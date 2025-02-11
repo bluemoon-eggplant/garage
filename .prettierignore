@@ -1,0 +1,16 @@
+dist
+node_modules
+.changeset
+yarn.yaml
+.turbo
+.vercel
+.astro
+
+# enable for .md
+docs/*
+!docs/working-notes/templates/project.md
+
+
+# formatting breaks them
+# *.md
+*.mdx
