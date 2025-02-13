@@ -14,6 +14,41 @@ interface Props {
 // global polyfill for react-image-lightbox
 window.global = window.global || window;
 
+const CaptionComponent = ({ image }: { image: ImageProps }) => (
+  <div
+    style={{
+      position: 'fixed',
+      top: '80px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      padding: '8px 16px',
+      borderRadius: '4px',
+      zIndex: 2000,
+      fontFamily: 'system-ui, sans-serif',
+      textAlign: 'center',
+      minWidth: '120px',
+    }}
+  >
+    <a
+      href={image.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: '#fff',
+        textDecoration: 'underline',
+        cursor: 'pointer',
+        fontSize: '14px',
+        display: 'block',
+        lineHeight: '1.4',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      {image.caption}
+    </a>
+  </div>
+);
+
 const Gallery: React.FC<Props> = ({ images }) => {
   const [index, setIndex] = useState(-1);
 
@@ -33,7 +68,6 @@ const Gallery: React.FC<Props> = ({ images }) => {
       <ReactGridGallery images={images} onClick={handleClick} enableImageSelection={false} />
       {!!currentImage && (
         <Lightbox
-          imageTitle={currentImage.caption}
           mainSrc={currentImage.originalSrc}
           mainSrcThumbnail={currentImage.src}
           nextSrc={nextImage.originalSrc}
@@ -43,6 +77,8 @@ const Gallery: React.FC<Props> = ({ images }) => {
           onCloseRequest={handleClose}
           onMovePrevRequest={handleMovePrev}
           onMoveNextRequest={handleMoveNext}
+          imageCaption={<CaptionComponent image={currentImage} />}
+          imagePadding={80}
         />
       )}
     </div>

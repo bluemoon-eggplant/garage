@@ -25,6 +25,8 @@ export interface PaginationProps
 
 export interface ImageProps extends ReactGridGalleryImage {
   originalSrc: string;
+  link?: string;
+  caption?: string;
 }
 
 export type AstroImageProps = ComponentProps<typeof Image>;

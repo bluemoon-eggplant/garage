@@ -32,6 +32,48 @@ const getAllImagesMetadata = (): ImageMetadata[] => {
 
 const imagesMetadata = getAllImagesMetadata();
 
+const imageMap = (() => {
+  const posts = import.meta.glob('/src/content/post/**/*.mdx', { eager: true }) as Record<
+    string,
+    { frontmatter?: any }
+  >;
+  const mapping: Record<string, string> = {};
+
+  for (const path in posts) {
+    const fm = posts[path]?.frontmatter;
+    if (fm?.heroImage) {
+      const normalizedImagePath = fm.heroImage
+        .replace('../../../', '/src/')
+        .replace(/^\.\.\//, '/src/');
+
+      const articlePath = path.replace(/^\/src\/content/, '').replace(/\/index\.mdx$/, '');
+
+      mapping[normalizedImagePath] = articlePath;
+    }
+  }
+  return mapping;
+})();
+
+function normalizeImagePath(path: string): string {
+  const cleanPath = path.split('?')[0].replace(/@fs/, '');
+  const filename = cleanPath.split('/').pop();
+
+  for (const [heroPath, articlePath] of Object.entries(imageMap)) {
+    if (heroPath.includes(filename!)) {
+      const match = articlePath.match(/\/post\/(\d{4})\/(\d{2}-\d{2}-.*$)/);
+      if (match) {
+        const [, year, slug] = match;
+        return `/blog/${year}-${slug}`;
+      }
+    }
+  }
+  return '#';
+}
+
+function getBlogLink(filename: string): string {
+  return normalizeImagePath(filename);
+}
+
 const imageMetadataToReactImageProps = async (
   imagesMetadata: ImageMetadata
 ): Promise<ImageProps> => {
@@ -58,12 +100,15 @@ const imageMetadataToReactImageProps = async (
   const optimizedLightboxAstroImageProps = await getImage(lightboxAstroImageProps);
   const { src: originalSrc } = optimizedLightboxAstroImageProps;
 
+  const link = getBlogLink(String(imagesMetadata.src));
   const reactImageProps = {
     src,
     originalSrc,
     // width and height only for thumbnails
     width: parseInt(String(attributes.width)),
     height: parseInt(String(attributes.height)),
+    link,
+    caption: '記事を見る', // シンプルなテキストのみ
   };
 
   return reactImageProps;
