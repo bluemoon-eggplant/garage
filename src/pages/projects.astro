@@ -1,0 +1,26 @@
+---
+import { getAllProjects } from '@/modules/project';
+import List from '@/layouts/List.astro';
+import ProjectList from '@/components/ProjectList.astro';
+import { getPageMetadata } from '@/utils/metadata';
+
+const projects = await getAllProjects();
+const metadata = getPageMetadata('lists/projects');
+
+// ページネーションプロパティを空オブジェクトで渡す
+const layoutProps = {
+  metadata,
+  paginationProps: {
+    url: { current: '/projects', prev: undefined, next: undefined },
+    currentPage: 1,
+    lastPage: 1,
+    start: 1,
+    end: projects.length,
+    total: projects.length,
+  },
+};
+---
+
+<List {...layoutProps}>
+  <ProjectList projects={projects} />
+</List>

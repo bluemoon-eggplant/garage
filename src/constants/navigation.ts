@@ -3,11 +3,7 @@ import { ROUTES } from '@/constants/routes';
 /** Doesn't contain Home nav item. */
 export const NAVIGATION_ITEMS = [
   {
-    title: 'Blog',
-    path: ROUTES.BLOG,
-  },
-  {
-    title: 'Explore',
+    title: 'History',
     path: ROUTES.EXPLORE,
   },
   // {
@@ -19,7 +15,7 @@ export const NAVIGATION_ITEMS = [
   //   path: ROUTES.CATEGORIES,
   // },
   {
-    title: 'Projects',
+    title: 'Cars',
     path: ROUTES.PROJECTS,
   },
   {
@@ -30,10 +26,10 @@ export const NAVIGATION_ITEMS = [
     title: 'Gallery',
     path: ROUTES.GALLERY,
   },
-  {
-    title: 'Links',
-    path: ROUTES.LINKS,
-  },
+  // {
+  //   title: 'Links',
+  //   path: ROUTES.LINKS,
+  // },
   // {
   //   title: 'Resume',
   //   path: ROUTES.RESUME,

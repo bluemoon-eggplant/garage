@@ -2,7 +2,6 @@
 import { Icon } from 'astro-icon/components';
 
 import BaseHead from '@/components/BaseHead.astro';
-import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
 import ScrollToTop from '@/components/react/ScrollToTop';
 import Breakpoints from '@/components/utils/breakpoints.astro';
@@ -20,10 +19,11 @@ const { metadata } = Astro.props as BaseProps;
   <body
     class="relative flex flex-col min-h-screen min-w-80 bg-base-100 transition-colors duration-500"
   >
-    <Header />
-    <slot />
-    <Footer />
-
+    <Header class="fixed top-0 left-0 right-0 z-50 bg-base-100 shadow-md" />
+    <div class="pt-16">
+      <!-- ヘッダーの高さ分のパディングを追加 -->
+      <slot />
+    </div>
     <ScrollToTop client:only="react">
       <Icon name="mdi:arrow-up-thin" class="h-10 w-10 text-content hover:text-links-hover" />
     </ScrollToTop>
