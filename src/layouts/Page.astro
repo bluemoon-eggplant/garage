@@ -31,31 +31,6 @@ const image = getOpenGraphImagePath(path);
 const metadata = { title, description, image };
 ---
 
-<style is:global>
-  table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    border-collapse: separate;
-    border-spacing: 0;
-  }
-
-  td:first-child,
-  th:first-child {
-    position: sticky;
-    left: 0;
-    background-color: var(--th-base-100); /* テーマ同色 */
-    z-index: 1;
-    border-right: 2px solid #ddd;
-  }
-
-  :root.dark td:first-child,
-  :root.dark th:first-child {
-    background-color: var(--th-base-100); /* テーマ同色 */
-  }
-</style>
-
 <Centered {metadata} class={cn(className)}>
   <article class="my-prose">
     <slot />

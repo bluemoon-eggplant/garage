@@ -3,6 +3,8 @@ import { getImage } from 'astro:assets';
 
 import ReactGallery from '@/components/react/Gallery';
 import { IMAGE_SIZES } from '@/constants/image';
+import { getAllPosts } from '@/modules/post/common';
+import { getAllProjects } from '@/modules/project';
 import { randomizeArray } from '@/utils/objects';
 import { cn } from '@/utils/styles';
 
@@ -32,46 +34,38 @@ const getAllImagesMetadata = (): ImageMetadata[] => {
 
 const imagesMetadata = getAllImagesMetadata();
 
-const imageMap = (() => {
-  const posts = import.meta.glob('/src/content/post/**/*.mdx', { eager: true }) as Record<
-    string,
-    { frontmatter?: any }
-  >;
-  const mapping: Record<string, string> = {};
+// Build mapping from heroImage filename to page URL using Content Collections API
+const imageMap: Record<string, string> = {};
 
-  for (const path in posts) {
-    const fm = posts[path]?.frontmatter;
-    if (fm?.heroImage) {
-      const normalizedImagePath = fm.heroImage
-        .replace('../../../', '/src/')
-        .replace(/^\.\.\//, '/src/');
-
-      const articlePath = path.replace(/^\/src\/content/, '').replace(/\/index\.mdx$/, '');
-
-      mapping[normalizedImagePath] = articlePath;
-    }
+// Add blog posts
+const posts = await getAllPosts();
+for (const post of posts) {
+  const heroImage = post.data.heroImage;
+  if (heroImage && typeof heroImage === 'object' && 'src' in heroImage) {
+    const heroSrc = String(heroImage.src);
+    const heroFilename = heroSrc.split('/').pop()?.split('.')[0] || '';
+    imageMap[heroFilename] = `/blog/${post.id}`;
   }
-  return mapping;
-})();
-
-function normalizeImagePath(path: string): string {
-  const cleanPath = path.split('?')[0].replace(/@fs/, '');
-  const filename = cleanPath.split('/').pop();
-
-  for (const [heroPath, articlePath] of Object.entries(imageMap)) {
-    if (heroPath.includes(filename!)) {
-      const match = articlePath.match(/\/post\/(\d{4})\/(\d{2}-\d{2}-.*$)/);
-      if (match) {
-        const [, year, slug] = match;
-        return `/blog/${year}-${slug}`;
-      }
-    }
-  }
-  return '#';
 }
 
-function getBlogLink(filename: string): string {
-  return normalizeImagePath(filename);
+// Add projects
+const projects = await getAllProjects();
+for (const project of projects) {
+  const heroImage = project.data.heroImage;
+  if (heroImage && typeof heroImage === 'object' && 'src' in heroImage) {
+    const heroSrc = String(heroImage.src);
+    const heroFilename = heroSrc.split('/').pop()?.split('.')[0] || '';
+    imageMap[heroFilename] = `/projects/${project.id}`;
+  }
+}
+
+// Add about page (uses electronics1.jpg)
+imageMap['electronics1'] = '/about/';
+
+function getBlogLink(imageSrc: string): string {
+  // Extract filename from gallery image src (e.g., "/src/assets/images/all-images/focus1.jpg" -> "focus1")
+  const filename = imageSrc.split('/').pop()?.split('.')[0] || '';
+  return imageMap[filename] || '#';
 }
 
 const imageMetadataToReactImageProps = async (

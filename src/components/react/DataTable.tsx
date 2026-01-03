@@ -1,0 +1,175 @@
+import React, { useMemo } from 'react';
+
+export interface Column {
+  key: string;
+  label: string;
+  /** Show data bar for numeric values */
+  dataBar?: boolean;
+  /** Data bar color (default: blue) */
+  barColor?: string;
+  /** Format function for display */
+  format?: (value: any) => string;
+  /** Column width */
+  width?: string;
+}
+
+export interface DataTableProps {
+  columns: Column[];
+  data: Record<string, any>[];
+  /** Number of columns to freeze from the left (default: 1) */
+  frozenColumns?: number;
+  /** Caption for the table */
+  caption?: string;
+}
+
+const DataTable: React.FC<DataTableProps> = ({
+  columns,
+  data,
+  frozenColumns = 1,
+  caption,
+}) => {
+  // Calculate min/max for data bar columns
+  const dataBarRanges = useMemo(() => {
+    const ranges: Record<string, { min: number; max: number }> = {};
+
+    columns.forEach((col) => {
+      if (col.dataBar) {
+        const values = data
+          .map((row) => row[col.key])
+          .filter((v) => typeof v === 'number') as number[];
+
+        if (values.length > 0) {
+          ranges[col.key] = {
+            min: Math.min(...values),
+            max: Math.max(...values),
+          };
+        }
+      }
+    });
+
+    return ranges;
+  }, [columns, data]);
+
+  const getBarWidth = (colKey: string, value: number): number => {
+    const range = dataBarRanges[colKey];
+    if (!range || range.max === range.min) return 100;
+    return ((value - range.min) / (range.max - range.min)) * 100;
+  };
+
+  const formatValue = (col: Column, value: any): string => {
+    if (col.format) return col.format(value);
+    if (typeof value === 'number') {
+      return value.toLocaleString();
+    }
+    return String(value ?? '');
+  };
+
+  // Calculate left positions for frozen columns
+  const getFrozenLeftPosition = (colIndex: number): number => {
+    let left = 0;
+    for (let i = 0; i < colIndex; i++) {
+      // Estimate width based on column width or default
+      left += 120; // Default column width estimate
+    }
+    return left;
+  };
+
+  return (
+    <div className="w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-sm">
+          {caption && (
+            <caption className="bg-gray-50 dark:bg-gray-800 px-4 py-2 text-left font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
+              {caption}
+            </caption>
+          )}
+          <thead>
+            <tr className="bg-gray-100 dark:bg-gray-800">
+              {columns.map((col, colIndex) => {
+                const isFrozen = colIndex < frozenColumns;
+                return (
+                  <th
+                    key={col.key}
+                    className={`
+                      px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200
+                      border-b border-gray-200 dark:border-gray-700
+                      whitespace-nowrap
+                      ${isFrozen ? 'sticky bg-gray-100 dark:bg-gray-800 z-10' : ''}
+                      ${isFrozen && colIndex === frozenColumns - 1 ? 'border-r-2 border-r-gray-300 dark:border-r-gray-600' : ''}
+                    `}
+                    style={{
+                      left: isFrozen ? `${colIndex * 120}px` : undefined,
+                      minWidth: col.width || '120px',
+                    }}
+                  >
+                    {col.label}
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((row, rowIndex) => (
+              <tr
+                key={rowIndex}
+                className={`
+                  ${rowIndex % 2 === 0 ? 'bg-white dark:bg-gray-900' : 'bg-gray-50 dark:bg-gray-800/50'}
+                  hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors
+                `}
+              >
+                {columns.map((col, colIndex) => {
+                  const isFrozen = colIndex < frozenColumns;
+                  const value = row[col.key];
+                  const isNumeric = typeof value === 'number';
+                  const showDataBar = col.dataBar && isNumeric;
+                  const barWidth = showDataBar ? getBarWidth(col.key, value) : 0;
+                  const barColor = col.barColor || 'rgb(59, 130, 246)'; // blue-500
+
+                  return (
+                    <td
+                      key={col.key}
+                      className={`
+                        px-4 py-3 border-b border-gray-100 dark:border-gray-800
+                        whitespace-nowrap
+                        ${isFrozen ? 'sticky z-10' : ''}
+                        ${isFrozen && colIndex === frozenColumns - 1 ? 'border-r-2 border-r-gray-300 dark:border-r-gray-600' : ''}
+                        ${rowIndex % 2 === 0 ? (isFrozen ? 'bg-white dark:bg-gray-900' : '') : (isFrozen ? 'bg-gray-50 dark:bg-gray-800/50' : '')}
+                      `}
+                      style={{
+                        left: isFrozen ? `${colIndex * 120}px` : undefined,
+                        minWidth: col.width || '120px',
+                      }}
+                    >
+                      {showDataBar ? (
+                        <div className="relative">
+                          {/* Data bar background */}
+                          <div
+                            className="absolute inset-y-0 left-0 opacity-25 rounded"
+                            style={{
+                              width: `${barWidth}%`,
+                              backgroundColor: barColor,
+                            }}
+                          />
+                          {/* Value text */}
+                          <span className="relative z-10 font-mono">
+                            {formatValue(col, value)}
+                          </span>
+                        </div>
+                      ) : (
+                        <span className={isNumeric ? 'font-mono' : ''}>
+                          {formatValue(col, value)}
+                        </span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default DataTable;
