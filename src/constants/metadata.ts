@@ -50,9 +50,9 @@ export const PAGE_METADATA = {
     title: 'Category',
   },
   // src/pages/blog/categories/[category]/[...page].astro
-  'lists/projects': {
-    title: 'Projects',
-    description: 'Ad duis incididunt reprehenderit elit in enim amet dolor.',
+  'lists/garage': {
+    title: 'Garage',
+    description: '所有する車とバイクの紹介',
   },
   'lists/links': {
     title: 'Links',
@@ -63,7 +63,7 @@ export type PageMetadataKey = keyof typeof PAGE_METADATA;
 
 export const OG_IMAGE_PREFIXES = {
   OG_BLOG: 'blog',
-  OG_PROJECTS: 'projects',
+  OG_GARAGE: 'garage',
   OG_PAGES: 'pages',
   OG_LISTS: 'lists',
 } as const;

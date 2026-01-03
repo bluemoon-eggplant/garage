@@ -5,13 +5,13 @@ import ProjectList from '@/components/ProjectList.astro';
 import { getPageMetadata } from '@/utils/metadata';
 
 const projects = await getAllProjects();
-const metadata = getPageMetadata('lists/projects');
+const metadata = getPageMetadata('lists/garage');
 
 // ページネーションプロパティを空オブジェクトで渡す
 const layoutProps = {
   metadata,
   paginationProps: {
-    url: { current: '/projects', prev: undefined, next: undefined },
+    url: { current: '/garage', prev: undefined, next: undefined },
     currentPage: 1,
     lastPage: 1,
     start: 1,

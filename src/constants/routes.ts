@@ -6,7 +6,7 @@
 export const ROUTES = {
   HOME: '/',
   BLOG: '/blog/',
-  PROJECTS: '/projects/',
+  GARAGE: '/garage/',
   OWNER: '/owner/',
   RESUME: '/resume/',
   TAGS: '/blog/tags/',

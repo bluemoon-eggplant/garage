@@ -55,7 +55,7 @@ for (const project of projects) {
   if (heroImage && typeof heroImage === 'object' && 'src' in heroImage) {
     const heroSrc = String(heroImage.src);
     const heroFilename = heroSrc.split('/').pop()?.split('.')[0] || '';
-    imageMap[heroFilename] = `/projects/${project.id}`;
+    imageMap[heroFilename] = `/garage/${project.id}`;
   }
 }
 

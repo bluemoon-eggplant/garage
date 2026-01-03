@@ -12,8 +12,8 @@ export const getActiveNavItemPath = (routePathname: string): NavigationItem['pat
     case routePathname === ROUTES.BLOG:
       activeNavItem = getNavItem(ROUTES.BLOG);
       break;
-    case routePathname === ROUTES.ABOUT:
-      activeNavItem = getNavItem(ROUTES.ABOUT);
+    case routePathname === ROUTES.OWNER:
+      activeNavItem = getNavItem(ROUTES.OWNER);
       break;
     case routePathname === ROUTES.GALLERY:
       activeNavItem = getNavItem(ROUTES.GALLERY);
@@ -25,8 +25,8 @@ export const getActiveNavItemPath = (routePathname: string): NavigationItem['pat
     case routePathname === ROUTES.RESUME:
       activeNavItem = getNavItem(ROUTES.RESUME);
       break;
-    case routePathname.startsWith(ROUTES.PROJECTS):
-      activeNavItem = getNavItem(ROUTES.PROJECTS);
+    case routePathname.startsWith(ROUTES.GARAGE):
+      activeNavItem = getNavItem(ROUTES.GARAGE);
       break;
     case routePathname.startsWith(ROUTES.TAGS):
     case routePathname.startsWith(ROUTES.CATEGORIES):

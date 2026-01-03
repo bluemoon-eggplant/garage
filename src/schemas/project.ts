@@ -15,4 +15,6 @@ export const projectSchema = ({ image }: SchemaContext) =>
     heroImage: image().default(HERO_IMAGE),
     heroAlt: z.string().default(HERO_ALT),
     draft: z.boolean().default(DRAFT),
+    /** Display order (lower numbers appear first) */
+    order: z.number().default(999),
   });

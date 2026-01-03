@@ -13,7 +13,7 @@ export const getFeed = async (): Promise<Feed> => {
   const author = {
     name: AUTHOR_NAME,
     email: AUTHOR_EMAIL,
-    link: `${SITE_URL}${ROUTES.ABOUT}`,
+    link: `${SITE_URL}${ROUTES.OWNER}`,
   };
 
   const copyright = (date: Date) =>

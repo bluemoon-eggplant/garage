@@ -15,8 +15,8 @@ export const NAVIGATION_ITEMS = [
   //   path: ROUTES.CATEGORIES,
   // },
   {
-    title: 'Cars',
-    path: ROUTES.PROJECTS,
+    title: 'Garage',
+    path: ROUTES.GARAGE,
   },
   {
     title: 'Owner',
