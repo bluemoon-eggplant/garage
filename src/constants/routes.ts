@@ -7,7 +7,7 @@ export const ROUTES = {
   HOME: '/',
   BLOG: '/blog/',
   PROJECTS: '/projects/',
-  ABOUT: '/about/',
+  OWNER: '/owner/',
   RESUME: '/resume/',
   TAGS: '/blog/tags/',
   CATEGORIES: '/blog/categories/',

@@ -19,8 +19,8 @@ export const NAVIGATION_ITEMS = [
     path: ROUTES.PROJECTS,
   },
   {
-    title: 'About',
-    path: ROUTES.ABOUT,
+    title: 'Owner',
+    path: ROUTES.OWNER,
   },
   {
     title: 'Gallery',
