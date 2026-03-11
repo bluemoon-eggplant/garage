@@ -3,9 +3,10 @@ import { glob } from 'astro/loaders';
 
 import { postSchema } from '@/schemas/post';
 import { garageSchema } from '@/schemas/garage';
+import { recordSchema } from '@/schemas/record';
 import { BASE_FOLDERS } from '@/constants/collections';
 
-const { POST, GARAGE } = BASE_FOLDERS;
+const { POST, GARAGE, RECORD } = BASE_FOLDERS;
 
 type GenerateIdFn = Parameters<typeof glob>[0]['generateId'];
 
@@ -27,5 +28,10 @@ export const garageCollection = defineCollection({
   schema: garageSchema,
 });
 
+export const recordCollection = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: RECORD, generateId }),
+  schema: recordSchema,
+});
+
 // _schemas folder in collections will be included in type
-export const collections = { post: postCollection, garage: garageCollection };
+export const collections = { post: postCollection, garage: garageCollection, record: recordCollection };

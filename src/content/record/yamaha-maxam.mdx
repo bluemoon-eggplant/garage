@@ -1,0 +1,13 @@
+---
+title: Yamaha MAXAM 記録
+category: yamaha-maxam
+publishDate: 2007-01-01
+---
+
+import CarDataTable from '../../components/CarDataTable.astro';
+
+export const carData = [
+  { date: '2007-01-01', mileage: 0, price: 0, fuelCost: 0, maintenance: 0, notes: '納車' },
+];
+
+<CarDataTable data={carData} caption="Yamaha MAXAM 維持記録" frozenColumns={1} />

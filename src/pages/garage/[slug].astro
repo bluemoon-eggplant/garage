@@ -3,6 +3,7 @@ import { render } from 'astro:content';
 
 import { getAllGarageItems } from '@/modules/garage';
 import GarageLayout from '@/layouts/Garage.astro';
+import GarageJumpLinks from '@/components/GarageJumpLinks.astro';
 import Share from '@/components/Share.astro';
 import { ROUTES } from '@/constants/routes';
 import { CONFIG_CLIENT } from '@/config/client';
@@ -29,7 +30,7 @@ const { pathname } = Astro.url;
 const { slug } = Astro.params;
 
 const image = getOpenGraphImagePath(pathname);
-const { title, description } = data;
+const { title, description, category } = data;
 
 const metadata: Metadata = { title, description, image };
 
@@ -44,5 +45,6 @@ const { Content } = await render(Astro.props);
 
 <GarageLayout {metadata}>
   <Content />
+  <GarageJumpLinks {category} />
   <Share {...shareProps} />
 </GarageLayout>

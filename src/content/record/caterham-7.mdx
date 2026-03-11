@@ -1,0 +1,13 @@
+---
+title: Caterham 7 記録
+category: caterham-7
+publishDate: 2021-01-01
+---
+
+import CarDataTable from '../../components/CarDataTable.astro';
+
+export const carData = [
+  { date: '2021-01-01', mileage: 5000, price: 0, fuelCost: 0, maintenance: 0, notes: '納車' },
+];
+
+<CarDataTable data={carData} caption="Caterham 7 維持記録" frozenColumns={1} />

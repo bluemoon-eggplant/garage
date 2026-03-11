@@ -10,6 +10,7 @@ export const garageSchema = ({ image }: SchemaContext) =>
   z.object({
     title: z.string().default(TITLE),
     description: z.string().default(DESCRIPTION),
+    category: z.string().optional(),
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: image().default(HERO_IMAGE),

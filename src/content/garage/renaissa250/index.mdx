@@ -1,6 +1,7 @@
 ---
 title: YAMAHA Renaissa
 description: 2024~
+category: yamaha-renaissa
 heroImage: './_images/renaissa.jpg'
 heroAlt: YAMAHA Renaissa
 publishDate: 2024-03-15
@@ -11,6 +12,10 @@ order: 2
 import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/renaissa.jpg';
+import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
+<GarageJumpLinks category="yamaha-renaissa" />
 
 ## 概要
 

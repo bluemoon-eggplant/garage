@@ -25,9 +25,13 @@ export const getActiveNavItemPath = (routePathname: string): NavigationItem['pat
     case routePathname === ROUTES.RESUME:
       activeNavItem = getNavItem(ROUTES.RESUME);
       break;
-    case routePathname.startsWith(ROUTES.GARAGE):
-      activeNavItem = getNavItem(ROUTES.GARAGE);
+    case routePathname.startsWith(ROUTES.RECORD):
+      activeNavItem = getNavItem(ROUTES.RECORD);
       break;
+    // garage individual pages don't highlight nav
+    // case routePathname.startsWith(ROUTES.GARAGE):
+    //   activeNavItem = getNavItem(ROUTES.GARAGE);
+    //   break;
     case routePathname.startsWith(ROUTES.TAGS):
     case routePathname.startsWith(ROUTES.CATEGORIES):
     case routePathname.startsWith(ROUTES.EXPLORE):

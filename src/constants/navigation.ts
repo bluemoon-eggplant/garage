@@ -3,6 +3,10 @@ import { ROUTES } from '@/constants/routes';
 /** Doesn't contain Home nav item. */
 export const NAVIGATION_ITEMS = [
   {
+    title: 'Record',
+    path: ROUTES.RECORD,
+  },
+  {
     title: 'History',
     path: ROUTES.EXPLORE,
   },
@@ -14,17 +18,17 @@ export const NAVIGATION_ITEMS = [
   //   title: 'Categories',
   //   path: ROUTES.CATEGORIES,
   // },
+  // {
+  //   title: 'Garage',
+  //   path: ROUTES.GARAGE,
+  // },
   {
-    title: 'Garage',
-    path: ROUTES.GARAGE,
+    title: 'Gallery',
+    path: ROUTES.GALLERY,
   },
   {
     title: 'Owner',
     path: ROUTES.OWNER,
-  },
-  {
-    title: 'Gallery',
-    path: ROUTES.GALLERY,
   },
   // {
   //   title: 'Links',

@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import { getCategoryProps } from '@/modules/post/category';
+import { getRecordCategoryLinks } from '@/modules/record';
+import Button from '@/components/Button.astro';
+import FilterList from '@/components/FilterList.astro';
+import { cn } from '@/utils/styles';
+
+import type { FilterLink } from '@/types/post';
+import type { Record } from '@/types/record';
+
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  records: Record[];
+  filterPathname?: string;
+}
+
+const { records, filterPathname, class: className, ...props } = Astro.props;
+
+const categoryLinks = getRecordCategoryLinks(records, filterPathname);
+---
+
+<section {...props} class={cn(className)}>
+  <FilterList class="gap-4 mb-4" itemLinks={categoryLinks}>
+    {
+      ({ href, text, textWithCount, isActive }: FilterLink) => {
+        const { icon } = getCategoryProps(text);
+        const buttonProps = isActive ? ({ colors: 'primary', variant: 'solid' } as const) : {};
+
+        return (
+          <Button href={href} size="md" {...buttonProps}>
+            <Icon name={icon} slot="before-icon" />
+            {textWithCount}
+          </Button>
+        );
+      }
+    }
+  </FilterList>
+</section>

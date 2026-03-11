@@ -43,6 +43,9 @@ export const PAGE_METADATA = {
   'lists/blog/explore': {
     title: '',
   },
+  'lists/record': {
+    title: '',
+  },
   'lists/blog/categories': {
     title: 'Categories',
   },

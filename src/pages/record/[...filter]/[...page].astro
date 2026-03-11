@@ -1,0 +1,72 @@
+---
+import { render } from 'astro:content';
+
+import { getAllRecords } from '@/modules/record';
+import RecordFilter from '@/components/RecordFilter.astro';
+import Centered from '@/layouts/Centered.astro';
+import { getPageMetadata } from '@/utils/metadata';
+import { ROUTES } from '@/constants/routes';
+
+import type { GetStaticPathsOptions } from 'astro';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const records = await getAllRecords();
+  const categories = [...new Set(records.map((r) => r.data.category))];
+
+  // root: /record/
+  const rootPaths = [{ params: { filter: undefined, page: undefined }, props: { filterCategory: undefined } }];
+
+  // category paths: /record/categories/{category}
+  const categoryPaths = categories.map((category) => ({
+    params: { filter: `categories/${category}`, page: undefined },
+    props: { filterCategory: category },
+  }));
+
+  return [...rootPaths, ...categoryPaths];
+}
+
+const { filterCategory } = Astro.props;
+const { filter } = Astro.params;
+
+const allRecords = await getAllRecords();
+
+// filter by category if selected
+const filteredRecords = filterCategory
+  ? allRecords.filter((r) => r.data.category === filterCategory)
+  : allRecords;
+
+// resolve pathname for active filter
+const filterPathname = filterCategory
+  ? `${ROUTES.RECORD_CATEGORIES}${filterCategory}`
+  : undefined;
+
+const metadata = getPageMetadata('lists/record');
+
+// render MDX content for each record
+const renderedRecords = await Promise.all(
+  filteredRecords.map(async (record) => {
+    const { Content } = await render(record);
+    return { record, Content };
+  })
+);
+---
+
+<Centered {metadata}>
+  <article class="flex flex-col">
+    <section class="flex-grow flex flex-col">
+      <RecordFilter records={allRecords} {filterPathname} />
+      <div>
+        {
+          renderedRecords.map(({ record, Content }) => (
+            <div class="mb-8">
+              <h2 class="b-h2">{record.data.title}</h2>
+              <div class="my-prose">
+                <Content />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </article>
+</Centered>

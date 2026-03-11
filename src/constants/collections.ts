@@ -6,6 +6,7 @@ import DefaultProjectHeroImage from '@/assets/images/default/default-project-her
 export const BASE_FOLDERS = {
   POST: 'src/content/post',
   GARAGE: 'src/content/garage',
+  RECORD: 'src/content/record',
 } as const;
 
 export const COLLECTIONS = {

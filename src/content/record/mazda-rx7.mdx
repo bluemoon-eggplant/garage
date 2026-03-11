@@ -1,14 +1,10 @@
 ---
-layout: '../layouts/Page.astro'
-title: 'Home'
-description: 'Welcome to my blog'
+title: Mazda RX-7 記録
+category: mazda-rx7
+publishDate: 2024-01-15
 ---
 
-import { Image } from 'astro:assets';
-
-import { IMAGE_SIZES } from '../constants/image';
-import River10Image from '../assets/images/all-images/river1.jpg';
-import CarDataTable from '../components/CarDataTable.astro';
+import CarDataTable from '../../components/CarDataTable.astro';
 
 export const carData = [
   { date: '2024-01-15', mileage: 12500, price: 1850000, fuelCost: 8500, maintenance: 0, notes: '初回点検' },
@@ -21,13 +17,4 @@ export const carData = [
   { date: '2024-08-25', mileage: 45100, price: 1590000, fuelCost: 28400, maintenance: 120000, notes: '車検' },
 ];
 
-# Hello and welcome
-
-<Image {...IMAGE_SIZES.FIXED.MDX_MD} src={River10Image} alt="Fishing spot" />
-
-## 車両管理データ
-
-<CarDataTable data={carData} caption="2024年 車両維持記録" frozenColumns={1} />
-
-Welcome to my coding blog. Here, I will share my coding experiments and thoughts on React.js, Next.js, Node.js, Astro, Python, DevOps, and more. Feel free to read, explore, and comment. Or, if you are feeling overwhelmed by coding, you can take a break and enjoy some random landscape photos from the articles. Maybe in the future, we will create a separate gallery for them. We will see.
-
+<CarDataTable data={carData} caption="Mazda RX-7 維持記録" frozenColumns={1} />

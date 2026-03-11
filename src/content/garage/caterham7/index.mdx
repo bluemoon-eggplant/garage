@@ -1,6 +1,7 @@
 ---
 title: Caterham 7
 description: 2021~
+category: caterham-7
 heroImage: './_images/caterham7.png'
 heroAlt: Caterham 7
 publishDate: 2024-12-09
@@ -10,10 +11,12 @@ order: 4
 import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/caterham7.png';
+import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 # Caterham 7
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
+<GarageJumpLinks category="caterham-7" />
 
 ## 概要
 

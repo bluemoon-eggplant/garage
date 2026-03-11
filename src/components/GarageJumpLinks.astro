@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import Button from '@/components/Button.astro';
+import { ROUTES } from '@/constants/routes';
+
+export interface Props {
+  category?: string;
+}
+
+const { category } = Astro.props;
+
+const recordHref = category
+  ? `${ROUTES.RECORD_CATEGORIES}${category}`
+  : ROUTES.RECORD;
+
+const historyHref = category
+  ? `${ROUTES.EXPLORE_CATEGORIES}${category}`
+  : ROUTES.EXPLORE;
+---
+
+<div class="not-prose flex justify-center gap-3 my-4">
+  <Button href={recordHref} size="md" variant="outline" colors="primary">
+    <Icon name="mdi:table" slot="before-icon" />
+    Jump to Record
+  </Button>
+  <Button href={historyHref} size="md" variant="outline" colors="primary">
+    <Icon name="mdi:history" slot="before-icon" />
+    Jump to History
+  </Button>
+</div>

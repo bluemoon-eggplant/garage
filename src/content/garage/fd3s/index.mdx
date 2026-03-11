@@ -1,6 +1,7 @@
 ---
 title: Mazda RX-7
 description: 2009~
+category: mazda-rx7
 heroImage: './_images/fd3s.png'
 heroAlt: Mazda RX-7(FD3S)
 publishDate: 2024-12-09
@@ -10,10 +11,12 @@ order: 6
 import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/fd3s.png';
+import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 # Mazda RX-7 (FD3S)
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
+<GarageJumpLinks category="mazda-rx7" />
 
 ## 概要
 

@@ -1,6 +1,7 @@
 ---
 title: Eunos Roadstar
 description: 2025~
+category: eunos-roadstar
 heroImage: './_images/roadstar.png'
 heroAlt: Eunos Roadstar
 publishDate: 2024-02-13
@@ -10,8 +11,10 @@ order: 1
 import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/roadstar.png';
+import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
+<GarageJumpLinks category="eunos-roadstar" />
 
 ## 概要
 
