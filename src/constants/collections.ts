@@ -5,12 +5,12 @@ import DefaultProjectHeroImage from '@/assets/images/default/default-project-her
 
 export const BASE_FOLDERS = {
   POST: 'src/content/post',
-  PROJECT: 'src/content/project',
+  GARAGE: 'src/content/garage',
 } as const;
 
 export const COLLECTIONS = {
   POST: 'post',
-  PROJECT: 'project',
+  GARAGE: 'garage',
 } as const;
 
 export const TAGS = [
@@ -25,37 +25,41 @@ export const TAGS = [
   'self-hosting',
 ] as const;
 
-/** adjust this later */
 export const CATEGORIES = [
-  // add color here
-  // extract find function
   {
-    name: 'tutorials',
-    icon: 'mdi:teach',
+    name: 'mazda-rx7',
+    label: 'Mazda RX-7',
+    icon: 'mdi:car-sports',
   },
   {
-    name: 'tips-and-tricks',
-    icon: 'mdi:lightbulb-outline',
+    name: 'eunos-roadstar',
+    label: 'Eunos Roadstar',
+    icon: 'mdi:car-convertible',
   },
   {
-    name: 'news',
-    icon: 'mdi:announcement-outline',
+    name: 'rover-mini',
+    label: 'Rover Mini',
+    icon: 'mdi:car-side',
   },
   {
-    name: 'showcases',
-    icon: 'mdi:presentation',
+    name: 'caterham-7',
+    label: 'Caterham 7',
+    icon: 'mdi:car-side',
   },
   {
-    name: 'video',
-    icon: 'mdi:video-outline',
+    name: 'kawasaki-zx14',
+    label: 'Kawasaki ZX-14',
+    icon: 'mdi:motorbike',
   },
   {
-    name: 'tools',
-    icon: 'mdi:tools',
+    name: 'yamaha-renaissa',
+    label: 'YAMAHA Renaissa',
+    icon: 'mdi:motorbike',
   },
   {
-    name: 'resources',
-    icon: 'mdi:book-open-variant-outline',
+    name: 'yamaha-maxam',
+    label: 'Yamaha MAXAM',
+    icon: 'mdi:motorbike',
   },
 ] as const;
 
@@ -71,7 +75,7 @@ export const DEFAULTS_POST = {
   TOC: true,
 } as const;
 
-export const DEFAULTS_PROJECT = {
+export const DEFAULTS_GARAGE = {
   TITLE: DEFAULT_METADATA.title,
   DESCRIPTION: DEFAULT_METADATA.description,
   NO_HERO: false,

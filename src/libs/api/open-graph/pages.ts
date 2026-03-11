@@ -1,5 +1,5 @@
 import { getAllPosts } from '@/modules/post/common';
-import { getAllProjects } from '@/modules/project';
+import { getAllGarageItems } from '@/modules/garage';
 import { DEFAULT_METADATA, OG_IMAGE_PREFIXES, PAGE_METADATA } from '@/constants/metadata';
 
 export const getPages = async () => {
@@ -45,12 +45,12 @@ export const getPages = async () => {
     allPosts.map((post) => [`${OG_IMAGE_PREFIXES.OG_BLOG}/${post.slug}`, post.data])
   );
 
-  const allProjects = await getAllProjects();
-  const projects = Object.fromEntries(
-    allProjects.map((project) => [`${OG_IMAGE_PREFIXES.OG_GARAGE}/${project.slug}`, project.data])
+  const allGarageItems = await getAllGarageItems();
+  const garageItems = Object.fromEntries(
+    allGarageItems.map((item) => [`${OG_IMAGE_PREFIXES.OG_GARAGE}/${item.slug}`, item.data])
   );
 
-  const pages = { ...posts, ...projects, ...mdxPages, ...listPages };
+  const pages = { ...posts, ...garageItems, ...mdxPages, ...listPages };
 
   return pages;
 };

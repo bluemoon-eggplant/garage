@@ -41,7 +41,7 @@ export const PAGE_METADATA = {
   },
   // 'src/pages/blog/tags/[tag]/[...page].astro' // dynamic tag param
   'lists/blog/explore': {
-    title: 'Explore',
+    title: '',
   },
   'lists/blog/categories': {
     title: 'Categories',

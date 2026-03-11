@@ -34,7 +34,9 @@ export const getCategoryLinks = (posts: PostCollection[], pathname?: string): Fi
     const { text, count } = item;
 
     const originalHref = `${ROUTES.EXPLORE_CATEGORIES}${text}`;
-    const textWithCount = `${text} ${count}`;
+    const { label } = getCategoryProps(text);
+    const displayText = label ?? text;
+    const textWithCount = `${displayText} ${count}`;
 
     const isActive = originalHref === pathname;
     const href = !isActive ? originalHref : ROUTES.EXPLORE;
