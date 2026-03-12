@@ -1,11 +1,12 @@
 ---
-import { render } from 'astro:content';
-
 import { getAllRecords } from '@/modules/record';
 import RecordFilter from '@/components/RecordFilter.astro';
+import CarDataTable from '@/components/CarDataTable.astro';
 import Centered from '@/layouts/Centered.astro';
 import { getPageMetadata } from '@/utils/metadata';
 import { ROUTES } from '@/constants/routes';
+import { CATEGORIES } from '@/constants/collections';
+import { fetchAllSheetData } from '@/libs/google-sheets';
 
 import type { GetStaticPathsOptions } from 'astro';
 
@@ -26,7 +27,6 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 }
 
 const { filterCategory } = Astro.props;
-const { filter } = Astro.params;
 
 const allRecords = await getAllRecords();
 
@@ -42,13 +42,14 @@ const filterPathname = filterCategory
 
 const metadata = getPageMetadata('lists/record');
 
-// render MDX content for each record
-const renderedRecords = await Promise.all(
-  filteredRecords.map(async (record) => {
-    const { Content } = await render(record);
-    return { record, Content };
-  })
-);
+// fetch Google Sheets data at build time
+const allSheetData = await fetchAllSheetData();
+
+// get display label for category
+function getCategoryLabel(category: string): string {
+  const cat = CATEGORIES.find((c) => c.name === category);
+  return cat?.label ?? category;
+}
 ---
 
 <Centered {metadata}>
@@ -57,14 +58,21 @@ const renderedRecords = await Promise.all(
       <RecordFilter records={allRecords} {filterPathname} />
       <div>
         {
-          renderedRecords.map(({ record, Content }) => (
-            <div class="mb-8">
-              <h2 class="b-h2">{record.data.title}</h2>
-              <div class="my-prose">
-                <Content />
+          filteredRecords.map((record) => {
+            const category = record.data.category;
+            const sheetData = allSheetData[category] ?? [];
+            const label = getCategoryLabel(category);
+            return (
+              <div class="mb-8">
+                <h2 class="b-h2">{record.data.title}</h2>
+                {sheetData.length > 0 ? (
+                  <CarDataTable data={sheetData} caption={`${label} 維持記録`} frozenColumns={1} />
+                ) : (
+                  <p class="text-gray-500 dark:text-gray-400 italic">データなし</p>
+                )}
               </div>
-            </div>
-          ))
+            );
+          })
         }
       </div>
     </section>

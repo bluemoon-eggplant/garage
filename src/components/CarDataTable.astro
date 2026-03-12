@@ -1,18 +1,10 @@
 ---
 import DataTable from '@/components/react/DataTable';
 import type { Column } from '@/components/react/DataTable';
-
-export interface CarRecord {
-  date: string;
-  mileage: number;
-  price: number;
-  fuelCost?: number;
-  maintenance?: number;
-  notes?: string;
-}
+import type { SheetRecord } from '@/libs/google-sheets';
 
 interface Props {
-  data: CarRecord[];
+  data: SheetRecord[];
   caption?: string;
   frozenColumns?: number;
 }
@@ -22,45 +14,34 @@ const { data, caption, frozenColumns = 1 } = Astro.props;
 const columns: Column[] = [
   {
     key: 'date',
-    label: '日付',
+    label: '支払日',
     width: '120px',
+  },
+  {
+    key: 'amount',
+    label: '金額',
+    dataBar: true,
+    barColor: 'rgb(59, 130, 246)', // blue-500
+    format: (v: number) => (v ? '¥' + v.toLocaleString() : '¥0'),
+    width: '150px',
+  },
+  {
+    key: 'item',
+    label: '項目',
+    width: '280px',
   },
   {
     key: 'mileage',
     label: '走行距離 (km)',
     dataBar: true,
     barColor: 'rgb(34, 197, 94)', // green-500
-    format: (v: number) => v.toLocaleString() + ' km',
+    format: (v: number | null) => (v != null ? v.toLocaleString() + ' km' : '-'),
     width: '150px',
   },
   {
-    key: 'price',
-    label: '価格 (税込)',
-    dataBar: true,
-    barColor: 'rgb(59, 130, 246)', // blue-500
-    format: (v: number) => '¥' + v.toLocaleString(),
+    key: 'shop',
+    label: '整備店',
     width: '150px',
-  },
-  {
-    key: 'fuelCost',
-    label: '燃料費',
-    dataBar: true,
-    barColor: 'rgb(249, 115, 22)', // orange-500
-    format: (v: number) => v ? '¥' + v.toLocaleString() : '-',
-    width: '120px',
-  },
-  {
-    key: 'maintenance',
-    label: '整備費',
-    dataBar: true,
-    barColor: 'rgb(168, 85, 247)', // purple-500
-    format: (v: number) => v ? '¥' + v.toLocaleString() : '-',
-    width: '120px',
-  },
-  {
-    key: 'notes',
-    label: '備考',
-    width: '200px',
   },
 ];
 ---

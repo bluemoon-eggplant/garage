@@ -3,18 +3,3 @@ title: Mazda RX-7 記録
 category: mazda-rx7
 publishDate: 2024-01-15
 ---
-
-import CarDataTable from '../../components/CarDataTable.astro';
-
-export const carData = [
-  { date: '2024-01-15', mileage: 12500, price: 1850000, fuelCost: 8500, maintenance: 0, notes: '初回点検' },
-  { date: '2024-02-20', mileage: 15200, price: 1820000, fuelCost: 12300, maintenance: 15000, notes: 'オイル交換' },
-  { date: '2024-03-18', mileage: 18900, price: 1780000, fuelCost: 14200, maintenance: 0, notes: '' },
-  { date: '2024-04-22', mileage: 23100, price: 1750000, fuelCost: 16800, maintenance: 45000, notes: 'タイヤ交換' },
-  { date: '2024-05-15', mileage: 27800, price: 1710000, fuelCost: 18500, maintenance: 0, notes: '' },
-  { date: '2024-06-10', mileage: 32400, price: 1680000, fuelCost: 15600, maintenance: 8000, notes: 'ワイパー交換' },
-  { date: '2024-07-08', mileage: 38200, price: 1640000, fuelCost: 22300, maintenance: 0, notes: '夏季点検' },
-  { date: '2024-08-25', mileage: 45100, price: 1590000, fuelCost: 28400, maintenance: 120000, notes: '車検' },
-];
-
-<CarDataTable data={carData} caption="Mazda RX-7 維持記録" frozenColumns={1} />
