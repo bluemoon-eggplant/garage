@@ -33,3 +33,8 @@ pnpm-debug.log*
 
 .astro/*
 !.astro/types.d.ts
+
+# receipt extraction
+scripts/input/
+scripts/output/
+scripts/service-account-key.json

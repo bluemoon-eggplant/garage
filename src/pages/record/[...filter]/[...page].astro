@@ -6,7 +6,7 @@ import Centered from '@/layouts/Centered.astro';
 import { getPageMetadata } from '@/utils/metadata';
 import { ROUTES } from '@/constants/routes';
 import { CATEGORIES } from '@/constants/collections';
-import { fetchAllSheetData } from '@/libs/google-sheets';
+import { loadAllMaintenanceRecords, toTableRow } from '@/libs/record-data';
 
 import type { GetStaticPathsOptions } from 'astro';
 
@@ -42,8 +42,8 @@ const filterPathname = filterCategory
 
 const metadata = getPageMetadata('lists/record');
 
-// fetch Google Sheets data at build time
-const allSheetData = await fetchAllSheetData();
+// load maintenance records from extracted.json
+const allMaintenanceRecords = loadAllMaintenanceRecords();
 
 // get display label for category
 function getCategoryLabel(category: string): string {
@@ -60,13 +60,22 @@ function getCategoryLabel(category: string): string {
         {
           filteredRecords.map((record) => {
             const category = record.data.category;
-            const sheetData = allSheetData[category] ?? [];
+            const categoryRecords = allMaintenanceRecords.filter((r) => r.category === category);
+            const tableRows = categoryRecords.map(toTableRow);
+            const totalAmount = categoryRecords.reduce((sum, r) => sum + r.totalAmount, 0);
             const label = getCategoryLabel(category);
             return (
               <div class="mb-8">
-                <h2 class="b-h2">{record.data.title}</h2>
-                {sheetData.length > 0 ? (
-                  <CarDataTable data={sheetData} caption={`${label} 維持記録`} frozenColumns={1} />
+                <div class="flex items-baseline justify-between">
+                  <h2 class="b-h2">{record.data.title}</h2>
+                  {tableRows.length > 0 && (
+                    <span class="text-lg font-mono font-semibold text-gray-700 dark:text-gray-300">
+                      合計 ¥{totalAmount.toLocaleString()}
+                    </span>
+                  )}
+                </div>
+                {tableRows.length > 0 ? (
+                  <CarDataTable data={tableRows} category={category} caption={`${label} 維持記録`} />
                 ) : (
                   <p class="text-gray-500 dark:text-gray-400 italic">データなし</p>
                 )}

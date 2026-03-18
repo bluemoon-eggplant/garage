@@ -9,8 +9,12 @@ export interface Column {
   barColor?: string;
   /** Format function for display */
   format?: (value: any) => string;
+  /** Custom React renderer (takes precedence over format/dataBar) */
+  render?: (value: any, row: Record<string, any>) => React.ReactNode;
   /** Column width */
   width?: string;
+  /** Truncate text with ellipsis (uses width as max-width) */
+  truncate?: boolean;
 }
 
 export interface DataTableProps {
@@ -76,14 +80,14 @@ const DataTable: React.FC<DataTableProps> = ({
 
   return (
     <div className="w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
-      <div className="overflow-x-auto">
+      <div className="overflow-auto max-h-[80vh]">
         <table className="w-full border-collapse text-sm">
           {caption && (
             <caption className="bg-gray-50 dark:bg-gray-800 px-4 py-2 text-left font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
               {caption}
             </caption>
           )}
-          <thead>
+          <thead className="sticky top-0 z-20">
             <tr className="bg-gray-100 dark:bg-gray-800">
               {columns.map((col, colIndex) => {
                 const isFrozen = colIndex < frozenColumns;
@@ -140,7 +144,9 @@ const DataTable: React.FC<DataTableProps> = ({
                         minWidth: col.width || '120px',
                       }}
                     >
-                      {showDataBar ? (
+                      {col.render ? (
+                        col.render(value, row)
+                      ) : showDataBar ? (
                         <div className="relative">
                           {/* Data bar background */}
                           <div
@@ -155,6 +161,14 @@ const DataTable: React.FC<DataTableProps> = ({
                             {formatValue(col, value)}
                           </span>
                         </div>
+                      ) : col.truncate ? (
+                        <span
+                          className={`block overflow-hidden text-ellipsis ${isNumeric ? 'font-mono' : ''}`}
+                          style={{ maxWidth: col.width || '120px' }}
+                          title={formatValue(col, value)}
+                        >
+                          {formatValue(col, value)}
+                        </span>
                       ) : (
                         <span className={isNumeric ? 'font-mono' : ''}>
                           {formatValue(col, value)}

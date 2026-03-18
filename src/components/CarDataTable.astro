@@ -1,55 +1,20 @@
 ---
-import DataTable from '@/components/react/DataTable';
-import type { Column } from '@/components/react/DataTable';
-import type { SheetRecord } from '@/libs/google-sheets';
+import RecordDataTable from '@/components/react/RecordDataTable';
+
+import type { MaintenanceTableRow } from '@/types/record';
 
 interface Props {
-  data: SheetRecord[];
+  data: MaintenanceTableRow[];
+  category: string;
   caption?: string;
-  frozenColumns?: number;
 }
 
-const { data, caption, frozenColumns = 1 } = Astro.props;
-
-const columns: Column[] = [
-  {
-    key: 'date',
-    label: '支払日',
-    width: '120px',
-  },
-  {
-    key: 'amount',
-    label: '金額',
-    dataBar: true,
-    barColor: 'rgb(59, 130, 246)', // blue-500
-    format: (v: number) => (v ? '¥' + v.toLocaleString() : '¥0'),
-    width: '150px',
-  },
-  {
-    key: 'item',
-    label: '項目',
-    width: '280px',
-  },
-  {
-    key: 'mileage',
-    label: '走行距離 (km)',
-    dataBar: true,
-    barColor: 'rgb(34, 197, 94)', // green-500
-    format: (v: number | null) => (v != null ? v.toLocaleString() + ' km' : '-'),
-    width: '150px',
-  },
-  {
-    key: 'shop',
-    label: '整備店',
-    width: '150px',
-  },
-];
+const { data, category, caption } = Astro.props;
 ---
 
-<DataTable
+<RecordDataTable
   client:load
-  columns={columns}
   data={data}
-  frozenColumns={frozenColumns}
+  category={category}
   caption={caption}
 />
