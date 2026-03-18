@@ -1,0 +1,81 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2254.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2009/01/16",
+    "totalAmount": 1702253,
+    "items": [
+      {
+        "description": "車両本体価格",
+        "amount": 1191020
+      },
+      {
+        "description": "車両販売価格割引",
+        "amount": -7725
+      },
+      {
+        "description": "プラグ ロータリー (RE)",
+        "amount": 17640
+      },
+      {
+        "description": "工賃",
+        "amount": 4200
+      },
+      {
+        "description": "バッテリー",
+        "amount": 15750
+      },
+      {
+        "description": "仙台→神戸西陸送費",
+        "amount": 49350
+      },
+      {
+        "description": "自動車税 (2ヶ月)",
+        "amount": 6500
+      },
+      {
+        "description": "自動車重量税",
+        "amount": 19600
+      },
+      {
+        "description": "自賠責保険料 (20ヶ月)",
+        "amount": 26100
+      },
+      {
+        "description": "登録届出費用",
+        "amount": 31500
+      },
+      {
+        "description": "回送費用",
+        "amount": 10500
+      },
+      {
+        "description": "遠隔地費用",
+        "amount": 12600
+      },
+      {
+        "description": "納車準備費用",
+        "amount": 10500
+      },
+      {
+        "description": "検査登録預り法定費用",
+        "amount": 500
+      },
+      {
+        "description": "ナンバープレート代",
+        "amount": 1440
+      },
+      {
+        "description": "リサイクル法関連費用",
+        "amount": 49350
+      },
+      {
+        "description": "分割手数料",
+        "amount": 252253
+      }
+    ],
+    "mileage": 18200,
+    "shop": "GTNET 仙台"
+  },
+  "reviewStatus": "pending"
+}

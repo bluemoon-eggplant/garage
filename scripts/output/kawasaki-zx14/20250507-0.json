@@ -1,0 +1,25 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0015.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2025/05/07",
+    "totalAmount": 21120,
+    "items": [
+      {
+        "description": "安心点検",
+        "amount": 12000
+      },
+      {
+        "description": "ブレーキエア抜き工賃",
+        "amount": 2900
+      },
+      {
+        "description": "L WHT ヘリテージ Tシャツ MACH",
+        "amount": 4300
+      }
+    ],
+    "mileage": 36231,
+    "shop": "カワサキ プラザ前橋"
+  },
+  "reviewStatus": "pending"
+}

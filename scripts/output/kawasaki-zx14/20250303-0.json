@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2025/03/03",
+    "totalAmount": 41079,
+    "items": [
+      {
+        "description": "タイヤ購入 PIRELLI ANGEL GT II フロント 120/70 ZR17",
+        "amount": 15927
+      },
+      {
+        "description": "タイヤ購入 PIRELLI ANGEL GT II リア 190/50 ZR17",
+        "amount": 25152
+      }
+    ],
+    "mileage": null,
+    "shop": "Amazon"
+  },
+  "reviewStatus": "approved"
+}

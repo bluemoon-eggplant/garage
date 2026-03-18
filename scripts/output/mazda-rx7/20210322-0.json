@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2021/03/22",
+    "totalAmount": 31642,
+    "items": [
+      {
+        "description": "シフトレバー交換",
+        "amount": null
+      },
+      {
+        "description": "シフトブーツ交換",
+        "amount": null
+      }
+    ],
+    "mileage": 73710,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

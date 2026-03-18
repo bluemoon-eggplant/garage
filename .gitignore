@@ -36,5 +36,4 @@ pnpm-debug.log*
 
 # receipt extraction
 scripts/input/
-scripts/output/
 scripts/service-account-key.json

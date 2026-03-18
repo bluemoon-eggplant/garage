@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2025/12/21",
+    "totalAmount": 29952,
+    "items": [
+      {
+        "description": "フロントブレーキホース交換（スウェッジライン）",
+        "amount": null
+      },
+      {
+        "description": "フロントキャリパーオーバーホール",
+        "amount": null
+      }
+    ],
+    "mileage": 36737,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

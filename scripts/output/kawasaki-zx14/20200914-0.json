@@ -1,0 +1,29 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0004_2.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2020/09/14",
+    "totalAmount": 0,
+    "items": [
+      {
+        "description": "エンジンオイル交換 Power1Racing 4T 5W-40 4L",
+        "amount": null
+      },
+      {
+        "description": "オイルフィルター交換 MH SF-4005RS",
+        "amount": null
+      },
+      {
+        "description": "スパークプラグ交換",
+        "amount": null
+      },
+      {
+        "description": "安全点検",
+        "amount": 0
+      }
+    ],
+    "mileage": 18639,
+    "shop": "株式会社2りんかんイエローハット 和光2りんかん"
+  },
+  "reviewStatus": "pending"
+}

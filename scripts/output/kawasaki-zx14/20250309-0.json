@@ -1,0 +1,33 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0014.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2025/03/09",
+    "totalAmount": 16330,
+    "items": [
+      {
+        "description": "フロントタイヤ交換",
+        "amount": 5500
+      },
+      {
+        "description": "リアタイヤ交換",
+        "amount": 8000
+      },
+      {
+        "description": "エアーバルブ(ストレート)",
+        "amount": 800
+      },
+      {
+        "description": "タイヤ廃棄処分費用",
+        "amount": 1000
+      },
+      {
+        "description": "前後同時交換割引",
+        "amount": -500
+      }
+    ],
+    "mileage": 36116,
+    "shop": "AT-1群馬自動車販売"
+  },
+  "reviewStatus": "pending"
+}

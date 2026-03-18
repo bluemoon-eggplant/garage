@@ -1,0 +1,29 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2227.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/03/16",
+    "totalAmount": 94800,
+    "items": [
+      {
+        "description": "ドライブレコーダー取付 2300",
+        "amount": 40000
+      },
+      {
+        "description": "ETC車載器取付 ND-ETCS10",
+        "amount": 18000
+      },
+      {
+        "description": "上記取付費",
+        "amount": 25000
+      },
+      {
+        "description": "ETCセットアップ",
+        "amount": 3500
+      }
+    ],
+    "mileage": null,
+    "shop": "株式会社ライジング"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,69 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0051.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2018/04/08",
+    "totalAmount": 3240,
+    "items": [
+      {
+        "description": "マツダセーフティーチェック料金(安心コース)",
+        "amount": 7344
+      },
+      {
+        "description": "技術料値引",
+        "amount": 4104
+      },
+      {
+        "description": "エンジンルーム点検 室内点検",
+        "amount": null
+      },
+      {
+        "description": "排出ガス点検 外廻り点検",
+        "amount": null
+      },
+      {
+        "description": "日常点検代行 【サービス】",
+        "amount": null
+      },
+      {
+        "description": "--シビアコンデションの点検--",
+        "amount": null
+      },
+      {
+        "description": "エアクリーナエレメントの汚れ、詰り点検",
+        "amount": null
+      },
+      {
+        "description": "ブレーキホース、パイプのオイル漏れ、損傷、取付状態点検",
+        "amount": null
+      },
+      {
+        "description": "ブレーキライニング、パッドの摩耗点検",
+        "amount": null
+      },
+      {
+        "description": "ブレーキ残量(F2.0mm, R4.7mm)",
+        "amount": null
+      },
+      {
+        "description": "エキゾーストパイプ、マフラーの取付状態、損傷点検",
+        "amount": null
+      },
+      {
+        "description": "詳しくはセーフティーチェックレコードをご覧ください",
+        "amount": null
+      },
+      {
+        "description": "※フロントブレーキパッドの残量が少ないです。",
+        "amount": null
+      },
+      {
+        "description": "諸費用 ※課税対象",
+        "amount": 0
+      }
+    ],
+    "mileage": 62192,
+    "shop": "株式会社関東マツダ 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

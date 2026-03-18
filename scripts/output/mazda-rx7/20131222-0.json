@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0044.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2013/12/22",
+    "totalAmount": 19719,
+    "items": [
+      {
+        "description": "スパークプラグセット",
+        "amount": 10080
+      },
+      {
+        "description": "スパークプラグ交換・取替 (1台分)",
+        "amount": 9639
+      }
+    ],
+    "mileage": 50330,
+    "shop": "東京マツダ販売株式会社 五反田営業所"
+  },
+  "reviewStatus": "pending"
+}

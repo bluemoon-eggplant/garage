@@ -1,0 +1,29 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0048.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2017/11/25",
+    "totalAmount": 500,
+    "items": [
+      {
+        "description": "水洗い洗車",
+        "amount": 540
+      },
+      {
+        "description": "簡単ガラス撥水(フロントウインドウ)",
+        "amount": 540
+      },
+      {
+        "description": "「お車エステ」1コインプレゼント",
+        "amount": 540
+      },
+      {
+        "description": "技術料値引",
+        "amount": -40
+      }
+    ],
+    "mileage": 61425,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

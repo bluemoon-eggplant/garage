@@ -1,0 +1,41 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260314-2159.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2009/06/27",
+    "totalAmount": 5250,
+    "items": [
+      {
+        "description": "エンジンオイル交換チケット",
+        "amount": 5250
+      },
+      {
+        "description": "ドレーンプラグの締付、漏れ点検",
+        "amount": null
+      },
+      {
+        "description": "オイルパン、ロッカーカバーからのオイル漏れ点検",
+        "amount": null
+      },
+      {
+        "description": "インフォメーション",
+        "amount": null
+      },
+      {
+        "description": "燃費向上・環境にもやさしい",
+        "amount": null
+      },
+      {
+        "description": "GOLDEN ECO 0W-20 をおすすめしてます",
+        "amount": null
+      },
+      {
+        "description": "タイヤ空気圧調整",
+        "amount": null
+      }
+    ],
+    "mileage": 21566,
+    "shop": "(株)千葉マツダ"
+  },
+  "reviewStatus": "pending"
+}

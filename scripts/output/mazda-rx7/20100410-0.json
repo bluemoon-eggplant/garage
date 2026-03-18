@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2010/04/10",
+    "totalAmount": 47250,
+    "items": [
+      {
+        "description": "左ステップ板金",
+        "amount": null
+      }
+    ],
+    "mileage": null,
+    "shop": "GTNET株式会社"
+  },
+  "reviewStatus": "approved"
+}

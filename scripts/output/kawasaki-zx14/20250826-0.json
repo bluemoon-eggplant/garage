@@ -1,0 +1,25 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0016.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2025/08/26",
+    "totalAmount": 37455,
+    "items": [
+      {
+        "description": "12か月点検",
+        "amount": 26000
+      },
+      {
+        "description": "カワサキS4 SG10W-40 20L ENEOS",
+        "amount": 7960
+      },
+      {
+        "description": "ガスケット,12X22X2",
+        "amount": 90
+      }
+    ],
+    "mileage": 36607,
+    "shop": "カワサキ プラザ前橋"
+  },
+  "reviewStatus": "pending"
+}

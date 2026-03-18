@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2025/04/13",
+    "totalAmount": 10560,
+    "items": [
+      {
+        "description": "フロントブレーキパッド交換（デイトナゴールデンパッド）",
+        "amount": null
+      },
+      {
+        "description": "フロントブレーキフルード交換",
+        "amount": null
+      }
+    ],
+    "mileage": 36151,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

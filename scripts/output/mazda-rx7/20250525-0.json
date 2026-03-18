@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2025/05/25",
+    "totalAmount": 47613,
+    "items": [
+      {
+        "description": "フロントホイルハウスインナーフェンダー交換",
+        "amount": null
+      },
+      {
+        "description": "左ドアトリム固定ネジ追加",
+        "amount": null
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

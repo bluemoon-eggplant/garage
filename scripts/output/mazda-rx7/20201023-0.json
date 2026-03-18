@@ -1,0 +1,25 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0101.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2020/10/23",
+    "totalAmount": 13354,
+    "items": [
+      {
+        "description": "オーディオ・セット脱着",
+        "amount": 4158
+      },
+      {
+        "description": "オーデ付修理・見積",
+        "amount": 4400
+      },
+      {
+        "description": "FD01626810 ウェッジ、リフトゲート",
+        "amount": 4796
+      }
+    ],
+    "mileage": 70739,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

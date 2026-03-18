@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2024/10/06",
+    "totalAmount": 37400,
+    "items": [
+      {
+        "description": "グローブボックス交換",
+        "amount": null
+      }
+    ],
+    "mileage": 96026,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

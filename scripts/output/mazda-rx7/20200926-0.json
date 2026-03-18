@@ -1,0 +1,145 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0100.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2020/09/26",
+    "totalAmount": 261000,
+    "items": [
+      {
+        "description": "法定24ヶ月点検料 《シビアコンディション含全項目》",
+        "amount": 28380
+      },
+      {
+        "description": "*保安基準確認検査料",
+        "amount": 10560
+      },
+      {
+        "description": "・冷却水(ロングライフクーラント交換) V6・RE (付帯)",
+        "amount": 6600
+      },
+      {
+        "description": "LLC1 ロングライフクーラント(スーパー)",
+        "amount": 3300
+      },
+      {
+        "description": "・ブレーキ・フォード交換 (付帯)",
+        "amount": 5500
+      },
+      {
+        "description": "BF-31 ブレーキフルード (BF-3) 0.5L",
+        "amount": 1320
+      },
+      {
+        "description": "クラッチ・ディスク取替",
+        "amount": 42966
+      },
+      {
+        "description": "N315164600 ディスク、クラッチ",
+        "amount": 20724
+      },
+      {
+        "description": "N31516410C カバー、クラッチ",
+        "amount": 27247
+      },
+      {
+        "description": "31516510 カラー、クラッチレリーズ",
+        "amount": 7194
+      },
+      {
+        "description": "999710800 ワツシヤー、スプリング",
+        "amount": 624
+      },
+      {
+        "description": "9YA000804 ボルト",
+        "amount": 858
+      },
+      {
+        "description": "N31516520B フォーク、クラッチレリーズ",
+        "amount": 10736
+      },
+      {
+        "description": "H50117103 シール、オイル",
+        "amount": 335
+      },
+      {
+        "description": "N31516221 カバー、フロント",
+        "amount": 7595
+      },
+      {
+        "description": "R50117335A シール、オイル",
+        "amount": 2403
+      },
+      {
+        "description": "M51317480A ブーツ、ダスト",
+        "amount": 2563
+      },
+      {
+        "description": "039817462A シート、スプリング",
+        "amount": 313
+      },
+      {
+        "description": "M50117515 ブツシュ",
+        "amount": 599
+      },
+      {
+        "description": "FD0164490A インソコレーター、ブーツ",
+        "amount": 5808
+      },
+      {
+        "description": "FB0164495 バッド、チェンジブーツ",
+        "amount": 198
+      },
+      {
+        "description": "N32611D03 ベアリング、ニードル",
+        "amount": 1507
+      },
+      {
+        "description": "188111404A シール、オイル",
+        "amount": 291
+      },
+      {
+        "description": "RF3640305 ガスケット",
+        "amount": 2992
+      },
+      {
+        "description": "999460800 ナット",
+        "amount": 330
+      },
+      {
+        "description": "9YB1012024 ナット",
+        "amount": 648
+      },
+      {
+        "description": "水洗い洗車",
+        "amount": 550
+      },
+      {
+        "description": "「お車エステ」 【コインプレゼント",
+        "amount": 550
+      },
+      {
+        "description": "技術料値引",
+        "amount": -841
+      },
+      {
+        "description": "自賠責",
+        "amount": 21550
+      },
+      {
+        "description": "重量税",
+        "amount": 37800
+      },
+      {
+        "description": "印紙証紙代",
+        "amount": 1000
+      },
+      {
+        "description": "* 代行料",
+        "amount": 9900
+      }
+    ],
+    "mileage": 70398,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

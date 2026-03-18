@@ -1,0 +1,57 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0059.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2020/07/06",
+    "totalAmount": 12293,
+    "items": [
+      {
+        "description": "オーバーヒート点検",
+        "amount": null
+      },
+      {
+        "description": "エンジン暖気後停止していると冷却水が噴き出してくる点検",
+        "amount": null
+      },
+      {
+        "description": "ラジエータキャップ加圧点検→不良",
+        "amount": null
+      },
+      {
+        "description": "冷却水(ロングライフ・クーラント) 交換",
+        "amount": null
+      },
+      {
+        "description": "ホース、パイプの劣化、損傷、水漏れ点検",
+        "amount": null
+      },
+      {
+        "description": "ラジエターキャップ、ドレーンプラグパッキン取替",
+        "amount": null
+      },
+      {
+        "description": "冷却水の量、エアー抜き、濃度点検",
+        "amount": null
+      },
+      {
+        "description": "ラジエーター キャップ KF0115205",
+        "amount": 2255
+      },
+      {
+        "description": "ラジエーター キャップ N3A115205A",
+        "amount": 2750
+      },
+      {
+        "description": "ロングライフクーラント 0302",
+        "amount": 3190
+      },
+      {
+        "description": "整備代",
+        "amount": 4098
+      }
+    ],
+    "mileage": 69148,
+    "shop": "甲信マツダ中野店"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,37 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0002.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2009/09/12",
+    "totalAmount": 20654,
+    "items": [
+      {
+        "description": "エンジンオイル SM (5W-30)",
+        "amount": 4200
+      },
+      {
+        "description": "部品代値引",
+        "amount": -4200
+      },
+      {
+        "description": "取付部締付、清掃、確認",
+        "amount": 1470
+      },
+      {
+        "description": "B6Y114302A カートリッジ、オイルフィルター",
+        "amount": 1260
+      },
+      {
+        "description": "ハイテンションコードの損傷、劣化点検",
+        "amount": 7844
+      },
+      {
+        "description": "N3X518110 プラグセット、スパーク",
+        "amount": 10080
+      }
+    ],
+    "mileage": 24315,
+    "shop": "千葉マツダ 我孫子店"
+  },
+  "reviewStatus": "pending"
+}

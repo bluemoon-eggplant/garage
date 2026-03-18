@@ -1,0 +1,37 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0057.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2019/03/30",
+    "totalAmount": 25031,
+    "items": [
+      {
+        "description": "SMC2 3 カストロールMAGNATECプロフェショナル 5W",
+        "amount": 7859
+      },
+      {
+        "description": "995641400 ガスケット",
+        "amount": null
+      },
+      {
+        "description": "オイルフィルター交換",
+        "amount": 1188
+      },
+      {
+        "description": "B6Y114302A カートリッジ、オイルフィルター",
+        "amount": 1296
+      },
+      {
+        "description": "スパーク・プラグ交換 (1台分)",
+        "amount": 4320
+      },
+      {
+        "description": "N3X518110 スパークプラグセット",
+        "amount": 10368
+      }
+    ],
+    "mileage": 64749,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

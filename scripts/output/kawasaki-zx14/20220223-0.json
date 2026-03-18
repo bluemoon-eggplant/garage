@@ -1,0 +1,29 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0009.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2022/02/23",
+    "totalAmount": 98350,
+    "items": [
+      {
+        "description": "カワサキ安心点検",
+        "amount": 12000
+      },
+      {
+        "description": "190/50ZR17 (73W) ミシュランROAD5",
+        "amount": 56247
+      },
+      {
+        "description": "120/70ZR17 (58W) ミシュランROAD5",
+        "amount": 38353
+      },
+      {
+        "description": "商品一式",
+        "amount": -8250
+      }
+    ],
+    "mileage": 25502,
+    "shop": "カワサキ プラザ東京練馬"
+  },
+  "reviewStatus": "pending"
+}

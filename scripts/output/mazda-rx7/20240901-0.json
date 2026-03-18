@@ -1,0 +1,97 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0200.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2024/09/01",
+    "totalAmount": 190000,
+    "items": [
+      {
+        "description": "パックdeメンテ:法定2年定期点検整備",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ:車検整備_ラージ[平日P]",
+        "amount": 52360
+      },
+      {
+        "description": "ブレーキ・フルード交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ:エンジンオイル交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ:オイルフィルター交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ:ワイパーゴム交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "エレメント、エアークリーナー (N3A113Z40)",
+        "amount": 6545
+      },
+      {
+        "description": "プラグセット、スパーク (N3X518110)",
+        "amount": 11429
+      },
+      {
+        "description": "ロングライフクーラント(スーパー) (LLC1)",
+        "amount": 3300
+      },
+      {
+        "description": "コック、ドレーン (NF0115203)",
+        "amount": 720
+      },
+      {
+        "description": "キャップ、ラジエーター (KF0115205)",
+        "amount": 2645
+      },
+      {
+        "description": "キャップ、ラジエーター (N3A115205A)",
+        "amount": 3217
+      },
+      {
+        "description": "技術料 (部品交換作業)",
+        "amount": 6600
+      },
+      {
+        "description": "水洗い洗車",
+        "amount": 550
+      },
+      {
+        "description": "ガラス内側クリーナー",
+        "amount": 550
+      },
+      {
+        "description": "お車エステ2コインプレゼント",
+        "amount": -1826
+      },
+      {
+        "description": "自賠責",
+        "amount": 17650
+      },
+      {
+        "description": "重量税",
+        "amount": 37800
+      },
+      {
+        "description": "印紙証紙代",
+        "amount": 1600
+      },
+      {
+        "description": "代行料(課税対象)",
+        "amount": 9900
+      },
+      {
+        "description": "パック前受金",
+        "amount": -52360
+      }
+    ],
+    "mileage": 95553,
+    "shop": "株式会社関東マツダ 群馬事業部 藤岡店"
+  },
+  "reviewStatus": "pending"
+}

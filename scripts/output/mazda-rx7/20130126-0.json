@@ -1,0 +1,65 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0042.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2013/01/26",
+    "totalAmount": 11760,
+    "items": [
+      {
+        "description": "マツダセーフティチェック整備料(アクティブ・コース)",
+        "amount": 8400
+      },
+      {
+        "description": "エンジン・ルーム点検",
+        "amount": null
+      },
+      {
+        "description": "室内点検",
+        "amount": null
+      },
+      {
+        "description": "足廻り点検",
+        "amount": null
+      },
+      {
+        "description": "下廻り点検",
+        "amount": null
+      },
+      {
+        "description": "シビアコンディション点検項目の点検",
+        "amount": null
+      },
+      {
+        "description": "[詳細はマツダセーフティチェックレコードを参照下さい]",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル交換 (特別価格)",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル(ガソリン) (10W-30)",
+        "amount": 2100
+      },
+      {
+        "description": "オイルフィルター交換",
+        "amount": null
+      },
+      {
+        "description": "カートリッジ、オイルフィルター",
+        "amount": 1260
+      },
+      {
+        "description": "タイヤエアー調整",
+        "amount": null
+      },
+      {
+        "description": "ステアリングギヤBOX締め付け",
+        "amount": null
+      }
+    ],
+    "mileage": 45720,
+    "shop": "東京マツダ販売株式会社 五反田営業所"
+  },
+  "reviewStatus": "pending"
+}

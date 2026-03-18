@@ -1,0 +1,89 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0107.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/08/26",
+    "totalAmount": 818628,
+    "items": [
+      {
+        "description": "自賠責保険料(24 ヶ月)",
+        "amount": 20010
+      },
+      {
+        "description": "重量税印紙代",
+        "amount": 37800
+      },
+      {
+        "description": "検査、登録印紙代",
+        "amount": 1400
+      },
+      {
+        "description": "検査料",
+        "amount": 12100
+      },
+      {
+        "description": "パワステラックオイル漏れ交換",
+        "amount": 199110
+      },
+      {
+        "description": "F・左スタビライザーリンク交換",
+        "amount": 18660
+      },
+      {
+        "description": "F・右スタビライザーリンク交換",
+        "amount": 18660
+      },
+      {
+        "description": "ラジエター漏れ修理",
+        "amount": 130460
+      },
+      {
+        "description": "ヘッドライト光軸調節 右LOW",
+        "amount": 1000
+      },
+      {
+        "description": "ヘッドライト光軸調節 左LOW",
+        "amount": 1000
+      },
+      {
+        "description": "ヘッドライトASSY交換 右LOW",
+        "amount": 23500
+      },
+      {
+        "description": "ヘッドライトASSY交換 左LOW",
+        "amount": 23500
+      },
+      {
+        "description": "サンフレア(非常信号用具)交換",
+        "amount": 800
+      },
+      {
+        "description": "エンジンオイル漏れ洗浄 大",
+        "amount": 3000
+      },
+      {
+        "description": "ステーショナリーオイルシール交換",
+        "amount": 64000
+      },
+      {
+        "description": "R左ラテラリンクブッシュ交換 (1カ所)",
+        "amount": 28310
+      },
+      {
+        "description": "R左右トーコン交換",
+        "amount": 107680
+      },
+      {
+        "description": "4輪アライメント",
+        "amount": 25000
+      },
+      {
+        "description": "ラジエーター同時交換部品",
+        "amount": 34700
+      }
+    ],
+    "mileage": 82550,
+    "shop": "GTNET埼玉店"
+  },
+  "reviewStatus": "pending"
+}

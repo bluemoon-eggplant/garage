@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2051.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2011/01/23",
+    "totalAmount": 0,
+    "items": [
+      {
+        "description": "エンジンオイル交換",
+        "amount": 0
+      },
+      {
+        "description": "エンジンオイル SM (5W-30)",
+        "amount": 0
+      }
+    ],
+    "mileage": 35966,
+    "shop": "㈱千葉マツダ 我孫子店"
+  },
+  "reviewStatus": "pending"
+}

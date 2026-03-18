@@ -1,0 +1,25 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2301.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2021/09/22",
+    "totalAmount": 13136,
+    "items": [
+      {
+        "description": "タイヤ組替 (16inc以下バランス調整含)",
+        "amount": 9680
+      },
+      {
+        "description": "廃タイヤ処理料(普通車)",
+        "amount": 1256
+      },
+      {
+        "description": "マルエム TLバルブ TR414",
+        "amount": 2200
+      }
+    ],
+    "mileage": 77700,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

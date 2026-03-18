@@ -1,0 +1,37 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0045.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2015/05/17",
+    "totalAmount": 7314,
+    "items": [
+      {
+        "description": "エンジンオイル交換 (エンジンオイル(ガソリン) (10W-30))",
+        "amount": 5314
+      },
+      {
+        "description": "セットメニュー洗車",
+        "amount": 2000
+      },
+      {
+        "description": "泡つや洗車 (月に一度がおすすめ!)",
+        "amount": null
+      },
+      {
+        "description": "室内除菌・抗菌コート",
+        "amount": null
+      },
+      {
+        "description": "室内掃除機で清掃",
+        "amount": null
+      },
+      {
+        "description": "タイヤワックス(4本)",
+        "amount": null
+      }
+    ],
+    "mileage": 55678,
+    "shop": "東京マツダ販売株式会社 五反田営業所"
+  },
+  "reviewStatus": "pending"
+}

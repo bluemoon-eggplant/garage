@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0108.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2023/02/01",
+    "totalAmount": 28380,
+    "items": [
+      {
+        "description": "GAIA SILVER BATTERY 90D23L",
+        "amount": 28380
+      },
+      {
+        "description": "バッテリー交換工賃(無料)",
+        "amount": 0
+      }
+    ],
+    "mileage": 87348,
+    "shop": "オートバックス 254朝霞店"
+  },
+  "reviewStatus": "reviewed"
+}

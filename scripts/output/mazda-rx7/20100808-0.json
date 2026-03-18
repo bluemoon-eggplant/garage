@@ -1,0 +1,33 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0004.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2010/08/08",
+    "totalAmount": 0,
+    "items": [
+      {
+        "description": "エンジンオイル SM (5W-30)",
+        "amount": 8400
+      },
+      {
+        "description": "オイル交換チケット使用",
+        "amount": -8400
+      },
+      {
+        "description": "ドレーンブラグの締付、漏れ点検",
+        "amount": 0
+      },
+      {
+        "description": "オイルパン、ロッカーカバーからのオイル漏れ点検",
+        "amount": 0
+      },
+      {
+        "description": "タイヤ空気圧調整",
+        "amount": 0
+      }
+    ],
+    "mileage": 33261,
+    "shop": "千葉マツダ 我孫子店"
+  },
+  "reviewStatus": "pending"
+}

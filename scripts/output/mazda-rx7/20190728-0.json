@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2019/07/28",
+    "totalAmount": 169992,
+    "items": [
+      {
+        "description": "左フロントフェンダー板金",
+        "amount": null
+      },
+      {
+        "description": "ショックアブソーバー交換（KYB）",
+        "amount": null
+      }
+    ],
+    "mileage": 65515,
+    "shop": "GTNET株式会社"
+  },
+  "reviewStatus": "approved"
+}

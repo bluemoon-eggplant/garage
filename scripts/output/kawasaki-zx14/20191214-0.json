@@ -1,0 +1,25 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0003.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2019/12/14",
+    "totalAmount": 4687,
+    "items": [
+      {
+        "description": "エンジンオイル交換 Power1Racing 4T 5W-40",
+        "amount": 3037
+      },
+      {
+        "description": "オイルエレメント交換工賃",
+        "amount": 1650
+      },
+      {
+        "description": "安全点検",
+        "amount": 0
+      }
+    ],
+    "mileage": 16304,
+    "shop": "株式会社2りんかんイエローハット 和光2りんかん"
+  },
+  "reviewStatus": "pending"
+}

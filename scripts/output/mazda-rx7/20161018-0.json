@@ -1,0 +1,53 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0047.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2016/10/18",
+    "totalAmount": 75000,
+    "items": [
+      {
+        "description": "211 サービスコード点検: 45",
+        "amount": null
+      },
+      {
+        "description": "211 CCNTソレノイド系統",
+        "amount": null
+      },
+      {
+        "description": "211 ソレノイドバルブ単体点検: NG",
+        "amount": null
+      },
+      {
+        "description": "211 ソレノイド・バルブ アッセンブリ 取替",
+        "amount": 39658
+      },
+      {
+        "description": "211 N3A113112 ガスケットNO. 2, INマニホールド",
+        "amount": 1123
+      },
+      {
+        "description": "211 N3F1204B0 ユニツト、バキューム",
+        "amount": 39960
+      },
+      {
+        "description": "211 N3A113655 ガスケット、スロットルボデー",
+        "amount": 1306
+      },
+      {
+        "description": "211 技術料値引 10%",
+        "amount": -3965
+      },
+      {
+        "description": "211 9950 部品代値引 5%",
+        "amount": -2119
+      },
+      {
+        "description": "211 9956 部品代値引",
+        "amount": -963
+      }
+    ],
+    "mileage": 58943,
+    "shop": "東京マツダ販売株式会社"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2010/04/10",
+    "totalAmount": 0,
+    "items": [
+      {
+        "description": "1年点検",
+        "amount": null
+      }
+    ],
+    "mileage": 29805,
+    "shop": "GTNET株式会社"
+  },
+  "reviewStatus": "approved"
+}

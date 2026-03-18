@@ -1,0 +1,125 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0013.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2024/08/04",
+    "totalAmount": 197010,
+    "items": [
+      {
+        "description": "重量税 継続",
+        "amount": 3800
+      },
+      {
+        "description": "印紙代 登録 指定",
+        "amount": 1200
+      },
+      {
+        "description": "自賠責保険 25か月",
+        "amount": 8910
+      },
+      {
+        "description": "24か月点検",
+        "amount": 28000
+      },
+      {
+        "description": "保安確認検査料",
+        "amount": 10000
+      },
+      {
+        "description": "検査書類作成料",
+        "amount": 2000
+      },
+      {
+        "description": "検査代行手数料",
+        "amount": 3000
+      },
+      {
+        "description": "1L ブレーキフルードDOT-4",
+        "amount": 11120
+      },
+      {
+        "description": "ブレーキキャリパー清掃",
+        "amount": 6000
+      },
+      {
+        "description": "ショートパーツ",
+        "amount": 2000
+      },
+      {
+        "description": "エレメント(エアフィルタ)",
+        "amount": 5670
+      },
+      {
+        "description": "シリンダアツシ (マスタ), FR",
+        "amount": 30480
+      },
+      {
+        "description": "ワツシヤ(シール), 10.1X14.5X1.5",
+        "amount": 160
+      },
+      {
+        "description": "プラグ CR9EIA9 ネジ型",
+        "amount": 18500
+      },
+      {
+        "description": "ステムベアリング交換",
+        "amount": 29900
+      },
+      {
+        "description": "BEARING-BALL,SF07A17PX1V1",
+        "amount": 4700
+      },
+      {
+        "description": "SEAL-OIL, DS35X55X4",
+        "amount": 630
+      },
+      {
+        "description": "SEAL-OIL, XMH 43 75 6.43",
+        "amount": 950
+      },
+      {
+        "description": "WASHER",
+        "amount": 120
+      },
+      {
+        "description": "カワサキS4 SG10W-40 20L ENEOS",
+        "amount": 10175
+      },
+      {
+        "description": "ガスケット、12X22X2",
+        "amount": 90
+      },
+      {
+        "description": "エレメント(オイルフィルター)",
+        "amount": 1280
+      },
+      {
+        "description": "ロングライフクーラントグリーン20",
+        "amount": 14920
+      },
+      {
+        "description": "ワツシヤ、ドレイン",
+        "amount": 90
+      },
+      {
+        "description": "キャップ アツシ (プレツシヤ)",
+        "amount": 2270
+      },
+      {
+        "description": "値引 プラグ CR9E1A9 ネジ型",
+        "amount": -5200
+      },
+      {
+        "description": "値引 ステムベアリング交換",
+        "amount": -3900
+      },
+      {
+        "description": "値引 ロングライフクーラントグリーン20",
+        "amount": -6500
+      }
+    ],
+    "mileage": 34672,
+    "shop": "カワサキ プラザ前橋"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,41 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2224.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/02/06",
+    "totalAmount": 261360,
+    "items": [
+      {
+        "description": "カーセキュリティ取付 パンテーラ Z105",
+        "amount": 158000
+      },
+      {
+        "description": "デジタル傾斜センサー",
+        "amount": 25000
+      },
+      {
+        "description": "トランクスイッチ",
+        "amount": 9000
+      },
+      {
+        "description": "ドライブレコーダー接続ケーブル J-760",
+        "amount": 1600
+      },
+      {
+        "description": "キーレスエントリーキット 純正品",
+        "amount": 27000
+      },
+      {
+        "description": "上記キーレスユニット取付費",
+        "amount": 9000
+      },
+      {
+        "description": "ドアロックソレノイドリレー",
+        "amount": 8000
+      }
+    ],
+    "mileage": null,
+    "shop": "株式会社ライジング"
+  },
+  "reviewStatus": "pending"
+}

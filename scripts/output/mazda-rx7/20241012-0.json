@@ -1,0 +1,49 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0112.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2024/10/12",
+    "totalAmount": 22128,
+    "items": [
+      {
+        "description": "ヘッド・ライト・セット脱着、ブッシュ交換左右",
+        "amount": null
+      },
+      {
+        "description": "ヘットライト、光軸点検・調整",
+        "amount": 11088
+      },
+      {
+        "description": "BR70510E1 ファスナー、ランプ",
+        "amount": 792
+      },
+      {
+        "description": "FD0151025 ファスナー、ランプ",
+        "amount": 770
+      },
+      {
+        "description": "FD0151037 スクリュー、アジヤスト",
+        "amount": 1034
+      },
+      {
+        "description": "FD0151047 スクリュー、アジヤスト",
+        "amount": 1034
+      },
+      {
+        "description": "BM8951037 スクリュー、アジヤスト",
+        "amount": 484
+      },
+      {
+        "description": "BR70510K3 ブツシュA、アジヤスト スクリュ",
+        "amount": 1482
+      },
+      {
+        "description": "997032605 バルブ、ヘッドランプ",
+        "amount": 5444
+      }
+    ],
+    "mileage": 96046,
+    "shop": "株式会社関東マツダ 群馬事業部 藤岡店"
+  },
+  "reviewStatus": "pending"
+}

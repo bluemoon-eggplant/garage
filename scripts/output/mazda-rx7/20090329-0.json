@@ -1,0 +1,233 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0000.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2009/03/29",
+    "totalAmount": 1141778,
+    "items": [
+      {
+        "description": "FバンパーASSY",
+        "amount": 30000
+      },
+      {
+        "description": "フードパネル",
+        "amount": 27600
+      },
+      {
+        "description": "フェンダーパネル RH",
+        "amount": 11400
+      },
+      {
+        "description": "フェンダーパネル LH",
+        "amount": 11400
+      },
+      {
+        "description": "ラジエーター",
+        "amount": 30000
+      },
+      {
+        "description": "クーラーコンデンサー",
+        "amount": 14000
+      },
+      {
+        "description": "ヘットランプベゼル RH",
+        "amount": 6440
+      },
+      {
+        "description": "ヘットライトベゼル LH",
+        "amount": 6440
+      },
+      {
+        "description": "ヘットランプブラケット RH",
+        "amount": 21300
+      },
+      {
+        "description": "F/バンパーエンブレム",
+        "amount": 1250
+      },
+      {
+        "description": "F/ホイルエプロンパネル RH",
+        "amount": 6230
+      },
+      {
+        "description": "シュラウドパネル",
+        "amount": 12500
+      },
+      {
+        "description": "パワーステアリングベルト",
+        "amount": 4180
+      },
+      {
+        "description": "F/ホイールエプロンパネルLH",
+        "amount": 6230
+      },
+      {
+        "description": "メンバー クロス",
+        "amount": 3200
+      },
+      {
+        "description": "ボンネットロック",
+        "amount": 7230
+      },
+      {
+        "description": "ボンネットロックステー",
+        "amount": 1250
+      },
+      {
+        "description": "ラジエター カウリング",
+        "amount": 7710
+      },
+      {
+        "description": "ブラケット スタビライザー",
+        "amount": 4820
+      },
+      {
+        "description": "ブラケット スタビライザー",
+        "amount": 4820
+      },
+      {
+        "description": "ブラケット ホーン",
+        "amount": 740
+      },
+      {
+        "description": "ホーン ロートーン",
+        "amount": 2330
+      },
+      {
+        "description": "プーリーベーンポンプ",
+        "amount": 5260
+      },
+      {
+        "description": "ファスナーランプ",
+        "amount": 130
+      },
+      {
+        "description": "ヘッドランプリッド RH",
+        "amount": 7320
+      },
+      {
+        "description": "ヘットランプリッド LH",
+        "amount": 7320
+      },
+      {
+        "description": "ラジエターアッパーホース",
+        "amount": 2810
+      },
+      {
+        "description": "ラジエターロアホース",
+        "amount": 1780
+      },
+      {
+        "description": "ダクト インタークーラー エアー",
+        "amount": 7500
+      },
+      {
+        "description": "パイプ リターン",
+        "amount": 13900
+      },
+      {
+        "description": "ホーン ハイトーン",
+        "amount": 3280
+      },
+      {
+        "description": "F/ホイールエプロンパネル RH",
+        "amount": 3810
+      },
+      {
+        "description": "F/ホイールエプロンパネル LH",
+        "amount": 3810
+      },
+      {
+        "description": "F/バンパーリンホースメント",
+        "amount": 52000
+      },
+      {
+        "description": "クーラーパイプ",
+        "amount": 2240
+      },
+      {
+        "description": "クーラーパイプ",
+        "amount": 2240
+      },
+      {
+        "description": "ナンバー代",
+        "amount": 780
+      },
+      {
+        "description": "リキッドタンク",
+        "amount": 5900
+      },
+      {
+        "description": "クリーナーエアー",
+        "amount": 38000
+      },
+      {
+        "description": "ブラケット インタークーラー",
+        "amount": 1710
+      },
+      {
+        "description": "バッテリー",
+        "amount": 22000
+      },
+      {
+        "description": "F M-3",
+        "amount": 3720
+      },
+      {
+        "description": "LLC",
+        "amount": 6300
+      },
+      {
+        "description": "HFC134",
+        "amount": 2520
+      },
+      {
+        "description": "H/Lユニット",
+        "amount": 20600
+      },
+      {
+        "description": "板金代",
+        "amount": 424056
+      },
+      {
+        "description": "タイヤ交換工賃（WANLI）",
+        "amount": 10000
+      },
+      {
+        "description": "Fモール",
+        "amount": 6000
+      },
+      {
+        "description": "ドア交換",
+        "amount": 15000
+      },
+      {
+        "description": "Fウィンドガラス交換工賃",
+        "amount": 26000
+      },
+      {
+        "description": "ステップ板金",
+        "amount": 45000
+      },
+      {
+        "description": "パワステリザーバーホース",
+        "amount": 2000
+      },
+      {
+        "description": "24ヶ月点検",
+        "amount": 24572
+      },
+      {
+        "description": "交換工賃",
+        "amount": 2000
+      },
+      {
+        "description": "分割手数料",
+        "amount": 101659
+      }
+    ],
+    "mileage": 19100,
+    "shop": "GTNET 埼玉"
+  },
+  "reviewStatus": "pending"
+}

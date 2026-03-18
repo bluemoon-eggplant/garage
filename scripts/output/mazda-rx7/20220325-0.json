@@ -1,0 +1,29 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0105.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/03/25",
+    "totalAmount": 16478,
+    "items": [
+      {
+        "description": "マツダセーフティーチェック (標準コース)",
+        "amount": 7480
+      },
+      {
+        "description": "スパークプラグ清掃・交換",
+        "amount": 220
+      },
+      {
+        "description": "プラグ、スパーク (N34218110)",
+        "amount": 3234
+      },
+      {
+        "description": "プラグ、スパーク (N3A218110)",
+        "amount": 5544
+      }
+    ],
+    "mileage": 80664,
+    "shop": "株式会社関東マツグ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0004.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2020/10/22",
+    "totalAmount": 20900,
+    "items": [
+      {
+        "description": "ホウレイ12カゲツテンケン",
+        "amount": 20900
+      }
+    ],
+    "mileage": 20055,
+    "shop": "株式会社2りんかんイエローバット 和光2りんかん"
+  },
+  "reviewStatus": "pending"
+}

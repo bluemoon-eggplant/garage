@@ -1,0 +1,33 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0052.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2018/07/28",
+    "totalAmount": 68364,
+    "items": [
+      {
+        "description": "フロントキャリバー左右交換",
+        "amount": 15000
+      },
+      {
+        "description": "ブレーキオイルDOT4 18L",
+        "amount": 1300
+      },
+      {
+        "description": "中古キャリパーASSY Rh",
+        "amount": 19500
+      },
+      {
+        "description": "中古キャリパーASSY Lh",
+        "amount": 19500
+      },
+      {
+        "description": "ディクセルパット",
+        "amount": 8000
+      }
+    ],
+    "mileage": 62996,
+    "shop": "GTNET株式会社"
+  },
+  "reviewStatus": "pending"
+}

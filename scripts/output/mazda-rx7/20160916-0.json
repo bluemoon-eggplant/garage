@@ -1,0 +1,121 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0046.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2016/09/16",
+    "totalAmount": 143000,
+    "items": [
+      {
+        "description": "24ヵ月定期点検整備料(スタンダード・コース)",
+        "amount": 27108
+      },
+      {
+        "description": "エンジン・シャシー洗浄",
+        "amount": 5400
+      },
+      {
+        "description": "検査機器使用による完成検査料",
+        "amount": 1620
+      },
+      {
+        "description": "ブレーキ・テスター測定料金",
+        "amount": 1080
+      },
+      {
+        "description": "スピードメータ誤差測定料金",
+        "amount": 1620
+      },
+      {
+        "description": "サイドスリップ測定調整料金",
+        "amount": 2160
+      },
+      {
+        "description": "ヘッドライト測定調整料金",
+        "amount": 1080
+      },
+      {
+        "description": "排気ガス測定料金",
+        "amount": 1080
+      },
+      {
+        "description": "ブレーキフルード交換",
+        "amount": 3780
+      },
+      {
+        "description": "0400 ブレーキフルード BF-3",
+        "amount": 1296
+      },
+      {
+        "description": "エンジンオイル交換",
+        "amount": 5335
+      },
+      {
+        "description": "0101 エンジンオイル(ガソリン) (10W-30)",
+        "amount": 5335
+      },
+      {
+        "description": "995641400 ガスケット",
+        "amount": 86
+      },
+      {
+        "description": "オイルフィルター交換",
+        "amount": 1296
+      },
+      {
+        "description": "B6Y114302A カートリンジ、オイルフィルター",
+        "amount": 1296
+      },
+      {
+        "description": "スパークプラグ交換",
+        "amount": 10368
+      },
+      {
+        "description": "N3X518110 プラグセット、スパーク",
+        "amount": 10368
+      },
+      {
+        "description": "フロントワイパーリフィール交換",
+        "amount": 1728
+      },
+      {
+        "description": "DB0967333 ラバー、ブレードーフロント",
+        "amount": 1728
+      },
+      {
+        "description": "004067333 ラバー、ブレードーフロント",
+        "amount": 864
+      },
+      {
+        "description": "ミッションオイル交換",
+        "amount": 1080
+      },
+      {
+        "description": "0311 76 ギヤカープ (75-90)",
+        "amount": 2700
+      },
+      {
+        "description": "9956 部品代値引",
+        "amount": -241
+      },
+      {
+        "description": "自賠責",
+        "amount": 27840
+      },
+      {
+        "description": "重量税",
+        "amount": 34200
+      },
+      {
+        "description": "印紙代",
+        "amount": 1800
+      },
+      {
+        "description": "代行料",
+        "amount": 10800
+      }
+    ],
+    "mileage": 58792,
+    "shop": "東京マツダ販売株式会社 五反田営業所"
+  },
+  "reviewStatus": "pending"
+}

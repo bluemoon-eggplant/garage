@@ -1,0 +1,17 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0004_1.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2020/07/30",
+    "totalAmount": 38742,
+    "items": [
+      {
+        "description": "フロントアッパーカウル、ミラー、左右ロアカウル、センターアンダーカウル持ち込み交換",
+        "amount": null
+      }
+    ],
+    "mileage": 17699,
+    "shop": "株式会社2りんかんイエローハット 和光2りんかん"
+  },
+  "reviewStatus": "pending"
+}

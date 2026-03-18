@@ -1,0 +1,45 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0102.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2021/03/24",
+    "totalAmount": 50336,
+    "items": [
+      {
+        "description": "マツダセーフティーチェック料金(標準コース)",
+        "amount": 7480
+      },
+      {
+        "description": "フロント・ベルト・ライン・モールディング取替",
+        "amount": 2772
+      },
+      {
+        "description": "モール(L)、ベルトライン FD01506505",
+        "amount": 11572
+      },
+      {
+        "description": "ガーニッシュ(R)、ドア F10068DJXC",
+        "amount": 1650
+      },
+      {
+        "description": "ガラス・テン・チャンネル取替",
+        "amount": 9702
+      },
+      {
+        "description": "チャンネル(R)、ガラス FD0158605E",
+        "amount": 17160
+      },
+      {
+        "description": "水洗い洗車",
+        "amount": 0
+      },
+      {
+        "description": "「お車エステ」1コインプレゼント",
+        "amount": 0
+      }
+    ],
+    "mileage": 73716,
+    "shop": "株式会社関東マツダ 埼玉事業台 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

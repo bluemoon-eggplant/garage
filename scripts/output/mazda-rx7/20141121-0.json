@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2014/11/21",
+    "totalAmount": 38680,
+    "items": [
+      {
+        "description": "タイヤ購入 DUNLOP SP SPORT MAXX 225/50R16.Z 92Y",
+        "amount": 38680
+      }
+    ],
+    "mileage": null,
+    "shop": "AUTOWAY"
+  },
+  "reviewStatus": "approved"
+}

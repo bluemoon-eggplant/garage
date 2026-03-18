@@ -1,0 +1,25 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0111.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2024/04/05",
+    "totalAmount": 0,
+    "items": [
+      {
+        "description": "パックdeメンテ マツダセーフティーチェック_ラージ[平日P]",
+        "amount": 9240
+      },
+      {
+        "description": "室内除菌・抗菌コート(ダッシュ・ハンドル廻り)",
+        "amount": 550
+      },
+      {
+        "description": "「お車エステ」1コインプレゼント",
+        "amount": -550
+      }
+    ],
+    "mileage": 94009,
+    "shop": "株式会社関東マツダ 群馬事業部 藤岡店"
+  },
+  "reviewStatus": "pending"
+}

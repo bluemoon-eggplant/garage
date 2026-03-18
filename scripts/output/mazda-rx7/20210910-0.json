@@ -1,0 +1,37 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0104.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2021/09/10",
+    "totalAmount": 26466,
+    "items": [
+      {
+        "description": "法定1年点検基本料金(標準コース)",
+        "amount": 17380
+      },
+      {
+        "description": "エンジンオイル SN02 3 ゴールデンSN 5W-30 3",
+        "amount": 4180
+      },
+      {
+        "description": "オイルフィルター B6Y114302A カートリッジ",
+        "amount": 1386
+      },
+      {
+        "description": "左リヤエアーバルブ組替 (16incバランス調整、部品代含)",
+        "amount": 2420
+      },
+      {
+        "description": "水洗い洗車",
+        "amount": 550
+      },
+      {
+        "description": "お車エステ 1コインプレゼント",
+        "amount": 550
+      }
+    ],
+    "mileage": 77462,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,41 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0110.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2023/08/31",
+    "totalAmount": 0,
+    "items": [
+      {
+        "description": "バックdeメンテ 12ヶ月点検ラージ[平日P]",
+        "amount": null
+      },
+      {
+        "description": "CP-01L04 ゴールデンSP 5W-30",
+        "amount": null
+      },
+      {
+        "description": "995641400 ガスケット",
+        "amount": null
+      },
+      {
+        "description": "B6Y114302A カートリッジ、オイルフィルター",
+        "amount": null
+      },
+      {
+        "description": "①整備代合計",
+        "amount": 18480
+      },
+      {
+        "description": "うち消費税",
+        "amount": 1680
+      },
+      {
+        "description": "②パック前受金",
+        "amount": 18480
+      }
+    ],
+    "mileage": 92188,
+    "shop": "株式会社関東マツダ 埼玉事業部"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,61 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2052.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2012/03/16",
+    "totalAmount": 2000,
+    "items": [
+      {
+        "description": "エンジンオイル交換 (オイルチケット会員)",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル SM (5W-30)",
+        "amount": null
+      },
+      {
+        "description": "◇オイル交換チケット 2枚月使用",
+        "amount": null
+      },
+      {
+        "description": "チケットNO.045241",
+        "amount": null
+      },
+      {
+        "description": "オイルチケットレス",
+        "amount": null
+      },
+      {
+        "description": "ドレーングラグの締付、漏れ点検",
+        "amount": null
+      },
+      {
+        "description": "オイルパン、ロッカーカバーからのオイル漏れ点検",
+        "amount": null
+      },
+      {
+        "description": "タイヤ空気圧調整 2.2K",
+        "amount": null
+      },
+      {
+        "description": "バッテリーテスト結果は正常でした",
+        "amount": null
+      },
+      {
+        "description": "★☆★ マツダ お車エステ ★☆★",
+        "amount": null
+      },
+      {
+        "description": "簡易ボディーコーティング",
+        "amount": 1000
+      },
+      {
+        "description": "車内清掃",
+        "amount": 1000
+      }
+    ],
+    "mileage": 41077,
+    "shop": "Mazda 我孫子店"
+  },
+  "reviewStatus": "pending"
+}

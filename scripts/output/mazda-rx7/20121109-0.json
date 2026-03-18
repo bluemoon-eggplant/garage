@@ -1,0 +1,53 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0041.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2012/11/09",
+    "totalAmount": 215630,
+    "items": [
+      {
+        "description": "319 右フロントドアベル販",
+        "amount": 14701
+      },
+      {
+        "description": "311 F146580208 ボデー(R)、フロントドアー",
+        "amount": 74865
+      },
+      {
+        "description": "311 FD0150640E モール(R)、ベルトライン",
+        "amount": 7830
+      },
+      {
+        "description": "311 FD0158760E ウエザーストリップ(R)、ドア",
+        "amount": 8778
+      },
+      {
+        "description": "311 F13258861 スクリーン(R)、フロントドア",
+        "amount": 315
+      },
+      {
+        "description": "319 右リヤフェンダード鈑金",
+        "amount": 37695
+      },
+      {
+        "description": "319 ホイールアライメント測定",
+        "amount": 71616
+      },
+      {
+        "description": "319 塗装一式",
+        "amount": 7384
+      },
+      {
+        "description": "319 塗料",
+        "amount": 1575
+      },
+      {
+        "description": "311 9950 部品代値引 10%",
+        "amount": -9184
+      }
+    ],
+    "mileage": 43890,
+    "shop": "東京マツダ販売株式会社 五反田営業所"
+  },
+  "reviewStatus": "pending"
+}

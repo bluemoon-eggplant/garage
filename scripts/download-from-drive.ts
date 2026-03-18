@@ -37,6 +37,7 @@ const VALID_CATEGORIES = [
 
 const SCRIPTS_DIR = path.dirname(new URL(import.meta.url).pathname);
 const INPUT_DIR = path.join(SCRIPTS_DIR, 'input');
+const MANIFEST_PATH = path.join(INPUT_DIR, '.downloaded-ids.json');
 
 // --- Main ---
 
@@ -78,6 +79,9 @@ async function main() {
   // Ensure input directory exists
   fs.mkdirSync(INPUT_DIR, { recursive: true });
 
+  // Load manifest of previously downloaded file IDs
+  const downloadedIds = loadManifest();
+
   // List category subfolders in Drive
   console.log('Driveフォルダを読み込み中...');
   const categoryFolders = await listFolders(drive, folderId);
@@ -114,18 +118,21 @@ async function main() {
     }
 
     for (const file of pdfFiles) {
-      const localPath = path.join(localDir, file.name!);
-
-      // Skip if already downloaded
-      if (fs.existsSync(localPath)) {
+      // Skip if this Drive file ID was already downloaded
+      if (downloadedIds.has(file.id!)) {
         console.log(`  ✓ ${file.name} (ダウンロード済み)`);
         totalSkipped++;
         continue;
       }
 
+      // Resolve local path, adding suffix if name already exists
+      const localPath = resolveUniquePath(localDir, file.name!);
+      const localName = path.basename(localPath);
+
       // Download
-      console.log(`  ↓ ${file.name} ...`);
+      console.log(`  ↓ ${localName} ...`);
       await downloadFile(drive, file.id!, localPath);
+      downloadedIds.add(file.id!);
       totalDownloaded++;
     }
   }
@@ -133,6 +140,9 @@ async function main() {
   console.log(`\n--- 完了 ---`);
   console.log(`ダウンロード: ${totalDownloaded}件 / スキップ: ${totalSkipped}件`);
   console.log(`出力先: ${INPUT_DIR}`);
+
+  // Save manifest
+  saveManifest(downloadedIds);
 
   if (totalDownloaded > 0) {
     console.log('\n次のステップ: yarn extract-receipts');
@@ -168,6 +178,33 @@ async function listPDFs(
     orderBy: 'name',
   });
   return (res.data.files || []) as DriveFile[];
+}
+
+function loadManifest(): Set<string> {
+  try {
+    const data = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf-8')) as string[];
+    return new Set(data);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveManifest(ids: Set<string>): void {
+  fs.writeFileSync(MANIFEST_PATH, JSON.stringify([...ids], null, 2), 'utf-8');
+}
+
+function resolveUniquePath(dir: string, filename: string): string {
+  let candidate = path.join(dir, filename);
+  if (!fs.existsSync(candidate)) return candidate;
+
+  const ext = path.extname(filename);
+  const base = path.basename(filename, ext);
+  let suffix = 1;
+  while (fs.existsSync(candidate)) {
+    candidate = path.join(dir, `${base}_${suffix}${ext}`);
+    suffix++;
+  }
+  return candidate;
 }
 
 async function downloadFile(

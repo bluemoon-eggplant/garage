@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0106.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/08/22",
+    "totalAmount": 46816,
+    "items": [
+      {
+        "description": "オーディオ・デッキ取替",
+        "amount": 4158
+      },
+      {
+        "description": "CDチェンジャー修理",
+        "amount": 42658
+      }
+    ],
+    "mileage": 82550,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

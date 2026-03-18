@@ -1,0 +1,29 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0056.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2020/04/11",
+    "totalAmount": 174372,
+    "items": [
+      {
+        "description": "トーコンロッド左右交換",
+        "amount": 6000
+      },
+      {
+        "description": "リンク、コートン",
+        "amount": 66320
+      },
+      {
+        "description": "アライメント代",
+        "amount": 18000
+      },
+      {
+        "description": "右ドア板金修理一式",
+        "amount": 68200
+      }
+    ],
+    "mileage": 62996,
+    "shop": "GTNET埼玉"
+  },
+  "reviewStatus": "pending"
+}

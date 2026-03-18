@@ -1,0 +1,49 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0058.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2020/04/24",
+    "totalAmount": 15577,
+    "items": [
+      {
+        "description": "マツダセーフティーチェック料金(標準コース)",
+        "amount": 7480
+      },
+      {
+        "description": "エジンルーム点検 室内点検",
+        "amount": null
+      },
+      {
+        "description": "排出ガス点検 外廻り点検",
+        "amount": null
+      },
+      {
+        "description": "詳しくはセーファィーチェックレコードをご覧ください",
+        "amount": null
+      },
+      {
+        "description": "日常点検代行 【サービス】",
+        "amount": null
+      },
+      {
+        "description": "**************",
+        "amount": null
+      },
+      {
+        "description": "カストローMMagnatecプロフェッショナル 5W-40 オイル交換",
+        "amount": null
+      },
+      {
+        "description": "カストロールMAGNATECプロフェショナル 5W",
+        "amount": 8004
+      },
+      {
+        "description": "ガスケット",
+        "amount": 93
+      }
+    ],
+    "mileage": 68265,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

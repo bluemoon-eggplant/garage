@@ -1,0 +1,29 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0006.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2021/07/22",
+    "totalAmount": 39824,
+    "items": [
+      {
+        "description": "カワサキ法定12か月点検",
+        "amount": 18000
+      },
+      {
+        "description": "カワサキS4 SG10W-40 200L JXTG",
+        "amount": 8360
+      },
+      {
+        "description": "パツドアツシ(ブレーキ)",
+        "amount": 8184
+      },
+      {
+        "description": "FBK デザインT(ニンジャ)",
+        "amount": 5280
+      }
+    ],
+    "mileage": 22817,
+    "shop": "カワサキ プラザ東京練馬"
+  },
+  "reviewStatus": "pending"
+}

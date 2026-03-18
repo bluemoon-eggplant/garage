@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2009/10/19",
+    "totalAmount": 49350,
+    "items": [
+      {
+        "description": "フロントガラス交換",
+        "amount": null
+      },
+      {
+        "description": "左ドア交換",
+        "amount": null
+      }
+    ],
+    "mileage": null,
+    "shop": "GTNET株式会社"
+  },
+  "reviewStatus": "approved"
+}

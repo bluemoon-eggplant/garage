@@ -1,0 +1,125 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0002.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2019/06/10",
+    "totalAmount": 1070000,
+    "items": [
+      {
+        "description": "車両本体価格",
+        "amount": 786112
+      },
+      {
+        "description": "排ガス検査",
+        "amount": 30000
+      },
+      {
+        "description": "お値引き",
+        "amount": 0
+      },
+      {
+        "description": "ETC BE-51 (部品)",
+        "amount": 16800
+      },
+      {
+        "description": "ETC SetUP (工賃)",
+        "amount": 21217
+      },
+      {
+        "description": "助成金",
+        "amount": -9260
+      },
+      {
+        "description": "USB",
+        "amount": 1900
+      },
+      {
+        "description": "ロードスマート目",
+        "amount": 19500
+      },
+      {
+        "description": "ソックスロードサービス",
+        "amount": 0
+      },
+      {
+        "description": "バイク延長保証",
+        "amount": 0
+      },
+      {
+        "description": "防犯登録",
+        "amount": 0
+      },
+      {
+        "description": "登録費用",
+        "amount": 28000
+      },
+      {
+        "description": "販売証明書",
+        "amount": 0
+      },
+      {
+        "description": "納車整備料",
+        "amount": 32000
+      },
+      {
+        "description": "持込検査料",
+        "amount": 15000
+      },
+      {
+        "description": "配送料",
+        "amount": 0
+      },
+      {
+        "description": "開梱手数料",
+        "amount": 10000
+      },
+      {
+        "description": "自賠責変更手数料",
+        "amount": 0
+      },
+      {
+        "description": "未経過自賠責保険料相当額",
+        "amount": 0
+      },
+      {
+        "description": "下取手数料",
+        "amount": 0
+      },
+      {
+        "description": "ローン取扱手数料",
+        "amount": 18000
+      },
+      {
+        "description": "消費税",
+        "amount": 77541
+      },
+      {
+        "description": "自賠責保険料 (37ヶ月)",
+        "amount": 14950
+      },
+      {
+        "description": "重量税",
+        "amount": 5700
+      },
+      {
+        "description": "印紙代",
+        "amount": 2000
+      },
+      {
+        "description": "ナンバー代",
+        "amount": 540
+      },
+      {
+        "description": "盗難保険",
+        "amount": 0
+      },
+      {
+        "description": "クレジット残一括代金",
+        "amount": 0
+      }
+    ],
+    "mileage": 12921,
+    "shop": "SOX柏沼南店"
+  },
+  "reviewStatus": "pending"
+}

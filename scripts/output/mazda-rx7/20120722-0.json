@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0006.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2012/07/22",
+    "totalAmount": 14325,
+    "items": [
+      {
+        "description": "シンコウベ KAバツテリー 55D23L",
+        "amount": 13800
+      },
+      {
+        "description": "パツテリー コウカンコウチン",
+        "amount": 525
+      }
+    ],
+    "mileage": 43287,
+    "shop": "オートバックス 三島店"
+  },
+  "reviewStatus": "pending"
+}

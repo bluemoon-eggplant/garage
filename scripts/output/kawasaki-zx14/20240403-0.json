@@ -1,0 +1,17 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0012.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2024/04/03",
+    "totalAmount": 12100,
+    "items": [
+      {
+        "description": "6ヶ月点検",
+        "amount": 12100
+      }
+    ],
+    "mileage": 34259,
+    "shop": "カワサキ プラザ前橋"
+  },
+  "reviewStatus": "pending"
+}

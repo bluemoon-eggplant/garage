@@ -1,0 +1,25 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2101.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/07/14",
+    "totalAmount": 15719,
+    "items": [
+      {
+        "description": "B. B ROTARY-1 (4L)",
+        "amount": 13640
+      },
+      {
+        "description": "ガスケット",
+        "amount": 99
+      },
+      {
+        "description": "タワーバー取付",
+        "amount": 1980
+      }
+    ],
+    "mileage": 82098,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

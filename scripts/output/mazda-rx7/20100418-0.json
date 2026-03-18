@@ -1,0 +1,29 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2044.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2010/04/18",
+    "totalAmount": 25904,
+    "items": [
+      {
+        "description": "エンジンオイル交換チケット",
+        "amount": 5250
+      },
+      {
+        "description": "エンジンオイル・オイルフィルター交換",
+        "amount": 2730
+      },
+      {
+        "description": "スパークプラグ取替",
+        "amount": 17924
+      },
+      {
+        "description": "タイヤ空気圧点検、調整",
+        "amount": null
+      }
+    ],
+    "mileage": 30056,
+    "shop": "千葉マツダ 我孫子店"
+  },
+  "reviewStatus": "pending"
+}

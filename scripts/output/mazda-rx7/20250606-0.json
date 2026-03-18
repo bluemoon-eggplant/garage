@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2106.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2025/06/06",
+    "totalAmount": 50930,
+    "items": [
+      {
+        "description": "*ステアリング張替 (マツダRX7)",
+        "amount": 45000
+      },
+      {
+        "description": "返送料",
+        "amount": 1300
+      }
+    ],
+    "mileage": null,
+    "shop": "(株)ロブソンマチュリティ"
+  },
+  "reviewStatus": "pending"
+}
