@@ -1,0 +1,121 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2237_1.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2022/04/02",
+    "totalAmount": 655200,
+    "items": [
+      {
+        "description": "12ヵ月点検 工賃",
+        "amount": 33000
+      },
+      {
+        "description": "クラッチマスターシリンダーO/Hキット",
+        "amount": 2000
+      },
+      {
+        "description": "クラッチマスターシリンダーO/Hキット 交換工賃",
+        "amount": 25000
+      },
+      {
+        "description": "クラッチマスターフルード",
+        "amount": 3600
+      },
+      {
+        "description": "クラッチマスターフルード 交換・エア抜き工賃",
+        "amount": 11000
+      },
+      {
+        "description": "クラッチレリーズベアリング&シリンダー",
+        "amount": 35000
+      },
+      {
+        "description": "クラッチカバー・ディスクセット",
+        "amount": 65000
+      },
+      {
+        "description": "クラッチカバーボルト",
+        "amount": 3300
+      },
+      {
+        "description": "エキゾーストガスケット",
+        "amount": 5700
+      },
+      {
+        "description": "エキゾーストマウント",
+        "amount": 800
+      },
+      {
+        "description": "エンジンマウント",
+        "amount": 11400
+      },
+      {
+        "description": "フライホイール",
+        "amount": 133000
+      },
+      {
+        "description": "フライホイールボルト",
+        "amount": 2280
+      },
+      {
+        "description": "エンジン脱着工賃",
+        "amount": 145000
+      },
+      {
+        "description": "クラッチカバー・ディスク交換工賃",
+        "amount": 15000
+      },
+      {
+        "description": "フライホイール交換工賃",
+        "amount": 16000
+      },
+      {
+        "description": "ワイパーブレード",
+        "amount": 4400
+      },
+      {
+        "description": "ワイパーブレード 交換工賃",
+        "amount": 2200
+      },
+      {
+        "description": "FUELポンプガスケット",
+        "amount": 3500
+      },
+      {
+        "description": "固定リング",
+        "amount": 2300
+      },
+      {
+        "description": "FUELパイプ",
+        "amount": 7000
+      },
+      {
+        "description": "FUELポンプAssy",
+        "amount": 26020
+      },
+      {
+        "description": "FUELポンプ他 交換工賃",
+        "amount": 25000
+      },
+      {
+        "description": "右フロントアッパーボールジョイントブーツ",
+        "amount": 1200
+      },
+      {
+        "description": "右フロントアッパーボールジョイントブーツ 交換工賃",
+        "amount": 12000
+      },
+      {
+        "description": "ブレーキライトスイッチ",
+        "amount": 1700
+      },
+      {
+        "description": "ブレーキライトスイッチ 交換工賃",
+        "amount": 3300
+      }
+    ],
+    "mileage": 21492,
+    "shop": "有限会社 ブリッジウェイズ Witham Cars TOKYO"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,33 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2253.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/02/11",
+    "totalAmount": 7359,
+    "items": [
+      {
+        "description": "基本点検 整備",
+        "amount": 0
+      },
+      {
+        "description": "クーラント漏れ点検 プレッシャーテスト",
+        "amount": 0
+      },
+      {
+        "description": "電動ファンスイッチブッシュより微量のクーラント漏れあり",
+        "amount": 0
+      },
+      {
+        "description": "電動ファンスイッチブッシュ",
+        "amount": 3490
+      },
+      {
+        "description": "クーラント 入れ替え",
+        "amount": 3200
+      }
+    ],
+    "mileage": 24905,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

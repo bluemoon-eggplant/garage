@@ -1,0 +1,41 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2252_1.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/02/02",
+    "totalAmount": 24222,
+    "items": [
+      {
+        "description": "レスポ ミニ専用エンジンオイル 15W-40",
+        "amount": 9000
+      },
+      {
+        "description": "オイルエレメント",
+        "amount": 1520
+      },
+      {
+        "description": "ドレンワッシャ",
+        "amount": 200
+      },
+      {
+        "description": "オイル汚れ洗浄 パーツクリーナー",
+        "amount": 600
+      },
+      {
+        "description": "エンジンオイル、オイルエレメント 交換工賃",
+        "amount": 6000
+      },
+      {
+        "description": "トランクワイヤー",
+        "amount": 1800
+      },
+      {
+        "description": "テールレンズパッキン",
+        "amount": 2900
+      }
+    ],
+    "mileage": 14889,
+    "shop": "タートルトレーディング株式会社 所沢パーツセンター"
+  },
+  "reviewStatus": "pending"
+}

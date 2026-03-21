@@ -1,0 +1,105 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2240.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2025/01/23",
+    "totalAmount": 228770,
+    "items": [
+      {
+        "description": "車検整備代",
+        "amount": 45000
+      },
+      {
+        "description": "代行手数料",
+        "amount": 7000
+      },
+      {
+        "description": "テスター代",
+        "amount": 5000
+      },
+      {
+        "description": "下回り洗浄",
+        "amount": 5000
+      },
+      {
+        "description": "Fブレーキ点検",
+        "amount": 5000
+      },
+      {
+        "description": "Rブレーキ点検",
+        "amount": 5000
+      },
+      {
+        "description": "ブレーキオイル交換",
+        "amount": 10000
+      },
+      {
+        "description": "クラッチオイル交換",
+        "amount": 6000
+      },
+      {
+        "description": "エンジンオイル交換",
+        "amount": 7000
+      },
+      {
+        "description": "オイルフィルター交換",
+        "amount": 2000
+      },
+      {
+        "description": "クーラント交換",
+        "amount": 8000
+      },
+      {
+        "description": "ミッションオイル交換",
+        "amount": 10000
+      },
+      {
+        "description": "デフオイル交換",
+        "amount": 10000
+      },
+      {
+        "description": "スパークプラグ交換",
+        "amount": 9200
+      },
+      {
+        "description": "ステアリングラックブーツ左右交換",
+        "amount": 11500
+      },
+      {
+        "description": "マフラーマウントゴム交換",
+        "amount": 2500
+      },
+      {
+        "description": "サイドブレーキ警告灯不灯修理",
+        "amount": 10000
+      },
+      {
+        "description": "ショートパーツ",
+        "amount": 1000
+      },
+      {
+        "description": "車検時 通過用作業",
+        "amount": 10000
+      },
+      {
+        "description": "自賠責",
+        "amount": 17650
+      },
+      {
+        "description": "重量税",
+        "amount": 22800
+      },
+      {
+        "description": "印紙代",
+        "amount": 2200
+      },
+      {
+        "description": "消費税(10%)",
+        "amount": 16920
+      }
+    ],
+    "mileage": 44533,
+    "shop": "有限会社ケントスピード"
+  },
+  "reviewStatus": "pending"
+}

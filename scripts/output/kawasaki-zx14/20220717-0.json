@@ -1,0 +1,117 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0011_2.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2022/07/17",
+    "totalAmount": 77764,
+    "items": [
+      {
+        "description": "車検整備一式",
+        "amount": 26950
+      },
+      {
+        "description": "カワサキ法定24ヶ月点検",
+        "amount": 0
+      },
+      {
+        "description": "灯火類、ラジエターファン 点検",
+        "amount": 0
+      },
+      {
+        "description": "バッテリーターミナル締付 点検",
+        "amount": 0
+      },
+      {
+        "description": "ステアリングステム 点検",
+        "amount": 0
+      },
+      {
+        "description": "タイヤ亀裂、異物など 点検",
+        "amount": 0
+      },
+      {
+        "description": "タイヤ空気圧 調整",
+        "amount": 0
+      },
+      {
+        "description": "ブレーキパット残量 点検",
+        "amount": 0
+      },
+      {
+        "description": "ブレーキキャリパー清掃",
+        "amount": 0
+      },
+      {
+        "description": "フロントフォーク漏れなど 点検",
+        "amount": 0
+      },
+      {
+        "description": "F.Rホイールベアリング 点検",
+        "amount": 0
+      },
+      {
+        "description": "ドライブチェーン清掃、給油、調整",
+        "amount": 0
+      },
+      {
+        "description": "エレメント(エアフィルタ)",
+        "amount": 5590
+      },
+      {
+        "description": "カワサキS4 SG10W-40 200L JXTG",
+        "amount": 9246
+      },
+      {
+        "description": "エレメント(オイルフィルター)",
+        "amount": 1408
+      },
+      {
+        "description": "クーラント量 点検",
+        "amount": 0
+      },
+      {
+        "description": "ブレーキ、クラッチフルード 点検",
+        "amount": 0
+      },
+      {
+        "description": "レバー、ペダル、スタンド 給油",
+        "amount": 0
+      },
+      {
+        "description": "排気ガス点検",
+        "amount": 0
+      },
+      {
+        "description": "各部締め付け 点検",
+        "amount": 0
+      },
+      {
+        "description": "試乗テスト走行",
+        "amount": 0
+      },
+      {
+        "description": "車検代行手数料",
+        "amount": 17600
+      },
+      {
+        "description": "検査機器使用料",
+        "amount": 2200
+      },
+      {
+        "description": "継続検査印紙代",
+        "amount": 1700
+      },
+      {
+        "description": "重量税2年",
+        "amount": 3800
+      },
+      {
+        "description": "自賠責保険(24ヶ月)",
+        "amount": 9270
+      }
+    ],
+    "mileage": null,
+    "shop": "カワサキ プラザ東京練馬"
+  },
+  "reviewStatus": "pending"
+}

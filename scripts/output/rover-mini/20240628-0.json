@@ -1,0 +1,53 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2253_2.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/06/28",
+    "totalAmount": 78298,
+    "items": [
+      {
+        "description": "6ヶ月点検",
+        "amount": 9000
+      },
+      {
+        "description": "レスポ ミニ専用エンジンオイル 15W-40",
+        "amount": 14600
+      },
+      {
+        "description": "オイルエレメント",
+        "amount": 5980
+      },
+      {
+        "description": "ドレンワッシャ",
+        "amount": 200
+      },
+      {
+        "description": "パーツクリーナー",
+        "amount": 600
+      },
+      {
+        "description": "ACサーモアンプ不良により交換",
+        "amount": 15200
+      },
+      {
+        "description": "フロントガラス 内側、外側シーリング",
+        "amount": 6800
+      },
+      {
+        "description": "フロントガラス メッキモール",
+        "amount": 7800
+      },
+      {
+        "description": "リアガラス 外側 シーリング",
+        "amount": 3500
+      },
+      {
+        "description": "リアガラス メッキモール",
+        "amount": 7500
+      }
+    ],
+    "mileage": 19784,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

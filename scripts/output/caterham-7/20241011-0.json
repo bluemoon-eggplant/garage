@@ -1,0 +1,25 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2240_1.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2024/10/11",
+    "totalAmount": 13200,
+    "items": [
+      {
+        "description": "ラジエターパイプバンド修理",
+        "amount": 12000
+      },
+      {
+        "description": "パイプクランプ取付",
+        "amount": null
+      },
+      {
+        "description": "オフセットステー製作",
+        "amount": null
+      }
+    ],
+    "mileage": 43210,
+    "shop": "有限会社ケントスピード"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,41 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2241.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2026/01/19",
+    "totalAmount": 39600,
+    "items": [
+      {
+        "description": "12ヶ月点検整備",
+        "amount": 15000
+      },
+      {
+        "description": "エンジンオイル交換",
+        "amount": 8000
+      },
+      {
+        "description": "オイルフィルター交換",
+        "amount": 2200
+      },
+      {
+        "description": "リザーブタンクホース部漏れ点検",
+        "amount": null
+      },
+      {
+        "description": "ホースバンド位置調整 増し締め",
+        "amount": null
+      },
+      {
+        "description": "テスト後漏れなし",
+        "amount": null
+      },
+      {
+        "description": "ホイールセンターキャップ",
+        "amount": 10800
+      }
+    ],
+    "mileage": 47585,
+    "shop": "有限会社ケントスピード"
+  },
+  "reviewStatus": "pending"
+}

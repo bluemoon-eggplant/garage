@@ -1,0 +1,69 @@
+{
+  "source": "input/eunos-roadstar/スキャン_20260321-2259.pdf",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2025/04/18",
+    "totalAmount": 6380,
+    "items": [
+      {
+        "description": "マツダセーフティーチェック (標準コース)",
+        "amount": null
+      },
+      {
+        "description": "オイル漏れ確認",
+        "amount": null
+      },
+      {
+        "description": "*マツダセーフティーチェック料金(標準コース)",
+        "amount": 6380
+      },
+      {
+        "description": "エンジンルーム点検 室内点検",
+        "amount": null
+      },
+      {
+        "description": "排出ガス点検 外廻り点検",
+        "amount": null
+      },
+      {
+        "description": "日常点検代行 【サービス】",
+        "amount": null
+      },
+      {
+        "description": "点検結果に基づく整備《付帯作業》",
+        "amount": null
+      },
+      {
+        "description": "タイヤ空気圧調整 (2.0 Kg/cm²)",
+        "amount": null
+      },
+      {
+        "description": "バッテリ液補充",
+        "amount": null
+      },
+      {
+        "description": "ウォッシャー液補充",
+        "amount": null
+      },
+      {
+        "description": "トランスミッションオイル漏れ診断",
+        "amount": null
+      },
+      {
+        "description": "P/Sギヤボックスオイル漏れ診断",
+        "amount": null
+      },
+      {
+        "description": "ベルトひび割れ診断",
+        "amount": null
+      },
+      {
+        "description": "バッテリー劣化診断",
+        "amount": null
+      }
+    ],
+    "mileage": 289600,
+    "shop": "株式会社関東マツダ 埼玉事業部 本庄店"
+  },
+  "reviewStatus": "pending"
+}

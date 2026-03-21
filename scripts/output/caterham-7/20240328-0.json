@@ -1,0 +1,105 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2239.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2024/03/28",
+    "totalAmount": 123640,
+    "items": [
+      {
+        "description": "12ヵ月点検",
+        "amount": 33000
+      },
+      {
+        "description": "エンジン点検・電気機器",
+        "amount": null
+      },
+      {
+        "description": "オイル類",
+        "amount": null
+      },
+      {
+        "description": "ベルト類",
+        "amount": null
+      },
+      {
+        "description": "下回り・マウント類",
+        "amount": null
+      },
+      {
+        "description": "ブレーキ関係",
+        "amount": null
+      },
+      {
+        "description": "ステアリング装置",
+        "amount": null
+      },
+      {
+        "description": "動力伝達装置",
+        "amount": null
+      },
+      {
+        "description": "冷却関係",
+        "amount": null
+      },
+      {
+        "description": "エアエレメント",
+        "amount": null
+      },
+      {
+        "description": "灯火・保安装置",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル交換 WAKO'S PROSTAGE-S",
+        "amount": 9600
+      },
+      {
+        "description": "上記部品交換工賃",
+        "amount": 2800
+      },
+      {
+        "description": "前後ブレーキパッド経年劣化の為、交換致しました。",
+        "amount": null
+      },
+      {
+        "description": "フロントブレーキパッド 30B031A",
+        "amount": 30000
+      },
+      {
+        "description": "上記部品交換工賃",
+        "amount": 11000
+      },
+      {
+        "description": "リアブレーキパッド 30B013A-PG",
+        "amount": 11000
+      },
+      {
+        "description": "上記部品交換工賃",
+        "amount": 15000
+      },
+      {
+        "description": "タイヤホイール脱着",
+        "amount": null
+      },
+      {
+        "description": "ブレーキパッド脱着・交換",
+        "amount": null
+      },
+      {
+        "description": "※B/Kフルード汚れが確認出来ますので、次回整備の際に交換をお勧め致します。",
+        "amount": null
+      },
+      {
+        "description": "※サイドブレーキスイッチ不灯 スイッチ本体不良と思われます。次回整備の際に確認致します。",
+        "amount": null
+      },
+      {
+        "description": "※ステアリングラックブーツ劣化有り。次回整備の際に交換をお勧め致します。",
+        "amount": null
+      }
+    ],
+    "mileage": 41436,
+    "shop": "有限会社 ブリッジウェイズ"
+  },
+  "reviewStatus": "pending"
+}

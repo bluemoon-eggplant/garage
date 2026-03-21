@@ -1,0 +1,41 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2233.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2021/05/06",
+    "totalAmount": 130570,
+    "items": [
+      {
+        "description": "エンジンオイル WAKO'S Triple-R 10W-40",
+        "amount": 10400
+      },
+      {
+        "description": "エンジンオイル交換工賃",
+        "amount": 2800
+      },
+      {
+        "description": "ハーフフード easy in zip 30V103A",
+        "amount": 82500
+      },
+      {
+        "description": "ハーフフード取付工賃",
+        "amount": 7000
+      },
+      {
+        "description": "ホーンブラケット(High/Low)",
+        "amount": 5000
+      },
+      {
+        "description": "ホーンブラケット交換工賃",
+        "amount": 5500
+      },
+      {
+        "description": "スピードメーターセンサー調整",
+        "amount": 5500
+      }
+    ],
+    "mileage": 13420,
+    "shop": "Witham Cars"
+  },
+  "reviewStatus": "pending"
+}

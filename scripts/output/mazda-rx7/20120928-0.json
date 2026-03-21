@@ -1,0 +1,77 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0041_2.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2012/09/28",
+    "totalAmount": 48000,
+    "items": [
+      {
+        "description": "12ヵ月定期点検整備料(セイフティー・コース)",
+        "amount": 19950
+      },
+      {
+        "description": "(日常点検項目を含む)",
+        "amount": null
+      },
+      {
+        "description": "・エンジン・ルーム点検",
+        "amount": null
+      },
+      {
+        "description": "・室内点検",
+        "amount": null
+      },
+      {
+        "description": "・足廻り点検",
+        "amount": null
+      },
+      {
+        "description": "・下廻り点検",
+        "amount": null
+      },
+      {
+        "description": "タイヤローテーション",
+        "amount": null
+      },
+      {
+        "description": "サイドブレーキ引き代調整",
+        "amount": null
+      },
+      {
+        "description": "[詳細は、整備記録簿を参照ください]",
+        "amount": null
+      },
+      {
+        "description": "ブレーキフルード交換",
+        "amount": 3675
+      },
+      {
+        "description": "0400 ブレーキフルード BF-3",
+        "amount": 1260
+      },
+      {
+        "description": "フロント左ワパーブレード交換",
+        "amount": null
+      },
+      {
+        "description": "D06167330A ブレード(R)、ワイパーフロント",
+        "amount": 1995
+      },
+      {
+        "description": "パワー・ウインド・スイッチ取替",
+        "amount": 1607
+      },
+      {
+        "description": "F10066350C スイツチ、パワーウインド",
+        "amount": 19740
+      },
+      {
+        "description": "9956 部品代値引",
+        "amount": -227
+      }
+    ],
+    "mileage": 43717,
+    "shop": "東京マツダ販売株式会社 五反田営業所"
+  },
+  "reviewStatus": "pending"
+}

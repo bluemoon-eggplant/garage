@@ -1,0 +1,41 @@
+{
+  "source": "input/yamaha-renaissa/スキャン_20260321-2257_1.pdf",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "1994/09/20",
+    "totalAmount": 9900,
+    "items": [
+      {
+        "description": "12ヶ月点検",
+        "amount": 9000
+      },
+      {
+        "description": "プラグ(くすぶりあり)",
+        "amount": null
+      },
+      {
+        "description": "エマークリーナ",
+        "amount": null
+      },
+      {
+        "description": "各音や(チキャリパーボルト不良)",
+        "amount": null
+      },
+      {
+        "description": "チェーングリス",
+        "amount": null
+      },
+      {
+        "description": "Fブレーキ遊び",
+        "amount": null
+      },
+      {
+        "description": "メーターケーブル",
+        "amount": null
+      }
+    ],
+    "mileage": 30552,
+    "shop": "YSP 熊谷"
+  },
+  "reviewStatus": "pending"
+}

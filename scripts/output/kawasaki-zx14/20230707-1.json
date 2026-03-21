@@ -1,0 +1,89 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0012_1_1.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2023/07/07",
+    "totalAmount": 38610,
+    "items": [
+      {
+        "description": "カワサキ法定12か月点検",
+        "amount": 24750
+      },
+      {
+        "description": "灯火類、ラジエターファン 点検",
+        "amount": 0
+      },
+      {
+        "description": "バッテリーターミナル締付 電圧点検",
+        "amount": 0
+      },
+      {
+        "description": "ステアリングステム 点検",
+        "amount": 0
+      },
+      {
+        "description": "タイヤ亀裂、異物など 点検",
+        "amount": 0
+      },
+      {
+        "description": "タイヤ空気圧調整",
+        "amount": 0
+      },
+      {
+        "description": "ブレーキパット残量点検",
+        "amount": 0
+      },
+      {
+        "description": "フロントフォーク漏れなど 点検",
+        "amount": 0
+      },
+      {
+        "description": "F. Rホイールベアリング 点検",
+        "amount": 0
+      },
+      {
+        "description": "ドライブチェーン清掃、給油、調整",
+        "amount": 0
+      },
+      {
+        "description": "エアーエレメント 点検",
+        "amount": 0
+      },
+      {
+        "description": "エンジンオイル量 点検",
+        "amount": 0
+      },
+      {
+        "description": "クーラント量 点検",
+        "amount": 0
+      },
+      {
+        "description": "ブレーキ、クラッチフルード 点検",
+        "amount": 0
+      },
+      {
+        "description": "レバー、ペダル、スタンド 給油",
+        "amount": 0
+      },
+      {
+        "description": "排気ガス点検",
+        "amount": 0
+      },
+      {
+        "description": "各部締め付け 点検",
+        "amount": 0
+      },
+      {
+        "description": "カワサキS4 SG10W-40 20L ENEOS",
+        "amount": 8778
+      },
+      {
+        "description": "1L ブレーキフルードDOT-4",
+        "amount": 5082
+      }
+    ],
+    "mileage": 31725,
+    "shop": "カワサキ プラザ東京練馬"
+  },
+  "reviewStatus": "pending"
+}

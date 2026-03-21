@@ -1,0 +1,29 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2240_2.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2024/09/19",
+    "totalAmount": 11000,
+    "items": [
+      {
+        "description": "6か月点検整備",
+        "amount": 10000
+      },
+      {
+        "description": "バッテリー弱い",
+        "amount": null
+      },
+      {
+        "description": "アッパーホースブラケット折れ",
+        "amount": null
+      },
+      {
+        "description": "ラックブーツ ヒビ",
+        "amount": null
+      }
+    ],
+    "mileage": 42810,
+    "shop": "有限会社ケントスピード"
+  },
+  "reviewStatus": "pending"
+}

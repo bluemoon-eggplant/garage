@@ -1,0 +1,21 @@
+{
+  "source": "input/yamaha-renaissa/スキャン_20260321-2256_1.pdf",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/07/27",
+    "totalAmount": 2500,
+    "items": [
+      {
+        "description": "コウシンオイル エレメ2 コウチン",
+        "amount": 900
+      },
+      {
+        "description": "スルーた取りル キャンプー",
+        "amount": 1600
+      }
+    ],
+    "mileage": 41790,
+    "shop": "株式会社2りんかんイエローハット 藤岡2りんかん"
+  },
+  "reviewStatus": "pending"
+}

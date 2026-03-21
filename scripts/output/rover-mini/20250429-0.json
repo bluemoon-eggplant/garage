@@ -1,0 +1,65 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2254_2.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/04/29",
+    "totalAmount": 125719,
+    "items": [
+      {
+        "description": "基本点検",
+        "amount": 0
+      },
+      {
+        "description": "次回の車検時 整備として",
+        "amount": 0
+      },
+      {
+        "description": "左右 タイロッドシャフトのガタがあり",
+        "amount": 35500
+      },
+      {
+        "description": "フロント トー調整 ステアリングセンター合わせ",
+        "amount": 6000
+      },
+      {
+        "description": "右側 ドライブシャフトアウターブーツ劣化あり",
+        "amount": 24990
+      },
+      {
+        "description": "テンションロッド 劣化あり エポンバー強化タイプ",
+        "amount": 17500
+      },
+      {
+        "description": "ボルトナット",
+        "amount": 2400
+      },
+      {
+        "description": "基本点検",
+        "amount": 0
+      },
+      {
+        "description": "12ヶ月点検",
+        "amount": 18000
+      },
+      {
+        "description": "ライセンスランプ 球切れ",
+        "amount": 1220
+      },
+      {
+        "description": "レスポ エンジンオイル 1.5リットル補充 (オイル漏れなし 燃焼している)",
+        "amount": 3480
+      },
+      {
+        "description": "ギアボックス ブラケット割れ",
+        "amount": 5200
+      },
+      {
+        "description": "クラッチ系統 プランジャー周辺へ給油",
+        "amount": 0
+      }
+    ],
+    "mileage": 25841,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

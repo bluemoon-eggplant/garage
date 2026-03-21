@@ -1,0 +1,125 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2238.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2023/02/18",
+    "totalAmount": 432300,
+    "items": [
+      {
+        "description": "自動車重量税(~1t)",
+        "amount": 16400
+      },
+      {
+        "description": "自賠責 (24ヶ月)",
+        "amount": 20010
+      },
+      {
+        "description": "印紙・テスター・書類作成など",
+        "amount": 9500
+      },
+      {
+        "description": "車検整備費用",
+        "amount": 52000
+      },
+      {
+        "description": "車検申請代行費用",
+        "amount": 11000
+      },
+      {
+        "description": "下回り清掃(ホイール、サス、エンジン下部)",
+        "amount": 11000
+      },
+      {
+        "description": "エンジンオイル WAKO'S PROSTAGE-S",
+        "amount": 10320
+      },
+      {
+        "description": "ドレンワッシャー",
+        "amount": 180
+      },
+      {
+        "description": "上記部品交換工賃",
+        "amount": 2800
+      },
+      {
+        "description": "ヘッドライト固定(分解・固定)",
+        "amount": 15000
+      },
+      {
+        "description": "ファンベルト 36E142A",
+        "amount": 9500
+      },
+      {
+        "description": "テンショナー 1114737",
+        "amount": 19000
+      },
+      {
+        "description": "上記部品交換工賃 (エンジン関連)",
+        "amount": 22000
+      },
+      {
+        "description": "エアフィルター 36E073A",
+        "amount": 10000
+      },
+      {
+        "description": "右アッパーボールジョイントASSY QR1798",
+        "amount": 7400
+      },
+      {
+        "description": "上記部品交換工賃 (アッパーボールジョイント)",
+        "amount": 11000
+      },
+      {
+        "description": "左右ラックブーツ",
+        "amount": 4500
+      },
+      {
+        "description": "上記部品交換工賃 (ラックブーツ)",
+        "amount": 22000
+      },
+      {
+        "description": "ブレーキ・クラッチフルード WAKO'S SP4",
+        "amount": 4320
+      },
+      {
+        "description": "上記部品交換工賃(エア抜き含む)",
+        "amount": 15000
+      },
+      {
+        "description": "トランク・幌カバーボタン",
+        "amount": 1800
+      },
+      {
+        "description": "上記部品交換補修工賃",
+        "amount": 45000
+      },
+      {
+        "description": "ショートパーツ(グリス、ブレーキクリーナーetc)",
+        "amount": 2800
+      },
+      {
+        "description": "タイヤ DUNLOP DIREZZA DZ102 185/60R 14",
+        "amount": 49600
+      },
+      {
+        "description": "エアバルブ",
+        "amount": 2000
+      },
+      {
+        "description": "上記部品交換工賃 (タイヤ)",
+        "amount": 14000
+      },
+      {
+        "description": "ウェイト接着剤清掃",
+        "amount": 6000
+      },
+      {
+        "description": "廃タイヤ処分費",
+        "amount": 2200
+      }
+    ],
+    "mileage": 32186,
+    "shop": "Witham Cars TOKYO"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2241_1.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2025/12/21",
+    "totalAmount": 5500,
+    "items": [
+      {
+        "description": "タイヤ組み換え",
+        "amount": 5000
+      }
+    ],
+    "mileage": 47296,
+    "shop": "AT-1群馬自動車販売"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,25 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0057_2.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2019/07/28",
+    "totalAmount": 169992,
+    "items": [
+      {
+        "description": "左フロントバンパー・フェンダー・ドアミラー板金修理一式",
+        "amount": 105000
+      },
+      {
+        "description": "前後ショックアブソーバー交換",
+        "amount": 34400
+      },
+      {
+        "description": "4輪アライメント",
+        "amount": 18000
+      }
+    ],
+    "mileage": 62996,
+    "shop": "GTNET 埼玉"
+  },
+  "reviewStatus": "pending"
+}

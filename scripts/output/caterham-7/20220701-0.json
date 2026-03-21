@@ -1,0 +1,49 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2237.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2022/07/01",
+    "totalAmount": 34320,
+    "items": [
+      {
+        "description": "エンジンオイル WAKO'S Triple-R 10w-40",
+        "amount": 14000
+      },
+      {
+        "description": "エンジンオイル交換工賃",
+        "amount": 2800
+      },
+      {
+        "description": "オイルフィルター",
+        "amount": 2000
+      },
+      {
+        "description": "オイルフィルター交換工賃",
+        "amount": 1200
+      },
+      {
+        "description": "スパークプラグ 36E038A-MK",
+        "amount": 5200
+      },
+      {
+        "description": "スパークプラグ交換工賃",
+        "amount": 6000
+      },
+      {
+        "description": "次回車検時にタイヤ交換ご希望 AVON ZV3 185/60R14 x 4",
+        "amount": null
+      },
+      {
+        "description": "ホイールナット締付確認",
+        "amount": null
+      },
+      {
+        "description": "タイヤ空気圧 Fr1.7kgf Rr1.7kgf",
+        "amount": null
+      }
+    ],
+    "mileage": 25076,
+    "shop": "Witham Cars"
+  },
+  "reviewStatus": "pending"
+}

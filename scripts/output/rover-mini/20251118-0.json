@@ -1,0 +1,73 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2254_1.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/11/18",
+    "totalAmount": 42284,
+    "items": [
+      {
+        "description": "基本整備",
+        "amount": 0
+      },
+      {
+        "description": "6ヶ月点検",
+        "amount": 10000
+      },
+      {
+        "description": "整備項目",
+        "amount": 0
+      },
+      {
+        "description": "ボンネットフック メタルクリップ",
+        "amount": 4910
+      },
+      {
+        "description": "右側 12インチ用 ブレーキローターカバー破損により異音あり",
+        "amount": 0
+      },
+      {
+        "description": "USEDカバー",
+        "amount": 7930
+      },
+      {
+        "description": "ステアリングセンターだし トー調整",
+        "amount": 6000
+      },
+      {
+        "description": "12インチ スチールホイール用 ホイールナットセット",
+        "amount": 9600
+      },
+      {
+        "description": "2026年4月車検時再点検として",
+        "amount": 0
+      },
+      {
+        "description": "左右 タイロッド (シャフト) 左右ややがたつきあり",
+        "amount": 0
+      },
+      {
+        "description": "ステアリング やや左へ持っていかれる",
+        "amount": 0
+      },
+      {
+        "description": "スパークプラグ燃焼状態",
+        "amount": 0
+      },
+      {
+        "description": "ロングライフクーラント汚れ具合",
+        "amount": 0
+      },
+      {
+        "description": "AC動作確認",
+        "amount": 0
+      },
+      {
+        "description": "ACモジュールリレー不良かリレーを動かす電力不足か、アース不良か",
+        "amount": 0
+      }
+    ],
+    "mileage": 26952,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

@@ -125,13 +125,29 @@ async function main() {
         continue;
       }
 
-      // Resolve local path, adding suffix if name already exists
-      const localPath = resolveUniquePath(localDir, file.name!);
-      const localName = path.basename(localPath);
+      // Download to buffer first
+      const buffer = await downloadFileToBuffer(drive, file.id!);
+      const targetPath = path.join(localDir, file.name!);
 
-      // Download
-      console.log(`  ↓ ${localName} ...`);
-      await downloadFile(drive, file.id!, localPath);
+      if (fs.existsSync(targetPath)) {
+        const existing = fs.readFileSync(targetPath);
+        if (buffer.equals(existing)) {
+          // Same content already on disk (pre-manifest) — just register ID
+          console.log(`  ✓ ${file.name} (既存と同一、ID登録)`);
+          downloadedIds.add(file.id!);
+          totalSkipped++;
+          continue;
+        }
+        // Different content with same name — save with suffix
+        const uniquePath = resolveUniquePath(localDir, file.name!);
+        const localName = path.basename(uniquePath);
+        console.log(`  ↓ ${localName} ...`);
+        fs.writeFileSync(uniquePath, buffer);
+      } else {
+        console.log(`  ↓ ${file.name} ...`);
+        fs.writeFileSync(targetPath, buffer);
+      }
+
       downloadedIds.add(file.id!);
       totalDownloaded++;
     }
@@ -207,16 +223,15 @@ function resolveUniquePath(dir: string, filename: string): string {
   return candidate;
 }
 
-async function downloadFile(
+async function downloadFileToBuffer(
   drive: ReturnType<typeof google.drive>,
-  fileId: string,
-  destPath: string
-): Promise<void> {
+  fileId: string
+): Promise<Buffer> {
   const res = await drive.files.get(
     { fileId, alt: 'media' },
     { responseType: 'arraybuffer' }
   );
-  fs.writeFileSync(destPath, Buffer.from(res.data as ArrayBuffer));
+  return Buffer.from(res.data as ArrayBuffer);
 }
 
 main().catch((e) => {

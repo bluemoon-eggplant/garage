@@ -1,0 +1,45 @@
+{
+  "source": "input/yamaha-renaissa/スキャン_20260321-2257.pdf",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2025/01/21",
+    "totalAmount": 62850,
+    "items": [
+      {
+        "description": "クランクケースヘリサート加工（特殊タップ通し）",
+        "amount": 37500
+      },
+      {
+        "description": "ダウエルピン圧2箇所 他1箇所（他全確認）",
+        "amount": null
+      },
+      {
+        "description": "スプロケットカバー上部ヘリサート加工 サービス",
+        "amount": 0
+      },
+      {
+        "description": "クランクケースカバーGK ダウエルピン2本",
+        "amount": 947
+      },
+      {
+        "description": "ステーターカバーボルト",
+        "amount": 946
+      },
+      {
+        "description": "スプロケットカバーボルト",
+        "amount": 363
+      },
+      {
+        "description": "カバーガスケット交換（フライホイール取外し含む）",
+        "amount": 15000
+      },
+      {
+        "description": "エンジンOIL 1.4L",
+        "amount": 2380
+      }
+    ],
+    "mileage": 31875,
+    "shop": "テクニカルサービス"
+  },
+  "reviewStatus": "approved"
+}

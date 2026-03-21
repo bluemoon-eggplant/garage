@@ -1,0 +1,113 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2236.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2021/09/10",
+    "totalAmount": 40700,
+    "items": [
+      {
+        "description": "6ヶ月点検工賃",
+        "amount": 18000
+      },
+      {
+        "description": "ボンネット脱着",
+        "amount": null
+      },
+      {
+        "description": "ノーズコーン脱着",
+        "amount": null
+      },
+      {
+        "description": "ペダルボックスカバー脱着",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル量 (点検・良好)",
+        "amount": null
+      },
+      {
+        "description": "冷却水量 (点検・良好)",
+        "amount": null
+      },
+      {
+        "description": "バッテリー (点検・良好)",
+        "amount": null
+      },
+      {
+        "description": "※287CCA/内部抵抗10.70m2/充電状態100%/健全性100%",
+        "amount": null
+      },
+      {
+        "description": "下回り (点検・良好)",
+        "amount": null
+      },
+      {
+        "description": "ブレーキ・クラッチフルード (点検・クラッチフルード漏れ)",
+        "amount": null
+      },
+      {
+        "description": "ブレーキペダル遊び・踏みしろ (点検良好)",
+        "amount": null
+      },
+      {
+        "description": "クラッチペダル 遊び・踏みしろ (点検良好)",
+        "amount": null
+      },
+      {
+        "description": "パーキングブレーキ引きしろ (点検・良好)",
+        "amount": null
+      },
+      {
+        "description": "灯火/保安装置 (点検・良好)",
+        "amount": null
+      },
+      {
+        "description": "※ タイヤ空気圧 F/1.7kgf R/1.7kgf",
+        "amount": null
+      },
+      {
+        "description": "※ ホイール締付け点検",
+        "amount": null
+      },
+      {
+        "description": "※ 車検満了日 令和5年2月7日",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル WAKO'S Triple-R 10W-40",
+        "amount": 13000
+      },
+      {
+        "description": "オイルフィルター",
+        "amount": 2000
+      },
+      {
+        "description": "上記部品交換工賃",
+        "amount": 4000
+      },
+      {
+        "description": "※クラッチマスターシリンダーフルード漏れあり",
+        "amount": null
+      },
+      {
+        "description": "クラッチマスターシリンダーの交換をお勧めいたします",
+        "amount": null
+      },
+      {
+        "description": "ワイパーゴム経年劣化・交換をお勧めいたします",
+        "amount": null
+      },
+      {
+        "description": "足回りボルトゆるみあり・増し締めいたしました",
+        "amount": null
+      },
+      {
+        "description": "消費税",
+        "amount": 3700
+      }
+    ],
+    "mileage": 17514,
+    "shop": "有限会社ブリッジウェイズ"
+  },
+  "reviewStatus": "pending"
+}

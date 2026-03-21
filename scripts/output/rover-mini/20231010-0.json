@@ -1,0 +1,25 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2250.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/10/10",
+    "totalAmount": 26400,
+    "items": [
+      {
+        "description": "12ヶ月点検",
+        "amount": 18000
+      },
+      {
+        "description": "ステアリングラック増し締め",
+        "amount": 3000
+      },
+      {
+        "description": "ステアリングセンター合わせ",
+        "amount": 3000
+      }
+    ],
+    "mileage": 9671,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

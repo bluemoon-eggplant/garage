@@ -1,0 +1,21 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2253_1.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/07/14",
+    "totalAmount": 11649,
+    "items": [
+      {
+        "description": "スピードメーターケーブル交換",
+        "amount": 10590
+      },
+      {
+        "description": "USBケーブル電源確認",
+        "amount": 0
+      }
+    ],
+    "mileage": 18267,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

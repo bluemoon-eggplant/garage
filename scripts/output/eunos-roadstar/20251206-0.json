@@ -1,0 +1,25 @@
+{
+  "source": "input/eunos-roadstar/スキャン_20260321-2338.pdf",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2025/12/06",
+    "totalAmount": 38000,
+    "items": [
+      {
+        "description": "左サイドシルパネル他 (工賃)",
+        "amount": 31590
+      },
+      {
+        "description": "鈑金材料費",
+        "amount": 1500
+      },
+      {
+        "description": "ショートパーツ",
+        "amount": 1500
+      }
+    ],
+    "mileage": 296396,
+    "shop": "株式会社峰岸自動車"
+  },
+  "reviewStatus": "pending"
+}

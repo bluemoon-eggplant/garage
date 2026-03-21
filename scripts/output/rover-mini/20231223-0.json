@@ -1,0 +1,41 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2251.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/12/23",
+    "totalAmount": 37279,
+    "items": [
+      {
+        "description": "レスポ ミニ専用エンジンオイル 15W-40",
+        "amount": 11820
+      },
+      {
+        "description": "オイルエレメント",
+        "amount": 4480
+      },
+      {
+        "description": "ドレンワッシャ",
+        "amount": 190
+      },
+      {
+        "description": "パーツクリーナー",
+        "amount": 600
+      },
+      {
+        "description": "スタッドレスタイヤへ組替え",
+        "amount": 1000
+      },
+      {
+        "description": "12インチ 純正ホイール用 専用ナット 16個入り",
+        "amount": 12800
+      },
+      {
+        "description": "USB電源取付",
+        "amount": 3000
+      }
+    ],
+    "mileage": 11229,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

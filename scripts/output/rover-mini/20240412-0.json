@@ -1,0 +1,81 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2252.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/04/12",
+    "totalAmount": 191226,
+    "items": [
+      {
+        "description": "車検基本点検、見積、申請、更新、代行費用",
+        "amount": 72000
+      },
+      {
+        "description": "ディクセル12インチ用 Mタイプセット",
+        "amount": 21000
+      },
+      {
+        "description": "12インチ用 バットピン",
+        "amount": 480
+      },
+      {
+        "description": "日本製 サーモスタット 88°C",
+        "amount": 13600
+      },
+      {
+        "description": "サーモパッキン",
+        "amount": 600
+      },
+      {
+        "description": "電動ファンスイッチ ブッシュ クリップ",
+        "amount": 6480
+      },
+      {
+        "description": "クーラント 入れ替え",
+        "amount": 3200
+      },
+      {
+        "description": "スタッドレスからオールシーズンタイヤセットへ",
+        "amount": 0
+      },
+      {
+        "description": "左右 リアドラムシリンダー分解、洗浄、給油、調整",
+        "amount": 1200
+      },
+      {
+        "description": "サーモスタット交換時 ステンレス製 サーモハウジングボルトセット",
+        "amount": 2800
+      },
+      {
+        "description": "ACレジスター",
+        "amount": 8800
+      },
+      {
+        "description": "消費税",
+        "amount": 13016
+      },
+      {
+        "description": "自賠責保険 24ヶ月分",
+        "amount": 17650
+      },
+      {
+        "description": "重量税 24ヶ月分",
+        "amount": 25200
+      },
+      {
+        "description": "印紙代",
+        "amount": 2200
+      },
+      {
+        "description": "テスター代",
+        "amount": 2000
+      },
+      {
+        "description": "代書代",
+        "amount": 1000
+      }
+    ],
+    "mileage": 16562,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

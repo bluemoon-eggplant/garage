@@ -1,0 +1,17 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0108_2.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/12/09",
+    "totalAmount": 8800,
+    "items": [
+      {
+        "description": "キーシリンダーシャッター修理左(トアハンドル脱着工賃込)",
+        "amount": 8000
+      }
+    ],
+    "mileage": null,
+    "shop": "有限会社 大原"
+  },
+  "reviewStatus": "pending"
+}

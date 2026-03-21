@@ -1,0 +1,29 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2234.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2021/07/23",
+    "totalAmount": 28050,
+    "items": [
+      {
+        "description": "スピードセンサー De-Dion CAT-SP-0038AK",
+        "amount": 12000
+      },
+      {
+        "description": "スピードセンサー交換・ギャップ調整（配線チェック含む、センサーギャップ: 1.0mm、メーター表示 180km/hまで動作確認）",
+        "amount": 11000
+      },
+      {
+        "description": "リアブレーキランプバルブ",
+        "amount": 500
+      },
+      {
+        "description": "リアブレーキランプバルブ交換工賃（灯火類点検含む）",
+        "amount": 2000
+      }
+    ],
+    "mileage": 15016,
+    "shop": "Witham Cars"
+  },
+  "reviewStatus": "pending"
+}

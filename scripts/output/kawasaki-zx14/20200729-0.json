@@ -1,0 +1,25 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260319-0004_1_1.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2020/07/29",
+    "totalAmount": 38.5,
+    "items": [
+      {
+        "description": "カワサキジュンセイキャクチュウ 150",
+        "amount": null
+      },
+      {
+        "description": "カワサキジュンセイキャクチュウ 70",
+        "amount": null
+      },
+      {
+        "description": "イッパンセイビサキョウ 2リン",
+        "amount": 38.5
+      }
+    ],
+    "mileage": null,
+    "shop": "株式会社2りんかんイエローハット 和光2りんかん"
+  },
+  "reviewStatus": "pending"
+}

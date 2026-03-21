@@ -1,0 +1,41 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2249.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/09/14",
+    "totalAmount": 1947863,
+    "items": [
+      {
+        "description": "車輌本体価格",
+        "amount": 1780000
+      },
+      {
+        "description": "納車点検費用",
+        "amount": 50000
+      },
+      {
+        "description": "手続代行費用等",
+        "amount": 82423
+      },
+      {
+        "description": "自動車税(種別割)",
+        "amount": 23100
+      },
+      {
+        "description": "登録届出費",
+        "amount": 500
+      },
+      {
+        "description": "新ナンバー代",
+        "amount": 1460
+      },
+      {
+        "description": "リサイクル料",
+        "amount": 10380
+      }
+    ],
+    "mileage": 9279,
+    "shop": "有限会社アクセル自動車販売"
+  },
+  "reviewStatus": "pending"
+}

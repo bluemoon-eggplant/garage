@@ -1,0 +1,157 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2251_1.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/11/01",
+    "totalAmount": 506165,
+    "items": [
+      {
+        "description": "基本点検",
+        "amount": 0
+      },
+      {
+        "description": "12ヶ月点検",
+        "amount": 0
+      },
+      {
+        "description": "ステアリングラック増し締め",
+        "amount": 0
+      },
+      {
+        "description": "ステアリングセンター合わせ",
+        "amount": 0
+      },
+      {
+        "description": "ファンベルト劣化あり",
+        "amount": 11570
+      },
+      {
+        "description": "ECUバキュームホースセット ラバー製へ交換おすすめ",
+        "amount": 14400
+      },
+      {
+        "description": "フューエルフィルター",
+        "amount": 11210
+      },
+      {
+        "description": "アクセルケーブル位置調整",
+        "amount": 1000
+      },
+      {
+        "description": "ステアリングラックブッシュガタ大きい",
+        "amount": 16900
+      },
+      {
+        "description": "左右 タイロッドエンドややガタあり",
+        "amount": 11320
+      },
+      {
+        "description": "左側 ボールジョイント部 ガタ大きい メンテナンスフリータイプへ",
+        "amount": 28920
+      },
+      {
+        "description": "左側 ハブナットピン",
+        "amount": 120
+      },
+      {
+        "description": "左右 半分消費されキャリパーピストンサビ発生 社外品Assy交換",
+        "amount": 59600
+      },
+      {
+        "description": "左右 ブレーキローター摩耗あり",
+        "amount": 15800
+      },
+      {
+        "description": "左右 銅ワッシャー",
+        "amount": 600
+      },
+      {
+        "description": "左右 リアドラムライニング ドラムとの当たり面悪い ライニング交換",
+        "amount": 9430
+      },
+      {
+        "description": "左右 リアドラムの交換",
+        "amount": 16360
+      },
+      {
+        "description": "4輪とも ブレーキオイル 入れ替え",
+        "amount": 6200
+      },
+      {
+        "description": "左右 ラジアスアーム ガタつきあり 特に左が大きい 左右脱着",
+        "amount": 36000
+      },
+      {
+        "description": "左右 ラジアスアーム 使用可能なUSEDに交換",
+        "amount": 65000
+      },
+      {
+        "description": "左右 ラジアスアーム 部品組み替え、パーツクリーナー洗浄",
+        "amount": 17000
+      },
+      {
+        "description": "左右 ナックルジョイント",
+        "amount": 3960
+      },
+      {
+        "description": "左右 リアネガティブキャンバーキット取付",
+        "amount": 33200
+      },
+      {
+        "description": "シフトシールよりエンジンオイル漏れあり",
+        "amount": 13370
+      },
+      {
+        "description": "ブーツも同時交換",
+        "amount": 970
+      },
+      {
+        "description": "エンジンタペットクリアランス異音あり クリアランス調整",
+        "amount": 15000
+      },
+      {
+        "description": "タペットパッキン、ブッシュ同時交換",
+        "amount": 2000
+      },
+      {
+        "description": "エンジン アッパーステディブッシュ ややへたりあり",
+        "amount": 12500
+      },
+      {
+        "description": "エンジン ロアーステディブッシュ 同時交換",
+        "amount": 7960
+      },
+      {
+        "description": "カプラーを引き出し、ハーネス延長接続",
+        "amount": 6200
+      },
+      {
+        "description": "既存ホイールからタイヤを外し、ご支給ホイールへ組み付け",
+        "amount": 16000
+      },
+      {
+        "description": "既存ホイールへご支給スタッドレスを組み付け",
+        "amount": 12000
+      },
+      {
+        "description": "ラバー製 エアバルブ",
+        "amount": 1920
+      },
+      {
+        "description": "純正ハーネスあり、USEDカプラー準備して取り付け",
+        "amount": 5500
+      },
+      {
+        "description": "ブレーキランプスイッチ接触不良あり 交換",
+        "amount": 2140
+      },
+      {
+        "description": "フロントタイヤ フェンダーやや干渉あり 車高調整",
+        "amount": 6000
+      }
+    ],
+    "mileage": null,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

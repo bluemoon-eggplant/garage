@@ -1,0 +1,33 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0102_2.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2021/01/15",
+    "totalAmount": 23584,
+    "items": [
+      {
+        "description": "エンジンオイル交換",
+        "amount": 8316
+      },
+      {
+        "description": "SN02 3 ゴールデンSN 5W-30 3",
+        "amount": 4180
+      },
+      {
+        "description": "995641400 ガスケット",
+        "amount": null
+      },
+      {
+        "description": "スパーク・プラグ取替",
+        "amount": 11088
+      },
+      {
+        "description": "N3X518110 スパークプラグセット",
+        "amount": null
+      }
+    ],
+    "mileage": 73232,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+  },
+  "reviewStatus": "pending"
+}

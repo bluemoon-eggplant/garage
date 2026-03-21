@@ -1,0 +1,21 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2254.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/11/18",
+    "totalAmount": 4598,
+    "items": [
+      {
+        "description": "パークランプ クリアー",
+        "amount": 3580
+      },
+      {
+        "description": "ACステッカー",
+        "amount": 600
+      }
+    ],
+    "mileage": null,
+    "shop": "所沢パーツセンター"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "input/caterham-7/スキャン_20260321-2238_1.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2022/07/19",
+    "totalAmount": 13200,
+    "items": [
+      {
+        "description": "車輌リフトアップ、各種点検作業",
+        "amount": 12000
+      }
+    ],
+    "mileage": 25950,
+    "shop": "Witham Cars TOKYO"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "input/yamaha-renaissa/スキャン_20260321-2256.pdf",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/08/23",
+    "totalAmount": 1650,
+    "items": [
+      {
+        "description": "ムリョウテンケン",
+        "amount": 0
+      },
+      {
+        "description": "マフラーヒートガードMSボルト払ム外し @ネジ山水確法",
+        "amount": 1650
+      }
+    ],
+    "mileage": 42294,
+    "shop": "株式会社2りんかんイエローハット 藤岡2りんかん"
+  },
+  "reviewStatus": "pending"
+}

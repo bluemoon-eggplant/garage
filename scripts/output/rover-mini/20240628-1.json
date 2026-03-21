@@ -1,0 +1,61 @@
+{
+  "source": "input/rover-mini/スキャン_20260321-2253_3.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/06/28",
+    "totalAmount": 51513,
+    "items": [
+      {
+        "description": "基本整備",
+        "amount": 0
+      },
+      {
+        "description": "エンジンオイル交換",
+        "amount": 0
+      },
+      {
+        "description": "スノコエンジンオイル 10W-50",
+        "amount": 12500
+      },
+      {
+        "description": "オイルエレメント",
+        "amount": 1630
+      },
+      {
+        "description": "ドレンワッシャ",
+        "amount": 200
+      },
+      {
+        "description": "パーツクリーナー",
+        "amount": 600
+      },
+      {
+        "description": "左側 巻き上げガラス点検",
+        "amount": 0
+      },
+      {
+        "description": "レギュレターチャンネル腐食により交換",
+        "amount": 0
+      },
+      {
+        "description": "左側前後 ステンレス製レギュレターチャンネル",
+        "amount": 12000
+      },
+      {
+        "description": "レギュレターラバー",
+        "amount": 1400
+      },
+      {
+        "description": "シートベルト警告灯点検",
+        "amount": 0
+      },
+      {
+        "description": "バルブソケット接触不良により交換",
+        "amount": 500
+      }
+    ],
+    "mileage": 17389,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}
