@@ -6,8 +6,12 @@
     "totalAmount": 10560,
     "items": [
       {
-        "description": "フロントブレーキパッド交換（デイトナゴールデンパッド）",
+        "description": "フロントブレーキパッド交換",
         "amount": null
+      },
+      {
+        "description": "（Amazon）デイトナ ゴールデンパッドX 97172",
+        "amount": 10560
       },
       {
         "description": "フロントブレーキフルード交換",

@@ -1,0 +1,33 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2025/01/13",
+    "totalAmount": 3567,
+    "items": [
+      {
+        "description": "オイル交換",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）ヤマルーブ スタンダードプラス MA2 10W-40 1L 90793-32159",
+        "amount": 2654
+      },
+      {
+        "description": "（Webike）YAMAHA純正 Oリング 93210-11368×1",
+        "amount": 238
+      },
+      {
+        "description": "左クランクケースガスケット交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ガスケット,クランクケースカバー 3DM-15451-00×1",
+        "amount": 675
+      }
+    ],
+    "mileage": 31796,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

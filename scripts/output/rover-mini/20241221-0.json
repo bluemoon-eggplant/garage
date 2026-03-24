@@ -1,0 +1,29 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/12/21",
+    "totalAmount": 7765,
+    "items": [
+      {
+        "description": "オイル、フィルター交換",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）RESPO エンジンオイル MINI 15W40 SL/CF 5L",
+        "amount": 6677
+      },
+      {
+        "description": "（Amazon）MAHLE オイルエレメント OC237/1",
+        "amount": 872
+      },
+      {
+        "description": "（楽天）ローバーミニ オイルパンドレンパッキン",
+        "amount": 216
+      }
+    ],
+    "mileage": 21130,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

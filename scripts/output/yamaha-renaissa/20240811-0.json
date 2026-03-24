@@ -1,0 +1,33 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/08/11",
+    "totalAmount": 5177,
+    "items": [
+      {
+        "description": "オイルフラッシング、オイル交換、フィルター交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 Oリング 93210-64297×1",
+        "amount": 238
+      },
+      {
+        "description": "（Webike）YAMAHA純正 オイルフィルター 4X7-13440-90×1",
+        "amount": 1055
+      },
+      {
+        "description": "（Webike）ヤマルーブ プレミアムシンセティック 10W-40×2",
+        "amount": 3414
+      },
+      {
+        "description": "（Webike）YAMAHA純正 Oリング 93210-35512×1",
+        "amount": 470
+      }
+    ],
+    "mileage": 41855,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

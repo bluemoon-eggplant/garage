@@ -3,7 +3,7 @@
   "category": "mazda-rx7",
   "data": {
     "date": "2025/05/25",
-    "totalAmount": 47613,
+    "totalAmount": 95226,
     "items": [
       {
         "description": "フロントホイルハウスインナーフェンダー交換",
@@ -12,6 +12,18 @@
       {
         "description": "左ドアトリム固定ネジ追加",
         "amount": null
+      },
+      {
+        "description": "（マツダで購入）F13856130A ガード（R）,マッド×1",
+        "amount": 23749
+      },
+      {
+        "description": "（マツダで購入）F13856140A ガード（L）,マッド×1",
+        "amount": 23749
+      },
+      {
+        "description": "（マツダで購入）998650540B スクリュー,タッピング×1",
+        "amount": 115
       }
     ],
     "mileage": null,

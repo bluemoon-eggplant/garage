@@ -1,0 +1,77 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/07/28",
+    "totalAmount": 6563,
+    "items": [
+      {
+        "description": "リアセクション分解整備",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,フランジ 95807-06020×1",
+        "amount": 80
+      },
+      {
+        "description": "（Webike）YAMAHA純正 カラー 90387-07391×1",
+        "amount": 130
+      },
+      {
+        "description": "（Webike）YAMAHA純正 グロメット 90480-15235×1",
+        "amount": 95
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット,フランジ 95707-05500×1",
+        "amount": 75
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,スモールフランジ 95027-06030×2",
+        "amount": 200
+      },
+      {
+        "description": "（Webike）YAMAHA純正 カラー 90387-081R2×2",
+        "amount": 240
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット,フランジ 95707-06500×2",
+        "amount": 150
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,フランジ 95817-08025×2",
+        "amount": 150
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,フランジ 95817-08012×2",
+        "amount": 150
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット,フランジ 95707-06500×1",
+        "amount": 75
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,ソケット 91314-08030×2",
+        "amount": 150
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,シートフィッティング 4HM-24739-00×2",
+        "amount": 1420
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ヘルメットハンガーアセンブリ 26H-21308-00×1",
+        "amount": 3130
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,ヘキサゴンソケットヘッド 90110-05201×2",
+        "amount": 170
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,ウィズワッシャー 90119-06194×3",
+        "amount": 348
+      }
+    ],
+    "mileage": 41790,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

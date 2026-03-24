@@ -1,0 +1,85 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/09/11",
+    "totalAmount": 18168,
+    "items": [
+      {
+        "description": "メーター、メーターケーブル交換、ヘッドライト周辺ダンパー類、ホーン交換",
+        "amount": null
+      },
+      {
+        "description": "（ヤフオク）ヤマハ ルネッサ 4DN スピードメーター SRV250",
+        "amount": 6190
+      },
+      {
+        "description": "（ヤフオク）NTB SRV250 ルネッサ 4DN スピードメーターケーブル SYJ-06-006",
+        "amount": 2198
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット 90179-06668×2",
+        "amount": 260
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ワッシャ 92990-05600×2",
+        "amount": 150
+      },
+      {
+        "description": "（Webike）YAMAHA純正 スプリング 4DN-84335-00×1",
+        "amount": 110
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ワッシャ,スペシャル 4DN-84327-00×1",
+        "amount": 140
+      },
+      {
+        "description": "（Webike）YAMAHA純正 カラー,ボデーフィッティング 4DN-84145-00×2",
+        "amount": 640
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ダンパ,ヘッドライト2 4KG-84367-00×2",
+        "amount": 360
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ダンパ,ヘッドライト1 4KG-84366-00×2",
+        "amount": 480
+      },
+      {
+        "description": "（Webike）YAMAHA純正 グロメット 90480-14105×2",
+        "amount": 240
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,フランジ 95817-06030×2",
+        "amount": 150
+      },
+      {
+        "description": "（Webike）YAMAHA純正 スクリュー,パンヘッド 98504-05014×2",
+        "amount": 180
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ホーン 4LR-83371-00×1",
+        "amount": 3750
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,フランジ 95027-06012×1",
+        "amount": 100
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ダンパ 1JK-83541-00×1",
+        "amount": 510
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ダンパ 1JK-83541-00×3",
+        "amount": 1530
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ダンパ 584-83523-00×2",
+        "amount": 1180
+      }
+    ],
+    "mileage": 30519,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

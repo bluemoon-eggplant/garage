@@ -1,0 +1,29 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/07/25",
+    "totalAmount": 8210,
+    "items": [
+      {
+        "description": "メーター交換、ダンパー、巻きネジ留めネジ新品",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ダンパ 1AE-83513-00×1",
+        "amount": 2580
+      },
+      {
+        "description": "（ヤフオク）ヤマハ ルネッサ メーター 4DN",
+        "amount": 5500
+      },
+      {
+        "description": "（Webike）YAMAHA純正 スクリュー,パンヘッド 90157-02031×1",
+        "amount": 130
+      }
+    ],
+    "mileage": 41768,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

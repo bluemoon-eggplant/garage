@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/08/12",
+    "totalAmount": 3630,
+    "items": [
+      {
+        "description": "バッテリー交換",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）台湾ユアサ バイク用バッテリー YTX7A-BS",
+        "amount": 3630
+      }
+    ],
+    "mileage": 41855,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/08/20",
+    "totalAmount": 1095,
+    "items": [
+      {
+        "description": "フォークガード取り付け",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）キタコ ミニフォークガード BLACK 500-9000100",
+        "amount": 1095
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

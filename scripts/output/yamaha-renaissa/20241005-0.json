@@ -1,0 +1,105 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/10/05",
+    "totalAmount": 55855,
+    "items": [
+      {
+        "description": "リアサス、ドラムブレーキ交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 リヤクッションアセンブリ 1JN-22210-20×2",
+        "amount": 39330
+      },
+      {
+        "description": "（Webike）YAMAHA純正 スプリング,コンプレッション 90501-10245×1",
+        "amount": 114
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ピン 90249-12008×1",
+        "amount": 105
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット 90179-06411×1",
+        "amount": 95
+      },
+      {
+        "description": "（Webike）YAMAHA純正 スプリング,テンション 90506-29266×1",
+        "amount": 789
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ピン,コッタ 91401-20015×1",
+        "amount": 76
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ワッシャ 92907-08600×2",
+        "amount": 162
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット 95337-08600×4",
+        "amount": 380
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ダンパ 3YF-25364-00×4",
+        "amount": 8020
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ブレーキシューセット 3FA-W2536-00×1",
+        "amount": 2166
+      },
+      {
+        "description": "（Webike）YAMAHA純正 カムシャフト 2RH-25351-00×1",
+        "amount": 2233
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト 90109-08063×1",
+        "amount": 295
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット,フランジ 95707-08500×1",
+        "amount": 57
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,ヘキサゴン 90101-06278×1",
+        "amount": 114
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット 95317-06600×1",
+        "amount": 81
+      },
+      {
+        "description": "（Webike）YAMAHA純正 プレート,インジケータ 3Y6-2533A-01×1",
+        "amount": 171
+      },
+      {
+        "description": "テールランプバルブ交換",
+        "amount": null
+      },
+      {
+        "description": "（にりんかん）バルブ",
+        "amount": 440
+      },
+      {
+        "description": "メーター照明バルブ交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 バルブ 1YT-83517-00×2",
+        "amount": 438
+      },
+      {
+        "description": "サイドスタンドスプリング交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 スプリング,テンション 90506-29266×1",
+        "amount": 789
+      }
+    ],
+    "mileage": 30991,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

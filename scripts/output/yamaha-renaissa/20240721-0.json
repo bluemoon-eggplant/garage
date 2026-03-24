@@ -1,0 +1,25 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/07/21",
+    "totalAmount": 4162,
+    "items": [
+      {
+        "description": "エアフィルター、プラグ交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 エアクリーナーエレメント 3LD-14450-00×1",
+        "amount": 3306
+      },
+      {
+        "description": "（Webike）YAMAHA純正 スパークプラグ CR7HSA 94703-00366×2",
+        "amount": 856
+      }
+    ],
+    "mileage": 12493,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

@@ -1,0 +1,37 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/10/06",
+    "totalAmount": 11134,
+    "items": [
+      {
+        "description": "オイル、フィルター、冷却水洗浄",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）RESPO エンジンオイル MINI 20W60 SL/CF 5L",
+        "amount": 6980
+      },
+      {
+        "description": "（Amazon）MAHLE オイルエレメント OC237/1",
+        "amount": 866
+      },
+      {
+        "description": "（楽天）ローバーミニ オイルパンドレンパッキン",
+        "amount": 216
+      },
+      {
+        "description": "（Amazon）ワコーズ RF ラジエーターフラッシュ 速効性ラジエーター洗浄剤 500ml R120",
+        "amount": 1560
+      },
+      {
+        "description": "（Amazon）古河薬品工業 ラクラククーラント 2L 緑 52-040",
+        "amount": 1512
+      }
+    ],
+    "mileage": 26000,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

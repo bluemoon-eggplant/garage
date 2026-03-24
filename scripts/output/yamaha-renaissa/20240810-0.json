@@ -1,0 +1,61 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/08/10",
+    "totalAmount": 14825,
+    "items": [
+      {
+        "description": "フロントフォークOH、ディスクボルト交換、エアバルブキャップ交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）エーモン エアバルブキャップ 8824×1",
+        "amount": 227
+      },
+      {
+        "description": "（Webike）YAMAHA純正 リング,スナップ 3R4-23153-00×2",
+        "amount": 820
+      },
+      {
+        "description": "（Webike）YAMAHA純正 オイルシール 3EN-23145-00×2",
+        "amount": 2300
+      },
+      {
+        "description": "（Webike）YAMAHA純正 メタル,スライド 4DN-23125-50×2",
+        "amount": 2940
+      },
+      {
+        "description": "（Webike）YAMAHA純正 シール,ダスト 3EN-23144-01×2",
+        "amount": 2040
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ワッシャ,オイルシール 4V2-23146-L0×2",
+        "amount": 2380
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ガスケット 1W4-23114-L0×2",
+        "amount": 1120
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト 90109-081F0×6",
+        "amount": 960
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ガスケット 509-23158-L0×1",
+        "amount": 250
+      },
+      {
+        "description": "（Webike）ヤマルーブ サスペンションオイルG-10×1",
+        "amount": 1638
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,フランジ 95817-08025×2",
+        "amount": 150
+      }
+    ],
+    "mileage": 41855,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

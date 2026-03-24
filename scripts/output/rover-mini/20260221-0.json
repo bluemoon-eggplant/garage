@@ -1,0 +1,29 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2026/02/21",
+    "totalAmount": 4767,
+    "items": [
+      {
+        "description": "オイル、フィルター交換",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）MAHLE オイルエレメント OC237/1",
+        "amount": 866
+      },
+      {
+        "description": "（Y!ショッピング）SUNOCO MARVIC SN>SQ 10W-40",
+        "amount": 3685
+      },
+      {
+        "description": "（楽天）ローバーミニ オイルパンドレンパッキン",
+        "amount": 216
+      }
+    ],
+    "mileage": 27940,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

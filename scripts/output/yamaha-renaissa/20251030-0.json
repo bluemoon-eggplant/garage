@@ -1,0 +1,25 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2025/10/30",
+    "totalAmount": 3180,
+    "items": [
+      {
+        "description": "グリップエンド紛失。装着",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 エンド,グリップ 4JH-26246-00×1",
+        "amount": 3084
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,ソケット 91317-06035×1",
+        "amount": 96
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

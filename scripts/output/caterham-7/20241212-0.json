@@ -1,0 +1,25 @@
+{
+  "source": "manual",
+  "category": "caterham-7",
+  "data": {
+    "date": "2024/12/12",
+    "totalAmount": 7789,
+    "items": [
+      {
+        "description": "バッテリー交換",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）GSユアサ HJ-30A19R 国産車バッテリー",
+        "amount": 6471
+      },
+      {
+        "description": "（モノタロウ）清和工業 バッテリーフレーム AF-1",
+        "amount": 1318
+      }
+    ],
+    "mileage": 44024,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

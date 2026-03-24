@@ -1,0 +1,77 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2025/10/06",
+    "totalAmount": 25934,
+    "items": [
+      {
+        "description": "オイル、フィルター、ブレーキフルード、クラッチディスク、交換",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ガスケット,クランクケースカバー2 3DM-15461-00×1",
+        "amount": 881
+      },
+      {
+        "description": "（Webike）YAMAHA純正 Oリング 93210-19123×1",
+        "amount": 146
+      },
+      {
+        "description": "（Webike）YAMAHA純正 プレート,フリクション2 5Y1-16331-01×4",
+        "amount": 7324
+      },
+      {
+        "description": "（Webike）YAMAHA純正 プレート,フリクション 31A-16321-01×1",
+        "amount": 1645
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト 90123-08046×1",
+        "amount": 305
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット 90179-08148×1",
+        "amount": 565
+      },
+      {
+        "description": "（Webike）YAMAHA純正 プレート,クラッチ1 3J2-16324-00×4",
+        "amount": 5232
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ワッシャー,プレート 90201-10118×3",
+        "amount": 226
+      },
+      {
+        "description": "（Webike）K-PIT Oリング 70-967-30050×1",
+        "amount": 165
+      },
+      {
+        "description": "（Webike）NTB オイルフィルター YO-2003×1",
+        "amount": 842
+      },
+      {
+        "description": "（Amazon）ヤマルーブ スタンダードプラス MA2 10W-40 1L 90793-32159",
+        "amount": 2654
+      },
+      {
+        "description": "（Webike）NTB クラッチケーブル CYJ-06-007×1",
+        "amount": 2355
+      },
+      {
+        "description": "（Webike）NTB ガスケット GK280-358-40×1",
+        "amount": 564
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト,ヘキサゴンソケットヘッド 90110-06210×2",
+        "amount": 150
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ガスケット,マフラー 4DN-14714-01×1",
+        "amount": 2880
+      }
+    ],
+    "mileage": 32600,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

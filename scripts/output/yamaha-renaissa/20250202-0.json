@@ -1,0 +1,37 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2025/02/02",
+    "totalAmount": 1835,
+    "items": [
+      {
+        "description": "シフトペダル分解整備",
+        "amount": null
+      },
+      {
+        "description": "（Webike）YAMAHA純正 カバーダスト 2H9-18154-00×2",
+        "amount": 720
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ボルト 97024-06020×1",
+        "amount": 65
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ロッド,シフト 4DN-18115-20×1",
+        "amount": 830
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット 90170-06228×1",
+        "amount": 120
+      },
+      {
+        "description": "（Webike）YAMAHA純正 ナット 95304-06700×1",
+        "amount": 100
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

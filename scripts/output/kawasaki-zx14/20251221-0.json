@@ -3,15 +3,47 @@
   "category": "kawasaki-zx14",
   "data": {
     "date": "2025/12/21",
-    "totalAmount": 29952,
+    "totalAmount": 26935,
     "items": [
       {
-        "description": "フロントブレーキホース交換（スウェッジライン）",
+        "description": "フロントブレーキホース交換",
         "amount": null
+      },
+      {
+        "description": "（Webike）スウェッジラインプロ ブレーキホースキット BTP722FB",
+        "amount": 20478
       },
       {
         "description": "フロントキャリパーオーバーホール",
         "amount": null
+      },
+      {
+        "description": "（カワサキオンラインショップ）ブリーザ（ブレーキ）×4",
+        "amount": 3212
+      },
+      {
+        "description": "（カワサキオンラインショップ）キャップ（ブリーザ）×4",
+        "amount": 1100
+      },
+      {
+        "description": "（カワサキオンラインショップ）ボルト,ソケット,10X60×1",
+        "amount": 550
+      },
+      {
+        "description": "（カワサキオンラインショップ）クランプ,ホース×1",
+        "amount": 407
+      },
+      {
+        "description": "（カワサキオンラインショップ）リベット×2",
+        "amount": 220
+      },
+      {
+        "description": "（カワサキオンラインショップ）シール（オイル）×2",
+        "amount": 506
+      },
+      {
+        "description": "（カワサキオンラインショップ）シール（オイル）×2",
+        "amount": 462
       }
     ],
     "mileage": 36737,

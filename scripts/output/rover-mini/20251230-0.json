@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/12/30",
+    "totalAmount": 1360,
+    "items": [
+      {
+        "description": "スパークプラグ交換",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）NGK スパークプラグ BPR6ES",
+        "amount": 1360
+      }
+    ],
+    "mileage": 27488,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}
