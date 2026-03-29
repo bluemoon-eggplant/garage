@@ -26,7 +26,7 @@ export const MAINTENANCE_CATEGORIES: Record<MaintenanceCategory, string> = {
 
 export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
   inspection: [
-    'マツダセーフティーチェック', 'カワサキ安心点検', '車検整備', '車検基本点検',
+    'マツダセーフティーチェック', 'パックdeメンテ', '安心点検', '車検整備', '車検基本点検',
   ],
   consumable: [
     'エンジンオイル', 'オイル交換', 'ROTARY-1', '5W-30', '10W-40', 'オイルエレメント', 'オイルフィルター交換',

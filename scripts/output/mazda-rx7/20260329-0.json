@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/03/29",
+    "totalAmount": 66000,
+    "items": [
+      {
+        "description": "内装7箇所リペア（Aピラー、ダッシュボードセンター&左端、リアシート2点、運転席シートバック、センタールーバー）",
+        "amount": 66000
+      }
+    ],
+    "mileage": null,
+    "shop": "トータルリペアリンク"
+  },
+  "reviewStatus": "approved"
+}

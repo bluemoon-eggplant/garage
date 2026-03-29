@@ -1,0 +1,17 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260325-2209.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/03/23",
+    "totalAmount": 0,
+    "items": [
+      {
+        "description": "パックdeメンテ: マツダ セーフティーチェック_ラージ[平日P]",
+        "amount": 9240
+      }
+    ],
+    "mileage": 100488,
+    "shop": "株式会社関東マツダ 埼玉事業部 本庄店"
+  },
+  "reviewStatus": "pending"
+}
