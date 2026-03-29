@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2020/05/08",
+    "totalAmount": 5500,
+    "items": [
+      {
+        "description": "（メルカリ）ZX14R リアカウル 外装 ZZR1400×1",
+        "amount": 5500
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

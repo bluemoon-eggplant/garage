@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "caterham-7",
+  "data": {
+    "date": "2025/06/02",
+    "totalAmount": 1710,
+    "items": [
+      {
+        "description": "（Amazon）エナジープライス メーターリングセット CB400SF×1",
+        "amount": 1710
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

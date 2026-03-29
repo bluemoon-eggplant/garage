@@ -1,0 +1,29 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2019/06/13",
+    "totalAmount": 57720,
+    "items": [
+      {
+        "description": "（Amazon）GSG Mototechnik ZZR1400/ZX-12R用 リアアクスルスライダー×1",
+        "amount": 8424
+      },
+      {
+        "description": "（Webike）STRIKER ガードスライダー SS-GS82B-F1×1",
+        "amount": 15630
+      },
+      {
+        "description": "（Webike）TRICK STAR フロントアクスルスライダー TS-AX-01×1",
+        "amount": 6048
+      },
+      {
+        "description": "（Webike）KIJIMA ドライブレコーダー デュアルカメラ AD720 Z9-30-003×1",
+        "amount": 27618
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

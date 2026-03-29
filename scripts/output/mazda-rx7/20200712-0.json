@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2020/07/12",
+    "totalAmount": 8702,
+    "items": [
+      {
+        "description": "（楽天）RUGSLAY タフマット ラゲッジマット RX-7 FD3S×1",
+        "amount": 8702
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

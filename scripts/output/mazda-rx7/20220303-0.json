@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2022/03/03",
+    "totalAmount": 6666,
+    "items": [
+      {
+        "description": "（ヤフオク）RX-7 FD3S バッテリーカバー×1",
+        "amount": 6666
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

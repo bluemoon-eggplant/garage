@@ -3,7 +3,7 @@
   "category": "yamaha-renaissa",
   "data": {
     "date": "2024/07/28",
-    "totalAmount": 6563,
+    "totalAmount": 10501,
     "items": [
       {
         "description": "リアセクション分解整備",
@@ -68,6 +68,10 @@
       {
         "description": "（Webike）YAMAHA純正 ボルト,ウィズワッシャー 90119-06194×3",
         "amount": 348
+      },
+      {
+        "description": "（Yahooショッピング）YAMAHA純正 サイドカバーロックアセンブリ 55K-21708-00×1",
+        "amount": 3938
       }
     ],
     "mileage": 41790,

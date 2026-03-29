@@ -3,7 +3,7 @@
   "category": "mazda-rx7",
   "data": {
     "date": "2025/05/25",
-    "totalAmount": 95226,
+    "totalAmount": 101418,
     "items": [
       {
         "description": "フロントホイルハウスインナーフェンダー交換",
@@ -24,6 +24,14 @@
       {
         "description": "（マツダで購入）998650540B スクリュー,タッピング×1",
         "amount": 115
+      },
+      {
+        "description": "（Yahooショッピング）プッシュターンリベット BC1D-56-145 マツダ系 20個×1",
+        "amount": 2492
+      },
+      {
+        "description": "（ヤフオク）RX-7 FD3S 左前コーナーパネル 中古×1",
+        "amount": 3700
       }
     ],
     "mileage": null,

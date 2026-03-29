@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/10/12",
+    "totalAmount": 2370,
+    "items": [
+      {
+        "description": "（ヤフオク）Panasonic ROVER FACQ1650A カーカセットデッキ ジャンク×1",
+        "amount": 2370
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

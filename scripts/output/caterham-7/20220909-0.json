@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "caterham-7",
+  "data": {
+    "date": "2022/09/09",
+    "totalAmount": 7480,
+    "items": [
+      {
+        "description": "（Yahooショッピング）LUCAS L467 ナンバープレートランプ×1",
+        "amount": 7480
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

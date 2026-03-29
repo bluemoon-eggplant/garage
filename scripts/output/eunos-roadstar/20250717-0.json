@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2025/07/17",
+    "totalAmount": 1900,
+    "items": [
+      {
+        "description": "スパークプラグ交換",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）NGK スパークプラグ BKR5E-11×4",
+        "amount": 1900
+      }
+    ],
+    "mileage": 290907,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

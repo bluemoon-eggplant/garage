@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/10/11",
+    "totalAmount": 108000,
+    "items": [
+      {
+        "description": "（メルカリ）ローバーミニ MINI LIFE ML512×1",
+        "amount": 108000
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

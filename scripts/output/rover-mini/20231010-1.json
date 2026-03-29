@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/10/10",
+    "totalAmount": 2280,
+    "items": [
+      {
+        "description": "（ヤフオク）BLMC ROVER MINI 七宝メタル KEY FOB キーホルダー×1",
+        "amount": 2280
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

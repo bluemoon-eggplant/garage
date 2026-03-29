@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2022/08/27",
+    "totalAmount": 2680,
+    "items": [
+      {
+        "description": "（楽天）カワサキ純正 ZZR1400 アンダーカウルクッション 右×1",
+        "amount": 630
+      },
+      {
+        "description": "（楽天）カワサキ純正 ZZR1400 ロアカウルパッド 右×1",
+        "amount": 2050
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/07/17",
+    "totalAmount": 1780,
+    "items": [
+      {
+        "description": "（ヤフオク）1DIN オーディオ枠×1",
+        "amount": 1780
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2024/04/07",
+    "totalAmount": 3480,
+    "items": [
+      {
+        "description": "（Amazon）パワーウインドウスイッチ 6ピン RX-7 FD3S F100-66-350C 社外品×1",
+        "amount": 3480
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

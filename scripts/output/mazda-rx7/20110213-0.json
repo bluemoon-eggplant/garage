@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2011/02/13",
+    "totalAmount": 2999,
+    "items": [
+      {
+        "description": "（ヤフオク）FD3S RX-7 センター小物入れ×1",
+        "amount": 2999
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

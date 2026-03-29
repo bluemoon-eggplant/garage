@@ -3,7 +3,7 @@
   "category": "yamaha-renaissa",
   "data": {
     "date": "2025/01/13",
-    "totalAmount": 3567,
+    "totalAmount": 33377,
     "items": [
       {
         "description": "オイル交換",
@@ -24,6 +24,22 @@
       {
         "description": "（Webike）YAMAHA純正 ガスケット,クランクケースカバー 3DM-15451-00×1",
         "amount": 675
+      },
+      {
+        "description": "シートカウル、メインシート交換、シートバンド移植",
+        "amount": null
+      },
+      {
+        "description": "（ヤフオク）ヤマハ ルネッサ 4DN 純正シート シートカウル オレンジ×1",
+        "amount": 24110
+      },
+      {
+        "description": "ヘッドライトリム交換",
+        "amount": null
+      },
+      {
+        "description": "（ヤフオク）ヤマハ SRV250 ルネッサ 4DN 純正ヘッドライトレンズ×1",
+        "amount": 5700
       }
     ],
     "mileage": 31796,

@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2025/04/08",
+    "totalAmount": 25500,
+    "items": [
+      {
+        "description": "（ヤフオク）FD3S 5型 純正フロアマット×1",
+        "amount": 25500
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

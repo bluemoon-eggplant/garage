@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "caterham-7",
+  "data": {
+    "date": "2023/05/04",
+    "totalAmount": 3870,
+    "items": [
+      {
+        "description": "クロームメーターリング 52mm×3",
+        "amount": 3870
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "caterham-7",
+  "data": {
+    "date": "2023/08/28",
+    "totalAmount": 5049,
+    "items": [
+      {
+        "description": "（Yahooショッピング）ワイパーピボット PM25 クローム×1",
+        "amount": 5049
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

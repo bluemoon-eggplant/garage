@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "caterham-7",
+  "data": {
+    "date": "2023/02/19",
+    "totalAmount": 12900,
+    "items": [
+      {
+        "description": "（メルカリ）ケータハムスーパーセブン ワイパーアームステンレス・ブレードメッキ基部×1",
+        "amount": 12900
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

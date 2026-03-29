@@ -1,0 +1,25 @@
+{
+  "source": "manual",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2025/11/28",
+    "totalAmount": 3533,
+    "items": [
+      {
+        "description": "エンジンオイル交換、パッキン新品",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）TAKUMI エンジンオイル 10W-40 4L×1",
+        "amount": 3396
+      },
+      {
+        "description": "（Amazon）PIAA ドレンパッキン SAFETY マツダ車用 DP40×1",
+        "amount": 137
+      }
+    ],
+    "mileage": 295932,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

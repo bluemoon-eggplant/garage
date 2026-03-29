@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/06/24",
+    "totalAmount": 20900,
+    "items": [
+      {
+        "description": "（ミニマルヤマ）ウォールナット・ドアレギュレターハンドルセット×1",
+        "amount": 20900
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

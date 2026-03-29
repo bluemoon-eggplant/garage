@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/04/23",
+    "totalAmount": 6030,
+    "items": [
+      {
+        "description": "（ヤフオク）ローバーミニ 3色テールランプAssy 左右セット 中古品×1",
+        "amount": 6030
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

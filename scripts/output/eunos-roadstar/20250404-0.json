@@ -1,0 +1,77 @@
+{
+  "source": "manual",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2025/04/04",
+    "totalAmount": 115524,
+    "items": [
+      {
+        "description": "タイヤ交換",
+        "amount": null
+      },
+      {
+        "description": "（ヤフオク）ブリヂストン 185/60R14×4",
+        "amount": 15000
+      },
+      {
+        "description": "（株式会社 理嬉）タイヤ交換",
+        "amount": 6160
+      },
+      {
+        "description": "（メルカリ）BBS RG14インチ スポークデザインホイール センターキャップ付き",
+        "amount": 50000
+      },
+      {
+        "description": "（メルカリ）EUNOS ロードスターバッジ型キーホルダー 専用ケース付き",
+        "amount": 5555
+      },
+      {
+        "description": "（メルカリ）ユーノス セントラル 車検証入れ ロードスター シトロエンEUNOS",
+        "amount": 3000
+      },
+      {
+        "description": "（津ミルクネット）サイドブレーキブーツ×1",
+        "amount": 2120
+      },
+      {
+        "description": "（津ミルクネット）MT車用シフトブーツ×1",
+        "amount": 2940
+      },
+      {
+        "description": "（マルハモータース）チェンジレバーブーツセットNA/NB×1",
+        "amount": 8800
+      },
+      {
+        "description": "（マルハモータース）アッシュトレー(灰皿)NA用 黒色 NA01-64-610B×1",
+        "amount": 7514
+      },
+      {
+        "description": "（マルハモータース）ロッドホルダー G030-56-693A×1",
+        "amount": 210
+      },
+      {
+        "description": "（Yahoo!ショッピング）MAZDA純正 チェンジレバーノブ M523-17-520×1",
+        "amount": 5360
+      },
+      {
+        "description": "（ヤフオク）シガーライター×1",
+        "amount": 540
+      },
+      {
+        "description": "（ヤフオク）富士通テン カセットデッキ NAロードスター用 修理済み作動確認品×1",
+        "amount": 5250
+      },
+      {
+        "description": "（Amazon）KYO-EI ラグナット 貫通タイプ 21HEX M12×P1.5 101HC-16P×1",
+        "amount": 966
+      },
+      {
+        "description": "（Amazon）ENDY 1DINポケットグローブボックス EGB-201B×1",
+        "amount": 2109
+      }
+    ],
+    "mileage": 289254,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

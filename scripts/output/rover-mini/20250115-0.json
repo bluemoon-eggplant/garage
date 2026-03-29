@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/01/15",
+    "totalAmount": 52000,
+    "items": [
+      {
+        "description": "（ヤフオク）ローバーミニ スティールホイール+キャップ ヨコハマスタッドレス 英国ダンロップ×1",
+        "amount": 52000
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

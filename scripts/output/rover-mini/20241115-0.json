@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/11/15",
+    "totalAmount": 2140,
+    "items": [
+      {
+        "description": "（Yahooショッピング）ローバーミニ オイルフィラーキャップ GFE6003×1",
+        "amount": 2140
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

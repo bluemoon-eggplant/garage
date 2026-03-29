@@ -1,0 +1,77 @@
+{
+  "source": "manual",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2025/08/11",
+    "totalAmount": 38644,
+    "items": [
+      {
+        "description": "オイルフィルター交換",
+        "amount": null
+      },
+      {
+        "description": "オイルフラッシング",
+        "amount": null
+      },
+      {
+        "description": "スピードメーターケーブル交換",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル交換、パッキン新品",
+        "amount": null
+      },
+      {
+        "description": "ブレーキパッド交換",
+        "amount": null
+      },
+      {
+        "description": "ブレーキフルード交換",
+        "amount": null
+      },
+      {
+        "description": "クラッチフルード交換",
+        "amount": null
+      },
+      {
+        "description": "ラジエーターキャップ交換",
+        "amount": null
+      },
+      {
+        "description": "センターコンソールビス追加",
+        "amount": null
+      },
+      {
+        "description": "（Amazon）DIXCEL ブレーキパッド ESタイプ 1台分 ES-351122-ES-355042×1",
+        "amount": 16896
+      },
+      {
+        "description": "（Amazon）RESPO REO-3.8LRS エンジンオイル 3.8L×1",
+        "amount": 5150
+      },
+      {
+        "description": "（Amazon）PIAA ドレンパッキン SAFETY マツダ車用 DP40×1",
+        "amount": 137
+      },
+      {
+        "description": "（MAZDA）ケーブル,スピードメーター N00160070B×1",
+        "amount": 10032
+      },
+      {
+        "description": "（MAZDA）カートリッジ,オイルフィルター B6Y114302A×1",
+        "amount": 2772
+      },
+      {
+        "description": "（MAZDA）スクリュー,タッピング 998650516B×1",
+        "amount": 77
+      },
+      {
+        "description": "（MAZDA）キャップ,ラジエーター D31615205×1",
+        "amount": 3580
+      }
+    ],
+    "mileage": 291225,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

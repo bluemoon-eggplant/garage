@@ -1,0 +1,37 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2024/07/15",
+    "totalAmount": 49028,
+    "items": [
+      {
+        "description": "フロントカウルグリル、前後ワイパーアーム交換",
+        "amount": null
+      },
+      {
+        "description": "（楽天）FD3S RX-7 純正交換ワイパー フロント左右リア 3本セット ext100-257×1",
+        "amount": 2361
+      },
+      {
+        "description": "（ヤフオク）マツダ純正 RX-7 FD3S ワイパーアーム 3点セット MZD-004-S×1",
+        "amount": 22900
+      },
+      {
+        "description": "（ヤフオク）FD3S RX-7 純正 ワイパーメクラ蓋キャップカバー×1",
+        "amount": 1507
+      },
+      {
+        "description": "（ヤフオク）RX-7 FD3S フロントワイパー下カバー メクラキャップ 1台分×1",
+        "amount": 2460
+      },
+      {
+        "description": "（楽天）マツダ純正 フロントカウルカバー F100-50-790A×1",
+        "amount": 19800
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

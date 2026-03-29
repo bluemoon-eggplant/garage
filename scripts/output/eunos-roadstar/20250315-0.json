@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2025/03/15",
+    "totalAmount": 968510,
+    "items": [
+      {
+        "description": "車体購入",
+        "amount": 968510
+      }
+    ],
+    "mileage": 289071,
+    "shop": "ヤフオク"
+  },
+  "reviewStatus": "approved"
+}

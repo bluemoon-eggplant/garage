@@ -1,0 +1,21 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/08/06",
+    "totalAmount": 14355,
+    "items": [
+      {
+        "description": "リアエンブレム交換、メイフェアエンブレム取り付け",
+        "amount": null
+      },
+      {
+        "description": "（ヤフオク）ローバーミニ 純正エンブレム バッジ トランクリッド用MINI 前後×1",
+        "amount": 14355
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

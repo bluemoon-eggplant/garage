@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2025/08/14",
+    "totalAmount": 3000,
+    "items": [
+      {
+        "description": "（ヤフオク）ローバーミニ用 フューエルGSキャップ 中古×1",
+        "amount": 3000
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

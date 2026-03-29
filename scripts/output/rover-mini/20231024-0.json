@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2023/10/24",
+    "totalAmount": 9138,
+    "items": [
+      {
+        "description": "（ヤフオク）ローバーミニ 中古サイドバイザー エアロタイプ×1",
+        "amount": 9138
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}
