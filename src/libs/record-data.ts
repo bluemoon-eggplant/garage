@@ -31,6 +31,7 @@ interface RecordFile {
     items: ExtractedItem[];
     mileage: number | null;
     shop: string;
+    tasks?: string[];
   };
   reviewStatus: string;
 }
@@ -78,6 +79,7 @@ export function loadAllMaintenanceRecords(): MaintenanceRecord[] {
           mileage: recordFile.data.mileage,
           shop: recordFile.data.shop,
           source: recordFile.source,
+          tasks: recordFile.data.tasks ?? [],
         });
       } catch {
         console.warn(`Failed to parse: ${path.join(entry.name, file)}`);

@@ -34,13 +34,15 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const uniqueTags = getUniqueTags(posts);
 
   const tagPagination = uniqueTags.flatMap((tag) => {
-    const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
+    const filteredPosts = posts.filter((post) => post.data.tags?.includes(tag));
     const options = { pageSize, params: { filter: `tags/${tag}` } };
     const pagination = paginate(filteredPosts, options);
     return pagination;
   });
 
-  tagPagination.push({ ...tagPagination[0], params: { ...tagPagination[0].params, page: '1' } });
+  if (tagPagination.length > 0) {
+    tagPagination.push({ ...tagPagination[0], params: { ...tagPagination[0].params, page: '1' } });
+  }
 
   // prerender categories
   const uniqueCategories = getUniqueCategories(posts);

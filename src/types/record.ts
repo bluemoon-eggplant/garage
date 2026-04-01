@@ -46,6 +46,7 @@ export interface MaintenanceRecord {
   mileage: number | null;
   shop: string;
   source: string;
+  tasks: string[];
 }
 
 export interface MaintenanceTableRow {

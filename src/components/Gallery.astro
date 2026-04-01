@@ -3,8 +3,6 @@ import { getImage } from 'astro:assets';
 
 import ReactGallery from '@/components/react/Gallery';
 import { IMAGE_SIZES } from '@/constants/image';
-import { getAllPosts } from '@/modules/post/common';
-import { getAllGarageItems } from '@/modules/garage';
 import { randomizeArray } from '@/utils/objects';
 import { cn } from '@/utils/styles';
 
@@ -13,51 +11,59 @@ import type { ImageMetadata } from 'astro';
 
 export interface Props extends astroHTML.JSX.HTMLAttributes {}
 
-const getAllImagesMetadata = (): ImageMetadata[] => {
-  const imageModules = import.meta.glob<{ default: ImageMetadata }>(
-    // cant be even variable
-    '/src/assets/images/all-images/*.{jpg,png,webp}',
+/** Only return images that are used in blog posts */
+const getBlogImagesMetadata = (blogImageFilenames: Set<string>): ImageMetadata[] => {
+  const garageImageModules = import.meta.glob<{ default: ImageMetadata }>(
+    '/src/content/garage/**/_images/*.{jpg,png,webp}',
     { eager: true }
   );
 
-  // convert map to array
-  const imagesMetadata = Object.keys(imageModules)
-    .map((path) => imageModules[path].default);
-  return imagesMetadata;
+  return Object.entries(garageImageModules)
+    .filter(([path]) => {
+      const filename = path.split('/').pop()?.split('.')[0] || '';
+      return blogImageFilenames.has(filename);
+    })
+    .map(([, mod]) => mod.default);
 };
 
-const imagesMetadata = getAllImagesMetadata();
+/**
+ * Build imageMap: garage image filename → blog post URL.
+ * Scan blog MDX files for `import ... from '..._images/...'` to find which
+ * blog post uses which garage image.
+ */
+const buildImageMap = (): Record<string, string> => {
+  const map: Record<string, string> = {};
 
-// Build mapping from heroImage filename to page URL using Content Collections API
-const imageMap: Record<string, string> = {};
+  // Read all blog MDX files as raw text
+  const postMdxModules = import.meta.glob<string>(
+    '/src/content/post/**/index.mdx',
+    { eager: true, query: '?raw', import: 'default' }
+  );
 
-// Add blog posts
-const posts = await getAllPosts();
-for (const post of posts) {
-  const heroImage = post.data.heroImage;
-  if (heroImage && typeof heroImage === 'object' && 'src' in heroImage) {
-    const heroSrc = String(heroImage.src);
-    const heroFilename = heroSrc.split('/').pop()?.split('.')[0] || '';
-    imageMap[heroFilename] = `/blog/${post.id}`;
+  const importRegex = /from\s+['"].*_images\/([^'"]+)['"]/g;
+
+  for (const [mdxPath, raw] of Object.entries(postMdxModules)) {
+    // Extract blog slug from path: /src/content/post/2025/05-06-fd3s-maintenance/index.mdx
+    // Slug is the directory name right before index.mdx (no year prefix)
+    const parts = mdxPath.split('/');
+    const slug = parts[parts.length - 2];
+    const blogUrl = `/blog/${slug}`;
+
+    let match;
+    while ((match = importRegex.exec(raw)) !== null) {
+      // match[1] = "PXL_20250506_073305551.jpg"
+      const imageFilename = match[1].split('.')[0];
+      map[imageFilename] = blogUrl;
+    }
   }
-}
 
-// Add garage items
-const garageItems = await getAllGarageItems();
-for (const item of garageItems) {
-  const heroImage = item.data.heroImage;
-  if (heroImage && typeof heroImage === 'object' && 'src' in heroImage) {
-    const heroSrc = String(heroImage.src);
-    const heroFilename = heroSrc.split('/').pop()?.split('.')[0] || '';
-    imageMap[heroFilename] = `/garage/${item.id}`;
-  }
-}
+  return map;
+};
 
-// Add owner page (uses electronics1.jpg)
-imageMap['electronics1'] = '/owner/';
+const imageMap = buildImageMap();
+const imagesMetadata = getBlogImagesMetadata(new Set(Object.keys(imageMap)));
 
 function getBlogLink(imageSrc: string): string {
-  // Extract filename from gallery image src (e.g., "/src/assets/images/all-images/focus1.jpg" -> "focus1")
   const filename = imageSrc.split('/').pop()?.split('.')[0] || '';
   return imageMap[filename] || '#';
 }
@@ -70,15 +76,25 @@ const imageMetadataToReactImageProps = async (
     format: 'webp',
   };
 
+  // Preserve original aspect ratio — only constrain width
+  const thumbWidth = IMAGE_SIZES.FIXED.MDX_XS.width;
+  const aspectRatio = imagesMetadata.height / imagesMetadata.width;
+  const thumbHeight = Math.round(thumbWidth * aspectRatio);
+
   const thumbnailAstroImageProps = {
     ...astroImageProps,
-    ...IMAGE_SIZES.FIXED.MDX_XS_16_9,
+    width: thumbWidth,
+    height: thumbHeight,
     alt: 'Thumbnail image',
   };
 
+  const lightboxWidth = IMAGE_SIZES.FIXED.MDX_XL.width;
+  const lightboxHeight = Math.round(lightboxWidth * aspectRatio);
+
   const lightboxAstroImageProps = {
     ...astroImageProps,
-    ...IMAGE_SIZES.FIXED.MDX_XL_16_9,
+    width: lightboxWidth,
+    height: lightboxHeight,
     alt: 'Lightbox image',
   };
 

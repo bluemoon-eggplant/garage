@@ -35,13 +35,8 @@ export const getActiveNavItemPath = (routePathname: string): NavigationItem['pat
     case routePathname.startsWith(ROUTES.TAGS):
     case routePathname.startsWith(ROUTES.CATEGORIES):
     case routePathname.startsWith(ROUTES.EXPLORE):
+    case routePathname.startsWith(ROUTES.BLOG):
       activeNavItem = getNavItem(ROUTES.EXPLORE);
-      break;
-    case !routePathname.startsWith(ROUTES.TAGS) &&
-      !routePathname.startsWith(ROUTES.CATEGORIES) &&
-      !routePathname.startsWith(ROUTES.EXPLORE) &&
-      routePathname.startsWith(ROUTES.BLOG):
-      activeNavItem = getNavItem(ROUTES.BLOG);
       break;
 
     default:

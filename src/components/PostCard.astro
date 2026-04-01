@@ -5,7 +5,6 @@ import { Image } from 'astro:assets';
 import { getPublishedOrUpdatedDate } from '@/modules/common';
 import { getCategoryProps } from '@/modules/post/category';
 import Link from '@/components/Link.astro';
-import TagList from '@/components/TagList.astro';
 import { DRAFT_TEXT } from '@/constants/data';
 import { IMAGE_SIZES } from '@/constants/image';
 import { ROUTES } from '@/constants/routes';
@@ -31,8 +30,7 @@ const {
   heroAlt,
   noHero,
   category,
-  tags = [],
-  description,
+description,
 } = data;
 
 const { icon: categoryIcon } = getCategoryProps(category);
@@ -122,16 +120,7 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
       )
     }
 
-    {/* reading time and read more link */}
-    <div class="flex items-center xs:items-end justify-between">
-      <div class="flex items-center gap-4">
-        <span class="inline-flex items-center gap-2 text-sm text-captions">
-          <Icon name="mdi:book-open-blank-variant-outline" class="w-4 h-4" />
-          <span class="text-nowrap">{`${Math.round(readingTime)} minutes`}</span>
-        </span>
-        <TagList tags={tags.slice(0, 2)} size="sm" variant="text" class="hidden xs:inline-flex" />
-      </div>
-
+    <div class="flex items-center justify-end">
       <Link
         href={`${ROUTES.BLOG}${slug}`}
         class="inline-flex items-center gap-1 text-base font-medium"

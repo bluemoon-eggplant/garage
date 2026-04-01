@@ -18,8 +18,17 @@ type GenerateIdFn = Parameters<typeof glob>[0]['generateId'];
 const generateId: GenerateIdFn = ({ entry }: { entry: string }) =>
   entry.split('/')[0];
 
+/**
+ * For posts with year subfolders: get the immediate parent folder of index.mdx.
+ *
+ * @example filepath: 2024/01-20-my-history/index.mdx -> slug: 01-20-my-history
+ * @example filepath: 01-20-my-history/index.mdx -> slug: 01-20-my-history
+ */
+const generatePostId: GenerateIdFn = ({ entry }: { entry: string }) =>
+  entry.split('/').at(-2)!;
+
 export const postCollection = defineCollection({
-  loader: glob({ pattern: '**/*.mdx', base: POST, generateId }),
+  loader: glob({ pattern: '**/*.mdx', base: POST, generateId: generatePostId }),
   schema: postSchema,
 });
 

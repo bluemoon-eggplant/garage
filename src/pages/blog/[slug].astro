@@ -1,19 +1,16 @@
 ---
-import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 import { render } from 'astro:content';
 
 import { getAllPostsWithReadingTime } from '@/modules/post/common';
 import { getRandomPosts } from '@/modules/post/random';
-import { getHeadingsForTableOfContents } from '@/modules/post/table-of-contents';
+import { loadAllMaintenanceRecords } from '@/libs/record-data';
 import { default as PostLayout } from '@/layouts/Post.astro';
-import Giscus from '@/components/Giscus.astro';
+
 import PostListMore from '@/components/PostListMore.astro';
 import PostMeta from '@/components/PostMeta.astro';
 import Share from '@/components/Share.astro';
-import TableOfContents from '@/components/TableOfContents.astro';
-import TagList from '@/components/TagList.astro';
 import { DRAFT_TEXT } from '@/constants/data';
-import { IMAGE_SIZES } from '@/constants/image';
 import { ROUTES } from '@/constants/routes';
 import { setTransitionSlug, TRANSITION_ELEMENT_IDS } from '@/constants/transitions';
 import { CONFIG_CLIENT } from '@/config/client';
@@ -21,50 +18,63 @@ import { getOpenGraphImagePath } from '@/libs/api/open-graph/image-path';
 
 import type { Metadata } from '@/types/common';
 import type { Post } from '@/types/post';
+import type { MaintenanceRecord } from '@/types/record';
 
 const { SITE_URL } = CONFIG_CLIENT;
 
 export async function getStaticPaths() {
   const posts: Post[] = await getAllPostsWithReadingTime();
+  const records = loadAllMaintenanceRecords();
 
-  const paths = posts.map((post) => {
+  const paths = posts.map((post, index) => {
     const { slug } = post;
-    const randomPosts = getRandomPosts({ posts, excludeSlug: slug });
+    const { category, publishDate } = post.data;
+    const randomPosts = getRandomPosts({ posts, excludeSlug: slug, category });
+
+    // same category prev/next (posts are sorted by date desc)
+    const sameCategoryPosts = posts.filter((p) => p.data.category === category);
+    const categoryIndex = sameCategoryPosts.findIndex((p) => p.slug === slug);
+    const prevPost = sameCategoryPosts[categoryIndex - 1] ?? null;
+    const nextPost = sameCategoryPosts[categoryIndex + 1] ?? null;
+
+    // Match DIY record: same category + same date
+    const postDateStr = `${publishDate.getFullYear()}/${String(publishDate.getMonth() + 1).padStart(2, '0')}/${String(publishDate.getDate()).padStart(2, '0')}`;
+    const matchedRecord = records.find(
+      (r) => r.shop === 'DIY' && r.category === category && r.date === postDateStr
+    );
 
     return {
       params: { slug },
-      props: { ...post, randomPosts },
+      props: { ...post, randomPosts, prevPost, nextPost, matchedRecord: matchedRecord ?? null },
     };
   });
 
   return paths;
 }
 
-const { data, readingTime, randomPosts } = Astro.props;
+const { data, readingTime, randomPosts, prevPost, nextPost, matchedRecord } = Astro.props as Post & {
+  randomPosts: Post[];
+  prevPost: Post | null;
+  nextPost: Post | null;
+  matchedRecord: MaintenanceRecord | null;
+};
 const {
   draft,
   title,
   publishDate,
   updatedDate,
   description,
-  toc,
-  heroImage,
-  heroAlt,
-  noHero,
   category,
-  tags = [],
 } = data;
 
 const { slug } = Astro.params;
 const { pathname } = Astro.url;
 
-const { Content, headings: postHeadings } = await render(Astro.props);
-const headings = getHeadingsForTableOfContents(postHeadings);
+const { Content } = await render(Astro.props);
 
 const postMetaProps = {
   category,
   publishDate,
-  readingTime,
   updatedDate,
 };
 
@@ -83,27 +93,7 @@ const metadata: Metadata = { title, description, image };
 ---
 
 <PostLayout {metadata}>
-  <Fragment slot="hero-image">
-    {/* hero image 1280x720 max, 16:9 */}
-    {
-      !noHero && (
-        <Image
-          {...IMAGE_SIZES.RESPONSIVE.POST_HERO}
-          src={heroImage}
-          alt={heroAlt}
-          fetchpriority="high"
-          loading="eager"
-          itemprop="image"
-          class="block max-w-full h-auto aspect-[16/8] object-cover"
-          transition:name={getTransitionNameFromElementId({
-            elementId: TRANSITION_ELEMENT_IDS.POST_CARD.HERO_IMAGE,
-          })}
-        />
-      )
-    }
-  </Fragment>
-
-  <Fragment slot="hero-text">
+<Fragment slot="hero-text">
     <h1
       class="b-h1"
       transition:name={getTransitionNameFromElementId({
@@ -136,18 +126,56 @@ const metadata: Metadata = { title, description, image };
   </Fragment>
 
   <Fragment slot="content">
-    {toc && <TableOfContents headings={headings} />}
+    {matchedRecord && matchedRecord.tasks.length > 0 && (
+      <div class="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-900/20 px-6 py-4 mb-8">
+        <div class="flex items-center gap-2 mb-3">
+          <Icon name="mdi:wrench" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+          <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">やったこと</h2>
+          <a
+            href={`${ROUTES.RECORD}detail/${matchedRecord.id}`}
+            class="ml-auto text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+          >
+            整備記録を見る
+            <Icon name="mdi:arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
+        <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
+          {matchedRecord.tasks.map((task) => (
+            <li>{task}</li>
+          ))}
+        </ul>
+      </div>
+    )}
 
     <Content />
   </Fragment>
 
   <Fragment slot="after-content">
-    <div class="flex justify-between items-start gap-6 flex-col md:flex-row b-h2-mb">
-      <TagList tags={tags} size="md" />
+    <div class="flex justify-end b-h2-mb">
       <Share {...shareProps} />
     </div>
 
-    <Giscus class="b-h2-mt" />
+    <nav class="flex items-center justify-between gap-4 b-h2-mb">
+      {prevPost ? (
+        <a href={`${ROUTES.BLOG}${prevPost.slug}`} class="flex items-center gap-1 text-links hover:text-links-hover">
+          <Icon name="mdi:chevron-left" class="w-5 h-5" />
+          <span class="line-clamp-1">{prevPost.data.title}</span>
+        </a>
+      ) : <span />}
+      {nextPost ? (
+        <a href={`${ROUTES.BLOG}${nextPost.slug}`} class="flex items-center gap-1 text-links hover:text-links-hover text-right">
+          <span class="line-clamp-1">{nextPost.data.title}</span>
+          <Icon name="mdi:chevron-right" class="w-5 h-5" />
+        </a>
+      ) : <span />}
+    </nav>
+
+    <div class="flex justify-center">
+      <a href={`${ROUTES.EXPLORE_CATEGORIES}${category}`} class="flex items-center gap-1 text-links hover:text-links-hover">
+        <Icon name="mdi:arrow-left" class="w-4 h-4" />
+        <span>一覧に戻る</span>
+      </a>
+    </div>
   </Fragment>
 
   <Fragment slot="more-posts">

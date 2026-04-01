@@ -18,12 +18,14 @@ const { title, heroImage, heroAlt, description, draft } = data;
 ---
 
 <div>
-  <Image
-    {...IMAGE_SIZES.RESPONSIVE.POST_CARD}
-    src={heroImage}
-    alt={heroAlt}
-    class="max-h-40 object-cover rounded-t-box"
-  />
+  <a href={`${ROUTES.BLOG}${slug}`}>
+    <Image
+      {...IMAGE_SIZES.RESPONSIVE.POST_CARD}
+      src={heroImage}
+      alt={heroAlt}
+      class="max-h-40 object-cover rounded-t-box"
+    />
+  </a>
   <h4 class="b-h4 break-words line-clamp-2 mt-3 mb-2">
     <Link variant="link-heading" href={`${ROUTES.BLOG}${slug}`}>
       {title}

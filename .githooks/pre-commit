@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Auto-resize images in _images/ directories before commit
+# Resizes to max 1600px width using sharp
+
+IMAGES=$(git diff --cached --name-only --diff-filter=ACM | grep '_images/.*\.\(jpg\|jpeg\|png\|webp\)$' || true)
+
+if [ -z "$IMAGES" ]; then
+  exit 0
+fi
+
+echo "Pre-commit: resizing images in _images/..."
+node scripts/resize-staged-images.mjs $IMAGES

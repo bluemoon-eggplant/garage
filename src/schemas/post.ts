@@ -28,12 +28,6 @@ export const postSchema = ({ image }: SchemaContext) =>
     draft: z.boolean().default(DRAFT),
     category: z.string().default(CATEGORY),
     tags: z
-      .array(
-        z.string().refine(
-          (tag) => TAGS.includes(tag as (typeof TAGS)[number]),
-          (tag) => ({ message: `Invalid tag: ${tag} in the markdown.` })
-        )
-      )
-      .nonempty()
-      .transform(removeDuplicatesAndToLowerCase),
+      .array(z.string())
+      .default([]),
   });

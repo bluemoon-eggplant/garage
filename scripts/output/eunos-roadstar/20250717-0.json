@@ -15,7 +15,12 @@
       }
     ],
     "mileage": 290907,
-    "shop": "DIY"
+    "shop": "DIY",
+    "tasks": [
+      "スパークプラグ交換（BKR5E-11）",
+      "プラグホール清掃",
+      "エンジン始動確認"
+    ]
   },
   "reviewStatus": "approved"
 }

@@ -9,6 +9,7 @@ export interface RandomPostsArgs {
   posts: Post[];
   count?: number;
   excludeSlug?: string;
+  category?: string;
 }
 
 /** Must handle empty array. */
@@ -16,10 +17,15 @@ export const getRandomPosts = ({
   posts,
   count = MORE_POSTS_COUNT,
   excludeSlug,
+  category,
 }: RandomPostsArgs): Post[] => {
   if (!(posts.length > 0)) return [];
 
-  const filteredPosts = posts.filter((post) => post.slug !== excludeSlug);
+  let filteredPosts = posts.filter((post) => post.slug !== excludeSlug);
+
+  if (category) {
+    filteredPosts = filteredPosts.filter((post) => post.data.category === category);
+  }
 
   if (!(filteredPosts.length > 0)) return [];
 

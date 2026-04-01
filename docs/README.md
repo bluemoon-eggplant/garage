@@ -42,6 +42,74 @@ https://nemanjamitic.com/api/feed.xml
 https://nemanjamitic.com/api/feed.json
 ```
 
+### 画像の圧縮と配置
+
+ブログ記事（特に History 系）で写真を多用する場合のワークフロー。
+
+#### ディレクトリ構成
+
+画像は記事ローカルの `_images/` フォルダに配置する。
+
+```
+src/content/post/
+└── 2024/
+    └── 03-30-my-history/
+        ├── index.mdx
+        └── _images/
+            ├── photo1.jpg
+            ├── photo2.jpg
+            └── photo3.jpg
+```
+
+#### 画像リサイズ（macOS sips）
+
+スマホ・カメラの写真はそのままだと大きすぎる（3000〜4000px）。
+macOS 標準の `sips` コマンドで 1600px 幅にリサイズする。
+
+```bash
+# 記事の _images を一括リサイズ（アスペクト比維持）
+sips --resampleWidth 1600 src/content/post/2024/03-30-my-history/_images/*
+
+# サイズ確認
+sips -g pixelWidth -g pixelHeight src/content/post/2024/03-30-my-history/_images/*
+
+# garage の画像も同様
+sips --resampleWidth 1600 src/content/garage/fd3s/_images/*
+```
+
+**推奨リサイズ幅:** 1600px（サイト表示最大1280pxに対して十分な余裕）
+
+#### MDX での使い方
+
+```mdx
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Photo1 from './_images/photo1.jpg';
+import Photo2 from './_images/photo2.jpg';
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Photo1} alt="説明文" />
+<Image {...IMAGE_SIZES.FIXED.MDX_MD} src={Photo2} alt="説明文" />
+```
+
+主な IMAGE_SIZES:
+| 定数 | 横幅 | 用途 |
+|------|------|------|
+| `MDX_SM` | 640px | 小さめ表示 |
+| `MDX_MD` | 768px | 中サイズ |
+| `MDX_LG` | 1024px | 標準（よく使う） |
+| `MDX_XL` | 1280px | 大きめ表示 |
+
+#### Gallery ページとの連携
+
+`_images/` フォルダの画像は `/gallery/` ページにも自動表示される。
+リンクは親記事（`/blog/{slug}`）に自動で紐づく。
+
+#### 注意事項
+
+- **フォーマット変換は不要** — Astro が webp/avif にビルド時変換する
+- **リサイズは git add 前に行う** — 大きい画像をコミットするとリポジトリが膨れる
+- **JPEG品質の追加圧縮** — 必要なら `sips --setProperty formatOptions 80 ファイル名`
+
 ### Record ページ — Google Sheets 連携
 
 Record ページ (`/record/`) の維持記録データは Google Sheets から取得しています。
