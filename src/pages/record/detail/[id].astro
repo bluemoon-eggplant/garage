@@ -40,7 +40,7 @@ export async function getStaticPaths() {
         return postDateStr === recordDateStr;
       });
 
-      if (found) blogSlug = found.id;
+      if (found) blogSlug = String(found.id).replace(/^\d{4}\//, '');
     }
 
     return {
@@ -57,10 +57,11 @@ const { record, blogSlug } = Astro.props as {
 
 const categoryDef = CATEGORIES.find((c) => c.name === record.category);
 const categoryLabel = categoryDef?.label ?? record.category;
+const displayDate = record.date.replaceAll('/', '-');
 
 const metadata: Metadata = {
-  title: `${categoryLabel} 整備明細 - ${record.date}`,
-  description: `${record.date} ${record.shop} での整備記録`,
+  title: `${categoryLabel} 整備明細 - ${displayDate}`,
+  description: `${displayDate} ${record.shop} での整備記録`,
 };
 
 // Group items by maintenance category
@@ -96,7 +97,7 @@ for (const item of record.items) {
       <div class="px-6 py-4 grid grid-cols-2 gap-4 text-sm">
         <div>
           <span class="text-gray-500 dark:text-gray-400">完了日</span>
-          <p class="font-medium text-gray-900 dark:text-gray-100">{record.date}</p>
+          <p class="font-medium text-gray-900 dark:text-gray-100">{displayDate}</p>
         </div>
         <div>
           <span class="text-gray-500 dark:text-gray-400">整備店</span>

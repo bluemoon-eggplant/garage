@@ -69,7 +69,8 @@ export const getPublishedOrUpdatedDate = ({
 
 /*------------------------- for content layer -----------------------*/
 
-export const idToSlug = <T extends { id: unknown }>(item: T): T & { slug: T['id'] } => ({
+export const idToSlug = <T extends { id: unknown }>(item: T): T & { slug: string } => ({
   ...item,
-  slug: item.id,
+  // Strip year prefix for posts: "2025/05-25-fd3s" → "05-25-fd3s"
+  slug: String(item.id).replace(/^\d{4}\//, ''),
 });

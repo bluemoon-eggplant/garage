@@ -64,6 +64,17 @@ export const CATEGORIES = [
   },
 ] as const;
 
+/** Garage directory slug → record/post category name */
+export const GARAGE_SLUG_TO_CATEGORY: Record<string, string> = {
+  fd3s: 'mazda-rx7',
+  roadstar: 'eunos-roadstar',
+  mini: 'rover-mini',
+  caterham7: 'caterham-7',
+  zzr1400: 'kawasaki-zx14',
+  renaissa250: 'yamaha-renaissa',
+  maxam: 'yamaha-maxam',
+};
+
 // use imported images here
 export const DEFAULTS_POST = {
   TITLE: DEFAULT_METADATA.title,

@@ -1,8 +1,8 @@
 import { format } from 'date-fns';
 
 export const dateFormats = {
-  /** Jan 13, 2024 */
-  cardDate: 'MMM dd, yyyy',
+  /** 2024-01-13 */
+  cardDate: 'yyyy-MM-dd',
   /** 2024-02-26 */
   isoDate: 'yyyy-MM-dd',
   /** Tue, 16th July, 9am */

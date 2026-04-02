@@ -56,7 +56,7 @@ export const getFeed = async (): Promise<Feed> => {
       author: [author],
       copyright: copyright(publishDate),
       content,
-      ...(noHero ? { image: `${SITE_URL}${heroImage.src}` } : {}),
+      ...(heroImage && !noHero ? { image: `${SITE_URL}${heroImage.src}` } : {}),
     };
 
     return item;

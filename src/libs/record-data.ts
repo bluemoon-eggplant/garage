@@ -210,7 +210,7 @@ export function toTableRow(record: MaintenanceRecord): MaintenanceTableRow {
 
   return {
     id: record.id,
-    date: record.date,
+    date: record.date.replaceAll('/', '-'),
     amount: record.totalAmount,
     consumableTags,
     inspectionWork: grouped.inspection.join(', '),
