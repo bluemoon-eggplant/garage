@@ -41,7 +41,7 @@ interface RecordFile {
 let _cachedRecords: MaintenanceRecord[] | null = null;
 
 export function loadAllMaintenanceRecords(): MaintenanceRecord[] {
-  if (_cachedRecords) return _cachedRecords;
+  if (_cachedRecords && import.meta.env.PROD) return _cachedRecords;
 
   const outputDir = path.resolve(process.cwd(), 'scripts/output');
 

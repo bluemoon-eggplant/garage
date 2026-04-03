@@ -33,10 +33,15 @@ const VALID_SLUGS = [
   'roadstar',
   'mini',
   'caterham7',
-  'zzr1400',
+  'zx14',
   'renaissa250',
   'maxam',
 ];
+
+/** Drive folder name → local garage slug (when they differ) */
+const SLUG_REMAP: Record<string, string> = {
+  zzr1400: 'zx14',
+};
 
 const IMAGE_MIMETYPES = [
   'image/jpeg',
@@ -108,17 +113,19 @@ async function main() {
   for (const folder of slugFolders) {
     const slug = folder.name!;
 
-    if (filterSlug && slug !== filterSlug) continue;
+    const localSlug = SLUG_REMAP[slug] ?? slug;
 
-    if (!VALID_SLUGS.includes(slug)) {
+    if (!VALID_SLUGS.includes(localSlug)) {
       console.warn(`  スキップ: "${slug}" は有効なスラッグではありません`);
       continue;
     }
 
-    console.log(`\n📁 ${slug}/`);
+    if (filterSlug && localSlug !== filterSlug) continue;
+
+    console.log(`\n📁 ${slug}/ → ${localSlug}/`);
 
     // Ensure local _images directory exists
-    const localDir = path.join(GARAGE_DIR, slug, '_images');
+    const localDir = path.join(GARAGE_DIR, localSlug, '_images');
     fs.mkdirSync(localDir, { recursive: true });
 
     // List images in this folder

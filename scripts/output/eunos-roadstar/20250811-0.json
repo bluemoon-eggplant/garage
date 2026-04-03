@@ -4,41 +4,24 @@
   "data": {
     "date": "2025/08/11",
     "totalAmount": 38644,
+    "tasks": [
+      "エンジンオイル交換",
+      "オイルフィルター交換",
+      "スピードメーターケーブル交換",
+      "エンジンオイルフラッシング",
+      "ブレーキパッド交換",
+      "ラジエーターキャップ交換",
+      "センターコンソールビス追加",
+      "ブレーキフルード交換",
+      "クラッチフルード交換"
+    ],
     "items": [
-      {
-        "description": "オイルフィルター交換",
-        "amount": null
-      },
-      {
-        "description": "オイルフラッシング",
-        "amount": null
-      },
-      {
-        "description": "スピードメーターケーブル交換",
-        "amount": null
-      },
-      {
-        "description": "エンジンオイル交換、パッキン新品",
-        "amount": null
-      },
-      {
-        "description": "ブレーキパッド交換",
-        "amount": null
-      },
       {
         "description": "ブレーキフルード交換",
         "amount": null
       },
       {
         "description": "クラッチフルード交換",
-        "amount": null
-      },
-      {
-        "description": "ラジエーターキャップ交換",
-        "amount": null
-      },
-      {
-        "description": "センターコンソールビス追加",
         "amount": null
       },
       {

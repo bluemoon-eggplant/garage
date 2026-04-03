@@ -27,21 +27,19 @@ export async function getStaticPaths() {
   const posts = await getAllPosts();
 
   return records.map((record) => {
-    // Match blog post: same category + same date + DIY
+    // Match blog post: same category + same date
     let blogSlug: string | null = null;
-    if (record.shop === 'DIY') {
-      const [ry, rm, rd] = record.date.split('/');
-      const recordDateStr = `${ry}-${rm}-${rd}`;
+    const [ry, rm, rd] = record.date.split('/');
+    const recordDateStr = `${ry}-${rm}-${rd}`;
 
-      const found = posts.find((p) => {
-        if (p.data.category !== record.category) return false;
-        const pd = p.data.publishDate;
-        const postDateStr = `${pd.getFullYear()}-${String(pd.getMonth() + 1).padStart(2, '0')}-${String(pd.getDate()).padStart(2, '0')}`;
-        return postDateStr === recordDateStr;
-      });
+    const found = posts.find((p) => {
+      if (p.data.category !== record.category) return false;
+      const pd = p.data.publishDate;
+      const postDateStr = `${pd.getFullYear()}-${String(pd.getMonth() + 1).padStart(2, '0')}-${String(pd.getDate()).padStart(2, '0')}`;
+      return postDateStr === recordDateStr;
+    });
 
-      if (found) blogSlug = String(found.id).replace(/^\d{4}\//, '');
-    }
+    if (found) blogSlug = String(found.id).replace(/^\d{4}\//, '');
 
     return {
       params: { id: record.id },
@@ -118,22 +116,25 @@ for (const item of record.items) {
       </div>
     </div>
 
-    {/* Tasks + optional blog link */}
+    {/* Blog link */}
+    {blogSlug && (
+      <a
+        href={`${ROUTES.BLOG}${blogSlug}`}
+        class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+      >
+        <Icon name="mdi:notebook-outline" class="w-5 h-5" />
+        ブログ記事を見る
+        <Icon name="mdi:arrow-right" class="w-4 h-4" />
+      </a>
+    )}
+
+    {/* Tasks */}
     {record.tasks.length > 0 && (
       <div class="rounded-lg border border-blue-200 dark:border-blue-800 overflow-hidden bg-blue-50/50 dark:bg-blue-900/20">
         <div class="px-6 py-4">
           <div class="flex items-center gap-2 mb-3">
             <Icon name="mdi:wrench" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
-            <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">やったこと</h2>
-            {blogSlug && (
-              <a
-                href={`${ROUTES.BLOG}${blogSlug}`}
-                class="ml-auto text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
-              >
-                ブログ記事を見る
-                <Icon name="mdi:arrow-right" class="w-4 h-4" />
-              </a>
-            )}
+            <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">DIY作業内容</h2>
           </div>
           <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
             {record.tasks.map((task) => (

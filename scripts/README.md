@@ -135,11 +135,94 @@ yarn dev
 
 キーワードの定義は `src/constants/record.ts` にあります。
 
+---
+
+# ブログ写真管理
+
+## 概要
+
+ブログ記事に使う写真は Google Drive から取り込み、各車両の `_images/` ディレクトリに配置されます。
+
+```
+src/content/garage/
+  fd3s/_images/
+    PXL_20250524_140718562.jpg
+  zx14/_images/
+    PXL_20251220_081411235.jpg
+```
+
+## Google Drive フォルダ構成
+
+Drive 上に車両スラッグ名のフォルダを作成し、写真を配置します。
+
+```
+📁 blog-photos (DRIVE_PHOTOS_FOLDER_ID)
+  📁 fd3s/
+    📷 PXL_20250524_140718562.jpg
+  📁 zzr1400/          ← Drive上のフォルダ名（ローカルの zx14 に自動リマップ）
+    📷 PXL_20251220_081411235.jpg
+```
+
+## 写真取り込み方法
+
+```bash
+# 全車両の写真をダウンロード
+yarn download-photos
+
+# 特定車両のみ
+yarn download-photos zx14
+yarn download-photos fd3s
+```
+
+処理済み写真はマニフェストで管理され、追加分のみダウンロードされます。
+
+## ブログ記事への写真追加
+
+取り込んだ写真は MDX ファイル内で import して使用します。
+
+```mdx
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/fd3s/_images/PXL_20250524_140718562.jpg';
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="説明" />
+```
+
+## 有効なスラッグ
+
+| スラッグ | 車両 | Driveフォルダ名 |
+|---------|------|----------------|
+| `fd3s` | Mazda RX-7 | fd3s |
+| `roadstar` | Eunos Roadstar | roadstar |
+| `mini` | Rover Mini | mini |
+| `caterham7` | Caterham 7 | caterham7 |
+| `zx14` | Kawasaki ZX-14 | zzr1400 |
+| `renaissa250` | YAMAHA Renaissa | renaissa250 |
+| `maxam` | Yamaha MAXAM | maxam |
+
+## 環境変数
+
+`.env` に以下を設定:
+
+```
+GOOGLE_SERVICE_ACCOUNT_KEY_PATH=./scripts/service-account-key.json
+DRIVE_PHOTOS_FOLDER_ID=xxxxx
+```
+
+## サムネイル
+
+ブログ記事の最初の画像 import が、記事一覧のサムネイルとして自動的に使用されます。
+`heroImage` を frontmatter に設定する必要はありません。
+
+---
+
 ## ファイル構成
 
 ```
 scripts/
 ├── download-from-drive.ts   # Google DriveからPDFダウンロード
+├── download-photos.ts       # Google Driveから写真ダウンロード
 ├── extract-receipts.ts      # Gemini APIで構造化データ抽出
 ├── service-account-key.json # GCPサービスアカウントキー (.gitignore)
 ├── input/                   # ダウンロードしたPDF (.gitignore)

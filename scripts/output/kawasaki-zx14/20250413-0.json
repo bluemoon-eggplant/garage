@@ -4,11 +4,11 @@
   "data": {
     "date": "2025/04/13",
     "totalAmount": 10560,
+    "tasks": [
+      "フロントブレーキパッド交換",
+      "フロントブレーキフルード交換"
+    ],
     "items": [
-      {
-        "description": "フロントブレーキパッド交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）デイトナ ゴールデンパッドX 97172",
         "amount": 10560

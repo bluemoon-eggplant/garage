@@ -34,7 +34,7 @@ const shouldDisplay = [category, publishDate, updatedDate, readingTime].some(Boo
         {category && (  
           <span>·</span>     
           <Icon name={getCategoryProps(category).icon} />
-          <Link href={`${ROUTES.CATEGORIES}${category}`}>{category}</Link>       
+          <Link href={`${ROUTES.EXPLORE_CATEGORIES}${category}`}>{category}</Link>       
         )}
         {readingTime && (    
           <span>·</span>     

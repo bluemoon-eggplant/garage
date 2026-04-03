@@ -1,0 +1,69 @@
+---
+title: フロントブレーキの制動力が弱い問題の解消
+description: |
+  ブレーキキャリパーのオーバーホールと、ブレーキホースの交換を実施
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/zx14/_images/PXL_20251220_081411235.jpg';
+import Img2 from '../../../garage/zx14/_images/PXL_20251220_112329687.jpg';
+import Img3 from '../../../garage/zx14/_images/PXL_20251220_113619046.jpg';
+import Img4 from '../../../garage/zx14/_images/PXL_20251220_113932531.jpg';
+import Img5 from '../../../garage/zx14/_images/PXL_20251220_122920334.jpg';
+import Img6 from '../../../garage/zx14/_images/PXL_20251221_014700715.jpg';
+import Img7 from '../../../garage/zx14/_images/PXL_20251221_014724601.jpg';
+import Img8 from '../../../garage/zx14/_images/PXL_20251228_125204952.jpg';
+
+## 事象
+
+* フロントブレーキレバーの握りが深くなり、制動力が弱い
+* パッドは新品交換後のため、摩耗はない
+* ブレーキフルードを交換しても症状は改善しない
+* KAWASAKIディーラーでエア抜きしてもらい、直後は改善するも、すぐにまた症状が出る
+
+## 診断
+
+KAWASAKIディーラーの仮説では、フルード漏れがないため、ブレーキホースの劣化ではないか、とのこと。
+
+## 対応
+
+ホース交換はマストでやるとして、原因が複合的な可能性を考慮し、キャリパーのオーバーホールも実施。
+
+## 結果
+
+* 症状は完全に解消
+* 問題の切り分けは難しいが、バンジョーアダプタ、ボルトが錆びていたため、交換は正解だったと思う
+* 原因はキャリパーのブリーダーボルト？ネジ部に固体化したフルードが堆積しており、ちゃんと密封できていなかったのではないかと推測
+
+## キャリパーオーバーホール
+
+新品交換したが、見た感じシール類は全く問題なかった。  
+特殊な表面処理がなされているのか、びっくりするくらいピストンもきれい。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="チェーン周辺" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="スプロケット" />
+
+ただ、スライドピンの錆がひどく、パッドの動きを悪くしていた。  
+新品交換も考えたが、一旦研磨にて対応。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="各部の状態" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="NISSIN キャリパー" />
+
+## ブレーキホース交換
+
+本当は純正がよかったんだけど、廃盤のため社外品を採用。  
+ホースの取り回しと固定にかなりの時間を要した。  
+ハンドル全切りした際に、フレームやインナーカウルに干渉しないようにするため、シビアな調整を強いられた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img6} alt="キャリパー装着" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img7} alt="ブレーキホース接続部" />
+
+外したホースのバンジョー部。  
+動作はするんでしょうけど、錆はあんまり気持ちが良くないですね。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img8} alt="ブレーキホース全体" />

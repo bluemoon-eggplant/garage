@@ -4,11 +4,13 @@
   "data": {
     "date": "2025/10/06",
     "totalAmount": 11134,
+    "tasks": [
+      "エンジンオイル交換",
+      "オイルフィルター交換",
+      "冷却水交換",
+      "ラジエーターフラッシング"
+    ],
     "items": [
-      {
-        "description": "オイル、フィルター、冷却水洗浄",
-        "amount": null
-      },
       {
         "description": "（Amazon）RESPO エンジンオイル MINI 20W60 SL/CF 5L",
         "amount": 6980

@@ -70,7 +70,7 @@ export const GARAGE_SLUG_TO_CATEGORY: Record<string, string> = {
   roadstar: 'eunos-roadstar',
   mini: 'rover-mini',
   caterham7: 'caterham-7',
-  zzr1400: 'kawasaki-zx14',
+  zx14: 'kawasaki-zx14',
   renaissa250: 'yamaha-renaissa',
   maxam: 'yamaha-maxam',
 };

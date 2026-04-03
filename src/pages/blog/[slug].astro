@@ -9,6 +9,8 @@ import { default as PostLayout } from '@/layouts/Post.astro';
 
 import PostListMore from '@/components/PostListMore.astro';
 import PostMeta from '@/components/PostMeta.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import { getHeadingsForTableOfContents } from '@/modules/post/table-of-contents';
 import Share from '@/components/Share.astro';
 import { DRAFT_TEXT } from '@/constants/data';
 import { ROUTES } from '@/constants/routes';
@@ -37,10 +39,10 @@ export async function getStaticPaths() {
     const prevPost = sameCategoryPosts[categoryIndex - 1] ?? null;
     const nextPost = sameCategoryPosts[categoryIndex + 1] ?? null;
 
-    // Match DIY record: same category + same date
+    // Match record: same category + same date
     const postDateStr = `${publishDate.getFullYear()}/${String(publishDate.getMonth() + 1).padStart(2, '0')}/${String(publishDate.getDate()).padStart(2, '0')}`;
     const matchedRecord = records.find(
-      (r) => r.shop === 'DIY' && r.category === category && r.date === postDateStr
+      (r) => r.category === category && r.date === postDateStr
     );
 
     return {
@@ -70,7 +72,8 @@ const {
 const { slug } = Astro.params;
 const { pathname } = Astro.url;
 
-const { Content } = await render(Astro.props);
+const { Content, headings: rawHeadings } = await render(Astro.props);
+const headings = getHeadingsForTableOfContents(rawHeadings);
 
 const postMetaProps = {
   category,
@@ -126,18 +129,22 @@ const metadata: Metadata = { title, description, image };
   </Fragment>
 
   <Fragment slot="content">
+    {matchedRecord && (
+      <a
+        href={`${ROUTES.RECORD}detail/${matchedRecord.id}`}
+        class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline mb-4"
+      >
+        <Icon name="mdi:notebook-outline" class="w-5 h-5" />
+        整備記録を見る
+        <Icon name="mdi:arrow-right" class="w-4 h-4" />
+      </a>
+    )}
+
     {matchedRecord && matchedRecord.tasks.length > 0 && (
       <div class="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-900/20 px-6 py-4 mb-8">
         <div class="flex items-center gap-2 mb-3">
           <Icon name="mdi:wrench" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
-          <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">やったこと</h2>
-          <a
-            href={`${ROUTES.RECORD}detail/${matchedRecord.id}`}
-            class="ml-auto text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
-          >
-            整備記録を見る
-            <Icon name="mdi:arrow-right" class="w-4 h-4" />
-          </a>
+          <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">DIY作業内容</h2>
         </div>
         <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
           {matchedRecord.tasks.map((task) => (
@@ -145,6 +152,10 @@ const metadata: Metadata = { title, description, image };
           ))}
         </ul>
       </div>
+    )}
+
+    {headings.length > 0 && (
+      <TableOfContents headings={headings} class="mb-8" />
     )}
 
     <Content />
