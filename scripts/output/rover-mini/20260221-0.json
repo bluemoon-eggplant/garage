@@ -4,11 +4,11 @@
   "data": {
     "date": "2026/02/21",
     "totalAmount": 4767,
+    "tasks": [
+      "エンジンオイル交換",
+      "オイルフィルター交換"
+    ],
     "items": [
-      {
-        "description": "オイル、フィルター交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）MAHLE オイルエレメント OC237/1",
         "amount": 866

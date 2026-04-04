@@ -4,11 +4,10 @@
   "data": {
     "date": "2025/09/05",
     "totalAmount": 3569,
+    "tasks": [
+      "エアクリーナー交換"
+    ],
     "items": [
-      {
-        "description": "エアクリーナー交換",
-        "amount": null
-      },
       {
         "description": "（MAZDA）エレメント,エアクリーナー B6S713Z40×1",
         "amount": 3569

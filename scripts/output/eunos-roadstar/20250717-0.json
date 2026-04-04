@@ -6,10 +6,6 @@
     "totalAmount": 1900,
     "items": [
       {
-        "description": "スパークプラグ交換",
-        "amount": null
-      },
-      {
         "description": "（Amazon）NGK スパークプラグ BKR5E-11×4",
         "amount": 1900
       }
@@ -17,9 +13,7 @@
     "mileage": 290907,
     "shop": "DIY",
     "tasks": [
-      "スパークプラグ交換（BKR5E-11）",
-      "プラグホール清掃",
-      "エンジン始動確認"
+      "スパークプラグ交換"
     ]
   },
   "reviewStatus": "approved"

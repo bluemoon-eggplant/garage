@@ -1,6 +1,9 @@
 #!/bin/sh
 
-# Auto-resize images in _images/ directories before commit
+# 1. Remove unused images from _images/ directories
+node scripts/cleanup-unused-images.mjs
+
+# 2. Auto-resize images in _images/ directories before commit
 # Resizes to max 1600px width using sharp
 
 IMAGES=$(git diff --cached --name-only --diff-filter=ACM | grep '_images/.*\.\(jpg\|jpeg\|png\|webp\)$' || true)

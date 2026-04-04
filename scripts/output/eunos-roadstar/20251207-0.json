@@ -4,11 +4,10 @@
   "data": {
     "date": "2025/12/07",
     "totalAmount": 300,
+    "tasks": [
+      "パワステベルト交換"
+    ],
     "items": [
-      {
-        "description": "パワステベルト交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）BANDO ファンベルト リブエース・エコ 4PK955×1",
         "amount": 300
