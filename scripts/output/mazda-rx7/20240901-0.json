@@ -4,30 +4,12 @@
   "data": {
     "date": "2024/09/01",
     "totalAmount": 190000,
+    "mileage": 95553,
+    "shop": "株式会社関東マツダ 群馬事業部 藤岡店",
     "items": [
-      {
-        "description": "パックdeメンテ:法定2年定期点検整備",
-        "amount": null
-      },
       {
         "description": "パックdeメンテ:車検整備_ラージ[平日P]",
         "amount": 52360
-      },
-      {
-        "description": "ブレーキ・フルード交換(付帯)",
-        "amount": null
-      },
-      {
-        "description": "パックdeメンテ:エンジンオイル交換(付帯)",
-        "amount": null
-      },
-      {
-        "description": "パックdeメンテ:オイルフィルター交換(付帯)",
-        "amount": null
-      },
-      {
-        "description": "パックdeメンテ:ワイパーゴム交換(付帯)",
-        "amount": null
       },
       {
         "description": "エレメント、エアークリーナー (N3A113Z40)",
@@ -88,10 +70,28 @@
       {
         "description": "パック前受金",
         "amount": -52360
+      },
+      {
+        "description": "パックdeメンテ:法定2年定期点検整備",
+        "amount": null
+      },
+      {
+        "description": "ブレーキ・フルード交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ:エンジンオイル交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ:オイルフィルター交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ:ワイパーゴム交換(付帯)",
+        "amount": null
       }
-    ],
-    "mileage": 95553,
-    "shop": "株式会社関東マツダ 群馬事業部 藤岡店"
+    ]
   },
   "reviewStatus": "pending"
 }

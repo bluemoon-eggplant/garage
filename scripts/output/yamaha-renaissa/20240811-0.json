@@ -4,11 +4,12 @@
   "data": {
     "date": "2024/08/11",
     "totalAmount": 5177,
+    "mileage": 41855,
+    "shop": "DIY",
+    "tasks": [
+      "オイルフラッシング、オイル交換、フィルター交換"
+    ],
     "items": [
-      {
-        "description": "オイルフラッシング、オイル交換、フィルター交換",
-        "amount": null
-      },
       {
         "description": "（Webike）YAMAHA純正 Oリング 93210-64297×1",
         "amount": 238
@@ -25,9 +26,7 @@
         "description": "（Webike）YAMAHA純正 Oリング 93210-35512×1",
         "amount": 470
       }
-    ],
-    "mileage": 41855,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

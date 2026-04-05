@@ -4,11 +4,9 @@
   "data": {
     "date": "2022/08/22",
     "totalAmount": 46816,
+    "mileage": 82550,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店",
     "items": [
-      {
-        "description": "修理済みオーディオデッキ(純正) 取付",
-        "amount": null
-      },
       {
         "description": "オーディオ・デッキ取替",
         "amount": 4158
@@ -16,10 +14,12 @@
       {
         "description": "CDチェンジャー修理",
         "amount": 42658
+      },
+      {
+        "description": "修理済みオーディオデッキ(純正) 取付",
+        "amount": null
       }
-    ],
-    "mileage": 82550,
-    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+    ]
   },
   "reviewStatus": "pending"
 }

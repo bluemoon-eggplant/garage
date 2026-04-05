@@ -4,19 +4,9 @@
   "data": {
     "date": "2016/10/18",
     "totalAmount": 75000,
+    "mileage": 58943,
+    "shop": "東京マツダ販売株式会社",
     "items": [
-      {
-        "description": "211 サービスコード点検: 45",
-        "amount": null
-      },
-      {
-        "description": "211 CCNTソレノイド系統",
-        "amount": null
-      },
-      {
-        "description": "211 ソレノイドバルブ単体点検: NG",
-        "amount": null
-      },
       {
         "description": "211 ソレノイド・バルブ アッセンブリ 取替",
         "amount": 39658
@@ -44,10 +34,20 @@
       {
         "description": "211 9956 部品代値引",
         "amount": -963
+      },
+      {
+        "description": "211 サービスコード点検: 45",
+        "amount": null
+      },
+      {
+        "description": "211 CCNTソレノイド系統",
+        "amount": null
+      },
+      {
+        "description": "211 ソレノイドバルブ単体点検: NG",
+        "amount": null
       }
-    ],
-    "mileage": 58943,
-    "shop": "東京マツダ販売株式会社"
+    ]
   },
   "reviewStatus": "pending"
 }

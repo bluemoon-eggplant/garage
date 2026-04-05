@@ -4,6 +4,8 @@
   "data": {
     "date": "2026/01/19",
     "totalAmount": 39600,
+    "mileage": 47585,
+    "shop": "有限会社ケントスピード",
     "items": [
       {
         "description": "12ヶ月点検整備",
@@ -18,6 +20,10 @@
         "amount": 2200
       },
       {
+        "description": "ホイールセンターキャップ",
+        "amount": 10800
+      },
+      {
         "description": "リザーブタンクホース部漏れ点検",
         "amount": null
       },
@@ -28,14 +34,8 @@
       {
         "description": "テスト後漏れなし",
         "amount": null
-      },
-      {
-        "description": "ホイールセンターキャップ",
-        "amount": 10800
       }
-    ],
-    "mileage": 47585,
-    "shop": "有限会社ケントスピード"
+    ]
   },
   "reviewStatus": "pending"
 }

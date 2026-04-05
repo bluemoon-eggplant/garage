@@ -4,18 +4,17 @@
   "data": {
     "date": "2024/07/15",
     "totalAmount": 10261,
+    "mileage": 12493,
+    "shop": "DIY",
+    "tasks": [
+      "ミラー交換"
+    ],
     "items": [
-      {
-        "description": "ミラー交換",
-        "amount": null
-      },
       {
         "description": "（ヤフオク）YAMAHA SR400 SR500 初期型 純正 バックミラー 左右セット",
         "amount": 10261
       }
-    ],
-    "mileage": 12493,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

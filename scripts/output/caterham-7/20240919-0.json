@@ -4,6 +4,8 @@
   "data": {
     "date": "2024/09/19",
     "totalAmount": 11000,
+    "mileage": 42810,
+    "shop": "有限会社ケントスピード",
     "items": [
       {
         "description": "6か月点検整備",
@@ -21,9 +23,7 @@
         "description": "ラックブーツ ヒビ",
         "amount": null
       }
-    ],
-    "mileage": 42810,
-    "shop": "有限会社ケントスピード"
+    ]
   },
   "reviewStatus": "pending"
 }

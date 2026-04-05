@@ -4,14 +4,18 @@
   "data": {
     "date": "2019/07/28",
     "totalAmount": 27538,
+    "mileage": 65515,
+    "shop": "オートバックス",
     "items": [
       {
         "description": "バッテリー交換",
         "amount": null
+      },
+      {
+        "description": "バッテリー交換",
+        "amount": null
       }
-    ],
-    "mileage": 65515,
-    "shop": "オートバックス"
+    ]
   },
   "reviewStatus": "approved"
 }

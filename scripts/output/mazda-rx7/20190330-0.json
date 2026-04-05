@@ -4,14 +4,12 @@
   "data": {
     "date": "2019/03/30",
     "totalAmount": 25031,
+    "mileage": 64749,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店",
     "items": [
       {
         "description": "SMC2 3 カストロールMAGNATECプロフェショナル 5W",
         "amount": 7859
-      },
-      {
-        "description": "995641400 ガスケット",
-        "amount": null
       },
       {
         "description": "オイルフィルター交換",
@@ -28,10 +26,12 @@
       {
         "description": "N3X518110 スパークプラグセット",
         "amount": 10368
+      },
+      {
+        "description": "995641400 ガスケット",
+        "amount": null
       }
-    ],
-    "mileage": 64749,
-    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+    ]
   },
   "reviewStatus": "pending"
 }

@@ -1,0 +1,37 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2025/03/05",
+    "totalAmount": 6904,
+    "mileage": null,
+    "shop": "DIY",
+    "tasks": [
+      "ステップ周りラバー交換",
+      "タンクパッド交換"
+    ],
+    "items": [
+      {
+        "description": "ステップFRラバー ×2",
+        "amount": 3296
+      },
+      {
+        "description": "ダンパ チェンジペダル ×1",
+        "amount": 231
+      },
+      {
+        "description": "リベット ×2",
+        "amount": 198
+      },
+      {
+        "description": "リベット ×1",
+        "amount": 99
+      },
+      {
+        "description": "カワサキタンクパッド Kawasaki（カーボン調）",
+        "amount": 3080
+      }
+    ]
+  },
+  "reviewStatus": "approved"
+}

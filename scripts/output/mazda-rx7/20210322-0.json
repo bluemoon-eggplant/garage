@@ -4,11 +4,12 @@
   "data": {
     "date": "2021/03/22",
     "totalAmount": 32642,
+    "mileage": 73710,
+    "shop": "DIY",
+    "tasks": [
+      "シフトレバー、シフトブーツ交換"
+    ],
     "items": [
-      {
-        "description": "シフトレバー、シフトブーツ交換",
-        "amount": null
-      },
       {
         "description": "（楽天）RX-7 FD3S マツダ純正 革巻シフトノブ",
         "amount": 16942
@@ -17,9 +18,7 @@
         "description": "（楽天）RX-7 FD3S用 純正 シフトブーツ",
         "amount": 15700
       }
-    ],
-    "mileage": 73710,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

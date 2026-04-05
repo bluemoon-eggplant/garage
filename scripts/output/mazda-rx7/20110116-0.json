@@ -4,14 +4,14 @@
   "data": {
     "date": "2011/01/16",
     "totalAmount": 30000,
+    "mileage": 35905,
+    "shop": "GTNET株式会社",
     "items": [
       {
         "description": "2年点検",
         "amount": null
       }
-    ],
-    "mileage": 35905,
-    "shop": "GTNET株式会社"
+    ]
   },
   "reviewStatus": "approved"
 }

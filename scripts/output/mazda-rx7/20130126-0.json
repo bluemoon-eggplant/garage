@@ -4,10 +4,20 @@
   "data": {
     "date": "2013/01/26",
     "totalAmount": 11760,
+    "mileage": 45720,
+    "shop": "東京マツダ販売株式会社 五反田営業所",
     "items": [
       {
         "description": "マツダセーフティチェック整備料(アクティブ・コース)",
         "amount": 8400
+      },
+      {
+        "description": "エンジンオイル(ガソリン) (10W-30)",
+        "amount": 2100
+      },
+      {
+        "description": "カートリッジ、オイルフィルター",
+        "amount": 1260
       },
       {
         "description": "エンジン・ルーム点検",
@@ -38,16 +48,8 @@
         "amount": null
       },
       {
-        "description": "エンジンオイル(ガソリン) (10W-30)",
-        "amount": 2100
-      },
-      {
         "description": "オイルフィルター交換",
         "amount": null
-      },
-      {
-        "description": "カートリッジ、オイルフィルター",
-        "amount": 1260
       },
       {
         "description": "タイヤエアー調整",
@@ -57,9 +59,7 @@
         "description": "ステアリングギヤBOX締め付け",
         "amount": null
       }
-    ],
-    "mileage": 45720,
-    "shop": "東京マツダ販売株式会社 五反田営業所"
+    ]
   },
   "reviewStatus": "pending"
 }

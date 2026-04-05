@@ -4,10 +4,20 @@
   "data": {
     "date": "2019/11/04",
     "totalAmount": 17380,
+    "mileage": 66285,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店",
     "items": [
       {
         "description": "法定1年点検基本料金(標準コース)",
         "amount": 16280
+      },
+      {
+        "description": "水洗い洗車",
+        "amount": 550
+      },
+      {
+        "description": "「お車エステ」1コインプレゼント",
+        "amount": 550
       },
       {
         "description": "エンジンルーム点検 室内点検",
@@ -24,18 +34,8 @@
       {
         "description": "日常点検代行 【サービス】",
         "amount": null
-      },
-      {
-        "description": "水洗い洗車",
-        "amount": 550
-      },
-      {
-        "description": "「お車エステ」1コインプレゼント",
-        "amount": 550
       }
-    ],
-    "mileage": 66285,
-    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+    ]
   },
   "reviewStatus": "pending"
 }

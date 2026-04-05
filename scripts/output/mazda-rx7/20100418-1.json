@@ -4,6 +4,8 @@
   "data": {
     "date": "2010/04/18",
     "totalAmount": 25904,
+    "mileage": 30056,
+    "shop": "千葉マツグ",
     "items": [
       {
         "description": "エンジンオイル交換チケット",
@@ -29,9 +31,7 @@
         "description": "タイヤ空気圧点検,調整致しました",
         "amount": null
       }
-    ],
-    "mileage": 30056,
-    "shop": "千葉マツグ"
+    ]
   },
   "reviewStatus": "pending"
 }

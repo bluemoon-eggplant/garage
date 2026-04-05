@@ -4,7 +4,33 @@
   "data": {
     "date": "2012/03/16",
     "totalAmount": 2000,
+    "mileage": 41077,
+    "shop": "Mazda 我孫子店",
     "items": [
+      {
+        "description": "エンジンオイル交換 (オイルチケット会員)",
+        "amount": null
+      },
+      {
+        "description": "エンジンオイル SM (5W-30)",
+        "amount": null
+      },
+      {
+        "description": "◇オイル交換チケット 2枚月使用",
+        "amount": null
+      },
+      {
+        "description": "オイルチケットレス",
+        "amount": null
+      },
+      {
+        "description": "簡易ボディーコーティング",
+        "amount": 1000
+      },
+      {
+        "description": "車内清掃",
+        "amount": 1000
+      },
       {
         "description": "エンジンオイル交換 (オイルチケット会員)",
         "amount": null
@@ -44,18 +70,8 @@
       {
         "description": "★☆★ マツダ お車エステ ★☆★",
         "amount": null
-      },
-      {
-        "description": "簡易ボディーコーティング",
-        "amount": 1000
-      },
-      {
-        "description": "車内清掃",
-        "amount": 1000
       }
-    ],
-    "mileage": 41077,
-    "shop": "Mazda 我孫子店"
+    ]
   },
   "reviewStatus": "pending"
 }

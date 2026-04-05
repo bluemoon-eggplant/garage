@@ -4,11 +4,13 @@
   "data": {
     "date": "2024/08/28",
     "totalAmount": 28615,
+    "mileage": 42362,
+    "shop": "DIY",
+    "tasks": [
+      "フロントブレーキOH",
+      "エキパイヒートガードボルト交換"
+    ],
     "items": [
-      {
-        "description": "フロントブレーキOH、エキパイヒートガードボルト交換",
-        "amount": null
-      },
       {
         "description": "（Webike）YAMAHA純正 ダイヤフラム,リザーバ 4HM-25854-00×1",
         "amount": 1120
@@ -97,9 +99,7 @@
         "description": "（Webike）YAMAHA純正 ブレーキパッドキット 4BP-W0045-00×1",
         "amount": 4800
       }
-    ],
-    "mileage": 42362,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

@@ -1,0 +1,20 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2024/07/04",
+    "totalAmount": 5000,
+    "tasks": [
+      "オーディオデッキ交換"
+    ],
+    "items": [
+      {
+        "description": "ローバーミニ純正オーディオラジカセ",
+        "amount": 5000
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

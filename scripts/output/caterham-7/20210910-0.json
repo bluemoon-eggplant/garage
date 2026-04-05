@@ -4,10 +4,28 @@
   "data": {
     "date": "2021/09/10",
     "totalAmount": 40700,
+    "mileage": 17514,
+    "shop": "有限会社ブリッジウェイズ",
     "items": [
       {
         "description": "6ヶ月点検工賃",
         "amount": 18000
+      },
+      {
+        "description": "エンジンオイル WAKO'S Triple-R 10W-40",
+        "amount": 13000
+      },
+      {
+        "description": "オイルフィルター",
+        "amount": 2000
+      },
+      {
+        "description": "上記部品交換工賃",
+        "amount": 4000
+      },
+      {
+        "description": "消費税",
+        "amount": 3700
       },
       {
         "description": "ボンネット脱着",
@@ -74,18 +92,6 @@
         "amount": null
       },
       {
-        "description": "エンジンオイル WAKO'S Triple-R 10W-40",
-        "amount": 13000
-      },
-      {
-        "description": "オイルフィルター",
-        "amount": 2000
-      },
-      {
-        "description": "上記部品交換工賃",
-        "amount": 4000
-      },
-      {
         "description": "※クラッチマスターシリンダーフルード漏れあり",
         "amount": null
       },
@@ -100,14 +106,8 @@
       {
         "description": "足回りボルトゆるみあり・増し締めいたしました",
         "amount": null
-      },
-      {
-        "description": "消費税",
-        "amount": 3700
       }
-    ],
-    "mileage": 17514,
-    "shop": "有限会社ブリッジウェイズ"
+    ]
   },
   "reviewStatus": "pending"
 }

@@ -4,11 +4,12 @@
   "data": {
     "date": "2024/07/24",
     "totalAmount": 6617,
+    "mileage": 12493,
+    "shop": "DIY",
+    "tasks": [
+      "マフラー交換、ボルトガスケット新品"
+    ],
     "items": [
-      {
-        "description": "マフラー交換、ボルトガスケット新品",
-        "amount": null
-      },
       {
         "description": "（Webike）YAMAHA純正 ガスケット,マフラー 4DN-14714-01×2",
         "amount": 5472
@@ -29,9 +30,7 @@
         "description": "（Webike）YAMAHA純正 ボルト,フランジ 95024-08020×1",
         "amount": 75
       }
-    ],
-    "mileage": 12493,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

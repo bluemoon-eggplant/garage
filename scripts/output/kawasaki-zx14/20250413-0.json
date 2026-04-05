@@ -4,22 +4,22 @@
   "data": {
     "date": "2025/04/13",
     "totalAmount": 10560,
+    "mileage": 36151,
+    "shop": "DIY",
     "tasks": [
       "フロントブレーキパッド交換",
       "フロントブレーキフルード交換"
     ],
     "items": [
       {
-        "description": "（Amazon）デイトナ ゴールデンパッドX 97172",
-        "amount": 10560
-      },
-      {
         "description": "フロントブレーキフルード交換",
         "amount": null
+      },
+      {
+        "description": "（Amazon）デイトナ ゴールデンパッドX 97172",
+        "amount": 10560
       }
-    ],
-    "mileage": 36151,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

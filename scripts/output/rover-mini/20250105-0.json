@@ -4,11 +4,10 @@
   "data": {
     "date": "2025/01/05",
     "totalAmount": 7765,
+    "mileage": 24131,
+    "shop": "DIY",
+    "tasks": ["エンジンオイル交換", "オイルフィルター交換"],
     "items": [
-      {
-        "description": "オイル、フィルター交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）RESPO エンジンオイル MINI 15W40 SL/CF 5L",
         "amount": 6677
@@ -21,9 +20,7 @@
         "description": "（楽天）ローバーミニ オイルパンドレンパッキン",
         "amount": 216
       }
-    ],
-    "mileage": 24131,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

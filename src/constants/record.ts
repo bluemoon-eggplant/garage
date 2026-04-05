@@ -66,7 +66,7 @@ export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
 
 /** Exclude descriptions containing these keywords from consumable tag matching */
 export const CONSUMABLE_TAG_EXCLUSIONS: string[] = [
-  '漏れ', '洗浄', '点検', 'テスト', '診断', '液補充', 'ご希望', '弱い', '燃焼状態', '汚れ', 'ホースバンド',
+  '漏れ', '洗浄', '点検', 'テスト', '診断', '液補充', 'ご希望', '弱い', '燃焼状態', '汚れ', 'ホースバンド', 'カバー',
 ];
 
 /** Map description keywords to specific consumable tags */

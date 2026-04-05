@@ -4,6 +4,8 @@
   "data": {
     "date": "2010/04/18",
     "totalAmount": 25904,
+    "mileage": 30056,
+    "shop": "千葉マツダ 我孫子店",
     "items": [
       {
         "description": "エンジンオイル交換チケット",
@@ -21,9 +23,7 @@
         "description": "タイヤ空気圧点検、調整",
         "amount": null
       }
-    ],
-    "mileage": 30056,
-    "shop": "千葉マツダ 我孫子店"
+    ]
   },
   "reviewStatus": "pending"
 }

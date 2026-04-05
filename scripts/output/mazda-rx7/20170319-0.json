@@ -4,6 +4,8 @@
   "data": {
     "date": "2017/03/19",
     "totalAmount": 28900,
+    "mileage": 59715,
+    "shop": "東京マツダ販売株式会社 五反田営業所",
     "items": [
       {
         "description": "マツダセーフティチェック整備料(アクティブ・コース)",
@@ -18,16 +20,14 @@
         "amount": 10368
       },
       {
-        "description": "エンジンオイル交換",
-        "amount": null
-      },
-      {
         "description": "技術料値引",
         "amount": -22
+      },
+      {
+        "description": "エンジンオイル交換",
+        "amount": null
       }
-    ],
-    "mileage": 59715,
-    "shop": "東京マツダ販売株式会社 五反田営業所"
+    ]
   },
   "reviewStatus": "pending"
 }

@@ -4,7 +4,25 @@
   "data": {
     "date": "2020/07/06",
     "totalAmount": 12293,
+    "mileage": 69148,
+    "shop": "甲信マツダ中野店",
     "items": [
+      {
+        "description": "ラジエーター キャップ KF0115205",
+        "amount": 2255
+      },
+      {
+        "description": "ラジエーター キャップ N3A115205A",
+        "amount": 2750
+      },
+      {
+        "description": "ロングライフクーラント 0302",
+        "amount": 3190
+      },
+      {
+        "description": "整備代",
+        "amount": 4098
+      },
       {
         "description": "オーバーヒート点検",
         "amount": null
@@ -32,26 +50,8 @@
       {
         "description": "冷却水の量、エアー抜き、濃度点検",
         "amount": null
-      },
-      {
-        "description": "ラジエーター キャップ KF0115205",
-        "amount": 2255
-      },
-      {
-        "description": "ラジエーター キャップ N3A115205A",
-        "amount": 2750
-      },
-      {
-        "description": "ロングライフクーラント 0302",
-        "amount": 3190
-      },
-      {
-        "description": "整備代",
-        "amount": 4098
       }
-    ],
-    "mileage": 69148,
-    "shop": "甲信マツダ中野店"
+    ]
   },
   "reviewStatus": "pending"
 }

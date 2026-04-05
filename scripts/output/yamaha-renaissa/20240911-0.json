@@ -4,11 +4,15 @@
   "data": {
     "date": "2024/09/11",
     "totalAmount": 18168,
+    "mileage": 30519,
+    "shop": "DIY",
+    "tasks": [
+      "メーター交換",
+      "メーターケーブル交換",
+      "ヘッドライト周辺分解整備",
+      "ホーン交換"
+    ],
     "items": [
-      {
-        "description": "メーター、メーターケーブル交換、ヘッドライト周辺ダンパー類、ホーン交換",
-        "amount": null
-      },
       {
         "description": "（ヤフオク）ヤマハ ルネッサ 4DN スピードメーター SRV250",
         "amount": 6190
@@ -77,9 +81,7 @@
         "description": "（Webike）YAMAHA純正 ダンパ 584-83523-00×2",
         "amount": 1180
       }
-    ],
-    "mileage": 30519,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

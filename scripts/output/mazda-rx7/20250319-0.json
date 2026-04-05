@@ -4,7 +4,13 @@
   "data": {
     "date": "2025/03/19",
     "totalAmount": 9240,
+    "mileage": 97397,
+    "shop": "株式会社関東マツダ 埼玉事業部 本庄店",
     "items": [
+      {
+        "description": "CP-01L03 ゴールデンSN 5W-30",
+        "amount": null
+      },
       {
         "description": "パックdeメンテ:マツダセーフティーチェック_ラージ[平日P]",
         "amount": 9240
@@ -17,9 +23,7 @@
         "description": "995641400 ガスケット",
         "amount": null
       }
-    ],
-    "mileage": 97397,
-    "shop": "株式会社関東マツダ 埼玉事業部 本庄店"
+    ]
   },
   "reviewStatus": "pending"
 }

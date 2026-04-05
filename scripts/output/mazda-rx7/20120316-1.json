@@ -4,10 +4,20 @@
   "data": {
     "date": "2012/03/16",
     "totalAmount": 2000,
+    "mileage": 41077,
+    "shop": "千草マツダ",
     "items": [
       {
         "description": "エンジンオイル SM (5W-30) (オイルチケット利用)",
         "amount": 0
+      },
+      {
+        "description": "簡易ボディーコーティング",
+        "amount": 1000
+      },
+      {
+        "description": "車内清掃",
+        "amount": 1000
       },
       {
         "description": "ドレーンプラグの締付、漏れ点検",
@@ -24,18 +34,8 @@
       {
         "description": "バッテリーテスト",
         "amount": null
-      },
-      {
-        "description": "簡易ボディーコーティング",
-        "amount": 1000
-      },
-      {
-        "description": "車内清掃",
-        "amount": 1000
       }
-    ],
-    "mileage": 41077,
-    "shop": "千草マツダ"
+    ]
   },
   "reviewStatus": "pending"
 }

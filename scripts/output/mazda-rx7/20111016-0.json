@@ -4,10 +4,20 @@
   "data": {
     "date": "2011/10/16",
     "totalAmount": 23436,
+    "mileage": 39192,
+    "shop": "千葉マツダ 我孫子店",
     "items": [
       {
         "description": "オイル交換チケットお買い上げ",
         "amount": 5250
+      },
+      {
+        "description": "スパーク・プラグ取替 (1台分)",
+        "amount": 17924
+      },
+      {
+        "description": "ストップランプ球交換",
+        "amount": 262
       },
       {
         "description": "エンジンオイル交換",
@@ -22,14 +32,6 @@
         "amount": null
       },
       {
-        "description": "スパーク・プラグ取替 (1台分)",
-        "amount": 17924
-      },
-      {
-        "description": "ストップランプ球交換",
-        "amount": 262
-      },
-      {
         "description": "タイヤ空気圧調整",
         "amount": null
       },
@@ -37,9 +39,7 @@
         "description": "*エアエレメント点検",
         "amount": null
       }
-    ],
-    "mileage": 39192,
-    "shop": "千葉マツダ 我孫子店"
+    ]
   },
   "reviewStatus": "pending"
 }

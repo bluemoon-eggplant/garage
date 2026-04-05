@@ -4,10 +4,24 @@
   "data": {
     "date": "2020/04/24",
     "totalAmount": 15577,
+    "mileage": 68265,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店",
     "items": [
+      {
+        "description": "カストローMMagnatecプロフェッショナル 5W-40 オイル交換",
+        "amount": null
+      },
       {
         "description": "マツダセーフティーチェック料金(標準コース)",
         "amount": 7480
+      },
+      {
+        "description": "カストロールMAGNATECプロフェショナル 5W",
+        "amount": 8004
+      },
+      {
+        "description": "ガスケット",
+        "amount": 93
       },
       {
         "description": "エジンルーム点検 室内点検",
@@ -32,18 +46,8 @@
       {
         "description": "カストローMMagnatecプロフェッショナル 5W-40 オイル交換",
         "amount": null
-      },
-      {
-        "description": "カストロールMAGNATECプロフェショナル 5W",
-        "amount": 8004
-      },
-      {
-        "description": "ガスケット",
-        "amount": 93
       }
-    ],
-    "mileage": 68265,
-    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+    ]
   },
   "reviewStatus": "pending"
 }

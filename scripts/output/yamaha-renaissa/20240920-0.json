@@ -4,6 +4,8 @@
   "data": {
     "date": "2024/09/20",
     "totalAmount": 9900,
+    "mileage": 30552,
+    "shop": "YSP 熊谷",
     "items": [
       {
         "description": "12ヶ月点検",
@@ -33,9 +35,7 @@
         "description": "メーターケーブル",
         "amount": null
       }
-    ],
-    "mileage": 30552,
-    "shop": "YSP 熊谷"
+    ]
   },
   "reviewStatus": "pending"
 }

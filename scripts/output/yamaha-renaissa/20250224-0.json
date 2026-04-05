@@ -4,11 +4,15 @@
   "data": {
     "date": "2025/02/24",
     "totalAmount": 113112,
+    "mileage": 31979,
+    "shop": "DIY",
+    "tasks": [
+      "キャブレターオーバーホール",
+      "スロットルケーブル交換",
+      "グリップ周り部品交換",
+      "ガソリンキャップ交換"
+    ],
     "items": [
-      {
-        "description": "キャブレターオーバーホール",
-        "amount": null
-      },
       {
         "description": "（Webike）YAMAHA純正 クランプ,ホース 90460-54137×2",
         "amount": 620
@@ -217,9 +221,7 @@
         "description": "（Webike）YAMAHA純正 スクリュ,パンヘッド 98580-04014×6",
         "amount": 600
       }
-    ],
-    "mileage": 31979,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

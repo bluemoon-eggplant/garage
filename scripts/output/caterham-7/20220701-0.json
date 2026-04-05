@@ -4,6 +4,8 @@
   "data": {
     "date": "2022/07/01",
     "totalAmount": 34320,
+    "mileage": 25076,
+    "shop": "Witham Cars",
     "items": [
       {
         "description": "エンジンオイル WAKO'S Triple-R 10w-40",
@@ -41,9 +43,7 @@
         "description": "タイヤ空気圧 Fr1.7kgf Rr1.7kgf",
         "amount": null
       }
-    ],
-    "mileage": 25076,
-    "shop": "Witham Cars"
+    ]
   },
   "reviewStatus": "pending"
 }

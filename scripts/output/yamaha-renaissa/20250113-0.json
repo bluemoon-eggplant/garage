@@ -4,11 +4,15 @@
   "data": {
     "date": "2025/01/13",
     "totalAmount": 33377,
+    "mileage": 31796,
+    "shop": "DIY",
+    "tasks": [
+      "オイル交換",
+      "左クランクケースガスケット交換",
+      "シートカウル、メインシート交換、シートバンド移植",
+      "ヘッドライトリム交換"
+    ],
     "items": [
-      {
-        "description": "オイル交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）ヤマルーブ スタンダードプラス MA2 10W-40 1L 90793-32159",
         "amount": 2654
@@ -18,32 +22,18 @@
         "amount": 238
       },
       {
-        "description": "左クランクケースガスケット交換",
-        "amount": null
-      },
-      {
         "description": "（Webike）YAMAHA純正 ガスケット,クランクケースカバー 3DM-15451-00×1",
         "amount": 675
-      },
-      {
-        "description": "シートカウル、メインシート交換、シートバンド移植",
-        "amount": null
       },
       {
         "description": "（ヤフオク）ヤマハ ルネッサ 4DN 純正シート シートカウル オレンジ×1",
         "amount": 24110
       },
       {
-        "description": "ヘッドライトリム交換",
-        "amount": null
-      },
-      {
         "description": "（ヤフオク）ヤマハ SRV250 ルネッサ 4DN 純正ヘッドライトレンズ×1",
         "amount": 5700
       }
-    ],
-    "mileage": 31796,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

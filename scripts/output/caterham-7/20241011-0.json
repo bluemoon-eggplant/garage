@@ -4,6 +4,8 @@
   "data": {
     "date": "2024/10/11",
     "totalAmount": 13200,
+    "mileage": 43210,
+    "shop": "有限会社ケントスピード",
     "items": [
       {
         "description": "ラジエターパイプバンド修理",
@@ -17,9 +19,7 @@
         "description": "オフセットステー製作",
         "amount": null
       }
-    ],
-    "mileage": 43210,
-    "shop": "有限会社ケントスピード"
+    ]
   },
   "reviewStatus": "pending"
 }

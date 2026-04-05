@@ -4,18 +4,17 @@
   "data": {
     "date": "2024/11/10",
     "totalAmount": 1780,
+    "mileage": null,
+    "shop": "DIY",
+    "tasks": [
+      "オーディオブラケット交換"
+    ],
     "items": [
-      {
-        "description": "オーディオブラケット交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）XTRONS 1DIN DVDプレーヤー専用ケージ 取付キット FRA002×1",
         "amount": 1780
       }
-    ],
-    "mileage": null,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

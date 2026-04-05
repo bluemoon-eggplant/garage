@@ -4,6 +4,8 @@
   "data": {
     "date": "2016/07/16",
     "totalAmount": 2700,
+    "mileage": 58147,
+    "shop": "東京マツダ販売株式会社 五反田営業所",
     "items": [
       {
         "description": "ETCセットアップ",
@@ -13,9 +15,7 @@
         "description": "タイヤエア調整",
         "amount": null
       }
-    ],
-    "mileage": 58147,
-    "shop": "東京マツダ販売株式会社 五反田営業所"
+    ]
   },
   "reviewStatus": "pending"
 }

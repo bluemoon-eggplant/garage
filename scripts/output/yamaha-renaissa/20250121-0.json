@@ -4,14 +4,12 @@
   "data": {
     "date": "2025/01/21",
     "totalAmount": 62850,
+    "mileage": 31875,
+    "shop": "テクニカルサービス",
     "items": [
       {
         "description": "クランクケースヘリサート加工（特殊タップ通し）",
         "amount": 37500
-      },
-      {
-        "description": "ダウエルピン圧2箇所 他1箇所（他全確認）",
-        "amount": null
       },
       {
         "description": "スプロケットカバー上部ヘリサート加工 サービス",
@@ -36,10 +34,12 @@
       {
         "description": "エンジンOIL 1.4L",
         "amount": 2380
+      },
+      {
+        "description": "ダウエルピン圧2箇所 他1箇所（他全確認）",
+        "amount": null
       }
-    ],
-    "mileage": 31875,
-    "shop": "テクニカルサービス"
+    ]
   },
   "reviewStatus": "approved"
 }

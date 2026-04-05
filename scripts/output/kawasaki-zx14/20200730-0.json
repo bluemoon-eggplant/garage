@@ -4,11 +4,9 @@
   "data": {
     "date": "2020/07/30",
     "totalAmount": 83835,
+    "mileage": 17699,
+    "shop": "株式会社2りんかんイエローハット 和光2りんかん",
     "items": [
-      {
-        "description": "フロントアッパーカウル、ミラー、左右ロアカウル、センターアンダーカウル持ち込み交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）BigOne ZZR1400 カウルミラー 純正タイプ 左右セット 車検対応×1",
         "amount": 7480
@@ -16,10 +14,12 @@
       {
         "description": "（Amazon）VITCIK フェアリングキット ZX14R ZZR1400 2006-2011 外装パーツセット オレンジ&ブラック×1",
         "amount": 37613
+      },
+      {
+        "description": "フロントアッパーカウル、ミラー、左右ロアカウル、センターアンダーカウル持ち込み交換",
+        "amount": null
       }
-    ],
-    "mileage": 17699,
-    "shop": "株式会社2りんかんイエローハット 和光2りんかん"
+    ]
   },
   "reviewStatus": "pending"
 }

@@ -4,10 +4,40 @@
   "data": {
     "date": "2018/09/23",
     "totalAmount": 109392,
+    "mileage": 63458,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店",
     "items": [
       {
         "description": "法定24ヶ月点検料《シビアコンディション含全項目》",
         "amount": 25488
+      },
+      {
+        "description": "保安基準確認検査料",
+        "amount": 9180
+      },
+      {
+        "description": "フロントブレーキメンテナンス(点検作業時付帯料金)清掃",
+        "amount": 1080
+      },
+      {
+        "description": "リヤブレーキメンテナンス(点検作業時付帯料金)清掃",
+        "amount": 1080
+      },
+      {
+        "description": "BF-31 ブレーキフルード (BF-3) 0.5L",
+        "amount": 1296
+      },
+      {
+        "description": "M001W3002B FLARE, SIGNAL, PICK",
+        "amount": 1598
+      },
+      {
+        "description": "水洗い洗車",
+        "amount": 540
+      },
+      {
+        "description": "「お車エステ」1コインプレゼント",
+        "amount": 540
       },
       {
         "description": "エンジンルーム点検 室内点検",
@@ -46,18 +76,6 @@
         "amount": null
       },
       {
-        "description": "保安基準確認検査料",
-        "amount": 9180
-      },
-      {
-        "description": "フロントブレーキメンテナンス(点検作業時付帯料金)清掃",
-        "amount": 1080
-      },
-      {
-        "description": "リヤブレーキメンテナンス(点検作業時付帯料金)清掃",
-        "amount": 1080
-      },
-      {
         "description": "制動力測定",
         "amount": null
       },
@@ -82,32 +100,14 @@
         "amount": null
       },
       {
-        "description": "BF-31 ブレーキフルード (BF-3) 0.5L",
-        "amount": 1296
-      },
-      {
         "description": "非常信号用具交換(緊急脱出ピック付)",
         "amount": null
       },
       {
-        "description": "M001W3002B FLARE, SIGNAL, PICK",
-        "amount": 1598
-      },
-      {
         "description": "タイヤ空気圧調整",
         "amount": null
-      },
-      {
-        "description": "水洗い洗車",
-        "amount": 540
-      },
-      {
-        "description": "「お車エステ」1コインプレゼント",
-        "amount": 540
       }
-    ],
-    "mileage": 63458,
-    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+    ]
   },
   "reviewStatus": "pending"
 }

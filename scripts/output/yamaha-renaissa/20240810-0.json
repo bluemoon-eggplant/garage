@@ -4,11 +4,12 @@
   "data": {
     "date": "2024/08/10",
     "totalAmount": 26625,
+    "mileage": 41855,
+    "shop": "DIY",
+    "tasks": [
+      "フロントフォークOH"
+    ],
     "items": [
-      {
-        "description": "フロントフォークOH、ディスクボルト交換、エアバルブキャップ交換",
-        "amount": null
-      },
       {
         "description": "（Webike）エーモン エアバルブキャップ 8824×1",
         "amount": 227
@@ -57,9 +58,7 @@
         "description": "（Yahooショッピング）BZ30 SRV250 4DN 38MM インナーチューブ 4DN-23110-50対応×2",
         "amount": 11800
       }
-    ],
-    "mileage": 41855,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

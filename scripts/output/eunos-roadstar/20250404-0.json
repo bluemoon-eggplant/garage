@@ -4,11 +4,16 @@
   "data": {
     "date": "2025/04/04",
     "totalAmount": 115524,
+    "mileage": 289254,
+    "shop": "DIY",
+    "tasks": [
+      "タイヤ交換",
+      "シフトブーツ交換",
+      "ミッションオイル補充",
+      "オーディオ交換",
+      "ボンネットロッドホルダー交換"
+    ],
     "items": [
-      {
-        "description": "タイヤ交換",
-        "amount": null
-      },
       {
         "description": "（ヤフオク）ブリヂストン 185/60R14×4",
         "amount": 15000
@@ -69,9 +74,7 @@
         "description": "（Amazon）ENDY 1DINポケットグローブボックス EGB-201B×1",
         "amount": 2109
       }
-    ],
-    "mileage": 289254,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

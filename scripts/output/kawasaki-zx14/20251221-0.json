@@ -4,6 +4,8 @@
   "data": {
     "date": "2025/12/21",
     "totalAmount": 26935,
+    "mileage": 36737,
+    "shop": "DIY",
     "tasks": [
       "フロントブレーキホース交換",
       "フロントキャリパーオーバーホール",
@@ -46,9 +48,7 @@
         "description": "（カワサキオンラインショップ）シール（オイル）×2",
         "amount": 462
       }
-    ],
-    "mileage": 36737,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

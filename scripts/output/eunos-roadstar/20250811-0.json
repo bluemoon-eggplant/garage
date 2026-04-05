@@ -4,6 +4,8 @@
   "data": {
     "date": "2025/08/11",
     "totalAmount": 38644,
+    "mileage": 291225,
+    "shop": "DIY",
     "tasks": [
       "エンジンオイル交換",
       "オイルフィルター交換",
@@ -16,14 +18,6 @@
       "クラッチフルード交換"
     ],
     "items": [
-      {
-        "description": "ブレーキフルード交換",
-        "amount": null
-      },
-      {
-        "description": "クラッチフルード交換",
-        "amount": null
-      },
       {
         "description": "（Amazon）DIXCEL ブレーキパッド ESタイプ 1台分 ES-351122-ES-355042×1",
         "amount": 16896
@@ -52,9 +46,7 @@
         "description": "（MAZDA）キャップ,ラジエーター D31615205×1",
         "amount": 3580
       }
-    ],
-    "mileage": 291225,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

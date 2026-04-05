@@ -4,11 +4,16 @@
   "data": {
     "date": "2024/10/05",
     "totalAmount": 55855,
+    "mileage": 30991,
+    "shop": "DIY",
+    "tasks": [
+      "リアサスペンション交換",
+      "ドラムブレーキ周り部品交換",
+      "テールランプバルブ交換",
+      "メーター照明バルブ交換",
+      "サイドスタンドスプリング交換"
+    ],
     "items": [
-      {
-        "description": "リアサス、ドラムブレーキ交換",
-        "amount": null
-      },
       {
         "description": "（Webike）YAMAHA純正 リヤクッションアセンブリ 1JN-22210-20×2",
         "amount": 39330
@@ -74,32 +79,18 @@
         "amount": 171
       },
       {
-        "description": "テールランプバルブ交換",
-        "amount": null
-      },
-      {
         "description": "（にりんかん）バルブ",
         "amount": 440
-      },
-      {
-        "description": "メーター照明バルブ交換",
-        "amount": null
       },
       {
         "description": "（Webike）YAMAHA純正 バルブ 1YT-83517-00×2",
         "amount": 438
       },
       {
-        "description": "サイドスタンドスプリング交換",
-        "amount": null
-      },
-      {
         "description": "（Webike）YAMAHA純正 スプリング,テンション 90506-29266×1",
         "amount": 789
       }
-    ],
-    "mileage": 30991,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

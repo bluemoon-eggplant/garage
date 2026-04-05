@@ -4,6 +4,8 @@
   "data": {
     "date": "2018/04/08",
     "totalAmount": 3240,
+    "mileage": 62192,
+    "shop": "株式会社関東マツダ 朝霞店",
     "items": [
       {
         "description": "マツダセーフティーチェック料金(安心コース)",
@@ -12,6 +14,10 @@
       {
         "description": "技術料値引",
         "amount": 4104
+      },
+      {
+        "description": "諸費用 ※課税対象",
+        "amount": 0
       },
       {
         "description": "エンジンルーム点検 室内点検",
@@ -56,14 +62,8 @@
       {
         "description": "※フロントブレーキパッドの残量が少ないです。",
         "amount": null
-      },
-      {
-        "description": "諸費用 ※課税対象",
-        "amount": 0
       }
-    ],
-    "mileage": 62192,
-    "shop": "株式会社関東マツダ 朝霞店"
+    ]
   },
   "reviewStatus": "pending"
 }

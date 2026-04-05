@@ -4,6 +4,8 @@
   "data": {
     "date": "2015/05/17",
     "totalAmount": 7314,
+    "mileage": 55678,
+    "shop": "東京マツダ販売株式会社 五反田営業所",
     "items": [
       {
         "description": "エンジンオイル交換 (エンジンオイル(ガソリン) (10W-30))",
@@ -29,9 +31,7 @@
         "description": "タイヤワックス(4本)",
         "amount": null
       }
-    ],
-    "mileage": 55678,
-    "shop": "東京マツダ販売株式会社 五反田営業所"
+    ]
   },
   "reviewStatus": "pending"
 }

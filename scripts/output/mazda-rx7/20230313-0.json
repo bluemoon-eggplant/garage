@@ -4,98 +4,12 @@
   "data": {
     "date": "2023/03/13",
     "totalAmount": 71041,
+    "mileage": 87595,
+    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店",
     "items": [
-      {
-        "description": "マツダセーフティーチェック (安心コース)",
-        "amount": null
-      },
-      {
-        "description": "プラグ交換",
-        "amount": null
-      },
-      {
-        "description": "オイツ&エレメント交換",
-        "amount": null
-      },
-      {
-        "description": "エアセパレータータンク交換",
-        "amount": null
-      },
-      {
-        "description": "ブレーキをよく見てほしい(前に固着したF)",
-        "amount": null
-      },
-      {
-        "description": "Rパッド",
-        "amount": null
-      },
       {
         "description": "マツダセーフティーチェック料金(安心コース)",
         "amount": 12760
-      },
-      {
-        "description": "エンジンルーム点検 室内点検",
-        "amount": null
-      },
-      {
-        "description": "バッテリー液の量、テスター電圧点検(12.63)",
-        "amount": null
-      },
-      {
-        "description": "良好です。",
-        "amount": null
-      },
-      {
-        "description": "排出ガス点検 外廻り点検",
-        "amount": null
-      },
-      {
-        "description": "日常点検代行 【サービス】",
-        "amount": null
-      },
-      {
-        "description": "タイヤの残量点検(F6.5mm、R6.5mm)",
-        "amount": null
-      },
-      {
-        "description": "フロント タイヤ空気圧 (kpa)調整",
-        "amount": null
-      },
-      {
-        "description": "リヤ タイヤ空気圧(kpa)調整",
-        "amount": null
-      },
-      {
-        "description": "シビアコンデションの点検",
-        "amount": null
-      },
-      {
-        "description": "エアクリーナエレメントの汚れ、詰り点検",
-        "amount": null
-      },
-      {
-        "description": "ブレーキホース、パイプのオイル漏れ、損傷、取付状態点検",
-        "amount": null
-      },
-      {
-        "description": "ブレーキライニング、パットの摩耗点検",
-        "amount": null
-      },
-      {
-        "description": "ブレーキディスクパッド残量 (F10mm) (R4.5mm)",
-        "amount": null
-      },
-      {
-        "description": "エキゾーストパイプ、マフラーの取付状態、損傷点検",
-        "amount": null
-      },
-      {
-        "description": "詳しくはセーフティーチェックレコードをご覧ください",
-        "amount": null
-      },
-      {
-        "description": "********************\n点検結果に基づく整備《付帯作業》",
-        "amount": null
       },
       {
         "description": "エンジンオイル交換 (クラス売り) ゴールデンSP 5W-30 3",
@@ -166,20 +80,108 @@
         "amount": 396
       },
       {
-        "description": "漏れが直って圧がかかる事により他が漏れる",
-        "amount": null
-      },
-      {
-        "description": "可能性が有ります。",
-        "amount": null
-      },
-      {
         "description": "水洗い洗車",
         "amount": 550
       },
       {
         "description": "「お車エステ」1コインプレゼント",
         "amount": -550
+      },
+      {
+        "description": "マツダセーフティーチェック (安心コース)",
+        "amount": null
+      },
+      {
+        "description": "プラグ交換",
+        "amount": null
+      },
+      {
+        "description": "オイツ&エレメント交換",
+        "amount": null
+      },
+      {
+        "description": "エアセパレータータンク交換",
+        "amount": null
+      },
+      {
+        "description": "ブレーキをよく見てほしい(前に固着したF)",
+        "amount": null
+      },
+      {
+        "description": "Rパッド",
+        "amount": null
+      },
+      {
+        "description": "エンジンルーム点検 室内点検",
+        "amount": null
+      },
+      {
+        "description": "バッテリー液の量、テスター電圧点検(12.63)",
+        "amount": null
+      },
+      {
+        "description": "良好です。",
+        "amount": null
+      },
+      {
+        "description": "排出ガス点検 外廻り点検",
+        "amount": null
+      },
+      {
+        "description": "日常点検代行 【サービス】",
+        "amount": null
+      },
+      {
+        "description": "タイヤの残量点検(F6.5mm、R6.5mm)",
+        "amount": null
+      },
+      {
+        "description": "フロント タイヤ空気圧 (kpa)調整",
+        "amount": null
+      },
+      {
+        "description": "リヤ タイヤ空気圧(kpa)調整",
+        "amount": null
+      },
+      {
+        "description": "シビアコンデションの点検",
+        "amount": null
+      },
+      {
+        "description": "エアクリーナエレメントの汚れ、詰り点検",
+        "amount": null
+      },
+      {
+        "description": "ブレーキホース、パイプのオイル漏れ、損傷、取付状態点検",
+        "amount": null
+      },
+      {
+        "description": "ブレーキライニング、パットの摩耗点検",
+        "amount": null
+      },
+      {
+        "description": "ブレーキディスクパッド残量 (F10mm) (R4.5mm)",
+        "amount": null
+      },
+      {
+        "description": "エキゾーストパイプ、マフラーの取付状態、損傷点検",
+        "amount": null
+      },
+      {
+        "description": "詳しくはセーフティーチェックレコードをご覧ください",
+        "amount": null
+      },
+      {
+        "description": "********************\n点検結果に基づく整備《付帯作業》",
+        "amount": null
+      },
+      {
+        "description": "漏れが直って圧がかかる事により他が漏れる",
+        "amount": null
+      },
+      {
+        "description": "可能性が有ります。",
+        "amount": null
       },
       {
         "description": "ブレーキ固着点検",
@@ -189,9 +191,7 @@
         "description": "問題ありません。",
         "amount": null
       }
-    ],
-    "mileage": 87595,
-    "shop": "株式会社関東マツダ 埼玉事業部 朝霞店"
+    ]
   },
   "reviewStatus": "pending"
 }

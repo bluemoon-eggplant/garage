@@ -1,0 +1,17 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/07/06",
+    "totalAmount": 205000,
+    "mileage": 12146,
+    "shop": "ヤフオク",
+    "items": [
+      {
+        "description": "車体購入",
+        "amount": 205000
+      }
+    ]
+  },
+  "reviewStatus": "approved"
+}

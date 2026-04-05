@@ -4,11 +4,12 @@
   "data": {
     "date": "2024/07/28",
     "totalAmount": 10501,
+    "mileage": 41790,
+    "shop": "DIY",
+    "tasks": [
+      "リアセクション分解整備"
+    ],
     "items": [
-      {
-        "description": "リアセクション分解整備",
-        "amount": null
-      },
       {
         "description": "（Webike）YAMAHA純正 ボルト,フランジ 95807-06020×1",
         "amount": 80
@@ -73,9 +74,7 @@
         "description": "（Yahooショッピング）YAMAHA純正 サイドカバーロックアセンブリ 55K-21708-00×1",
         "amount": 3938
       }
-    ],
-    "mileage": 41790,
-    "shop": "DIY"
+    ]
   },
   "reviewStatus": "approved"
 }

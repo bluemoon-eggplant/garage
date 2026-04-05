@@ -4,6 +4,8 @@
   "data": {
     "date": "2021/02/12",
     "totalAmount": 96250,
+    "mileage": 9626,
+    "shop": "Witham Cars 有限会社ブリッジウェイズ",
     "items": [
       {
         "description": "タイミングベルト Sigma",
@@ -41,9 +43,7 @@
         "description": "ヘッダータンク交換",
         "amount": null
       }
-    ],
-    "mileage": 9626,
-    "shop": "Witham Cars 有限会社ブリッジウェイズ"
+    ]
   },
   "reviewStatus": "pending"
 }
