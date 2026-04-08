@@ -5,7 +5,7 @@ import CarDataTable from '@/components/CarDataTable.astro';
 import Centered from '@/layouts/Centered.astro';
 import { getPageMetadata } from '@/utils/metadata';
 import { ROUTES } from '@/constants/routes';
-import { CATEGORIES } from '@/constants/collections';
+import { CATEGORIES, GARAGE_SLUG_TO_CATEGORY } from '@/constants/collections';
 import { loadAllMaintenanceRecords, toTableRow } from '@/libs/record-data';
 
 import type { GetStaticPathsOptions } from 'astro';
@@ -64,10 +64,21 @@ function getCategoryLabel(category: string): string {
             const tableRows = categoryRecords.map(toTableRow);
             const totalAmount = categoryRecords.reduce((sum, r) => sum + r.totalAmount, 0);
             const label = getCategoryLabel(category);
+            const garageSlug = Object.entries(GARAGE_SLUG_TO_CATEGORY).find(([, cat]) => cat === category)?.[0];
             return (
               <div class="mb-8">
                 <div class="flex items-baseline justify-between">
-                  <h2 class="b-h2">{record.data.title}</h2>
+                  <h2 class="b-h2">
+                    {record.data.title}
+                    {garageSlug && (
+                      <a
+                        href={`${ROUTES.GARAGE}${garageSlug}`}
+                        class="ml-2 text-sm font-normal text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        車両情報 &rarr;
+                      </a>
+                    )}
+                  </h2>
                   {tableRows.length > 0 && (
                     <span class="text-lg font-mono font-semibold text-gray-700 dark:text-gray-300">
                       合計 ¥{totalAmount.toLocaleString()}

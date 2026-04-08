@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 
 import { getPublishedOrUpdatedDate } from '@/modules/common';
+import { getCategoryProps } from '@/modules/post/category';
 import Link from '@/components/Link.astro';
 import { DRAFT_TEXT } from '@/constants/data';
 import { IMAGE_SIZES } from '@/constants/image';
@@ -26,6 +27,9 @@ const { lastAccessDate, isUpdatedDate } = getPublishedOrUpdatedDate({
   publishDate,
   updatedDate,
 });
+
+const category = data.category;
+const { label: categoryLabel, icon: categoryIcon } = getCategoryProps(category);
 
 const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
 ---
@@ -75,16 +79,27 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
         </p>
       )
     }
-    <span
-      class="inline-flex items-center gap-1 text-sm text-captions text-nowrap mt-auto"
-      transition:name={getTransitionNameFromElementId({
-        elementId: TRANSITION_ELEMENT_IDS.POST_CARD.META,
-      })}
-    >
-      <Icon name={isUpdatedDate ? 'mdi:edit-outline' : 'mdi:access-time'} class="w-4 h-4" />
-      <time itemprop="datePublished" datetime={formatDateIso(lastAccessDate)}>
-        {formatDate(lastAccessDate)}
-      </time>
-    </span>
+    <div class="inline-flex items-center gap-3 mt-auto flex-wrap">
+      <span
+        class="inline-flex items-center gap-1 text-sm text-captions text-nowrap"
+        transition:name={getTransitionNameFromElementId({
+          elementId: TRANSITION_ELEMENT_IDS.POST_CARD.META,
+        })}
+      >
+        <Icon name={isUpdatedDate ? 'mdi:edit-outline' : 'mdi:access-time'} class="w-4 h-4" />
+        <time itemprop="datePublished" datetime={formatDateIso(lastAccessDate)}>
+          {formatDate(lastAccessDate)}
+        </time>
+      </span>
+      {category && (
+        <a
+          href={`${ROUTES.EXPLORE_CATEGORIES}${category}`}
+          class="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-base-200 text-captions hover:bg-base-300 transition-colors"
+        >
+          <Icon name={categoryIcon} class="w-3.5 h-3.5" />
+          {categoryLabel}
+        </a>
+      )}
+    </div>
   </div>
 </article>

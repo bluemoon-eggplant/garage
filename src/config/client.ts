@@ -8,7 +8,7 @@ import type { ConfigClientType } from '@/types/config';
 const configClientData: ConfigClientType = {
   /** all urls without '/' */
   SITE_URL,
-  SITE_TITLE: 'まこちゃんズ乗り物電子カルテ',
+  SITE_TITLE: 'まこちゃんガレージ',
   SITE_DESCRIPTION: 'I am Nemanja, full stack developer',
   PLAUSIBLE_SCRIPT_URL,
   PLAUSIBLE_DOMAIN,
@@ -17,7 +17,7 @@ const configClientData: ConfigClientType = {
   MORE_POSTS_COUNT: 3,
   DEFAULT_MODE: 'light',
   DEFAULT_THEME: 'default-light',
-  AUTHOR_NAME: 'まこちゃんズ乗り物電子カルテ',
+  AUTHOR_NAME: 'まこちゃんガレージ',
   AUTHOR_EMAIL: 'email@email.com',
   AUTHOR_GITHUB: 'https://github.com/nemanjam',
   AUTHOR_LINKEDIN: 'https://www.linkedin.com/in/nemanja-mitic',
