@@ -23,6 +23,7 @@ const configClientData: ConfigClientType = {
   AUTHOR_LINKEDIN: 'https://www.linkedin.com/in/nemanja-mitic',
   AUTHOR_TWITTER: 'https://x.com/nemanja_codes',
   AUTHOR_YOUTUBE: 'https://www.youtube.com/@nemanja_codes',
+  AUTHOR_INSTAGRAM: 'https://www.instagram.com/makosgarage',
   REPO_URL: 'https://github.com/nemanjam/nemanjam.github.io',
 };
 

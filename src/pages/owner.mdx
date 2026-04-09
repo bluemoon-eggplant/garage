@@ -11,7 +11,7 @@ import { IMAGE_SIZES, TW_SCREENS } from '../constants/image';
 import Link from '../components/Link.astro';
 
 
-export const { AUTHOR_GITHUB, AUTHOR_LINKEDIN, AUTHOR_TWITTER, AUTHOR_YOUTUBE } = CONFIG_CLIENT;
+export const { AUTHOR_GITHUB, AUTHOR_LINKEDIN, AUTHOR_TWITTER, AUTHOR_YOUTUBE, AUTHOR_INSTAGRAM } = CONFIG_CLIENT;
 
 {/* bellow SM image is full width of content so higher resolution image */}
 export const imageSizes = {
@@ -19,6 +19,7 @@ export const imageSizes = {
   sizes: `(max-width: ${TW_SCREENS.SM}px) ${TW_SCREENS.SM}px, (max-width: ${TW_SCREENS.MD}px) ${TW_SCREENS.MD}px, ${TW_SCREENS.SM}px`,
 };
 
+<Link href={AUTHOR_INSTAGRAM} target="_blank" rel="me noreferrer noopener">📷 Instagram (@makosgarage)</Link>
 
 車とバイクを愛する一般男性です。  
 自己紹介させてください。  
@@ -34,7 +35,7 @@ export const imageSizes = {
 ## あくまで道具として
 
 旅好きな故、必然的に長距離を走ることが多く、道具としての信頼性を重視します。  
-また、道具は使ってなんぼだと考え、飛び石傷などはあまり気にしません。
+また、道具は使ってなんぼだと考え、飛び石傷などはあまり気にしません。  
 ガンガン乗って直して、を信条にしていましたが、気づけば御老体の車ばかりになってしまい、自己矛盾を感じていたりします。
 
 ---
