@@ -1,0 +1,16 @@
+{
+  "source": "DSC08876.jpg",
+  "category": "yamaha-maxam",
+  "data": {
+    "date": "2006/10/25",
+    "totalAmount": null,
+    "items": [
+      { "description": "初回1か月無料点検", "amount": null },
+      { "description": "エンジンオイル交換 (モチュール 4T)", "amount": null },
+      { "description": "オイルフィルタ交換", "amount": null }
+    ],
+    "mileage": 945,
+    "shop": "株式会社ティーズ センター店"
+  },
+  "reviewStatus": "pending"
+}

@@ -41,7 +41,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
             href={localizedPath(locale, `/record/detail/${row.id}`)}
             className="relative z-10 font-mono text-blue-600 dark:text-blue-400 hover:underline"
           >
-            ¥{value.toLocaleString()}
+            {value != null ? `¥${value.toLocaleString()}` : '-'}
           </a>
         </div>
       ),

@@ -65,7 +65,8 @@ function getCategoryLabel(category: string): string {
             const category = record.data.category;
             const categoryRecords = allMaintenanceRecords.filter((r) => r.category === category);
             const tableRows = categoryRecords.map(toTableRow);
-            const totalAmount = categoryRecords.reduce((sum, r) => sum + r.totalAmount, 0);
+            const allNull = categoryRecords.every((r) => r.totalAmount == null);
+            const totalAmount = allNull ? null : categoryRecords.reduce((sum, r) => sum + (r.totalAmount ?? 0), 0);
             const label = getCategoryLabel(category);
             const garageSlug = Object.entries(GARAGE_SLUG_TO_CATEGORY).find(([, cat]) => cat === category)?.[0];
             return (
@@ -84,7 +85,7 @@ function getCategoryLabel(category: string): string {
                   </h2>
                   {tableRows.length > 0 && (
                     <span class="text-lg font-mono font-semibold text-gray-700 dark:text-gray-300">
-                      {t('record.totalPrefix')} ¥{totalAmount.toLocaleString()}
+                      {totalAmount != null ? `${t('record.totalPrefix')} ¥${totalAmount.toLocaleString()}` : `${t('record.totalPrefix')} Unknown`}
                     </span>
                   )}
                 </div>

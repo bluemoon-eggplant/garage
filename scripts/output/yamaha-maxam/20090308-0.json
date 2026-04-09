@@ -1,0 +1,16 @@
+{
+  "source": "DSC08877.jpg",
+  "category": "yamaha-maxam",
+  "data": {
+    "date": "2009/03/08",
+    "totalAmount": null,
+    "items": [
+      { "description": "3年目 6か月定期点検", "amount": null },
+      { "description": "ブレーキ液交換", "amount": null },
+      { "description": "エンジンオイル交換", "amount": null }
+    ],
+    "mileage": 26055,
+    "shop": "株式会社 早坂サイクル商会 モーターステージ大手町"
+  },
+  "reviewStatus": "pending"
+}

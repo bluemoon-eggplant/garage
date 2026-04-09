@@ -12,6 +12,7 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/caterham7.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 # Caterham 7
 
@@ -20,17 +21,19 @@ import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 ## Overview
 
-* Ownership period: 2021~
-* Model year: 2009
-* Grade/Color: Roadsport 200, full repaint in Green
-* Displacement: 1,596cc
-* Engine: Water-cooled 4-cylinder DOHC 16-valve (Ford Sigma)
-* Transmission: 5-speed MT
-* Drivetrain: FR
-* Curb weight: 550kg
-* Max power: 120ps
-* Real-world fuel economy: 13~15km/L
-* Fuel: Premium
+<SpecTable items={[
+  ["Ownership period", "2021~"],
+  ["Model year", "2009"],
+  ["Grade/Color", "Roadsport 200, full repaint in Green"],
+  ["Displacement", "1,596cc"],
+  ["Engine", "Water-cooled 4-cylinder DOHC 16-valve (Ford Sigma)"],
+  ["Transmission", "5-speed MT"],
+  ["Drivetrain", "FR"],
+  ["Curb weight", "550kg"],
+  ["Max power", "120ps"],
+  ["Real-world fuel economy", "13~15km/L"],
+  ["Fuel", "Premium gasoline"],
+]} />
 
 ## Why I Bought It
 

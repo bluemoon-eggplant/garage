@@ -12,6 +12,9 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/fd3s.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
+import DSC08301 from './_images/DSC08301.JPG';
+import DSC08297 from './_images/DSC08297.JPG';
 
 # Mazda RX-7 (FD3S)
 
@@ -20,17 +23,19 @@ import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 ## Overview
 
-* Ownership period: 2009~
-* Model year: 2001
-* Grade/Color: Type R, Vintage Red
-* Displacement: 1,308cc
-* Engine: Twin-rotor sequential twin turbo
-* Transmission: 5-speed MT
-* Drivetrain: FR
-* Curb weight: 1,260kg
-* Max power: 280ps
-* Catalog fuel economy: 8km/L
-* Fuel: Premium
+<SpecTable items={[
+  ["Ownership period", "2009~"],
+  ["Model year", "2001"],
+  ["Grade/Color", "Type R, Vintage Red"],
+  ["Displacement", "1,308cc"],
+  ["Engine", "Twin-rotor sequential twin turbo"],
+  ["Transmission", "5-speed MT"],
+  ["Drivetrain", "FR"],
+  ["Curb weight", "1,260kg"],
+  ["Max power", "280ps"],
+  ["Catalog fuel economy", "8km/L"],
+  ["Fuel", "Premium gasoline"],
+]} />
 
 ## Why I Bought It
 
@@ -47,6 +52,9 @@ I couldn't inspect the actual car since it was at a different location, but they
 I figured a novice like me wouldn't learn much from inspecting it in person anyway, so I trusted the dealer and bought it. Turned out to be a good call -- the dealer was a decent person.
 
 ## Delivery Day
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08297} alt="" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08301} alt="" />
 
 This turned out to be the worst delivery day in my history of car ownership.
 First, I went to pick up the car despite a snow forecast.

@@ -12,6 +12,7 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/caterham7.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 # Caterham 7
 
@@ -20,17 +21,19 @@ import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 ## 概要
 
-* 所有期間: 2021年〜
-* 年式: 2009年式
-* グレード・色: ロードスポーツ200・グリーン全塗装
-* 排気量: 1,596cc
-* エンジン: 水冷4気筒DOHC16バルブ（フォード製Sigma）
-* ミッション: 5速MT
-* 駆動方式: FR
-* 車重: 550kg
-* 最大馬力: 120ps
-* 実燃費: 13~15km/L
-* ガソリン: ハイオク
+<SpecTable items={[
+  ["所有期間", "2021年〜"],
+  ["年式", "2009年式"],
+  ["グレード・色", "ロードスポーツ200・グリーン全塗装"],
+  ["排気量", "1,596cc"],
+  ["エンジン", "水冷4気筒DOHC16バルブ（フォード製Sigma）"],
+  ["ミッション", "5速MT"],
+  ["駆動方式", "FR"],
+  ["車重", "550kg"],
+  ["最大馬力", "120ps"],
+  ["実燃費", "13~15km/L"],
+  ["燃料", "ハイオクガソリン"],
+]} />
 
 ## 購入のきっかけ
 

@@ -12,6 +12,7 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/zx14.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 # Kawasaki ZX-14
 
@@ -20,16 +21,18 @@ import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 ## 概要
 
-* 所有期間: 2019年〜
-* 年式: 2009年式
-* グレード・色: 逆輸入車（アメリカ）スペシャルエディション・キャンディバーントオレンジ
-* 排気量: 1,352cc
-* エンジン: 水冷DOHC並列4気筒16バルブ
-* ミッション: 6速MT
-* 車重: 220kg
-* 最大馬力: 203ps
-* カタログ燃費: 13km/L
-* ガソリン: ハイオク
+<SpecTable items={[
+  ["所有期間", "2019年〜"],
+  ["年式", "2009年式"],
+  ["グレード・色", "逆輸入車（アメリカ）スペシャルエディション・キャンディバーントオレンジ"],
+  ["排気量", "1,352cc"],
+  ["エンジン", "水冷DOHC並列4気筒16バルブ"],
+  ["ミッション", "6速MT"],
+  ["車重", "220kg"],
+  ["最大馬力", "203ps"],
+  ["カタログ燃費", "13km/L"],
+  ["燃料", "ハイオクガソリン"],
+]} />
 
 ## 購入のきっかけ
 

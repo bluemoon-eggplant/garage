@@ -12,23 +12,26 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/mini.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
 <GarageJumpLinks category="rover-mini" />
 
 ## 概要
 
-* 所有期間: 2023年〜
-* 年式: 2000年式
-* グレード・色: メイフェア・サーフブルー?（色替え全塗装）
-* 排気量: 1,271cc
-* エンジン: 水冷直列4気筒OHV8バルブ
-* ミッション: AT改4速MT
-* 駆動方式: FF
-* 車重: 740kg
-* 最大馬力: 53ps
-* 実燃費: 13~15km/L
-* ガソリン: ハイオク
+<SpecTable items={[
+  ["所有期間", "2023年〜"],
+  ["年式", "2000年式"],
+  ["グレード・色", "メイフェア・サーフブルー?（色替え全塗装）"],
+  ["排気量", "1,271cc"],
+  ["エンジン", "水冷直列4気筒OHV8バルブ"],
+  ["ミッション", "AT改4速MT"],
+  ["駆動方式", "FF"],
+  ["車重", "740kg"],
+  ["最大馬力", "53ps"],
+  ["実燃費", "13~15km/L"],
+  ["燃料", "ハイオクガソリン"],
+]} />
 
 ## 購入のきっかけ
 

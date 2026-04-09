@@ -1,0 +1,14 @@
+{
+  "source": "DSC08876.jpg",
+  "category": "yamaha-maxam",
+  "data": {
+    "date": "2007/03/26",
+    "totalAmount": null,
+    "items": [
+      { "description": "1年目 6か月定期点検", "amount": null }
+    ],
+    "mileage": 3247,
+    "shop": "株式会社ティーズ センター店"
+  },
+  "reviewStatus": "pending"
+}

@@ -12,23 +12,26 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/mini.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
 <GarageJumpLinks category="rover-mini" />
 
 ## Overview
 
-* Ownership period: 2023~
-* Model year: 2000
-* Grade/Color: Mayfair, Surf Blue? (full repaint in a different color)
-* Displacement: 1,271cc
-* Engine: Water-cooled inline 4-cylinder OHV 8-valve
-* Transmission: AT-converted 4-speed MT
-* Drivetrain: FF
-* Curb weight: 740kg
-* Max power: 53ps
-* Real-world fuel economy: 13~15km/L
-* Fuel: Premium
+<SpecTable items={[
+  ["Ownership period", "2023~"],
+  ["Model year", "2000"],
+  ["Grade/Color", "Mayfair, Surf Blue? (full repaint in a different color)"],
+  ["Displacement", "1,271cc"],
+  ["Engine", "Water-cooled inline 4-cylinder OHV 8-valve"],
+  ["Transmission", "AT-converted 4-speed MT"],
+  ["Drivetrain", "FF"],
+  ["Curb weight", "740kg"],
+  ["Max power", "53ps"],
+  ["Real-world fuel economy", "13~15km/L"],
+  ["Fuel", "Premium gasoline"],
+]} />
 
 ## Why I Bought It
 

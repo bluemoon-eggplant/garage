@@ -1,0 +1,19 @@
+{
+  "source": "DSC08876.jpg",
+  "category": "yamaha-maxam",
+  "data": {
+    "date": "2008/09/26",
+    "totalAmount": null,
+    "items": [
+      { "description": "2年目 12か月定期点検", "amount": null },
+      { "description": "ブレーキケーブル交換", "amount": null },
+      { "description": "スパークプラグ交換", "amount": null },
+      { "description": "エンジンオイル交換", "amount": null },
+      { "description": "タイヤ交換", "amount": null },
+      { "description": "Vベルト交換", "amount": null }
+    ],
+    "mileage": 23097,
+    "shop": "株式会社 早坂サイクル商会 モーターステージ大手町"
+  },
+  "reviewStatus": "pending"
+}

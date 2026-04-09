@@ -12,6 +12,7 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/zx14.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 # Kawasaki ZX-14
 
@@ -20,16 +21,18 @@ import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
 
 ## Overview
 
-* Ownership period: 2019~
-* Model year: 2009
-* Grade/Color: Re-import (USA) Special Edition, Candy Burnt Orange
-* Displacement: 1,352cc
-* Engine: Water-cooled DOHC inline 4-cylinder 16-valve
-* Transmission: 6-speed MT
-* Curb weight: 220kg
-* Max power: 203ps
-* Catalog fuel economy: 13km/L
-* Fuel: Premium
+<SpecTable items={[
+  ["Ownership period", "2019~"],
+  ["Model year", "2009"],
+  ["Grade/Color", "Re-import (USA) Special Edition, Candy Burnt Orange"],
+  ["Displacement", "1,352cc"],
+  ["Engine", "Water-cooled DOHC inline 4-cylinder 16-valve"],
+  ["Transmission", "6-speed MT"],
+  ["Curb weight", "220kg"],
+  ["Max power", "203ps"],
+  ["Catalog fuel economy", "13km/L"],
+  ["Fuel", "Premium gasoline"],
+]} />
 
 ## Why I Bought It
 

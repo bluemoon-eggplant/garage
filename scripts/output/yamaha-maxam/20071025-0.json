@@ -1,0 +1,15 @@
+{
+  "source": "DSC08876.jpg",
+  "category": "yamaha-maxam",
+  "data": {
+    "date": "2007/10/25",
+    "totalAmount": null,
+    "items": [
+      { "description": "1年目 12か月定期点検", "amount": null },
+      { "description": "エンジンオイル交換 (4T)", "amount": null }
+    ],
+    "mileage": 7553,
+    "shop": "株式会社ティーズ"
+  },
+  "reviewStatus": "pending"
+}

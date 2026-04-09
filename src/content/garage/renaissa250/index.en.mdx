@@ -13,22 +13,25 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/renaissa.jpg';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
 <GarageJumpLinks category="yamaha-renaissa" />
 
 ## Overview
 
-* Ownership period: 2024~
-* Model year: 1997
-* Color: Orange Cocktail 1
-* Displacement: 248cc
-* Engine: Air-cooled SOHC 4-valve V-twin
-* Transmission: 5-speed MT
-* Curb weight: 152kg
-* Max power: 27hp
-* Real-world fuel economy: Approx. 25km/L
-* Fuel: Regular
+<SpecTable items={[
+  ["Ownership period", "2024~"],
+  ["Model year", "1997"],
+  ["Color", "Orange Cocktail 1"],
+  ["Displacement", "248cc"],
+  ["Engine", "Air-cooled SOHC 4-valve V-twin"],
+  ["Transmission", "5-speed MT"],
+  ["Curb weight", "152kg"],
+  ["Max power", "27hp"],
+  ["Real-world fuel economy", "Approx. 25km/L"],
+  ["Fuel", "Regular gasoline"],
+]} />
 
 ## Why I Bought It
 

@@ -12,23 +12,26 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/roadstar.png';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
 <GarageJumpLinks category="eunos-roadstar" />
 
 ## Overview
 
-* Ownership period: 2025~
-* Model year: 1992
-* Grade/Color: Standard, Chaste White
-* Displacement: 1,597cc
-* Engine: Water-cooled inline 4-cylinder DOHC 16-valve
-* Transmission: 5-speed MT
-* Drivetrain: FR
-* Curb weight: 950kg
-* Max power: 120ps
-* Catalog fuel economy: 13.2km/L
-* Fuel: Regular
+<SpecTable items={[
+  ["Ownership period", "2025~"],
+  ["Model year", "1992"],
+  ["Grade/Color", "Standard, Chaste White"],
+  ["Displacement", "1,597cc"],
+  ["Engine", "Water-cooled inline 4-cylinder DOHC 16-valve"],
+  ["Transmission", "5-speed MT"],
+  ["Drivetrain", "FR"],
+  ["Curb weight", "950kg"],
+  ["Max power", "120ps"],
+  ["Catalog fuel economy", "13.2km/L"],
+  ["Fuel", "Regular gasoline"],
+]} />
 
 ## Why I Bought It
 

@@ -13,22 +13,25 @@ import { Image } from 'astro:assets';
 import { IMAGE_SIZES } from '@/constants/image';
 import HeroImage from './_images/renaissa.jpg';
 import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
 
 <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
 <GarageJumpLinks category="yamaha-renaissa" />
 
 ## 概要
 
-* 所有期間: 2024年〜
-* 年式: 1997年式
-* 色: オレンジカクテル1
-* 排気量: 248cc
-* エンジン: 空冷SOHC4バルブV型2気筒
-* ミッション: 5速MT
-* 車重: 152kg
-* 最大馬力: 27馬力
-* 実燃費: 約25km/L
-* ガソリン: レギュラー
+<SpecTable items={[
+  ["所有期間", "2024年〜"],
+  ["年式", "1997年式"],
+  ["色", "オレンジカクテル1"],
+  ["排気量", "248cc"],
+  ["エンジン", "空冷SOHC4バルブV型2気筒"],
+  ["ミッション", "5速MT"],
+  ["車重", "152kg"],
+  ["最大馬力", "27馬力"],
+  ["実燃費", "約25km/L"],
+  ["燃料", "レギュラーガソリン"],
+]} />
 
 ## 購入のきっかけ
 

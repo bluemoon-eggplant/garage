@@ -1,27 +1,42 @@
 ---
 title: Yamaha MAXAM
-description: 2007~2009
-heroImage: '../../../assets/images/default/default-project-hero-image.jpg'
+description: 2006~2009
+heroImage: './_images/DSC08764.JPG'
 category: yamaha-maxam
 heroAlt: Yamaha MAXAM
 publishDate: 2024-12-09
 order: 7
 ---
 
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import HeroImage from './_images/DSC08764.JPG';
+import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
+import DSC08763 from './_images/DSC08763.JPG';
+import DSC08762 from './_images/DSC08762.JPG';
+import DSC08790 from './_images/DSC08790.JPG';
+import DSC08793 from './_images/DSC08793.JPG';
+
 # Yamaha MAXAM
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
+<GarageJumpLinks category="yamaha-maxam" />
 
 ## 概要
 
-* 所有期間: 2007年〜2009年
-* 年式: 2007年式
-* グレード・色: バイオレット
-* 排気量: 249cc
-* エンジン: 4ストローク 水冷 DOHC 4バルブ 単気筒
-* 車重: 198kg
-* ミッション: Vベルト式無段変速
-* 最大馬力: 20ps
-* カタログ燃費: 36km/L
-* ガソリン: レギュラー
+<SpecTable items={[
+  ["所有期間", "2006年〜2009年"],
+  ["年式", "2006年式"],
+  ["グレード・色", "バイオレット"],
+  ["排気量", "249cc"],
+  ["エンジン", "4ストローク 水冷 DOHC 4バルブ 単気筒"],
+  ["車重", "198kg"],
+  ["ミッション", "Vベルト式無段変速"],
+  ["最大馬力", "20ps"],
+  ["カタログ燃費", "36km/L"],
+  ["燃料", "レギュラーガソリン"],
+]} />
 
 ## 購入のきっかけ
 
@@ -31,6 +46,9 @@ order: 7
 探してみると、なんとも個性的でかっこいい、しかもいかにもタンデムに適してそうなMAXAMがあるじゃないか！
 
 ## 購入方法・納車日
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08790} alt="" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08793} alt="" />
 
 当時、MAXAMは市場に出たてのバイクだったため中古が存在せず、新車で購入。  
 通販で購入したため、ローダーで運ばれてきた。  
@@ -45,6 +63,9 @@ YAMAHAもこれを売りにしていた記憶があります。
 今思えば、バンクさせるとステップを擦ったりと動力性能はお察しながら、当時はこれしか知らないわけですから、それはもう最高に楽しいバイクライフでした。  
 
 ## カスタム
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08763} alt="" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08762} alt="" />
 
 カスタムトレンドには乗らない！みたいなことを前述しましたが、なんか色々やってました。  
 ただ、雑誌に載っているようなTheビッグスクーターみたいなものではなく、どちらかというとゲテモノカスタムでした。  

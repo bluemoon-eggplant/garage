@@ -1,27 +1,42 @@
 ---
 title: Yamaha MAXAM
-description: 2007~2009
-heroImage: '../../../assets/images/default/default-project-hero-image.jpg'
+description: 2006~2009
+heroImage: './_images/DSC08764.JPG'
 category: yamaha-maxam
 heroAlt: Yamaha MAXAM
 publishDate: 2024-12-09
 order: 7
 ---
 
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import HeroImage from './_images/DSC08764.JPG';
+import GarageJumpLinks from '../../../components/GarageJumpLinks.astro';
+import SpecTable from '../../../components/SpecTable.astro';
+import DSC08763 from './_images/DSC08763.JPG';
+import DSC08762 from './_images/DSC08762.JPG';
+import DSC08790 from './_images/DSC08790.JPG';
+import DSC08793 from './_images/DSC08793.JPG';
+
 # Yamaha MAXAM
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={HeroImage} alt="" />
+<GarageJumpLinks category="yamaha-maxam" />
 
 ## Overview
 
-* Ownership period: 2007~2009
-* Model year: 2007
-* Grade/Color: Violet
-* Displacement: 249cc
-* Engine: 4-stroke water-cooled DOHC 4-valve single-cylinder
-* Curb weight: 198kg
-* Transmission: V-belt CVT
-* Max power: 20ps
-* Catalog fuel economy: 36km/L
-* Fuel: Regular
+<SpecTable items={[
+  ["Ownership period", "2006~2009"],
+  ["Model year", "2006"],
+  ["Grade/Color", "Violet"],
+  ["Displacement", "249cc"],
+  ["Engine", "4-stroke water-cooled DOHC 4-valve single-cylinder"],
+  ["Curb weight", "198kg"],
+  ["Transmission", "V-belt CVT"],
+  ["Max power", "20ps"],
+  ["Catalog fuel economy", "36km/L"],
+  ["Fuel", "Regular gasoline"],
+]} />
 
 ## Why I Bought It
 
@@ -31,6 +46,9 @@ I had no interest in that scene, so the Majesty, Forza, and the like were off my
 After some searching, I found the MAXAM -- wildly unique, undeniably cool, and it looked perfect for carrying a passenger!
 
 ## How I Bought It / Delivery Day
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08790} alt="" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08793} alt="" />
 
 At the time, the MAXAM had just hit the market so there were no used ones available, and I bought it new.
 I ordered it online, so it arrived on a flatbed truck.
@@ -45,6 +63,9 @@ I recall YAMAHA even marketed this as a selling point.
 Looking back, the performance was nothing special -- the footpegs would scrape if you leaned it over -- but since it was the only thing I knew, it was hands-down the most fun motorcycle experience of my life.
 
 ## Modifications
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08763} alt="" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={DSC08762} alt="" />
 
 I said earlier that I wasn't into the customization trend, but apparently I did a fair bit.
 Rather than the typical big-scooter look from the magazines though, mine were more on the eccentric side.

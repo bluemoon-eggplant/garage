@@ -1,0 +1,14 @@
+{
+  "source": "DSC08876.jpg",
+  "category": "yamaha-maxam",
+  "data": {
+    "date": "2008/08/07",
+    "totalAmount": null,
+    "items": [
+      { "description": "2年目 6か月定期点検", "amount": null }
+    ],
+    "mileage": 12220,
+    "shop": "株式会社 早坂サイクル商会 モーターステージ大手町"
+  },
+  "reviewStatus": "pending"
+}
