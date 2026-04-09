@@ -14,7 +14,7 @@ export interface BaseProps extends BaseHeadProps {}
 const { metadata } = Astro.props as BaseProps;
 ---
 
-<html lang="en">
+<html lang={Astro.currentLocale ?? 'ja'}>
   <BaseHead {metadata} />
   <body
     class="relative flex flex-col min-h-screen min-w-80 bg-base-100 transition-colors duration-500"

@@ -12,8 +12,8 @@ import PostMeta from '@/components/PostMeta.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import { getHeadingsForTableOfContents } from '@/modules/post/table-of-contents';
 import Share from '@/components/Share.astro';
-import { DRAFT_TEXT } from '@/constants/data';
 import { ROUTES } from '@/constants/routes';
+import { useTranslations } from '@/i18n';
 import { setTransitionSlug, TRANSITION_ELEMENT_IDS } from '@/constants/transitions';
 import { CONFIG_CLIENT } from '@/config/client';
 import { getOpenGraphImagePath } from '@/libs/api/open-graph/image-path';
@@ -23,6 +23,7 @@ import type { Post } from '@/types/post';
 import type { MaintenanceRecord } from '@/types/record';
 
 const { SITE_URL } = CONFIG_CLIENT;
+const t = useTranslations(Astro.currentLocale);
 
 export async function getStaticPaths() {
   const posts: Post[] = await getAllPostsWithReadingTime();
@@ -104,7 +105,7 @@ const metadata: Metadata = { title, description, image };
       })}
     >
       {title}
-      {draft && <sup class="text-red-500 ml-1">{DRAFT_TEXT}</sup>}
+      {draft && <sup class="text-red-500 ml-1">{t('blog.draft')}</sup>}
     </h1>
 
     {
@@ -135,7 +136,7 @@ const metadata: Metadata = { title, description, image };
         class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline mb-4"
       >
         <Icon name="mdi:notebook-outline" class="w-5 h-5" />
-        整備記録を見る
+        {t('blog.viewRecord')}
         <Icon name="mdi:arrow-right" class="w-4 h-4" />
       </a>
     )}
@@ -144,7 +145,7 @@ const metadata: Metadata = { title, description, image };
       <div class="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-900/20 px-6 py-4 mb-8">
         <div class="flex items-center gap-2 mb-3">
           <Icon name="mdi:wrench" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
-          <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">DIY作業内容</h2>
+          <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">{t('blog.diyTasks')}</h2>
         </div>
         <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
           {matchedRecord.tasks.map((task) => (
@@ -184,7 +185,7 @@ const metadata: Metadata = { title, description, image };
     <div class="flex justify-center">
       <a href={`${ROUTES.EXPLORE_CATEGORIES}${category}`} class="flex items-center gap-1 text-links hover:text-links-hover">
         <Icon name="mdi:arrow-left" class="w-4 h-4" />
-        <span>一覧に戻る</span>
+        <span>{t('blog.backToList')}</span>
       </a>
     </div>
   </Fragment>

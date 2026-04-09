@@ -20,6 +20,13 @@ const remarkPlugins = [remarkReadingTime];
 export default defineConfig({
   site: SITE_URL,
   trailingSlash: 'ignore',
+  i18n: {
+    defaultLocale: 'ja',
+    locales: ['ja', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   env: envSchema,
   // default
   compressHTML: true,

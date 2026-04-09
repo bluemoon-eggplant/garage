@@ -1,0 +1,50 @@
+---
+import { render } from 'astro:content';
+
+import { getAllGarageItems } from '@/modules/garage';
+import GarageLayout from '@/layouts/Garage.astro';
+import GarageJumpLinks from '@/components/GarageJumpLinks.astro';
+import Share from '@/components/Share.astro';
+import { ROUTES } from '@/constants/routes';
+import { CONFIG_CLIENT } from '@/config/client';
+import { getOpenGraphImagePath } from '@/libs/api/open-graph/image-path';
+
+import type { Metadata } from '@/types/common';
+import type { Garage } from '@/types/garage';
+
+const { SITE_URL } = CONFIG_CLIENT;
+
+export async function getStaticPaths() {
+  const items: Garage[] = await getAllGarageItems('en');
+
+  const paths = items.map((item) => ({
+    params: { slug: item.slug },
+    props: { ...item },
+  }));
+
+  return paths;
+}
+
+const { data } = Astro.props;
+const { pathname } = Astro.url;
+const { slug } = Astro.params;
+
+const image = getOpenGraphImagePath(pathname);
+const { title, description, category } = data;
+
+const metadata: Metadata = { title, description, image };
+
+const shareProps = {
+  title,
+  description,
+  url: `${SITE_URL}/en${ROUTES.GARAGE}${slug}`,
+};
+
+const { Content } = await render(Astro.props);
+---
+
+<GarageLayout {metadata}>
+  <Content />
+  <GarageJumpLinks {category} />
+  <Share {...shareProps} />
+</GarageLayout>

@@ -85,7 +85,7 @@ const imageMetadataToReactImageProps = async (
     ...astroImageProps,
     width: thumbWidth,
     height: thumbHeight,
-    alt: 'Thumbnail image',
+    alt: 'Thumbnail',
   };
 
   const lightboxWidth = IMAGE_SIZES.FIXED.MDX_XL.width;
@@ -95,7 +95,7 @@ const imageMetadataToReactImageProps = async (
     ...astroImageProps,
     width: lightboxWidth,
     height: lightboxHeight,
-    alt: 'Lightbox image',
+    alt: 'Lightbox',
   };
 
   const optimizedThumbnailAstroImageProps = await getImage(thumbnailAstroImageProps);
@@ -112,7 +112,7 @@ const imageMetadataToReactImageProps = async (
     width: parseInt(String(attributes.width)),
     height: parseInt(String(attributes.height)),
     link,
-    caption: '記事を見る', // シンプルなテキストのみ
+    caption: 'View article',
   };
 
   return reactImageProps;

@@ -36,12 +36,48 @@ interface RecordFile {
   reviewStatus: string;
 }
 
+// --- Translation ---
+
+interface RecordTranslations {
+  shops: Record<string, string>;
+  descriptions: Record<string, string>;
+  tasks: Record<string, string>;
+}
+
+let _cachedTranslations: RecordTranslations | null = null;
+
+function loadRecordTranslations(): RecordTranslations {
+  if (_cachedTranslations) return _cachedTranslations;
+  const filePath = path.resolve(process.cwd(), 'scripts/output-en/translations.json');
+  if (!fs.existsSync(filePath)) {
+    _cachedTranslations = { shops: {}, descriptions: {}, tasks: {} };
+    return _cachedTranslations;
+  }
+  _cachedTranslations = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  return _cachedTranslations!;
+}
+
+function translateRecord(record: MaintenanceRecord): MaintenanceRecord {
+  const t = loadRecordTranslations();
+  return {
+    ...record,
+    shop: t.shops[record.shop] ?? record.shop,
+    items: record.items.map((item) => ({
+      ...item,
+      description: t.descriptions[item.description] ?? item.description,
+    })),
+    tasks: record.tasks.map((task) => t.tasks[task] ?? task),
+  };
+}
+
 // --- Data Loading ---
 
 let _cachedRecords: MaintenanceRecord[] | null = null;
+let _cachedRecordsEn: MaintenanceRecord[] | null = null;
 
-export function loadAllMaintenanceRecords(): MaintenanceRecord[] {
-  if (_cachedRecords && import.meta.env.PROD) return _cachedRecords;
+export function loadAllMaintenanceRecords(locale: string = 'ja'): MaintenanceRecord[] {
+  if (locale === 'en' && _cachedRecordsEn && import.meta.env.PROD) return _cachedRecordsEn;
+  if (locale !== 'en' && _cachedRecords && import.meta.env.PROD) return _cachedRecords;
 
   const outputDir = path.resolve(process.cwd(), 'scripts/output');
 
@@ -89,6 +125,12 @@ export function loadAllMaintenanceRecords(): MaintenanceRecord[] {
 
   // Sort by date descending
   records.sort((a, b) => b.date.localeCompare(a.date));
+
+  if (locale === 'en') {
+    const translated = records.map(translateRecord);
+    _cachedRecordsEn = translated;
+    return translated;
+  }
 
   _cachedRecords = records;
   return records;

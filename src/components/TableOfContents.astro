@@ -1,5 +1,6 @@
 ---
 import Link from '@/components/Link.astro';
+import { useTranslations } from '@/i18n';
 import { cn } from '@/utils/styles';
 
 import type { HTMLAttributes } from 'astro/types';
@@ -15,12 +16,13 @@ export interface Props extends HTMLAttributes<'aside'> {
 }
 
 const { headings, class: className } = Astro.props as Props;
+const t = useTranslations(Astro.currentLocale);
 
 const getHref = (slug: string) => `#${slug}`;
 ---
 
 <aside class={cn('toc md:max-w-lg rounded-box border border-base-300 p-4 mx-auto', className)}>
-  <h2 class="b-h2 mt-4">Table of contents</h2>
+  <h2 class="b-h2 mt-4">{t('blog.toc')}</h2>
 
   <ol class="ol-nested-decimal my-0">
     {

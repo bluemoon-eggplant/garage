@@ -7,8 +7,11 @@ import { getPageMetadata } from '@/utils/metadata';
 import { ROUTES } from '@/constants/routes';
 import { CATEGORIES, GARAGE_SLUG_TO_CATEGORY } from '@/constants/collections';
 import { loadAllMaintenanceRecords, toTableRow } from '@/libs/record-data';
+import { useTranslations } from '@/i18n';
 
 import type { GetStaticPathsOptions } from 'astro';
+
+const t = useTranslations(Astro.currentLocale);
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const records = await getAllRecords();
@@ -75,20 +78,20 @@ function getCategoryLabel(category: string): string {
                         href={`${ROUTES.GARAGE}${garageSlug}`}
                         class="ml-2 text-sm font-normal text-blue-600 dark:text-blue-400 hover:underline"
                       >
-                        車両情報 &rarr;
+                        {t('record.vehicleInfo')} &rarr;
                       </a>
                     )}
                   </h2>
                   {tableRows.length > 0 && (
                     <span class="text-lg font-mono font-semibold text-gray-700 dark:text-gray-300">
-                      合計 ¥{totalAmount.toLocaleString()}
+                      {t('record.totalPrefix')} ¥{totalAmount.toLocaleString()}
                     </span>
                   )}
                 </div>
                 {tableRows.length > 0 ? (
-                  <CarDataTable data={tableRows} category={category} caption={`${label} 維持記録`} />
+                  <CarDataTable data={tableRows} category={category} caption={`${label} ${t('record.maintenanceRecord')}`} />
                 ) : (
-                  <p class="text-gray-500 dark:text-gray-400 italic">データなし</p>
+                  <p class="text-gray-500 dark:text-gray-400 italic">{t('record.noData')}</p>
                 )}
               </div>
             );

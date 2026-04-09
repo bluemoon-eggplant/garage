@@ -1,5 +1,6 @@
-import { getAllEntries, idToSlug } from '@/modules/common';
+import { getAllEntries, idToSlug, filterByLocale } from '@/modules/common';
 import { COLLECTIONS } from '@/constants/collections';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
 import type { Garage, GarageCollection } from '@/types/garage';
 
@@ -14,8 +15,9 @@ const sortByOrder = (entries: GarageCollection[]) =>
  * My custom type with slug, etc.
  * Sorted by order field (lower numbers first).
  */
-export const getAllGarageItems = async (): Promise<Garage[]> => {
+export const getAllGarageItems = async (locale: Locale = DEFAULT_LOCALE): Promise<Garage[]> => {
   const entries = await getAllEntries(COLLECTIONS.GARAGE, { skipSort: true });
-  const sorted = sortByOrder(entries);
+  const localeEntries = filterByLocale(entries, locale);
+  const sorted = sortByOrder(localeEntries);
   return sorted.map(idToSlug);
 };

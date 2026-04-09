@@ -11,6 +11,8 @@ import { CONFIG_CLIENT } from '@/config/client';
 import { handleTitle } from '@/utils/metadata';
 import { filterUndefined } from '@/utils/objects';
 
+import { stripLocalePrefix, localizedPath } from '@/utils/i18n';
+
 import type { Metadata } from '@/types/common';
 
 const { AUTHOR_NAME, PLAUSIBLE_SCRIPT_URL, PLAUSIBLE_DOMAIN } = CONFIG_CLIENT;
@@ -35,6 +37,10 @@ const mergedMetadata: Required<Metadata> = { ...DEFAULT_METADATA, ...filteredMet
 const { title, description, image } = mergedMetadata;
 
 const ogImageUrl = new URL(image, url);
+
+const basePath = stripLocalePrefix(url.pathname);
+const jaUrl = new URL(basePath, url);
+const enUrl = new URL(localizedPath('en', basePath), url);
 ---
 
 <head>
@@ -44,6 +50,11 @@ const ogImageUrl = new URL(image, url);
 
   {/* wrong, set from theme toggle */}
   <meta name="theme-color" content="" />
+
+  {/* i18n alternate links */}
+  <link rel="alternate" hreflang="ja" href={jaUrl} />
+  <link rel="alternate" hreflang="en" href={enUrl} />
+  <link rel="alternate" hreflang="x-default" href={jaUrl} />
 
   {/* Links */}
   {/* Root-Relative URL (Starts with /): */}
@@ -121,6 +132,24 @@ const ogImageUrl = new URL(image, url);
   {/* Theme */}
   {/* MUST be inside <head /> to avoid white flash, IMPORTANT */}
   <ThemeScript />
+
+  {/* Locale auto-detection: redirect first-time visitors based on browser language */}
+  <script is:inline>
+  (function() {
+    if (localStorage.getItem('locale-preference')) return;
+    if (location.pathname.startsWith('/en')) {
+      localStorage.setItem('locale-preference', 'en');
+      return;
+    }
+    var lang = navigator.language || '';
+    if (lang.startsWith('en')) {
+      localStorage.setItem('locale-preference', 'en');
+      location.replace('/en' + location.pathname + location.search + location.hash);
+    } else {
+      localStorage.setItem('locale-preference', 'ja');
+    }
+  })();
+  </script>
 
   <ClientRouter fallback="none" />
 

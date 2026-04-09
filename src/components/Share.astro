@@ -6,6 +6,7 @@ import {
 
 import { DEFAULT_METADATA } from '@/constants/metadata';
 import { CONFIG_CLIENT } from '@/config/client';
+import { useTranslations } from '@/i18n';
 import { cn } from '@/utils/styles';
 
 import type { ComponentProps } from 'astro/types';
@@ -27,12 +28,13 @@ const buttons = [
 ];
 
 const props = { ...defaultProps, ...shareProps };
+const t = useTranslations(Astro.currentLocale);
 
 // todo: change package
 ---
 
 <div class={cn('inline-flex items-center gap-2', className)}>
-  <span class="font-bold text-base">Share:</span>
+  <span class="font-bold text-base">{t('blog.share')}</span>
   <SocialShare {...props} {buttons} />
 </div>
 

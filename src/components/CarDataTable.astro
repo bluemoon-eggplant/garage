@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { data, category, caption } = Astro.props;
+const locale = Astro.currentLocale ?? 'ja';
 ---
 
 <RecordDataTable
@@ -17,4 +18,5 @@ const { data, category, caption } = Astro.props;
   data={data}
   category={category}
   caption={caption}
+  locale={locale}
 />

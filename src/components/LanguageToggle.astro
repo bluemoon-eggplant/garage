@@ -1,0 +1,71 @@
+---
+import { getAlternateLocalePath } from '@/utils/i18n';
+
+const { pathname } = Astro.url;
+const locale = Astro.currentLocale ?? 'ja';
+const { path: alternatePath } = getAlternateLocalePath(pathname);
+
+const jaPath = locale === 'ja' ? pathname : alternatePath;
+const enPath = locale === 'en' ? pathname : alternatePath;
+
+const options = [
+  { value: jaPath, label: '日本語', active: locale === 'ja' },
+  { value: enPath, label: 'English', active: locale === 'en' },
+];
+---
+
+<language-toggle class="relative">
+  <button class="rounded-md p-2 text-sm font-bold text-primary" type="button" aria-label="Language">
+    {locale.toUpperCase()}
+  </button>
+  <ul
+    class="hidden absolute right-0 top-full mt-1 py-1 rounded-md border border-base-300 bg-base-100 shadow-lg min-w-[8rem] z-50"
+    role="listbox"
+  >
+    {options.map(({ value, label, active }) => (
+      <li>
+        <a
+          href={value}
+          role="option"
+          aria-selected={String(active)}
+          data-locale={value.startsWith('/en') ? 'en' : 'ja'}
+          class:list={[
+            'block px-3 py-1.5 text-sm transition-colors',
+            active
+              ? 'font-bold text-primary bg-base-200'
+              : 'text-content hover:bg-base-200',
+          ]}
+          data-astro-reload
+        >
+          {label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</language-toggle>
+
+<script>
+  class LanguageToggle extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector('button')!;
+      const menu = this.querySelector('ul')!;
+
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+
+      menu.addEventListener('click', (e) => {
+        const anchor = (e.target as HTMLElement).closest('a');
+        if (!anchor) return;
+        const locale = anchor.dataset.locale || 'ja';
+        localStorage.setItem('locale-preference', locale);
+      });
+    }
+  }
+  customElements.define('language-toggle', LanguageToggle);
+</script>

@@ -2,16 +2,20 @@ import { OG_IMAGE_PREFIXES } from '@/constants/metadata';
 import { ROUTES } from '@/constants/routes';
 import { getPages } from '@/libs/api/open-graph/pages';
 import { removeLeadingAndTrailingSlashes } from '@/utils/paths';
+import { stripLocalePrefix } from '@/utils/i18n';
 
 import type { OgImagePrefixType } from '@/constants/metadata';
 
 /*--------------------- getOpenGraphImagePath -------------------*/
 
 export const getOpenGraphImagePath = (path: string): string => {
-  // only to throw for invalid path
-  const _prefix = getPagePrefix(path);
+  // Strip locale prefix so /en/garage/fd3s → /garage/fd3s
+  const basePath = stripLocalePrefix(path);
 
-  const trimmedPath = removeLeadingAndTrailingSlashes(path);
+  // only to throw for invalid path
+  const _prefix = getPagePrefix(basePath);
+
+  const trimmedPath = removeLeadingAndTrailingSlashes(basePath);
 
   const imagePath = `${ROUTES.API.OG_IMAGES}${trimmedPath}.png`;
 

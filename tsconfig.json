@@ -23,7 +23,9 @@
       "@/styles/*": ["styles/*"],
       "@/types/*": ["types/*"],
       "@/utils/*": ["utils/*"],
-      "@/config/*": ["config/*"]
+      "@/config/*": ["config/*"],
+      "@/i18n/*": ["i18n/*"],
+      "@/i18n": ["i18n/index.ts"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.astro", ".astro/types.d.ts"],

@@ -10,6 +10,7 @@ import { IMAGE_SIZES } from '@/constants/image';
 import { ROUTES } from '@/constants/routes';
 import { setTransitionSlug, TRANSITION_ELEMENT_IDS } from '@/constants/transitions';
 import { formatDate, formatDateIso } from '@/utils/datetime';
+import { localizedPath } from '@/utils/i18n';
 import { cn } from '@/utils/styles';
 
 import type { Post } from '@/types/post';
@@ -32,6 +33,7 @@ const category = data.category;
 const { label: categoryLabel, icon: categoryIcon } = getCategoryProps(category);
 
 const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
+const locale = Astro.currentLocale;
 ---
 
 <article
@@ -43,7 +45,7 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
   )}
 >
   {heroImage && (
-    <a href={`${ROUTES.BLOG}${slug}`} class="shrink-0 hidden xs:block">
+    <a href={localizedPath(locale, `${ROUTES.BLOG}${slug}`)} class="shrink-0 hidden xs:block">
       <Image
         {...IMAGE_SIZES.FIXED.POST_CARD_SMALL}
         src={heroImage}
@@ -62,7 +64,7 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
         elementId: TRANSITION_ELEMENT_IDS.POST_CARD.TITLE,
       })}
     >
-      <Link variant="link-heading" href={`${ROUTES.BLOG}${slug}`}>
+      <Link variant="link-heading" href={localizedPath(locale, `${ROUTES.BLOG}${slug}`)}>
         {draft && <sup class="text-sm text-red-500 mr-1">{DRAFT_TEXT}</sup>}
         {title}
       </Link>
@@ -93,7 +95,7 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
       </span>
       {category && (
         <a
-          href={`${ROUTES.EXPLORE_CATEGORIES}${category}`}
+          href={localizedPath(locale, `${ROUTES.EXPLORE_CATEGORIES}${category}`)}
           class="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-base-200 text-captions hover:bg-base-300 transition-colors"
         >
           <Icon name={categoryIcon} class="w-3.5 h-3.5" />

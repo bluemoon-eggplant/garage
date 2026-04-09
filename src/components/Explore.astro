@@ -6,6 +6,7 @@ import { getTagLinks } from '@/modules/post/tag';
 import Button from '@/components/Button.astro';
 import FilterList from '@/components/FilterList.astro';
 import Tag from '@/components/Tag.astro';
+import { localizedPath } from '@/utils/i18n';
 import { cn } from '@/utils/styles';
 
 import type { FilterLink, Post } from '@/types/post';
@@ -19,6 +20,7 @@ const { posts, filterPathname, class: className, ...props } = Astro.props;
 
 const tagLinks = getTagLinks(posts, filterPathname);
 const categoryLinks = getCategoryLinks(posts, filterPathname);
+const locale = Astro.currentLocale;
 ---
 
 <section {...props} class={cn(className)}>
@@ -29,7 +31,7 @@ const categoryLinks = getCategoryLinks(posts, filterPathname);
         const buttonProps = isActive ? ({ colors: 'primary', variant: 'solid' } as const) : {};
 
         return (
-          <Button href={href} size="md" {...buttonProps}>
+          <Button href={localizedPath(locale, href)} size="md" {...buttonProps}>
             <Icon name={icon} slot="before-icon" />
             {textWithCount}
           </Button>

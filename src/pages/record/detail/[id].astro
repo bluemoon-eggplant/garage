@@ -4,12 +4,15 @@ import { Icon } from 'astro-icon/components';
 import Centered from '@/layouts/Centered.astro';
 import { ROUTES } from '@/constants/routes';
 import { CATEGORIES } from '@/constants/collections';
-import { MAINTENANCE_CATEGORIES } from '@/constants/record';
+
 import { loadAllMaintenanceRecords } from '@/libs/record-data';
 import { getAllPosts } from '@/modules/post/common';
+import { useTranslations } from '@/i18n';
 
 import type { MaintenanceRecord, MaintenanceCategory, ConsumableTag } from '@/types/record';
 import type { Metadata } from '@/types/common';
+
+const t = useTranslations(Astro.currentLocale);
 
 const TAG_COLORS: Record<ConsumableTag, string> = {
   'エンジンオイル': 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200',
@@ -58,8 +61,8 @@ const categoryLabel = categoryDef?.label ?? record.category;
 const displayDate = record.date.replaceAll('/', '-');
 
 const metadata: Metadata = {
-  title: `${categoryLabel} 整備明細 - ${displayDate}`,
-  description: `${displayDate} ${record.shop} での整備記録`,
+  title: `${categoryLabel} ${t('record.detail.metaTitle')} - ${displayDate}`,
+  description: `${displayDate} ${record.shop} ${t('record.detail.metaDescSuffix')}`,
 };
 
 // Group items by maintenance category
@@ -78,14 +81,14 @@ for (const item of record.items) {
       href={`${ROUTES.RECORD_CATEGORIES}${record.category}`}
       class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
     >
-      &larr; {categoryLabel} の記録一覧に戻る
+      &larr; {categoryLabel}{t('record.detail.backToList')}
     </a>
 
     {/* Header card */}
     <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       <div class="bg-gray-50 dark:bg-gray-800 px-6 py-4 border-b border-gray-200 dark:border-gray-700">
         <h1 class="text-xl font-bold text-gray-900 dark:text-gray-100">
-          整備明細書
+          {t('record.detail.invoice')}
         </h1>
         <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
           {categoryLabel}
@@ -94,21 +97,21 @@ for (const item of record.items) {
 
       <div class="px-6 py-4 grid grid-cols-2 gap-4 text-sm">
         <div>
-          <span class="text-gray-500 dark:text-gray-400">完了日</span>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.completionDate')}</span>
           <p class="font-medium text-gray-900 dark:text-gray-100">{displayDate}</p>
         </div>
         <div>
-          <span class="text-gray-500 dark:text-gray-400">整備店</span>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.shop')}</span>
           <p class="font-medium text-gray-900 dark:text-gray-100">{record.shop}</p>
         </div>
         <div>
-          <span class="text-gray-500 dark:text-gray-400">走行距離</span>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.mileage')}</span>
           <p class="font-medium text-gray-900 dark:text-gray-100">
             {record.mileage != null ? `${record.mileage.toLocaleString()} km` : '-'}
           </p>
         </div>
         <div>
-          <span class="text-gray-500 dark:text-gray-400">合計金額</span>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.totalAmount')}</span>
           <p class="text-lg font-bold text-gray-900 dark:text-gray-100">
             ¥{record.totalAmount.toLocaleString()}
           </p>
@@ -123,7 +126,7 @@ for (const item of record.items) {
         class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
       >
         <Icon name="mdi:notebook-outline" class="w-5 h-5" />
-        ブログ記事を見る
+        {t('record.detail.viewBlog')}
         <Icon name="mdi:arrow-right" class="w-4 h-4" />
       </a>
     )}
@@ -134,7 +137,7 @@ for (const item of record.items) {
         <div class="px-6 py-4">
           <div class="flex items-center gap-2 mb-3">
             <Icon name="mdi:wrench" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
-            <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">DIY作業内容</h2>
+            <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">{t('record.detail.diyTasks')}</h2>
           </div>
           <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
             {record.tasks.map((task) => (
@@ -150,9 +153,9 @@ for (const item of record.items) {
       <table class="w-full text-sm">
         <thead>
           <tr class="bg-gray-100 dark:bg-gray-800">
-            <th class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200">分類</th>
-            <th class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200">作業内容</th>
-            <th class="px-4 py-3 text-right font-semibold text-gray-700 dark:text-gray-200">金額</th>
+            <th class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200">{t('record.detail.classification')}</th>
+            <th class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200">{t('record.detail.workContent')}</th>
+            <th class="px-4 py-3 text-right font-semibold text-gray-700 dark:text-gray-200">{t('record.detail.amount')}</th>
           </tr>
         </thead>
         <tbody>
@@ -165,7 +168,7 @@ for (const item of record.items) {
                     rowspan={String(items.length)}
                   >
                     <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">
-                      {MAINTENANCE_CATEGORIES[cat]}
+                      {t(`maintenance.${cat}` as any)}
                     </span>
                   </td>
                 )}
@@ -187,7 +190,7 @@ for (const item of record.items) {
         <tfoot>
           <tr class="bg-gray-50 dark:bg-gray-800 border-t-2 border-gray-300 dark:border-gray-600">
             <td colspan="2" class="px-4 py-3 text-right font-semibold text-gray-700 dark:text-gray-200">
-              合計
+              {t('record.detail.total')}
             </td>
             <td class="px-4 py-3 text-right font-mono font-bold text-lg text-gray-900 dark:text-gray-100">
               ¥{record.totalAmount.toLocaleString()}

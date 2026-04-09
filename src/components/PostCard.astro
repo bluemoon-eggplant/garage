@@ -10,6 +10,7 @@ import { IMAGE_SIZES } from '@/constants/image';
 import { ROUTES } from '@/constants/routes';
 import { setTransitionSlug, TRANSITION_ELEMENT_IDS } from '@/constants/transitions';
 import { formatDate, formatDateIso } from '@/utils/datetime';
+import { localizedPath } from '@/utils/i18n';
 import { cn } from '@/utils/styles';
 
 import type { Post } from '@/types/post';
@@ -40,6 +41,7 @@ const { lastAccessDate, isUpdatedDate } = getPublishedOrUpdatedDate({
 });
 
 const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
+const locale = Astro.currentLocale;
 ---
 
 <article
@@ -77,7 +79,7 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
       })}
     >
       <Link
-        href={`${ROUTES.EXPLORE_CATEGORIES}${category}`}
+        href={localizedPath(locale, `${ROUTES.EXPLORE_CATEGORIES}${category}`)}
         class="inline-flex items-center gap-2 bg-primary-base-200 font-medium px-2 py-0.5 rounded-button"
       >
         <Icon name={categoryIcon} class="w-4 h-4" />
@@ -101,7 +103,7 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
         elementId: TRANSITION_ELEMENT_IDS.POST_CARD.TITLE,
       })}
     >
-      <Link href={`${ROUTES.BLOG}${slug}`} variant="link-heading">
+      <Link href={localizedPath(locale, `${ROUTES.BLOG}${slug}`)} variant="link-heading">
         {title}
         {draft && <sup class="text-sm text-red-500 ml-1">{DRAFT_TEXT}</sup>}
       </Link>
@@ -122,7 +124,7 @@ const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
 
     <div class="flex items-center justify-end">
       <Link
-        href={`${ROUTES.BLOG}${slug}`}
+        href={localizedPath(locale, `${ROUTES.BLOG}${slug}`)}
         class="inline-flex items-center gap-1 text-base font-medium"
       >
         <span class="text-nowrap">Read more</span>

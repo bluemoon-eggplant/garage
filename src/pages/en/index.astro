@@ -1,0 +1,18 @@
+---
+import Centered from '@/layouts/Centered.astro';
+import GarageList from '@/components/GarageList.astro';
+import { getAllGarageItems } from '@/modules/garage';
+import { getOpenGraphImagePath } from '@/libs/api/open-graph/image-path';
+
+const items = await getAllGarageItems('en');
+
+const { pathname } = Astro.url;
+const path = `/pages${pathname}`;
+const image = getOpenGraphImagePath(path);
+
+const metadata = { title: 'Home', description: 'Welcome', image };
+---
+
+<Centered {metadata}>
+  <GarageList {items} />
+</Centered>

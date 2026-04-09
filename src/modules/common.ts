@@ -2,6 +2,7 @@ import { getCollection } from 'astro:content';
 
 import { isProd } from '@/utils/environment';
 import { isPreviewMode } from '@/utils/preview';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
 import type { CollectionEntry, CollectionKey } from 'astro:content';
 
@@ -72,5 +73,33 @@ export const getPublishedOrUpdatedDate = ({
 export const idToSlug = <T extends { id: unknown }>(item: T): T & { slug: string } => ({
   ...item,
   // Strip year prefix for posts: "2025/05-25-fd3s" → "05-25-fd3s"
-  slug: String(item.id).replace(/^\d{4}\//, ''),
+  // Strip locale suffix: "fd3s--en" → "fd3s"
+  slug: String(item.id).replace(/^\d{4}\//, '').replace(/--en$/, ''),
 });
+
+/**
+ * Filter collection entries by locale.
+ * For default locale (ja): return entries without --en suffix.
+ * For 'en': return --en entries where available, fall back to ja entries.
+ */
+export const filterByLocale = <T extends { id: unknown }>(
+  entries: T[],
+  locale: Locale = DEFAULT_LOCALE,
+  fallbackToDefault = true
+): T[] => {
+  const jaEntries = entries.filter((e) => !String(e.id).endsWith('--en'));
+  if (locale === DEFAULT_LOCALE) return jaEntries;
+
+  const enEntries = entries.filter((e) => String(e.id).endsWith('--en'));
+  if (!fallbackToDefault) return enEntries;
+
+  // Merge: use EN where available, fall back to JA
+  const enBaseIds = new Set(enEntries.map((e) => String(e.id).replace(/--en$/, '')));
+  return jaEntries.map((ja) => {
+    const jaId = String(ja.id);
+    if (enBaseIds.has(jaId)) {
+      return enEntries.find((en) => String(en.id) === `${jaId}--en`)!;
+    }
+    return ja;
+  });
+};

@@ -4,6 +4,8 @@ import { Icon } from 'astro-icon/components';
 import Link from '@/components/Link.astro';
 import { ROUTES } from '@/constants/routes';
 import { formatDate, formatDateIso } from '@/utils/datetime';
+import { useTranslations } from '@/i18n';
+import { localizedPath } from '@/utils/i18n';
 import { cn } from '@/utils/styles';
 import { getCategoryProps } from '@/modules/post/category';
 import type { HTMLAttributes } from 'astro/types';
@@ -18,6 +20,8 @@ export interface Props extends HTMLAttributes<'p'> {
 }
 
 const { category, publishDate, updatedDate, readingTime, class: className } = Astro.props;
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
 
 const shouldDisplay = [category, publishDate, updatedDate, readingTime].some(Boolean);
 ---
@@ -34,12 +38,12 @@ const shouldDisplay = [category, publishDate, updatedDate, readingTime].some(Boo
         {category && (  
           <span>·</span>     
           <Icon name={getCategoryProps(category).icon} />
-          <Link href={`${ROUTES.EXPLORE_CATEGORIES}${category}`}>{category}</Link>       
+          <Link href={localizedPath(locale, `${ROUTES.EXPLORE_CATEGORIES}${category}`)}>{category}</Link>       
         )}
         {readingTime && (    
           <span>·</span>     
           <Icon name="mdi:book-open-blank-variant-outline" />
-          <span>{`${Math.round(readingTime)} minutes`}</span>     
+          <span>{`${Math.round(readingTime)} ${t('blog.minutes')}`}</span>     
         )}
         {updatedDate && (    
           <span>·</span>     

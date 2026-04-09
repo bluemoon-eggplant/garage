@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { CONSUMABLE_TAG_EN } from '@/constants/record';
+
 import type { ConsumableTag } from '@/types/record';
 
 const TAG_COLORS: Record<ConsumableTag, string> = {
@@ -19,14 +21,18 @@ const FALLBACK_COLOR = 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-
 
 interface TagBadgeProps {
   label: string;
+  locale?: string;
 }
 
-const TagBadge: React.FC<TagBadgeProps> = ({ label }) => {
+const TagBadge: React.FC<TagBadgeProps> = ({ label, locale }) => {
   const colorClass = TAG_COLORS[label as ConsumableTag] ?? FALLBACK_COLOR;
+  const displayLabel = locale === 'en'
+    ? (CONSUMABLE_TAG_EN[label as ConsumableTag] ?? label)
+    : label;
 
   return (
     <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${colorClass} mr-1 mb-0.5`}>
-      {label}
+      {displayLabel}
     </span>
   );
 };

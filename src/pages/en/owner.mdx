@@ -1,0 +1,101 @@
+---
+layout: '../../layouts/Page.astro'
+title: 'Owner'
+description: 'Owner profile page'
+---
+
+import { Image } from 'astro:assets';
+
+import { CONFIG_CLIENT } from '../../config/client';
+import { IMAGE_SIZES, TW_SCREENS } from '../../constants/image';
+import Link from '../../components/Link.astro';
+
+
+export const { AUTHOR_GITHUB, AUTHOR_LINKEDIN, AUTHOR_TWITTER, AUTHOR_YOUTUBE } = CONFIG_CLIENT;
+
+{/* bellow SM image is full width of content so higher resolution image */}
+export const imageSizes = {
+  widths: [TW_SCREENS.SM, TW_SCREENS.MD, TW_SCREENS.SM],
+  sizes: `(max-width: ${TW_SCREENS.SM}px) ${TW_SCREENS.SM}px, (max-width: ${TW_SCREENS.MD}px) ${TW_SCREENS.MD}px, ${TW_SCREENS.SM}px`,
+};
+
+
+I'm just an ordinary guy who loves cars and motorcycles.
+Let me introduce myself.
+
+# Vehicles and Me
+
+## I Love Traveling
+
+For me, cars and motorcycles are a means of travel, so I hardly ever join group touring events.
+I also don't have the desire to show off my cars, so I'm not interested in car exhibition events.
+That said, I don't mind being approached by people on the road, and I try to respond as kindly as possible.
+
+## Tools, First and Foremost
+
+Because I love traveling, I inevitably cover long distances, and I value reliability as a practical tool.
+I also believe tools are meant to be used, so I don't worry much about stone chips and minor scratches.
+My motto has been "ride hard, fix it, repeat," but before I knew it, all my vehicles have become elderly machines, and I feel a bit of self-contradiction.
+
+---
+
+# How I Met Vehicles
+
+## Meeting Motorcycles
+
+I had no connection to vehicles until a turning point in my second year of college.
+A close friend bought a motorcycle (HONDA GB250 Clubman) and gave me a ride on the back.
+The overwhelming speed, acceleration — everything was uncharted territory. (Along with the absurd vibrations unique to the Clubman.)
+There's a Japanese expression "having your brain burned" — and that's exactly what happened. My brain was burned by the engine.
+For the first time, I wanted a motorcycle of my own.
+
+## Meeting Cars
+
+This is a very common story, but my interest in cars came from watching Initial D during college.
+Before that, I had virtually zero interest.
+In my senior year, with the optimistic assumption that I could pay off a loan once I started working, I bought my first car.
+
+---
+
+# Preferences
+
+First and foremost, I'm a purist.
+I believe the factory condition designed by the manufacturer is the most beautiful, so I prefer to keep things stock.
+No matter how dissatisfied I am with a particular aspect, I accept it as the philosophy and background behind its creation, and interpret it as "character."
+That said, since buying the Mini, my rigid views have softened a bit.
+
+## Design
+
+### Cars
+
+In my personal theory, car design can be divided into two categories:
+
+* American style
+* European style
+
+I prefer the "European style" and find beauty in curvy forms.
+My origin point is the "RX-7 FD3S" — that was my gateway to the designs I love.
+With full awareness that this is an extreme position, I assert that "long nose, short deck" should be prioritized above all else.
+
+### Motorcycles
+
+My love for "curvy" design is the same as with cars.
+The first motorcycle that struck me was the "KAWASAKI ZZR1400," and I generally love YAMAHA's design language.
+
+## Performance
+
+### Cars
+
+In contrast to my design preferences, I don't have strong opinions about performance.
+What's certain is that I value lightness over power.
+If I had to specify an engine preference, I favor power delivery that builds in high RPMs.
+I believe the limit for enjoying this on public roads is around a naturally aspirated 4-cylinder 1.6L, and the Caterham 7's engine characteristics come closest to my ideal.
+The NA Roadster has the same package, but it produces hardly any power at high revs, so I consider it a fundamentally different experience.
+
+### Motorcycles
+
+On the other hand, with motorcycles, I'm an inline-four sound supremacist.
+However, since owning the V-twin Renaissa, that conviction has mellowed.
+Meanwhile, the balance between weight and power is a difficult topic — I can't answer whether I prefer large or small bikes.
+Light bikes make cornering fun, but they simply lack stability and feel dangerous; heavy bikes are the opposite — each has its pros and cons.
+That's precisely why I feel motorcycles can be more fun than cars in certain ways.

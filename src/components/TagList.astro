@@ -3,6 +3,7 @@ import { cva } from 'class-variance-authority';
 
 import Tag from '@/components/Tag.astro';
 import { ROUTES } from '@/constants/routes';
+import { localizedPath } from '@/utils/i18n';
 
 import type { TagProps } from '@/components/Tag.astro';
 import type { HTMLAttributes } from 'astro/types';
@@ -29,7 +30,8 @@ const {
   ...props
 } = Astro.props;
 
-const tagLinks = tags.map((tagItem) => ({ href: `${ROUTES.TAGS}${tagItem}`, text: `#${tagItem}` }));
+const locale = Astro.currentLocale;
+const tagLinks = tags.map((tagItem) => ({ href: localizedPath(locale, `${ROUTES.TAGS}${tagItem}`), text: `#${tagItem}` }));
 ---
 
 {

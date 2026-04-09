@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 
 import Link from '@/components/Link.astro';
+import { useTranslations } from '@/i18n';
 import { cn } from '@/utils/styles';
 
 import type { PaginationProps } from '@/types/common';
@@ -21,6 +22,7 @@ const {
   total,
   class: className,
 } = Astro.props;
+const t = useTranslations(Astro.currentLocale);
 // all links in Astro are relative /blog/2
 const { prev: prevUrl, current: currentUrl, next: nextUrl } = url;
 
@@ -62,16 +64,16 @@ const threePageNumbers = (currentPage: number, lastPage: number): number[] => {
   hasMoreThanOnePage() || showIfOnePage ? (
     <div class={cn('flex items-center justify-end xs:justify-between gap-4', className)}>
       <p class="b-p hidden xs:inline-block text-base">
-        Showing
+        {t('pagination.showing')}
         <span class="font-bold">{start + 1}</span>
-        to
+        {t('pagination.to')}
         <span class="font-bold">{end + 1}</span>
-        of
+        {t('pagination.of')}
         <span class="font-bold">{total}</span>
-        results
+        {t('pagination.results')}
       </p>
 
-      <nav aria-label="pages" class="flex items-center justify-end gap-4 text-xl">
+      <nav aria-label={t('pagination.pages')} class="flex items-center justify-end gap-4 text-xl">
         <Link href={firstUrl} disabled={!prevUrl}>
           <Icon name="mdi:chevron-double-left" />
         </Link>

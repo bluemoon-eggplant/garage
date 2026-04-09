@@ -3,7 +3,11 @@
 # 1. Remove unused images from _images/ directories
 node scripts/cleanup-unused-images.mjs
 
-# 2. Auto-resize images in _images/ directories before commit
+# 2. Translation checks
+node scripts/check-translations.mjs || exit 1
+node scripts/check-garage-translations.mjs || exit 1
+
+# 3. Auto-resize images in _images/ directories before commit
 # Resizes to max 1600px width using sharp
 
 IMAGES=$(git diff --cached --name-only --diff-filter=ACM | grep '_images/.*\.\(jpg\|jpeg\|png\|webp\)$' || true)

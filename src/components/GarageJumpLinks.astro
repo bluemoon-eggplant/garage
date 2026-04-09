@@ -3,29 +3,33 @@ import { Icon } from 'astro-icon/components';
 
 import Button from '@/components/Button.astro';
 import { ROUTES } from '@/constants/routes';
+import { useTranslations } from '@/i18n';
+import { localizedPath } from '@/utils/i18n';
 
 export interface Props {
   category?: string;
 }
 
 const { category } = Astro.props;
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
 
-const recordHref = category
+const recordHref = localizedPath(locale, category
   ? `${ROUTES.RECORD_CATEGORIES}${category}`
-  : ROUTES.RECORD;
+  : ROUTES.RECORD);
 
-const historyHref = category
+const historyHref = localizedPath(locale, category
   ? `${ROUTES.EXPLORE_CATEGORIES}${category}`
-  : ROUTES.EXPLORE;
+  : ROUTES.EXPLORE);
 ---
 
 <div class="not-prose flex justify-center gap-3 my-4">
   <Button href={recordHref} size="md" variant="outline" colors="primary">
     <Icon name="mdi:table" slot="before-icon" />
-    Jump to Record
+    {t('garage.jumpToRecord')}
   </Button>
   <Button href={historyHref} size="md" variant="outline" colors="primary">
     <Icon name="mdi:history" slot="before-icon" />
-    Jump to History
+    {t('garage.jumpToHistory')}
   </Button>
 </div>

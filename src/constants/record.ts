@@ -24,6 +24,19 @@ export const MAINTENANCE_CATEGORIES: Record<MaintenanceCategory, string> = {
   other: 'その他整備',
 };
 
+export const CONSUMABLE_TAG_EN: Record<ConsumableTag, string> = {
+  'エンジンオイル': 'Engine Oil',
+  'オイルエレメント': 'Oil Filter',
+  'エアクリーナー': 'Air Filter',
+  'スパークプラグ': 'Spark Plug',
+  '冷却水': 'Coolant',
+  'ブレーキフルード': 'Brake Fluid',
+  'バッテリー': 'Battery',
+  'タイヤ': 'Tires',
+  'ミッションオイル': 'Transmission Oil',
+  'デフオイル': 'Differential Oil',
+};
+
 export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
   inspection: [
     'マツダセーフティーチェック', 'パックdeメンテ', '安心点検', '車検整備', '車検基本点検',

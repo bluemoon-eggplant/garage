@@ -1,0 +1,103 @@
+---
+import { getAllRecords } from '@/modules/record';
+import RecordFilter from '@/components/RecordFilter.astro';
+import CarDataTable from '@/components/CarDataTable.astro';
+import Centered from '@/layouts/Centered.astro';
+import { getPageMetadata } from '@/utils/metadata';
+import { ROUTES } from '@/constants/routes';
+import { CATEGORIES, GARAGE_SLUG_TO_CATEGORY } from '@/constants/collections';
+import { loadAllMaintenanceRecords, toTableRow } from '@/libs/record-data';
+import { useTranslations } from '@/i18n';
+
+import type { GetStaticPathsOptions } from 'astro';
+
+const t = useTranslations(Astro.currentLocale);
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const records = await getAllRecords();
+  const categories = [...new Set(records.map((r) => r.data.category))];
+
+  // root: /en/record/
+  const rootPaths = [{ params: { filter: undefined, page: undefined }, props: { filterCategory: undefined } }];
+
+  // category paths: /en/record/categories/{category}
+  const categoryPaths = categories.map((category) => ({
+    params: { filter: `categories/${category}`, page: undefined },
+    props: { filterCategory: category },
+  }));
+
+  return [...rootPaths, ...categoryPaths];
+}
+
+const { filterCategory } = Astro.props;
+
+const allRecords = await getAllRecords();
+
+// filter by category if selected
+const filteredRecords = filterCategory
+  ? allRecords.filter((r) => r.data.category === filterCategory)
+  : allRecords;
+
+// resolve pathname for active filter
+const filterPathname = filterCategory
+  ? `${ROUTES.RECORD_CATEGORIES}${filterCategory}`
+  : undefined;
+
+const metadata = getPageMetadata('lists/record');
+
+// load maintenance records from extracted.json
+const allMaintenanceRecords = loadAllMaintenanceRecords('en');
+
+// get display label for category
+function getCategoryLabel(category: string): string {
+  const cat = CATEGORIES.find((c) => c.name === category);
+  return cat?.label ?? category;
+}
+---
+
+<Centered {metadata}>
+  <article class="flex flex-col">
+    <section class="flex-grow flex flex-col">
+      <RecordFilter records={allRecords} {filterPathname} />
+      <div>
+        {
+          filteredRecords.map((record) => {
+            const category = record.data.category;
+            const categoryRecords = allMaintenanceRecords.filter((r) => r.category === category);
+            const tableRows = categoryRecords.map(toTableRow);
+            const totalAmount = categoryRecords.reduce((sum, r) => sum + r.totalAmount, 0);
+            const label = getCategoryLabel(category);
+            const garageSlug = Object.entries(GARAGE_SLUG_TO_CATEGORY).find(([, cat]) => cat === category)?.[0];
+            return (
+              <div class="mb-8">
+                <div class="flex items-baseline justify-between">
+                  <h2 class="b-h2">
+                    {`${label} ${t('record.maintenanceRecord')}`}
+                    {garageSlug && (
+                      <a
+                        href={`/en${ROUTES.GARAGE}${garageSlug}`}
+                        class="ml-2 text-sm font-normal text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        {t('record.vehicleInfo')} &rarr;
+                      </a>
+                    )}
+                  </h2>
+                  {tableRows.length > 0 && (
+                    <span class="text-lg font-mono font-semibold text-gray-700 dark:text-gray-300">
+                      {t('record.totalPrefix')} ¥{totalAmount.toLocaleString()}
+                    </span>
+                  )}
+                </div>
+                {tableRows.length > 0 ? (
+                  <CarDataTable data={tableRows} category={category} caption={`${label} ${t('record.maintenanceRecord')}`} />
+                ) : (
+                  <p class="text-gray-500 dark:text-gray-400 italic">{t('record.noData')}</p>
+                )}
+              </div>
+            );
+          })
+        }
+      </div>
+    </section>
+  </article>
+</Centered>

@@ -1,0 +1,203 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import Centered from '@/layouts/Centered.astro';
+import { ROUTES } from '@/constants/routes';
+import { CATEGORIES } from '@/constants/collections';
+import { CONSUMABLE_TAG_EN } from '@/constants/record';
+import { loadAllMaintenanceRecords } from '@/libs/record-data';
+import { getAllPosts } from '@/modules/post/common';
+import { useTranslations } from '@/i18n';
+
+import type { MaintenanceRecord, MaintenanceCategory, ConsumableTag } from '@/types/record';
+import type { Metadata } from '@/types/common';
+
+const t = useTranslations(Astro.currentLocale);
+
+const TAG_COLORS: Record<ConsumableTag, string> = {
+  'エンジンオイル': 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200',
+  'オイルエレメント': 'bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200',
+  'スパークプラグ': 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200',
+  '冷却水': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/50 dark:text-cyan-200',
+  'ブレーキフルード': 'bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200',
+  'バッテリー': 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200',
+  'タイヤ': 'bg-slate-100 text-slate-800 dark:bg-slate-900/50 dark:text-slate-200',
+};
+const FALLBACK_TAG_COLOR = 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200';
+
+export async function getStaticPaths() {
+  const records = loadAllMaintenanceRecords('en');
+  const posts = await getAllPosts('en');
+
+  return records.map((record) => {
+    // Match blog post: same category + same date
+    let blogSlug: string | null = null;
+    const [ry, rm, rd] = record.date.split('/');
+    const recordDateStr = `${ry}-${rm}-${rd}`;
+
+    const found = posts.find((p) => {
+      if (p.data.category !== record.category) return false;
+      const pd = p.data.publishDate;
+      const postDateStr = `${pd.getFullYear()}-${String(pd.getMonth() + 1).padStart(2, '0')}-${String(pd.getDate()).padStart(2, '0')}`;
+      return postDateStr === recordDateStr;
+    });
+
+    if (found) blogSlug = String(found.id).replace(/^\d{4}\//, '');
+
+    return {
+      params: { id: record.id },
+      props: { record, blogSlug },
+    };
+  });
+}
+
+const { record, blogSlug } = Astro.props as {
+  record: MaintenanceRecord;
+  blogSlug: string | null;
+};
+
+const categoryDef = CATEGORIES.find((c) => c.name === record.category);
+const categoryLabel = categoryDef?.label ?? record.category;
+const displayDate = record.date.replaceAll('/', '-');
+
+const metadata: Metadata = {
+  title: `${categoryLabel} ${t('record.detail.metaTitle')} - ${displayDate}`,
+  description: `${displayDate} ${record.shop} ${t('record.detail.metaDescSuffix')}`,
+};
+
+// Group items by maintenance category
+const grouped = new Map<MaintenanceCategory, typeof record.items>();
+for (const item of record.items) {
+  const cat = item.maintenanceCategory;
+  if (!grouped.has(cat)) grouped.set(cat, []);
+  grouped.get(cat)!.push(item);
+}
+---
+
+<Centered {metadata}>
+  <article class="flex flex-col gap-6 py-4">
+    {/* Back link */}
+    <a
+      href={`/en${ROUTES.RECORD_CATEGORIES}${record.category}`}
+      class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+    >
+      &larr; {categoryLabel}{t('record.detail.backToList')}
+    </a>
+
+    {/* Header card */}
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div class="bg-gray-50 dark:bg-gray-800 px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+        <h1 class="text-xl font-bold text-gray-900 dark:text-gray-100">
+          {t('record.detail.invoice')}
+        </h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+          {categoryLabel}
+        </p>
+      </div>
+
+      <div class="px-6 py-4 grid grid-cols-2 gap-4 text-sm">
+        <div>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.completionDate')}</span>
+          <p class="font-medium text-gray-900 dark:text-gray-100">{displayDate}</p>
+        </div>
+        <div>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.shop')}</span>
+          <p class="font-medium text-gray-900 dark:text-gray-100">{record.shop}</p>
+        </div>
+        <div>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.mileage')}</span>
+          <p class="font-medium text-gray-900 dark:text-gray-100">
+            {record.mileage != null ? `${record.mileage.toLocaleString()} km` : '-'}
+          </p>
+        </div>
+        <div>
+          <span class="text-gray-500 dark:text-gray-400">{t('record.detail.totalAmount')}</span>
+          <p class="text-lg font-bold text-gray-900 dark:text-gray-100">
+            ¥{record.totalAmount.toLocaleString()}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Blog link */}
+    {blogSlug && (
+      <a
+        href={`/en${ROUTES.BLOG}${blogSlug}`}
+        class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+      >
+        <Icon name="mdi:notebook-outline" class="w-5 h-5" />
+        {t('record.detail.viewBlog')}
+        <Icon name="mdi:arrow-right" class="w-4 h-4" />
+      </a>
+    )}
+
+    {/* Tasks */}
+    {record.tasks.length > 0 && (
+      <div class="rounded-lg border border-blue-200 dark:border-blue-800 overflow-hidden bg-blue-50/50 dark:bg-blue-900/20">
+        <div class="px-6 py-4">
+          <div class="flex items-center gap-2 mb-3">
+            <Icon name="mdi:wrench" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <h2 class="text-base font-bold text-gray-900 dark:text-gray-100">{t('record.detail.diyTasks')}</h2>
+          </div>
+          <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
+            {record.tasks.map((task) => (
+              <li>{task}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )}
+
+    {/* Items table */}
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100 dark:bg-gray-800">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200">{t('record.detail.classification')}</th>
+            <th class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200">{t('record.detail.workContent')}</th>
+            <th class="px-4 py-3 text-right font-semibold text-gray-700 dark:text-gray-200">{t('record.detail.amount')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[...grouped.entries()].map(([cat, items]) =>
+            items.map((item, i) => (
+              <tr class={`${i % 2 === 0 ? 'bg-white dark:bg-gray-900' : 'bg-gray-50 dark:bg-gray-800/50'} border-b border-gray-100 dark:border-gray-800`}>
+                {i === 0 && (
+                  <td
+                    class="px-4 py-3 align-top font-medium text-gray-600 dark:text-gray-300 whitespace-nowrap"
+                    rowspan={String(items.length)}
+                  >
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+                      {t(`maintenance.${cat}` as any)}
+                    </span>
+                  </td>
+                )}
+                <td class="px-4 py-3 text-gray-900 dark:text-gray-100">
+                  {item.description}
+                  {item.consumableTag && (
+                    <span class={`ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${TAG_COLORS[item.consumableTag] ?? FALLBACK_TAG_COLOR}`}>
+                      {CONSUMABLE_TAG_EN[item.consumableTag as keyof typeof CONSUMABLE_TAG_EN] ?? item.consumableTag}
+                    </span>
+                  )}
+                </td>
+                <td class="px-4 py-3 text-right font-mono text-gray-900 dark:text-gray-100 whitespace-nowrap">
+                  {item.amount != null ? `¥${item.amount.toLocaleString()}` : '-'}
+                </td>
+              </tr>
+            ))
+          )}
+        </tbody>
+        <tfoot>
+          <tr class="bg-gray-50 dark:bg-gray-800 border-t-2 border-gray-300 dark:border-gray-600">
+            <td colspan="2" class="px-4 py-3 text-right font-semibold text-gray-700 dark:text-gray-200">
+              {t('record.detail.total')}
+            </td>
+            <td class="px-4 py-3 text-right font-mono font-bold text-lg text-gray-900 dark:text-gray-100">
+              ¥{record.totalAmount.toLocaleString()}
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </article>
+</Centered>

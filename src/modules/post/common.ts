@@ -1,7 +1,8 @@
 import { render } from 'astro:content';
 
-import { getAllEntries, idToSlug } from '@/modules/common';
+import { getAllEntries, idToSlug, filterByLocale } from '@/modules/common';
 import { COLLECTIONS, GARAGE_SLUG_TO_CATEGORY, CATEGORIES } from '@/constants/collections';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
 import type { Post, PostCollection } from '@/types/post';
 
@@ -10,7 +11,7 @@ import type { Post, PostCollection } from '@/types/post';
  * id format: "2025/05-25-fd3s" → year=2025, month=05, day=25, garageSlug=fd3s
  */
 const enrichPostData = (post: PostCollection): PostCollection => {
-  const id = String(post.id);
+  const id = String(post.id).replace(/--en$/, '');
   const parts = id.split('/');
 
   // Parse year from path prefix (if present)
@@ -35,16 +36,18 @@ const enrichPostData = (post: PostCollection): PostCollection => {
 };
 
 /** Sorted posts. Enriches missing publishDate/category/heroImage from directory path + MDX imports. */
-export const getAllPosts = async (): Promise<PostCollection[]> => {
+export const getAllPosts = async (locale: Locale = DEFAULT_LOCALE): Promise<PostCollection[]> => {
   // Load without sorting first — publishDate may be undefined before enrichment
-  const posts = await getAllEntries(COLLECTIONS.POST, { skipSort: true });
+  const allPosts = await getAllEntries(COLLECTIONS.POST, { skipSort: true });
+  const posts = filterByLocale(allPosts, locale);
   const enriched = posts.map(enrichPostData);
 
   // Dynamic import to avoid circular deps (common → pages → image-path → metadata)
   const { postFirstImageMap } = await import('./thumbnail');
   for (const post of enriched) {
     if (!post.data.heroImage) {
-      const img = postFirstImageMap.get(String(post.id));
+      const lookupId = String(post.id).replace(/--en$/, '');
+      const img = postFirstImageMap.get(lookupId);
       if (img) (post.data as any).heroImage = img;
     }
   }
@@ -83,5 +86,5 @@ export const getPostsWithReadingTimeFromPosts = async (
  * From this point Post[] instead of CollectionEntry<'post'>[].
  * My custom type with slug, readingTime, etc.
  */
-export const getAllPostsWithReadingTime = async (): Promise<Post[]> =>
-  getPostsWithReadingTimeFromPosts(await getAllPosts());
+export const getAllPostsWithReadingTime = async (locale: Locale = DEFAULT_LOCALE): Promise<Post[]> =>
+  getPostsWithReadingTimeFromPosts(await getAllPosts(locale));

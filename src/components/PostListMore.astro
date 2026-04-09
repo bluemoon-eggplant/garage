@@ -1,5 +1,6 @@
 ---
 import PostCardMore from '@/components/PostCardMore.astro';
+import { useTranslations } from '@/i18n';
 import { cn } from '@/utils/styles';
 
 import type { Post } from '@/types/post';
@@ -10,10 +11,11 @@ export interface Props extends HTMLAttributes<'div'> {
 }
 
 const { morePosts, class: className } = Astro.props;
+const t = useTranslations(Astro.currentLocale);
 ---
 
 <div class={cn(className)}>
-  <h2 class="b-h2 mt-0">More posts</h2>
+  <h2 class="b-h2 mt-0">{t('blog.morePosts')}</h2>
   <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
     {
       morePosts.map((post) => (
