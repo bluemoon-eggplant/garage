@@ -9,6 +9,12 @@ import { Image } from 'astro:assets';
 import { CONFIG_CLIENT } from '../../config/client';
 import { IMAGE_SIZES, TW_SCREENS } from '../../constants/image';
 import Link from '../../components/Link.astro';
+import Figure from '../../components/Figure.astro';
+import GB250Clubman from '../_images/honda-gb250-clubman.jpg';
+import ZZR1400 from '../_images/kawasaki-zzr1400.jpg';
+import RX7FD3S from '../_images/rx7-fd3s.jpg';
+import Caterham7Nosappu from '../_images/caterham7-nosappu.jpg';
+import GarageAll from '../_images/garage-all.jpg';
 
 
 export const { AUTHOR_GITHUB, AUTHOR_LINKEDIN, AUTHOR_TWITTER, AUTHOR_YOUTUBE, AUTHOR_INSTAGRAM } = CONFIG_CLIENT;
@@ -21,12 +27,16 @@ export const imageSizes = {
 
 <Link href={AUTHOR_INSTAGRAM} target="_blank" rel="me noreferrer noopener">📷 Instagram (@makosgarage)</Link>
 
-I'm just an ordinary guy who loves cars and motorcycles.  
+I'm just an ordinary guy who loves cars and motorcycles.
 Let me introduce myself.  
 
 # Vehicles and Me
 
 ## I Love Traveling
+
+<Figure caption="Cape Nosappu, the easternmost point of mainland Japan">
+  <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Caterham7Nosappu} alt="" />
+</Figure>
 
 For me, cars and motorcycles are a means of travel, so I hardly ever join group touring events.  
 I also don't have the desire to show off my cars, so I'm not interested in car exhibition events.  
@@ -34,8 +44,8 @@ That said, I don't mind being approached by people on the road, and I try to res
 
 ## Tools, First and Foremost
 
-Because I love traveling, I inevitably cover long distances, and I value reliability as a practical tool.  
-I also believe tools are meant to be used, so I don't worry much about stone chips and minor scratches.  
+Because I love traveling, I inevitably cover long distances, and I value reliability as a practical tool.
+I also believe tools are meant to be used, so I don't worry much about stone chips and minor scratches.
 My motto has been "ride hard, fix it, repeat," but before I knew it, all my vehicles have become elderly machines, and I feel a bit of self-contradiction.
 
 ---
@@ -44,7 +54,11 @@ My motto has been "ride hard, fix it, repeat," but before I knew it, all my vehi
 
 ## Meeting Motorcycles
 
-I had no connection to vehicles until a turning point in my second year of college.  
+<Figure caption="HONDA GB250 Clubman">
+  <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={GB250Clubman} alt="" />
+</Figure>
+
+I had no connection to vehicles until a turning point in my second year of college.
 A close friend bought a motorcycle (HONDA GB250 Clubman) and gave me a ride on the back.  
 The overwhelming speed, acceleration — everything was uncharted territory. (Along with the absurd vibrations unique to the Clubman.)  
 There's a Japanese expression "having your brain burned" — and that's exactly what happened. My brain was burned by the engine.  
@@ -52,9 +66,9 @@ For the first time, I wanted a motorcycle of my own.
 
 ## Meeting Cars
 
-This is a very common story, but my interest in cars came from watching Initial D during college.  
-Before that, I had virtually zero interest.  
-In my senior year, with the optimistic assumption that I could pay off a loan once I started working, I bought my first car.  
+This is a very common story, but my interest in cars came from watching Initial D during college.
+Before that, I had virtually zero interest.
+In my senior year, with the optimistic assumption that I could pay off a loan once I started working, I bought my first car.
 
 ---
 
@@ -75,13 +89,22 @@ In my personal theory, car design can be divided into two categories:
 * European style
 
 I prefer the "European style" and find beauty in curvy forms.  
-My origin point is the "RX-7 FD3S" — that was my gateway to the designs I love.  
+My origin point is the "RX-7 FD3S" — that was my gateway to the designs I love.
+
+<Figure caption="Mazda RX-7 FD3S">
+  <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={RX7FD3S} alt="" />
+</Figure>
+
 With full awareness that this is an extreme position, I assert that "long nose, short deck" should be prioritized above all else.  
 
 ### Motorcycles
 
 My love for "curvy" design is the same as with cars.
-The first motorcycle that struck me was the "KAWASAKI ZZR1400," and I generally love YAMAHA's design language.  
+The first motorcycle that struck me was the "KAWASAKI ZZR1400," and I generally love YAMAHA's design language.
+
+<Figure caption="Kawasaki ZZR1400">
+  <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={ZZR1400} alt="" />
+</Figure>
 
 ## Performance
 

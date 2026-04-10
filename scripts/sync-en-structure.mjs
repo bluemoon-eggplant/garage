@@ -255,64 +255,128 @@ function syncImports(jaParsed, enLines) {
 }
 
 function syncImageComponents(jaBody, enLines) {
+  const IMAGE_RE = /^\s*<Image\s[^>]*src=\{(\w+)\}/;
   const enParsed = parseFile(enLines.join('\n'));
   const enBody = enParsed.body;
+  const bodyStartInFile = enLines.length - enBody.length;
 
   const jaSections = splitSections(jaBody);
   const enSections = splitSections(enBody);
 
-  const enImageVars = new Set();
-  for (const line of enBody) {
-    const match = line.match(/^\s*<Image\s[^>]*src=\{(\w+)\}/);
-    if (match) enImageVars.add(match[1]);
-  }
-
-  const insertions = [];
-
-  // Match sections by index (they correspond 1:1 when section count matches)
-  const maxSections = Math.min(jaSections.length, enSections.length);
-  for (let s = 0; s < maxSections; s++) {
-    const jaSec = jaSections[s];
-    const enSec = enSections[s];
-
-    // Find Image lines in JA section
-    const jaImages = [];
-    const allJaLines = [jaSec.heading, ...jaSec.lines].filter(Boolean);
-    for (let i = 0; i < allJaLines.length; i++) {
-      const match = allJaLines[i].match(/^\s*<Image\s[^>]*src=\{(\w+)\}/);
-      if (match && !enImageVars.has(match[1])) {
-        jaImages.push({ relOffset: i, line: allJaLines[i], varName: match[1] });
+  // Build JA image map: varName -> { sectionIdx, relOffset, line }
+  const jaImageMap = new Map();
+  for (let s = 0; s < jaSections.length; s++) {
+    const sec = jaSections[s];
+    const allLines = sec.heading ? [sec.heading, ...sec.lines] : [...sec.lines];
+    for (let i = 0; i < allLines.length; i++) {
+      const match = allLines[i].match(IMAGE_RE);
+      if (match) {
+        jaImageMap.set(match[1], { sectionIdx: s, relOffset: i, line: allLines[i] });
       }
     }
+  }
 
-    if (jaImages.length === 0) continue;
-
-    // Calculate absolute position in EN body for insertion
-    const enSecAbsStart = enSec.startIndex;
-    for (const img of jaImages) {
-      // Insert at same relative offset within section, clamped to section length
-      const enSecLen = 1 + enSec.lines.length; // heading + content
-      const insertRel = Math.min(img.relOffset, enSecLen);
-      const absPos = enSecAbsStart + insertRel;
-      insertions.push({ absPos, line: img.line, varName: img.varName });
+  // Build EN image map: varName -> { sectionIdx, absLineIdx (in full file) }
+  const enImageMap = new Map();
+  for (let s = 0; s < enSections.length; s++) {
+    const sec = enSections[s];
+    const allLines = sec.heading ? [sec.heading, ...sec.lines] : [...sec.lines];
+    for (let i = 0; i < allLines.length; i++) {
+      const match = allLines[i].match(IMAGE_RE);
+      if (match) {
+        enImageMap.set(match[1], {
+          sectionIdx: s,
+          absLineIdx: bodyStartInFile + sec.startIndex + i,
+        });
+      }
     }
   }
 
-  if (insertions.length === 0) return { lines: enLines, inserted: [] };
+  const maxSections = Math.min(jaSections.length, enSections.length);
+  const inserted = [];
+  const moved = [];
+  const removals = []; // file-level line indices to remove (for moves)
+  const insertions = []; // { absBodyPos, line, varName }
 
-  // Convert body positions to full-file positions
-  const bodyStartInFile = enLines.length - enParsed.body.length;
+  for (const [varName, jaInfo] of jaImageMap) {
+    if (jaInfo.sectionIdx >= maxSections) continue;
 
-  // Sort insertions by position descending to insert from bottom up (avoid offset shift)
-  insertions.sort((a, b) => b.absPos - a.absPos);
+    const enInfo = enImageMap.get(varName);
 
-  const newLines = [...enLines];
-  for (const ins of insertions) {
-    const filePos = bodyStartInFile + ins.absPos;
-    newLines.splice(filePos, 0, ins.line);
+    if (!enInfo) {
+      // Missing in EN — insert at corresponding position
+      const enSec = enSections[jaInfo.sectionIdx];
+      const enSecLen = 1 + enSec.lines.length;
+      const insertRel = Math.min(jaInfo.relOffset, enSecLen);
+      insertions.push({
+        absBodyPos: enSec.startIndex + insertRel,
+        line: jaInfo.line,
+        varName,
+      });
+      inserted.push(varName);
+    } else if (enInfo.sectionIdx !== jaInfo.sectionIdx && jaInfo.sectionIdx < maxSections) {
+      // Exists in EN but in wrong section — move it
+      removals.push(enInfo.absLineIdx);
+      const enSec = enSections[jaInfo.sectionIdx];
+      const enSecLen = 1 + enSec.lines.length;
+      const insertRel = Math.min(jaInfo.relOffset, enSecLen);
+      insertions.push({
+        absBodyPos: enSec.startIndex + insertRel,
+        line: jaInfo.line,
+        varName,
+      });
+      moved.push(varName);
+    }
   }
 
-  return { lines: newLines, inserted: insertions };
+  if (inserted.length === 0 && moved.length === 0) {
+    return { lines: enLines, inserted: [], moved: [] };
+  }
+
+  const newLines = [...enLines];
+
+  // 1. Remove moved images (mark as null, then filter)
+  for (const idx of removals) {
+    newLines[idx] = null;
+    // Also remove adjacent blank line if it creates a double blank
+    if (idx + 1 < newLines.length && newLines[idx + 1] !== null && newLines[idx + 1].trim() === '') {
+      newLines[idx + 1] = null;
+    }
+  }
+
+  // Filter out nulls and rebuild
+  const filtered = newLines.filter((l) => l !== null);
+
+  // Re-parse to get fresh body positions after removal
+  const freshParsed = parseFile(filtered.join('\n'));
+  const freshBody = freshParsed.body;
+  const freshBodyStart = filtered.length - freshBody.length;
+  const freshSections = splitSections(freshBody);
+
+  // 2. Recalculate insertion positions against fresh sections
+  const freshInsertions = [];
+  for (const ins of insertions) {
+    const jaInfo = jaImageMap.get(ins.varName);
+    if (jaInfo.sectionIdx >= freshSections.length) continue;
+    const sec = freshSections[jaInfo.sectionIdx];
+    const secLen = 1 + sec.lines.length;
+    const insertRel = Math.min(jaInfo.relOffset, secLen);
+    freshInsertions.push({
+      filePos: freshBodyStart + sec.startIndex + insertRel,
+      line: ins.line,
+      varName: ins.varName,
+    });
+  }
+
+  // Sort descending to insert from bottom up
+  freshInsertions.sort((a, b) => b.filePos - a.filePos);
+
+  const result = [...filtered];
+  for (const ins of freshInsertions) {
+    result.splice(ins.filePos, 0, ins.line);
+  }
+
+  return { lines: result, inserted, moved };
 }
 
 function syncTrailingSpaces(jaBody, enLines) {
@@ -426,11 +490,15 @@ for (const pair of pairs) {
   // 3. Image component sync (garage + post)
   if (pair.type === 'garage' || pair.type === 'post') {
     const result = syncImageComponents(jaParsed.body, enLines);
-    if (result.inserted.length > 0) {
+    if (result.inserted.length > 0 || result.moved.length > 0) {
       enLines = result.lines;
       fileModified = true;
-      const names = result.inserted.map((i) => i.varName);
-      logs.push(`  ✓ inserted ${result.inserted.length} <Image> component(s) (${names.join(', ')})`);
+      if (result.inserted.length > 0) {
+        logs.push(`  ✓ inserted ${result.inserted.length} <Image> component(s) (${result.inserted.join(', ')})`);
+      }
+      if (result.moved.length > 0) {
+        logs.push(`  ✓ moved ${result.moved.length} <Image> component(s) to match JA (${result.moved.join(', ')})`);
+      }
     }
   }
 
