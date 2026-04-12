@@ -46,5 +46,7 @@ const { Content } = await render(Astro.props);
 <GarageLayout {metadata}>
   <Content />
   <GarageJumpLinks {category} />
-  <Share {...shareProps} />
+  <div class="flex justify-end">
+    <Share {...shareProps} />
+  </div>
 </GarageLayout>

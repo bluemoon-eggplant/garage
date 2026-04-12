@@ -1,9 +1,12 @@
 ---
 import Centered from '@/layouts/Centered.astro';
 import GarageList from '@/components/GarageList.astro';
+import Share from '@/components/Share.astro';
 import { getAllGarageItems } from '@/modules/garage';
+import { CONFIG_CLIENT } from '@/config/client';
 import { getOpenGraphImagePath } from '@/libs/api/open-graph/image-path';
 
+const { SITE_URL } = CONFIG_CLIENT;
 const items = await getAllGarageItems();
 
 const { pathname } = Astro.url;
@@ -11,8 +14,17 @@ const path = `/pages${pathname}`;
 const image = getOpenGraphImagePath(path);
 
 const metadata = { title: 'Home', description: 'Welcome', image };
+
+const shareProps = {
+  title: metadata.title,
+  description: metadata.description,
+  url: SITE_URL,
+};
 ---
 
 <Centered {metadata}>
   <GarageList {items} />
+  <div class="flex justify-end mt-4">
+    <Share {...shareProps} />
+  </div>
 </Centered>

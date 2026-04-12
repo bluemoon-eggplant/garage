@@ -76,7 +76,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
     {
       key: 'shop',
       label: t('record.col.shop'),
-      width: '160px',
+      width: '210px',
     },
     {
       key: 'consumableTags',
@@ -93,7 +93,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
     {
       key: 'maintenanceTags',
       label: t('record.col.maintenanceContent'),
-      width: '310px',
+      width: '260px',
       render: (value: MaintenanceCategory[]) => (
         <div className="flex flex-wrap">
           {value.map((cat) => (
