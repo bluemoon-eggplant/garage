@@ -69,6 +69,8 @@ function getBlogLink(imageSrc: string): string {
   return imageMap[filename] || '#';
 }
 
+const galleryCaption = useTranslations(Astro.currentLocale)('gallery.viewArticle');
+
 const imageMetadataToReactImageProps = async (
   imagesMetadata: ImageMetadata
 ): Promise<ImageProps> => {
@@ -113,7 +115,7 @@ const imageMetadataToReactImageProps = async (
     width: parseInt(String(attributes.width)),
     height: parseInt(String(attributes.height)),
     link,
-    caption: useTranslations(Astro.currentLocale)('gallery.viewArticle'),
+    caption: galleryCaption,
   };
 
   return reactImageProps;
