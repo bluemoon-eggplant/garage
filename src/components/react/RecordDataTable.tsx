@@ -1,12 +1,12 @@
 import React from 'react';
 
 import DataTable from './DataTable';
-import TagBadge from './TagBadge';
+import TagBadge, { MaintenanceBadge } from './TagBadge';
 import { useTranslations } from '@/i18n';
 import { localizedPath } from '@/utils/i18n';
 
 import type { Column } from './DataTable';
-import type { ConsumableTag, MaintenanceTableRow } from '@/types/record';
+import type { ConsumableTag, MaintenanceCategory, MaintenanceTableRow } from '@/types/record';
 
 interface RecordDataTableProps {
   data: MaintenanceTableRow[];
@@ -27,7 +27,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
     {
       key: 'date',
       label: t('record.col.completionDate'),
-      width: '110px',
+      width: '130px',
     },
     {
       key: 'amount',
@@ -57,7 +57,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
     {
       key: 'shop',
       label: t('record.col.shop'),
-      width: '150px',
+      width: '100px',
     },
     {
       key: 'consumableTags',
@@ -72,46 +72,16 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
       ),
     },
     {
-      key: 'inspectionWork',
-      label: t('maintenance.inspection'),
-      width: '180px',
-      truncate: true,
-    },
-    {
-      key: 'engineWork',
-      label: t('maintenance.engine'),
-      width: '200px',
-      truncate: true,
-    },
-    {
-      key: 'coolingWork',
-      label: t('maintenance.cooling'),
-      width: '180px',
-      truncate: true,
-    },
-    {
-      key: 'brakingWork',
-      label: t('maintenance.braking'),
-      width: '180px',
-      truncate: true,
-    },
-    {
-      key: 'drivetrainWork',
-      label: t('maintenance.drivetrain'),
-      width: '180px',
-      truncate: true,
-    },
-    {
-      key: 'bodyWork',
-      label: t('maintenance.body'),
-      width: '150px',
-      truncate: true,
-    },
-    {
-      key: 'otherWork',
-      label: t('maintenance.other'),
-      width: '200px',
-      truncate: true,
+      key: 'maintenanceTags',
+      label: t('record.col.maintenanceContent'),
+      width: '280px',
+      render: (value: MaintenanceCategory[]) => (
+        <div className="flex flex-wrap">
+          {value.map((cat) => (
+            <MaintenanceBadge key={cat} category={cat} locale={locale} />
+          ))}
+        </div>
+      ),
     },
   ];
 

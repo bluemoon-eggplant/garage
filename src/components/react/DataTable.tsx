@@ -78,10 +78,12 @@ const DataTable: React.FC<DataTableProps> = ({
     return left;
   };
 
+  const totalWidth = columns.reduce((sum, col) => sum + parseInt(col.width || '120', 10), 0);
+
   return (
     <div className="w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
       <div className="overflow-auto max-h-[80vh]">
-        <table className="w-full border-collapse text-sm">
+        <table className="border-collapse text-sm" style={{ tableLayout: 'fixed', width: `${totalWidth}px` }}>
           {caption && (
             <caption className="bg-gray-50 dark:bg-gray-800 px-4 py-2 text-left font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
               {caption}
@@ -103,7 +105,7 @@ const DataTable: React.FC<DataTableProps> = ({
                     `}
                     style={{
                       left: isFrozen ? `${colIndex * 120}px` : undefined,
-                      minWidth: col.width || '120px',
+                      width: col.width || '120px',
                     }}
                   >
                     {col.label}
@@ -134,14 +136,14 @@ const DataTable: React.FC<DataTableProps> = ({
                       key={col.key}
                       className={`
                         px-4 py-3 border-b border-gray-100 dark:border-gray-800
-                        whitespace-nowrap
+                        whitespace-nowrap overflow-hidden text-ellipsis
                         ${isFrozen ? 'sticky z-10' : ''}
                         ${isFrozen && colIndex === frozenColumns - 1 ? 'border-r-2 border-r-gray-300 dark:border-r-gray-600' : ''}
                         ${rowIndex % 2 === 0 ? (isFrozen ? 'bg-white dark:bg-gray-900' : '') : (isFrozen ? 'bg-gray-50 dark:bg-gray-800/50' : '')}
                       `}
                       style={{
                         left: isFrozen ? `${colIndex * 120}px` : undefined,
-                        minWidth: col.width || '120px',
+                        width: col.width || '120px',
                       }}
                     >
                       {col.render ? (

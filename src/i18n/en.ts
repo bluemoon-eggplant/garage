@@ -64,8 +64,9 @@ export const en: Record<TranslationKey, string> = {
   // record data table columns
   'record.col.completionDate': 'Date',
   'record.col.amount': 'Amount',
-  'record.col.mileage': 'Mileage (km)',
+  'record.col.mileage': 'Mileage',
   'record.col.shop': 'Shop',
+  'record.col.maintenanceContent': 'Maintenance',
 
   // maintenance categories
   'maintenance.consumable': 'Consumable Replacement',
@@ -73,8 +74,10 @@ export const en: Record<TranslationKey, string> = {
   'maintenance.engine': 'Engine Work',
   'maintenance.cooling': 'Cooling System',
   'maintenance.braking': 'Braking System',
-  'maintenance.drivetrain': 'Drivetrain & Suspension',
-  'maintenance.body': 'Body & Paint',
+  'maintenance.suspension': 'Suspension',
+  'maintenance.drivetrain': 'Drivetrain',
+  'maintenance.interior': 'Interior/Exterior',
+  'maintenance.bodywork': 'Body & Paint',
   'maintenance.other': 'Other Maintenance',
 
   // garage

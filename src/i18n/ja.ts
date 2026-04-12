@@ -62,8 +62,9 @@ export const ja = {
   // record data table columns
   'record.col.completionDate': '完了日',
   'record.col.amount': '金額',
-  'record.col.mileage': '走行距離 (km)',
+  'record.col.mileage': '走行距離',
   'record.col.shop': '整備店',
+  'record.col.maintenanceContent': '整備内容',
 
   // maintenance categories
   'maintenance.consumable': '主要消耗品交換',
@@ -71,8 +72,10 @@ export const ja = {
   'maintenance.engine': '機関整備',
   'maintenance.cooling': '冷却系整備',
   'maintenance.braking': '制動系整備',
-  'maintenance.drivetrain': '足回り・駆動系',
-  'maintenance.body': '内外装・板金',
+  'maintenance.suspension': '足回り',
+  'maintenance.drivetrain': '駆動系',
+  'maintenance.interior': '内外装',
+  'maintenance.bodywork': '板金',
   'maintenance.other': 'その他整備',
 
   // garage

@@ -227,26 +227,16 @@ function matchConsumableTag(description: string): ConsumableTag | null {
 // --- Table Row Transform ---
 
 export function toTableRow(record: MaintenanceRecord): MaintenanceTableRow {
-  const grouped: Record<MaintenanceCategory, string[]> = {
-    consumable: [],
-    inspection: [],
-    engine: [],
-    cooling: [],
-    braking: [],
-    drivetrain: [],
-    body: [],
-    other: [],
-  };
-
   const consumableTags: ConsumableTag[] = [];
+  const maintenanceTagSet = new Set<MaintenanceCategory>();
 
   for (const item of record.items) {
     if (item.maintenanceCategory === 'consumable') {
       if (item.consumableTag && !consumableTags.includes(item.consumableTag)) {
         consumableTags.push(item.consumableTag);
       }
-    } else {
-      grouped[item.maintenanceCategory].push(item.description);
+    } else if (item.maintenanceCategory !== 'other') {
+      maintenanceTagSet.add(item.maintenanceCategory);
     }
   }
 
@@ -255,13 +245,7 @@ export function toTableRow(record: MaintenanceRecord): MaintenanceTableRow {
     date: record.date.replaceAll('/', '-'),
     amount: record.totalAmount,
     consumableTags,
-    inspectionWork: grouped.inspection.join(', '),
-    engineWork: grouped.engine.join(', '),
-    coolingWork: grouped.cooling.join(', '),
-    brakingWork: grouped.braking.join(', '),
-    drivetrainWork: grouped.drivetrain.join(', '),
-    bodyWork: grouped.body.join(', '),
-    otherWork: grouped.other.join(', '),
+    maintenanceTags: [...maintenanceTagSet],
     mileage: record.mileage,
     shop: record.shop,
   };

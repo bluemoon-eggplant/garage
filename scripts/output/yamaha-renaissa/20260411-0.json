@@ -1,0 +1,56 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2026/04/11",
+    "totalAmount": 7009,
+    "tasks": [
+      "エンジンオイル交換",
+      "オイルフラッシング",
+      "オイルフィルター交換",
+      "キャブクリーナー施工",
+      "後ろバンクエキゾーストパイプガスケット、ボルト交換",
+      "スパークプラグ清掃",
+      "ヘッドカバーボルト交換",
+      "クランクカバーボルト交換",
+      "ドライブチェーン清掃、注油"
+    ],
+    "items": [
+      {
+        "description": "（Webike）ボルト ヘキサゴンソケットヘッド 90110-06200×8",
+        "amount": 1168
+      },
+      {
+        "description": "（Webike）ボルト ヘキサゴンソケットヘッド 90110-06210×2",
+        "amount": 192
+      },
+      {
+        "description": "（Webike）ガスケット NTB GK280-358-40",
+        "amount": 746
+      },
+      {
+        "description": "（モノタロウ）Oリング KITACO 70-967-30050",
+        "amount": 199
+      },
+      {
+        "description": "（モノタロウ）オイルフィルター NTB YO-2003",
+        "amount": 999
+      },
+      {
+        "description": "（モノタロウ）ボルト ソケット YAMAHA 91314-06025×7",
+        "amount": 833
+      },
+      {
+        "description": "（モノタロウ）ボルト ソケット YAMAHA 91314-06035×2",
+        "amount": 218
+      },
+      {
+        "description": "（Amazon）ヤマルーブ スタンダードプラス MA2 10W-40 1L 90793-32159×2",
+        "amount": 2654
+      }
+    ],
+    "mileage": 33154,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

@@ -14,8 +14,10 @@ export type MaintenanceCategory =
   | 'engine'
   | 'cooling'
   | 'braking'
+  | 'suspension'
   | 'drivetrain'
-  | 'body'
+  | 'interior'
+  | 'bodywork'
   | 'other';
 
 export type ConsumableTag =
@@ -54,13 +56,7 @@ export interface MaintenanceTableRow {
   date: string;
   amount: number;
   consumableTags: ConsumableTag[];
-  inspectionWork: string;
-  engineWork: string;
-  coolingWork: string;
-  brakingWork: string;
-  drivetrainWork: string;
-  bodyWork: string;
-  otherWork: string;
+  maintenanceTags: MaintenanceCategory[];
   mileage: number | null;
   shop: string;
 }

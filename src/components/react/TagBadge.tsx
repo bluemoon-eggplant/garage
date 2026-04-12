@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { CONSUMABLE_TAG_EN } from '@/constants/record';
+import { CONSUMABLE_TAG_EN, MAINTENANCE_TAG_COLORS, MAINTENANCE_CATEGORY_EN, MAINTENANCE_CATEGORIES } from '@/constants/record';
 
-import type { ConsumableTag } from '@/types/record';
+import type { ConsumableTag, MaintenanceCategory } from '@/types/record';
 
 const TAG_COLORS: Record<ConsumableTag, string> = {
   'エンジンオイル': 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200',
@@ -29,6 +29,24 @@ const TagBadge: React.FC<TagBadgeProps> = ({ label, locale }) => {
   const displayLabel = locale === 'en'
     ? (CONSUMABLE_TAG_EN[label as ConsumableTag] ?? label)
     : label;
+
+  return (
+    <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${colorClass} mr-1 mb-0.5`}>
+      {displayLabel}
+    </span>
+  );
+};
+
+interface MaintenanceBadgeProps {
+  category: MaintenanceCategory;
+  locale?: string;
+}
+
+export const MaintenanceBadge: React.FC<MaintenanceBadgeProps> = ({ category, locale }) => {
+  const colorClass = MAINTENANCE_TAG_COLORS[category];
+  const displayLabel = locale === 'en'
+    ? MAINTENANCE_CATEGORY_EN[category]
+    : MAINTENANCE_CATEGORIES[category];
 
   return (
     <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${colorClass} mr-1 mb-0.5`}>

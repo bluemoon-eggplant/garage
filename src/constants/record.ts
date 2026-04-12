@@ -16,12 +16,40 @@ export const CONSUMABLE_TAGS: ConsumableTag[] = [
 export const MAINTENANCE_CATEGORIES: Record<MaintenanceCategory, string> = {
   consumable: '主要消耗品交換',
   inspection: '定期点検',
-  engine: '機関整備',
-  cooling: '冷却系整備',
-  braking: '制動系整備',
-  drivetrain: '足回り・駆動系',
-  body: '内外装・板金',
-  other: 'その他整備',
+  engine: '機関',
+  cooling: '冷却系',
+  braking: '制動系',
+  suspension: '足回り',
+  drivetrain: '駆動系',
+  interior: '内外装',
+  bodywork: '板金',
+  other: 'その他',
+};
+
+export const MAINTENANCE_TAG_COLORS: Record<MaintenanceCategory, string> = {
+  consumable: 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200',
+  inspection: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-200',
+  engine: 'bg-rose-100 text-rose-800 dark:bg-rose-900/50 dark:text-rose-200',
+  cooling: 'bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-200',
+  braking: 'bg-violet-100 text-violet-800 dark:bg-violet-900/50 dark:text-violet-200',
+  suspension: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200',
+  drivetrain: 'bg-lime-100 text-lime-800 dark:bg-lime-900/50 dark:text-lime-200',
+  interior: 'bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900/50 dark:text-fuchsia-200',
+  bodywork: 'bg-pink-100 text-pink-800 dark:bg-pink-900/50 dark:text-pink-200',
+  other: 'bg-gray-100 text-gray-800 dark:bg-gray-700/50 dark:text-gray-200',
+};
+
+export const MAINTENANCE_CATEGORY_EN: Record<MaintenanceCategory, string> = {
+  consumable: 'Consumable',
+  inspection: 'Inspection',
+  engine: 'Engine',
+  cooling: 'Cooling',
+  braking: 'Braking',
+  suspension: 'Suspension',
+  drivetrain: 'Drivetrain',
+  interior: 'Interior/Exterior',
+  bodywork: 'Body & Paint',
+  other: 'Other',
 };
 
 export const CONSUMABLE_TAG_EN: Record<ConsumableTag, string> = {
@@ -39,7 +67,7 @@ export const CONSUMABLE_TAG_EN: Record<ConsumableTag, string> = {
 
 export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
   inspection: [
-    'マツダセーフティーチェック', 'パックdeメンテ', '安心点検', '車検整備', '車検基本点検',
+    'マツダセーフティーチェック', 'パックdeメンテ', '安心点検', '車検整備', '車検基本点検', 'ホウレイ', '法令',
   ],
   consumable: [
     'エンジンオイル', 'オイル交換', 'ROTARY-1', '5W-30', '10W-40', 'オイルエレメント', 'オイルフィルター交換',
@@ -59,21 +87,26 @@ export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
     'ラジエーター', 'ラジエター', 'サーモスタット', 'ウォーターポンプ',
     '冷却', 'ファン', 'ヒーター', 'エアセパレートタンク',
   ],
-  body: [
-    '板金', '塗装', 'ペイント', 'ボディ', 'パネル', 'バンパー', 'フェンダー',
-    'ガラス交換', 'ドア交換', 'シフトレバー', 'シフトブーツ', 'グローブボックス',
+  interior: [
+    'シフトレバー', 'シフトブーツ', 'グローブボックス',
     'キーシリンダー', 'オーディオ', '張替', 'カウル', 'フード', 'レギュレターチャンネル', 'シーリング',
     'マッド', 'サイドブレーキブーツ', 'チェンジレバーブーツ', 'チェンジレバーノブ', 'カセットデッキ',
-    'シガーライター', 'アッシュトレー', '灰皿',
+    'シガーライター', 'アッシュトレー', '灰皿', 'ガラス交換', 'ドア交換',
+  ],
+  bodywork: [
+    '板金', '塗装', 'ペイント', 'ボディ', 'パネル', 'バンパー', 'フェンダー',
   ],
   braking: [
-    'ブレーキ', 'ディスク', 'パッド', 'キャリパー', 'マスターシリンダー', 'ディクセル',
+    'ブレーキ', 'ディスク', 'ブレーキパッド', 'キャリパー', 'マスターシリンダー', 'ディクセル',
+  ],
+  suspension: [
+    'サスペンション', 'トーコン', 'ショックアブソーバー', 'ステムベアリング',
+    'ラジアスアーム', 'キャンバー', 'フォーク',
   ],
   drivetrain: [
     'クラッチ', 'ミッション', 'トランスミッション', 'デフ', 'ドライブシャフト',
     'プロペラシャフト', 'タイミングチェーン', 'ドライブチェーン', 'スプロケット',
-    'サスペンション', 'トーコン', 'ショックアブソーバー', 'ステムベアリング', 'フライホイール',
-    'ラジアスアーム', 'キャンバー', 'フォーク',
+    'フライホイール',
   ],
 };
 
