@@ -4,9 +4,11 @@ import GarageList from '@/components/GarageList.astro';
 import Share from '@/components/Share.astro';
 import { getAllGarageItems } from '@/modules/garage';
 import { CONFIG_CLIENT } from '@/config/client';
+import { localizedPath } from '@/utils/i18n';
 import { getOpenGraphImagePath } from '@/libs/api/open-graph/image-path';
 
 const { SITE_URL } = CONFIG_CLIENT;
+const locale = Astro.currentLocale;
 const items = await getAllGarageItems('en');
 
 const { pathname } = Astro.url;
@@ -18,7 +20,7 @@ const metadata = { title: 'Home', description: 'Welcome', image };
 const shareProps = {
   title: metadata.title,
   description: metadata.description,
-  url: `${SITE_URL}/en`,
+  url: `${SITE_URL}${localizedPath(locale, '/')}`,
 };
 ---
 

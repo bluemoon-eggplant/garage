@@ -3,16 +3,20 @@ import { Icon } from 'astro-icon/components';
 
 import Centered from '@/layouts/Centered.astro';
 import { ROUTES } from '@/constants/routes';
-import { CATEGORIES } from '@/constants/collections';
+import { getCategoryProps } from '@/modules/post/category';
 
 import { loadAllMaintenanceRecords } from '@/libs/record-data';
 import { getAllPosts } from '@/modules/post/common';
+import { getPrevNext } from '@/modules/common';
+import { formatDateIso } from '@/utils/datetime';
+import { localizedPath } from '@/utils/i18n';
 import { useTranslations } from '@/i18n';
 
 import type { MaintenanceRecord, MaintenanceCategory, ConsumableTag } from '@/types/record';
 import type { Metadata } from '@/types/common';
 
-const t = useTranslations(Astro.currentLocale);
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
 
 const TAG_COLORS: Record<ConsumableTag, string> = {
   'エンジンオイル': 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200',
@@ -29,26 +33,17 @@ export async function getStaticPaths() {
   const records = loadAllMaintenanceRecords();
   const posts = await getAllPosts();
 
+  // Pre-compute post lookup: "category|yyyy-MM-dd" → post slug
+  const postMap = new Map<string, string>();
+  for (const p of posts) {
+    const key = `${p.data.category}|${formatDateIso(p.data.publishDate)}`;
+    postMap.set(key, String(p.id).replace(/^\d{4}\//, ''));
+  }
+
   return records.map((record) => {
-    // Match blog post: same category + same date
-    let blogSlug: string | null = null;
-    const [ry, rm, rd] = record.date.split('/');
-    const recordDateStr = `${ry}-${rm}-${rd}`;
-
-    const found = posts.find((p) => {
-      if (p.data.category !== record.category) return false;
-      const pd = p.data.publishDate;
-      const postDateStr = `${pd.getFullYear()}-${String(pd.getMonth() + 1).padStart(2, '0')}-${String(pd.getDate()).padStart(2, '0')}`;
-      return postDateStr === recordDateStr;
-    });
-
-    if (found) blogSlug = String(found.id).replace(/^\d{4}\//, '');
-
-    // same category prev/next (records are sorted by date desc)
-    const sameCategoryRecords = records.filter((r) => r.category === record.category);
-    const categoryIndex = sameCategoryRecords.findIndex((r) => r.id === record.id);
-    const prevRecord = sameCategoryRecords[categoryIndex - 1] ?? null;
-    const nextRecord = sameCategoryRecords[categoryIndex + 1] ?? null;
+    const recordDateIso = record.date.replaceAll('/', '-');
+    const blogSlug = postMap.get(`${record.category}|${recordDateIso}`) ?? null;
+    const { prev: prevRecord, next: nextRecord } = getPrevNext(records, record, (r) => r.category, record.category);
 
     return {
       params: { id: record.id },
@@ -64,8 +59,7 @@ const { record, blogSlug, prevRecord, nextRecord } = Astro.props as {
   nextRecord: MaintenanceRecord | null;
 };
 
-const categoryDef = CATEGORIES.find((c) => c.name === record.category);
-const categoryLabel = categoryDef?.label ?? record.category;
+const categoryLabel = getCategoryProps(record.category).label;
 const displayDate = record.date.replaceAll('/', '-');
 
 const metadata: Metadata = {
@@ -86,7 +80,7 @@ for (const item of record.items) {
   <article class="flex flex-col gap-6 py-4">
     {/* Back link */}
     <a
-      href={`${ROUTES.RECORD_CATEGORIES}${record.category}`}
+      href={localizedPath(locale, `${ROUTES.RECORD_CATEGORIES}${record.category}`)}
       class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
     >
       &larr; {categoryLabel}{t('record.detail.backToList')}
@@ -130,7 +124,7 @@ for (const item of record.items) {
     {/* Blog link */}
     {blogSlug && (
       <a
-        href={`${ROUTES.BLOG}${blogSlug}`}
+        href={localizedPath(locale, `${ROUTES.BLOG}${blogSlug}`)}
         class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
       >
         <Icon name="mdi:notebook-outline" class="w-5 h-5" />
@@ -211,13 +205,13 @@ for (const item of record.items) {
     {/* Prev / Next navigation */}
     <nav class="flex items-center justify-between gap-4 mt-2">
       {prevRecord ? (
-        <a href={`${ROUTES.RECORD_DETAIL}${prevRecord.id}`} class="flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline">
+        <a href={localizedPath(locale, `${ROUTES.RECORD_DETAIL}${prevRecord.id}`)} class="flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline">
           <Icon name="mdi:chevron-left" class="w-5 h-5" />
           <span>{t('record.detail.prevRecord')} ({prevRecord.date.replaceAll('/', '-')})</span>
         </a>
       ) : <span />}
       {nextRecord ? (
-        <a href={`${ROUTES.RECORD_DETAIL}${nextRecord.id}`} class="flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline text-right">
+        <a href={localizedPath(locale, `${ROUTES.RECORD_DETAIL}${nextRecord.id}`)} class="flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline text-right">
           <span>{t('record.detail.nextRecord')} ({nextRecord.date.replaceAll('/', '-')})</span>
           <Icon name="mdi:chevron-right" class="w-5 h-5" />
         </a>

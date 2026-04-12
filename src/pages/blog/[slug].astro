@@ -12,7 +12,10 @@ import PostMeta from '@/components/PostMeta.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import { getHeadingsForTableOfContents } from '@/modules/post/table-of-contents';
 import Share from '@/components/Share.astro';
+import { getPrevNext } from '@/modules/common';
 import { ROUTES } from '@/constants/routes';
+import { formatDateSlash } from '@/utils/datetime';
+import { localizedPath } from '@/utils/i18n';
 import { useTranslations } from '@/i18n';
 import { setTransitionSlug, TRANSITION_ELEMENT_IDS } from '@/constants/transitions';
 import { CONFIG_CLIENT } from '@/config/client';
@@ -23,32 +26,26 @@ import type { Post } from '@/types/post';
 import type { MaintenanceRecord } from '@/types/record';
 
 const { SITE_URL } = CONFIG_CLIENT;
-const t = useTranslations(Astro.currentLocale);
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
 
 export async function getStaticPaths() {
   const posts: Post[] = await getAllPostsWithReadingTime();
   const records = loadAllMaintenanceRecords();
 
-  const paths = posts.map((post, index) => {
+  // Pre-compute record lookup map: "category|yyyy/MM/dd" → record
+  const recordMap = new Map(records.map((r) => [`${r.category}|${r.date}`, r]));
+
+  const paths = posts.map((post) => {
     const { slug } = post;
     const { category, publishDate } = post.data;
     const randomPosts = getRandomPosts({ posts, excludeSlug: slug, category });
-
-    // same category prev/next (posts are sorted by date desc)
-    const sameCategoryPosts = posts.filter((p) => p.data.category === category);
-    const categoryIndex = sameCategoryPosts.findIndex((p) => p.slug === slug);
-    const prevPost = sameCategoryPosts[categoryIndex - 1] ?? null;
-    const nextPost = sameCategoryPosts[categoryIndex + 1] ?? null;
-
-    // Match record: same category + same date
-    const postDateStr = `${publishDate.getFullYear()}/${String(publishDate.getMonth() + 1).padStart(2, '0')}/${String(publishDate.getDate()).padStart(2, '0')}`;
-    const matchedRecord = records.find(
-      (r) => r.category === category && r.date === postDateStr
-    );
+    const { prev: prevPost, next: nextPost } = getPrevNext(posts, post, (p) => p.data.category, category);
+    const matchedRecord = recordMap.get(`${category}|${formatDateSlash(publishDate)}`) ?? null;
 
     return {
       params: { slug },
-      props: { ...post, randomPosts, prevPost, nextPost, matchedRecord: matchedRecord ?? null },
+      props: { ...post, randomPosts, prevPost, nextPost, matchedRecord },
     };
   });
 
@@ -85,7 +82,7 @@ const postMetaProps = {
 const shareProps = {
   title,
   description,
-  url: `${SITE_URL}${ROUTES.BLOG}${slug}`,
+  url: `${SITE_URL}${localizedPath(locale, `${ROUTES.BLOG}${slug}`)}`,
 };
 
 const getTransitionNameFromElementId = setTransitionSlug({ pageSlug: slug });
@@ -132,7 +129,7 @@ const metadata: Metadata = { title, description, image };
   <Fragment slot="content">
     {matchedRecord && (
       <a
-        href={`${ROUTES.RECORD}detail/${matchedRecord.id}`}
+        href={localizedPath(locale, `${ROUTES.RECORD}detail/${matchedRecord.id}`)}
         class="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline mb-4"
       >
         <Icon name="mdi:notebook-outline" class="w-5 h-5" />
@@ -169,13 +166,13 @@ const metadata: Metadata = { title, description, image };
 
     <nav class="flex items-center justify-between gap-4 b-h2-mb">
       {prevPost ? (
-        <a href={`${ROUTES.BLOG}${prevPost.slug}`} class="flex items-center gap-1 text-links hover:text-links-hover">
+        <a href={localizedPath(locale, `${ROUTES.BLOG}${prevPost.slug}`)} class="flex items-center gap-1 text-links hover:text-links-hover">
           <Icon name="mdi:chevron-left" class="w-5 h-5" />
           <span class="line-clamp-1">{prevPost.data.title}</span>
         </a>
       ) : <span />}
       {nextPost ? (
-        <a href={`${ROUTES.BLOG}${nextPost.slug}`} class="flex items-center gap-1 text-links hover:text-links-hover text-right">
+        <a href={localizedPath(locale, `${ROUTES.BLOG}${nextPost.slug}`)} class="flex items-center gap-1 text-links hover:text-links-hover text-right">
           <span class="line-clamp-1">{nextPost.data.title}</span>
           <Icon name="mdi:chevron-right" class="w-5 h-5" />
         </a>
@@ -183,7 +180,7 @@ const metadata: Metadata = { title, description, image };
     </nav>
 
     <div class="flex justify-center">
-      <a href={`${ROUTES.EXPLORE_CATEGORIES}${category}`} class="flex items-center gap-1 text-links hover:text-links-hover">
+      <a href={localizedPath(locale, `${ROUTES.EXPLORE_CATEGORIES}${category}`)} class="flex items-center gap-1 text-links hover:text-links-hover">
         <Icon name="mdi:arrow-left" class="w-4 h-4" />
         <span>{t('blog.backToList')}</span>
       </a>

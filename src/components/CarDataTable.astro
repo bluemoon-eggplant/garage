@@ -8,9 +8,10 @@ interface Props {
   records: MaintenanceRecord[];
   category: string;
   caption?: string;
+  blogSlugMap?: Record<string, string>;
 }
 
-const { data, records, category, caption } = Astro.props;
+const { data, records, category, caption, blogSlugMap } = Astro.props;
 const locale = Astro.currentLocale ?? 'ja';
 ---
 
@@ -21,4 +22,5 @@ const locale = Astro.currentLocale ?? 'ja';
   category={category}
   caption={caption}
   locale={locale}
+  blogSlugMap={blogSlugMap}
 />

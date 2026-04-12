@@ -12,6 +12,7 @@ interface RecordDetailModalProps {
   onPrev?: () => void;
   onNext?: () => void;
   locale?: string;
+  blogUrl?: string | null;
 }
 
 const RecordDetailModal: React.FC<RecordDetailModalProps> = ({
@@ -20,6 +21,7 @@ const RecordDetailModal: React.FC<RecordDetailModalProps> = ({
   onPrev,
   onNext,
   locale,
+  blogUrl,
 }) => {
   const t = useTranslations(locale);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -117,6 +119,16 @@ const RecordDetailModal: React.FC<RecordDetailModalProps> = ({
               </p>
             </div>
           </div>
+
+          {/* Blog link */}
+          {blogUrl && (
+            <a
+              href={blogUrl}
+              className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline mb-4"
+            >
+              {t('record.detail.viewBlog')} &rarr;
+            </a>
+          )}
 
           {/* Tasks */}
           {record.tasks.length > 0 && (

@@ -4,6 +4,10 @@ import type { FilterParams } from '@/types/post';
 
 /*-------------------------------- utils ------------------------------*/
 
+/** Extract filename without extension: "/path/to/file.jpg" → "file" */
+export const getFilenameWithoutExtension = (filePath: string): string =>
+  filePath.split('/').pop()?.split('.')[0] || '';
+
 export const removeLeadingSlash = (path: string) => path.replace(/^\/+/g, '');
 
 export const removeTrailingSlash = (path: string) => path.replace(/\/+$/g, '');

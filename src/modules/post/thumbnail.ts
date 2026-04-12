@@ -1,6 +1,8 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
+import { getFilenameWithoutExtension } from '@/utils/paths';
+
 import type { ImageMetadata } from 'astro';
 
 /**
@@ -16,7 +18,7 @@ const garageImageModules = import.meta.glob<{ default: ImageMetadata }>(
 
 const imageByFilename = new Map<string, ImageMetadata>();
 for (const [p, mod] of Object.entries(garageImageModules)) {
-  const filename = p.split('/').pop()?.split('.')[0] || '';
+  const filename = getFilenameWithoutExtension(p);
   imageByFilename.set(filename, mod.default);
 }
 
@@ -40,7 +42,7 @@ function buildPostFirstImageMap(): Map<string, ImageMetadata> {
       const m = raw.match(FIRST_IMPORT_RE);
       if (!m) continue;
 
-      const imageFilename = m[1].split('.')[0];
+      const imageFilename = getFilenameWithoutExtension(m[1]);
       const img = imageByFilename.get(imageFilename);
       if (img) {
         map.set(`${yearEntry.name}/${slugEntry.name}`, img);

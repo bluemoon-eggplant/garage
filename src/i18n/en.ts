@@ -8,7 +8,7 @@ export const en: Record<TranslationKey, string> = {
 
   // navigation
   'nav.record': 'Record',
-  'nav.history': 'History',
+  'nav.blog': 'Blog',
   'nav.gallery': 'Gallery',
   'nav.owner': 'Owner',
 
@@ -86,7 +86,7 @@ export const en: Record<TranslationKey, string> = {
 
   // garage
   'garage.jumpToRecord': 'Jump to Record',
-  'garage.jumpToHistory': 'Jump to History',
+  'garage.jumpToBlog': 'Jump to Blog',
 
   // gallery
   'gallery.viewArticle': 'View article',

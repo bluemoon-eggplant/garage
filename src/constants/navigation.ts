@@ -7,7 +7,7 @@ export const NAVIGATION_ITEMS = [
     path: ROUTES.RECORD,
   },
   {
-    title: 'History',
+    title: 'Blog',
     path: ROUTES.EXPLORE,
   },
   // {

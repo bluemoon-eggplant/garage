@@ -5,6 +5,7 @@ import ReactGallery from '@/components/react/Gallery';
 import { IMAGE_SIZES } from '@/constants/image';
 import { randomizeArray } from '@/utils/objects';
 import { cn } from '@/utils/styles';
+import { getFilenameWithoutExtension } from '@/utils/paths';
 import { useTranslations } from '@/i18n';
 
 import type { ImageProps } from '@/types/common';
@@ -21,8 +22,7 @@ const getBlogImagesMetadata = (blogImageFilenames: Set<string>): ImageMetadata[]
 
   return Object.entries(garageImageModules)
     .filter(([path]) => {
-      const filename = path.split('/').pop()?.split('.')[0] || '';
-      return blogImageFilenames.has(filename);
+      return blogImageFilenames.has(getFilenameWithoutExtension(path));
     })
     .map(([, mod]) => mod.default);
 };
@@ -53,7 +53,7 @@ const buildImageMap = (): Record<string, string> => {
     let match;
     while ((match = importRegex.exec(raw)) !== null) {
       // match[1] = "PXL_20250506_073305551.jpg"
-      const imageFilename = match[1].split('.')[0];
+      const imageFilename = getFilenameWithoutExtension(match[1]);
       map[imageFilename] = blogUrl;
     }
   }
@@ -65,8 +65,7 @@ const imageMap = buildImageMap();
 const imagesMetadata = getBlogImagesMetadata(new Set(Object.keys(imageMap)));
 
 function getBlogLink(imageSrc: string): string {
-  const filename = imageSrc.split('/').pop()?.split('.')[0] || '';
-  return imageMap[filename] || '#';
+  return imageMap[getFilenameWithoutExtension(imageSrc)] || '#';
 }
 
 const galleryCaption = useTranslations(Astro.currentLocale)('gallery.viewArticle');

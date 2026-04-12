@@ -5,13 +5,19 @@ import CarDataTable from '@/components/CarDataTable.astro';
 import Centered from '@/layouts/Centered.astro';
 import { getPageMetadata } from '@/utils/metadata';
 import { ROUTES } from '@/constants/routes';
-import { CATEGORIES, GARAGE_SLUG_TO_CATEGORY } from '@/constants/collections';
+import { GARAGE_SLUG_TO_CATEGORY } from '@/constants/collections';
+import { getCategoryProps } from '@/modules/post/category';
+import { getAllPosts } from '@/modules/post/common';
+import { stripLocaleSuffix } from '@/modules/common';
 import { loadAllMaintenanceRecords, toTableRow } from '@/libs/record-data';
+import { formatDateSlash } from '@/utils/datetime';
+import { localizedPath } from '@/utils/i18n';
 import { useTranslations } from '@/i18n';
 
 import type { GetStaticPathsOptions } from 'astro';
 
-const t = useTranslations(Astro.currentLocale);
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const records = await getAllRecords();
@@ -48,11 +54,15 @@ const metadata = getPageMetadata('lists/record');
 // load maintenance records from extracted.json
 const allMaintenanceRecords = loadAllMaintenanceRecords();
 
-// get display label for category
-function getCategoryLabel(category: string): string {
-  const cat = CATEGORIES.find((c) => c.name === category);
-  return cat?.label ?? category;
+// Pre-compute blog slug map: record date → blog URL
+const posts = await getAllPosts();
+const blogSlugMap: Record<string, string> = {};
+for (const p of posts) {
+  const key = `${p.data.category}|${formatDateSlash(p.data.publishDate)}`;
+  const slug = stripLocaleSuffix(String(p.id).replace(/^\d{4}\//, ''));
+  blogSlugMap[key] = localizedPath(locale, `${ROUTES.BLOG}${slug}`);
 }
+
 ---
 
 <Centered {metadata} class="max-w-6xl">
@@ -67,7 +77,7 @@ function getCategoryLabel(category: string): string {
             const tableRows = categoryRecords.map(toTableRow);
             const allNull = categoryRecords.every((r) => r.totalAmount == null);
             const totalAmount = allNull ? null : categoryRecords.reduce((sum, r) => sum + (r.totalAmount ?? 0), 0);
-            const label = getCategoryLabel(category);
+            const label = getCategoryProps(category).label;
             const garageSlug = Object.entries(GARAGE_SLUG_TO_CATEGORY).find(([, cat]) => cat === category)?.[0];
             return (
               <div class="mb-8">
@@ -76,7 +86,7 @@ function getCategoryLabel(category: string): string {
                     {record.data.title}
                     {garageSlug && (
                       <a
-                        href={`${ROUTES.GARAGE}${garageSlug}`}
+                        href={localizedPath(locale, `${ROUTES.GARAGE}${garageSlug}`)}
                         class="ml-2 text-sm font-normal text-blue-600 dark:text-blue-400 hover:underline"
                       >
                         {t('record.vehicleInfo')} &rarr;
@@ -90,7 +100,7 @@ function getCategoryLabel(category: string): string {
                   )}
                 </div>
                 {tableRows.length > 0 ? (
-                  <CarDataTable data={tableRows} records={categoryRecords} category={category} caption={`${label} ${t('record.maintenanceRecord')}`} />
+                  <CarDataTable data={tableRows} records={categoryRecords} category={category} caption={`${label} ${t('record.maintenanceRecord')}`} {blogSlugMap} />
                 ) : (
                   <p class="text-gray-500 dark:text-gray-400 italic">{t('record.noData')}</p>
                 )}

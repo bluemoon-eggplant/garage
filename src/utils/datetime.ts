@@ -13,4 +13,7 @@ export const formatDate = (date: Date): string => format(date, dateFormats.cardD
 
 export const formatDateIso = (date: Date): string => format(date, dateFormats.isoDate);
 
+/** Format as yyyy/MM/dd (for record date matching) */
+export const formatDateSlash = (date: Date): string => format(date, 'yyyy/MM/dd');
+
 export const shortDate = (date: Date): string => format(date, dateFormats.shortDate);

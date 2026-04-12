@@ -18,7 +18,7 @@ const recordHref = localizedPath(locale, category
   ? `${ROUTES.RECORD_CATEGORIES}${category}`
   : ROUTES.RECORD);
 
-const historyHref = localizedPath(locale, category
+const blogHref = localizedPath(locale, category
   ? `${ROUTES.EXPLORE_CATEGORIES}${category}`
   : ROUTES.EXPLORE);
 ---
@@ -28,8 +28,8 @@ const historyHref = localizedPath(locale, category
     <Icon name="mdi:table" slot="before-icon" />
     {t('garage.jumpToRecord')}
   </Button>
-  <Button href={historyHref} size="md" variant="outline" colors="primary">
-    <Icon name="mdi:history" slot="before-icon" />
-    {t('garage.jumpToHistory')}
+  <Button href={blogHref} size="md" variant="outline" colors="primary">
+    <Icon name="mdi:post-outline" slot="before-icon" />
+    {t('garage.jumpToBlog')}
   </Button>
 </div>

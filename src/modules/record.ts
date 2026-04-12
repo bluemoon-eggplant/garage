@@ -1,6 +1,6 @@
-import { CATEGORIES } from '@/constants/collections';
 import { ROUTES } from '@/constants/routes';
 import { getAllEntries, idToSlug } from '@/modules/common';
+import { getCategoryProps } from '@/modules/post/category';
 
 import type { Record, RecordCollection } from '@/types/record';
 import type { FilterLink } from '@/types/post';
@@ -18,8 +18,7 @@ export const getRecordCategoryLinks = (
 
   const itemLinks = categories.map((category) => {
     const count = records.filter((r) => r.data.category === category).length;
-    const categoryDef = CATEGORIES.find((c) => c.name === category);
-    const displayText = categoryDef?.label ?? category;
+    const displayText = getCategoryProps(category).label;
 
     const originalHref = `${ROUTES.RECORD_CATEGORIES}${category}`;
     const textWithCount = `${displayText} ${count}`;

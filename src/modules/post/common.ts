@@ -1,6 +1,6 @@
 import { render } from 'astro:content';
 
-import { getAllEntries, idToSlug, filterByLocale } from '@/modules/common';
+import { getAllEntries, idToSlug, filterByLocale, stripLocaleSuffix } from '@/modules/common';
 import { COLLECTIONS, GARAGE_SLUG_TO_CATEGORY, CATEGORIES } from '@/constants/collections';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
@@ -11,7 +11,7 @@ import type { Post, PostCollection } from '@/types/post';
  * id format: "2025/05-25-fd3s" → year=2025, month=05, day=25, garageSlug=fd3s
  */
 const enrichPostData = (post: PostCollection): PostCollection => {
-  const id = String(post.id).replace(/--en$/, '');
+  const id = stripLocaleSuffix(String(post.id));
   const parts = id.split('/');
 
   // Parse year from path prefix (if present)
@@ -46,7 +46,7 @@ export const getAllPosts = async (locale: Locale = DEFAULT_LOCALE): Promise<Post
   const { postFirstImageMap } = await import('./thumbnail');
   for (const post of enriched) {
     if (!post.data.heroImage) {
-      const lookupId = String(post.id).replace(/--en$/, '');
+      const lookupId = stripLocaleSuffix(String(post.id));
       const img = postFirstImageMap.get(lookupId);
       if (img) (post.data as any).heroImage = img;
     }

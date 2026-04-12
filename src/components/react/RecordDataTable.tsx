@@ -14,6 +14,7 @@ interface RecordDataTableProps {
   category: string;
   caption?: string;
   locale?: string;
+  blogSlugMap?: Record<string, string>;
 }
 
 const RecordDataTable: React.FC<RecordDataTableProps> = ({
@@ -22,6 +23,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
   category,
   caption,
   locale,
+  blogSlugMap,
 }) => {
   const t = useTranslations(locale);
   const [selectedRecordId, setSelectedRecordId] = useState<string | null>(null);
@@ -33,6 +35,11 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
   const selectedIndex = selectedRecord
     ? records.findIndex((r) => r.id === selectedRecordId)
     : -1;
+
+  // Resolve blog URL for selected record
+  const blogUrl = selectedRecord && blogSlugMap
+    ? blogSlugMap[`${selectedRecord.category}|${selectedRecord.date}`] ?? null
+    : null;
 
   const handleClose = useCallback(() => setSelectedRecordId(null), []);
   const handlePrev = selectedIndex > 0
@@ -118,6 +125,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
           onPrev={handlePrev}
           onNext={handleNext}
           locale={locale}
+          blogUrl={blogUrl}
         />
       )}
     </>

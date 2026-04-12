@@ -6,6 +6,7 @@ import GarageLayout from '@/layouts/Garage.astro';
 import GarageJumpLinks from '@/components/GarageJumpLinks.astro';
 import Share from '@/components/Share.astro';
 import { ROUTES } from '@/constants/routes';
+import { localizedPath } from '@/utils/i18n';
 import { CONFIG_CLIENT } from '@/config/client';
 import { getOpenGraphImagePath } from '@/libs/api/open-graph/image-path';
 
@@ -13,6 +14,7 @@ import type { Metadata } from '@/types/common';
 import type { Garage } from '@/types/garage';
 
 const { SITE_URL } = CONFIG_CLIENT;
+const locale = Astro.currentLocale;
 
 export async function getStaticPaths() {
   const items: Garage[] = await getAllGarageItems();
@@ -37,7 +39,7 @@ const metadata: Metadata = { title, description, image };
 const shareProps = {
   title,
   description,
-  url: `${SITE_URL}${ROUTES.GARAGE}${slug}`,
+  url: `${SITE_URL}${localizedPath(locale, `${ROUTES.GARAGE}${slug}`)}`,
 };
 
 const { Content } = await render(Astro.props);

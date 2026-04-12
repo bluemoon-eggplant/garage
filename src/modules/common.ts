@@ -68,13 +68,32 @@ export const getPublishedOrUpdatedDate = ({
   return result;
 };
 
+/*------------------------- prev/next navigation -----------------------*/
+
+/** Get prev/next items within same category from a sorted list. */
+export function getPrevNext<T>(
+  items: T[],
+  currentItem: T,
+  getCategory: (item: T) => string,
+  currentCategory: string,
+): { prev: T | null; next: T | null } {
+  const sameCategory = items.filter((item) => getCategory(item) === currentCategory);
+  const idx = sameCategory.indexOf(currentItem);
+  return {
+    prev: sameCategory[idx - 1] ?? null,
+    next: sameCategory[idx + 1] ?? null,
+  };
+}
+
 /*------------------------- for content layer -----------------------*/
+
+/** Strip locale suffix from content ID: "fd3s--en" → "fd3s" */
+export const stripLocaleSuffix = (id: string): string => id.replace(/--en$/, '');
 
 export const idToSlug = <T extends { id: unknown }>(item: T): T & { slug: string } => ({
   ...item,
   // Strip year prefix for posts: "2025/05-25-fd3s" → "05-25-fd3s"
-  // Strip locale suffix: "fd3s--en" → "fd3s"
-  slug: String(item.id).replace(/^\d{4}\//, '').replace(/--en$/, ''),
+  slug: stripLocaleSuffix(String(item.id).replace(/^\d{4}\//, '')),
 });
 
 /**
@@ -93,13 +112,10 @@ export const filterByLocale = <T extends { id: unknown }>(
   const enEntries = entries.filter((e) => String(e.id).endsWith('--en'));
   if (!fallbackToDefault) return enEntries;
 
-  // Merge: use EN where available, fall back to JA
-  const enBaseIds = new Set(enEntries.map((e) => String(e.id).replace(/--en$/, '')));
-  return jaEntries.map((ja) => {
-    const jaId = String(ja.id);
-    if (enBaseIds.has(jaId)) {
-      return enEntries.find((en) => String(en.id) === `${jaId}--en`)!;
-    }
-    return ja;
-  });
+  // Merge: use EN where available, fall back to JA (Map for O(1) lookup)
+  const enMap = new Map<string, T>();
+  for (const e of enEntries) {
+    enMap.set(stripLocaleSuffix(String(e.id)), e);
+  }
+  return jaEntries.map((ja) => enMap.get(String(ja.id)) ?? ja);
 };

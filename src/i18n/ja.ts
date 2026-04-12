@@ -6,7 +6,7 @@ export const ja = {
 
   // navigation
   'nav.record': 'Record',
-  'nav.history': 'History',
+  'nav.blog': 'Blog',
   'nav.gallery': 'Gallery',
   'nav.owner': 'Owner',
 
@@ -67,7 +67,7 @@ export const ja = {
   'record.col.amount': '金額',
   'record.col.mileage': '走行距離',
   'record.col.shop': '整備店',
-  'record.col.maintenanceContent': '整備内容',
+  'record.col.maintenanceContent': '整備カテゴリ',
 
   // maintenance categories
   'maintenance.consumable': '主要消耗品交換',
@@ -84,10 +84,10 @@ export const ja = {
 
   // garage
   'garage.jumpToRecord': 'Jump to Record',
-  'garage.jumpToHistory': 'Jump to History',
+  'garage.jumpToBlog': 'Jump to Blog',
 
   // gallery
-  'gallery.viewArticle': '記事を見る',
+  'gallery.viewArticle': 'ブログを見る',
   'gallery.thumbnailAlt': 'サムネイル画像',
   'gallery.lightboxAlt': 'ライトボックス画像',
 
