@@ -6,7 +6,10 @@ node scripts/cleanup-unused-images.mjs
 # 2. Sync EN structure (imports, frontmatter, images, trailing spaces)
 node scripts/sync-en-structure.mjs || exit 1
 
-# 3. Translation checks
+# 3. Auto-translate changed i18n values (JA→EN) via Claude CLI
+node scripts/sync-i18n-values.mjs
+
+# 4. Translation checks
 node scripts/check-translations.mjs || exit 1
 node scripts/check-garage-translations.mjs || exit 1
 

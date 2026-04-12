@@ -69,7 +69,7 @@ export const en: Record<TranslationKey, string> = {
   'record.col.amount': 'Amount',
   'record.col.mileage': 'Mileage',
   'record.col.shop': 'Shop',
-  'record.col.maintenanceContent': 'Maintenance',
+  'record.col.maintenanceContent': 'Maintenance Category',
 
   // maintenance categories
   'maintenance.consumable': 'Consumable Replacement',
@@ -89,7 +89,7 @@ export const en: Record<TranslationKey, string> = {
   'garage.jumpToBlog': 'Jump to Blog',
 
   // gallery
-  'gallery.viewArticle': 'View article',
+  'gallery.viewArticle': 'View blog',
   'gallery.thumbnailAlt': 'Thumbnail image',
   'gallery.lightboxAlt': 'Lightbox image',
 
