@@ -75,6 +75,7 @@ export const en: Record<TranslationKey, string> = {
   'maintenance.cooling': 'Cooling System',
   'maintenance.braking': 'Braking System',
   'maintenance.suspension': 'Suspension',
+  'maintenance.steering': 'Steering',
   'maintenance.drivetrain': 'Drivetrain',
   'maintenance.interior': 'Interior/Exterior',
   'maintenance.bodywork': 'Body & Paint',

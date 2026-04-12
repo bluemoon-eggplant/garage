@@ -11,6 +11,7 @@ export const CONSUMABLE_TAGS: ConsumableTag[] = [
   'タイヤ',
   'ミッションオイル',
   'デフオイル',
+  'フューエルフィルター',
 ];
 
 export const MAINTENANCE_CATEGORIES: Record<MaintenanceCategory, string> = {
@@ -20,6 +21,7 @@ export const MAINTENANCE_CATEGORIES: Record<MaintenanceCategory, string> = {
   cooling: '冷却系',
   braking: '制動系',
   suspension: '足回り',
+  steering: '操舵系',
   drivetrain: '駆動系',
   interior: '内外装',
   bodywork: '板金',
@@ -33,6 +35,7 @@ export const MAINTENANCE_TAG_COLORS: Record<MaintenanceCategory, string> = {
   cooling: 'bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-200',
   braking: 'bg-violet-100 text-violet-800 dark:bg-violet-900/50 dark:text-violet-200',
   suspension: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200',
+  steering: 'bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-200',
   drivetrain: 'bg-lime-100 text-lime-800 dark:bg-lime-900/50 dark:text-lime-200',
   interior: 'bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900/50 dark:text-fuchsia-200',
   bodywork: 'bg-pink-100 text-pink-800 dark:bg-pink-900/50 dark:text-pink-200',
@@ -46,6 +49,7 @@ export const MAINTENANCE_CATEGORY_EN: Record<MaintenanceCategory, string> = {
   cooling: 'Cooling',
   braking: 'Braking',
   suspension: 'Suspension',
+  steering: 'Steering',
   drivetrain: 'Drivetrain',
   interior: 'Interior/Exterior',
   bodywork: 'Body & Paint',
@@ -63,6 +67,7 @@ export const CONSUMABLE_TAG_EN: Record<ConsumableTag, string> = {
   'タイヤ': 'Tires',
   'ミッションオイル': 'Transmission Oil',
   'デフオイル': 'Differential Oil',
+  'フューエルフィルター': 'Fuel Filter',
 };
 
 export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
@@ -78,30 +83,36 @@ export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
     'ミッションオイル', 'デフオイル',
   ],
   engine: [
-    'エンジン', 'キャブレター', 'インジェクタ', '点火', 'イグニッション',
-    'ローター', 'アペックスシール', 'タイミング',
+    'エンジンマウント', 'エンジン載せ替え', 'キャブレター', 'インジェクタ', '点火', 'イグニッション',
+    'ロータリー', 'アペックスシール', 'タイミング',
     'プラグコード', 'ダイレクトイグニッション', 'ハイテンションコード',
-    'フューエル・フィルタ', 'フューエルフィルター', 'ソレノイドバルブ', 'FUEL',
+    'ソレノイドバルブ', 'FUEL',
+    'ニードルバルブ', 'ジェット,メイン', 'ステーショナリーオイルシール', 'ファンベルト',
   ],
   cooling: [
     'ラジエーター', 'ラジエター', 'サーモスタット', 'ウォーターポンプ',
-    '冷却', 'ファン', 'ヒーター', 'エアセパレートタンク',
+    '冷却ホース', '冷却系', 'ヒーター', 'エアセパレートタンク',
   ],
   interior: [
     'シフトレバー', 'シフトブーツ', 'グローブボックス',
     'キーシリンダー', 'オーディオ', '張替', 'カウル', 'フード', 'レギュレターチャンネル', 'シーリング',
     'マッド', 'サイドブレーキブーツ', 'チェンジレバーブーツ', 'チェンジレバーノブ', 'カセットデッキ',
-    'シガーライター', 'アッシュトレー', '灰皿', 'ガラス交換', 'ドア交換',
+    'シガーライター', 'アッシュトレー', '灰皿', 'ガラス交換', 'ドア交換', 'バイザー', 'MINI LIFE', 'ドアインナー', 'ドアハンドル', 'レギュレターハンドル',
+    'シフトノブ', 'エンブレム', 'ホイールナット', 'スティールホイール', 'テールランプ', 'ウインカーランプ', 'パークランプ', 'ハンドル3点セット', 'バックミラー', 'フォークガード', 'グリップ', '小物入れ', 'パワーウインド', 'ラゲッジマット',
+    'モールディング', 'モール', 'ガーニッシュ', 'ガラス・テン・チャンネル', 'ドライブレコーダー', 'フロアマット', 'コーナーパネル', 'リペア', 'トノカバー', '幌カバー',
   ],
   bodywork: [
-    '板金', '塗装', 'ペイント', 'ボディ', 'パネル', 'バンパー', 'フェンダー',
+    '板金', '塗装', 'パネル', 'バンパー',
   ],
   braking: [
-    'ブレーキ', 'ディスク', 'ブレーキパッド', 'キャリパー', 'マスターシリンダー', 'ディクセル',
+    'ブレーキ', 'ブレーキディスク', 'ブレーキパッド', 'ゴールデンパッド', 'キャリパー', 'キャリバー', 'ブレーキマスターシリンダー', 'ディクセル',
   ],
   suspension: [
-    'サスペンション', 'トーコン', 'ショックアブソーバー', 'ステムベアリング',
-    'ラジアスアーム', 'キャンバー', 'フォーク',
+    'サスペンション', 'トーコン', 'ショックアブソーバー',
+    'ラジアスアーム', 'キャンバー', 'フロントフォーク', 'リヤクッション', 'アライメント',
+  ],
+  steering: [
+    'パワステ', 'ステアリング', 'ステムベアリング',
   ],
   drivetrain: [
     'クラッチ', 'ミッション', 'トランスミッション', 'デフ', 'ドライブシャフト',
@@ -122,9 +133,10 @@ export const CONSUMABLE_TAG_KEYWORDS: Record<ConsumableTag, string[]> = {
   'エンジンオイル': ['エンジンオイル', 'オイル交換', 'オイルチケット', 'ROTARY-1', '5W-30', '10W-40'],
   'オイルエレメント': ['オイルエレメント', 'オイルフィルター交換', 'オイルフィルター', 'カートリッジ、オイルフィルター'],
   'エアクリーナー': ['エアエレメント', 'エアークリーナー'],
-  'スパークプラグ': ['スパークプラグ', 'スパーク・プラグ', 'プラグ交換', 'プラグ取替', 'プラグセット、スパーク', 'プラグセット', 'CR9EIA'],
+  'スパークプラグ': ['スパークプラグ', 'スパーク・プラグ', 'プラグ交換', 'プラグ取替', 'プラグセット、スパーク', 'プラグセット', 'CR9EIA', 'プラグ ロータリー'],
   '冷却水': ['冷却水', 'LLC', 'クーラント'],
   'ブレーキフルード': ['ブレーキフルード', 'ブレーキオイル'],
   'バッテリー': ['バッテリー', 'バツテリー', 'BATTERY'],
   'タイヤ': ['タイヤ交換', 'タイヤ組替', 'タイヤ購入', 'ミシュラン', 'DUNLOP', 'PIRELLI'],
+  'フューエルフィルター': ['フューエル・フィルタ', 'フューエルフィルター'],
 };

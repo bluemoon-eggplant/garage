@@ -15,6 +15,7 @@ export type MaintenanceCategory =
   | 'cooling'
   | 'braking'
   | 'suspension'
+  | 'steering'
   | 'drivetrain'
   | 'interior'
   | 'bodywork'
@@ -30,7 +31,8 @@ export type ConsumableTag =
   | 'バッテリー'
   | 'タイヤ'
   | 'ミッションオイル'
-  | 'デフオイル';
+  | 'デフオイル'
+  | 'フューエルフィルター';
 
 export interface ClassifiedItem {
   description: string;

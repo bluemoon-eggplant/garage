@@ -4,12 +4,16 @@
   "data": {
     "date": "2010/04/10",
     "totalAmount": 47250,
-    "mileage": null,
+    "mileage": 29805,
     "shop": "GTNET株式会社",
     "items": [
       {
+        "description": "1年点検",
+        "amount": 0
+      },
+      {
         "description": "左ステップ板金",
-        "amount": null
+        "amount": 47250
       }
     ]
   },

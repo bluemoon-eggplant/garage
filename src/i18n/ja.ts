@@ -73,10 +73,11 @@ export const ja = {
   'maintenance.cooling': '冷却系整備',
   'maintenance.braking': '制動系整備',
   'maintenance.suspension': '足回り',
+  'maintenance.steering': '操舵系',
   'maintenance.drivetrain': '駆動系',
   'maintenance.interior': '内外装',
   'maintenance.bodywork': '板金',
-  'maintenance.other': 'その他整備',
+  'maintenance.other': 'その他',
 
   // garage
   'garage.jumpToRecord': 'Jump to Record',

@@ -167,8 +167,8 @@ function normalizeText(text: string): string {
   // ツ↔ッ normalization for matching
   normalized = normalized.replace(/ツ/g, 'ッ');
 
-  // Strip prolonged sound marks (ー) to match セーフティー ↔ セーフティ, ラジエーター ↔ ラジエター etc.
-  normalized = normalized.replace(/ー/g, '');
+  // Strip prolonged sound marks (ー) and middle dots (・) to match セーフティー ↔ セーフティ, ソレノイド・バルブ ↔ ソレノイドバルブ etc.
+  normalized = normalized.replace(/[ー・]/g, '');
 
   // Lowercase ASCII → uppercase for matching
   normalized = normalized.toUpperCase();
@@ -183,10 +183,11 @@ function matchesKeyword(description: string, keyword: string): boolean {
 // --- Classification ---
 
 function classifyItem(item: ExtractedItem): ClassifiedItem {
-  const consumableTag = matchConsumableTag(item.description);
+  const isExcludedFromConsumable = CONSUMABLE_TAG_EXCLUSIONS.some((ex) => matchesKeyword(item.description, ex));
+  const consumableTag = isExcludedFromConsumable ? null : matchConsumableTag(item.description);
   const maintenanceCategory = consumableTag
     ? 'consumable'
-    : detectCategoryByKeyword(item.description);
+    : detectCategoryByKeyword(item.description, isExcludedFromConsumable);
 
   return {
     description: item.description,
@@ -198,13 +199,33 @@ function classifyItem(item: ExtractedItem): ClassifiedItem {
 
 const INSPECTION_PATTERN = /\d+\s*[ヶケカかヵ]?\s*[月年]\s*(?:定期)?点検/;
 
-function detectCategoryByKeyword(description: string): MaintenanceCategory {
-  // Check inspection pattern first (e.g. "24ヶ月点検", "12年点検")
+/** Items ending with 点検 are just visual inspections, not actual work */
+const INSPECTION_ONLY_PATTERN = /点検\s*$/;
+
+function detectCategoryByKeyword(description: string, skipConsumable: boolean = false): MaintenanceCategory {
+  // Check formal inspection pattern first (e.g. "24ヶ月点検", "12年点検")
   if (INSPECTION_PATTERN.test(description)) {
     return 'inspection';
   }
 
+  // Check inspection-category keywords (安心点検, 車検整備, etc.) before the 点検 skip
+  const inspectionKeywords = CLASSIFICATION_KEYWORDS.inspection ?? [];
+  if (inspectionKeywords.some((kw) => matchesKeyword(description, kw))) {
+    return 'inspection';
+  }
+
+  // "ブレーキパット残量 点検" etc. — just checking, not actual work
+  if (INSPECTION_ONLY_PATTERN.test(description)) {
+    return 'other';
+  }
+
+  // "ブレーキ残量(F2.0mm)" etc. — observation notes, not actual work
+  if (matchesKeyword(description, '残量')) {
+    return 'other';
+  }
+
   for (const [category, keywords] of Object.entries(CLASSIFICATION_KEYWORDS)) {
+    if (skipConsumable && category === 'consumable') continue;
     if (keywords.some((kw) => matchesKeyword(description, kw))) {
       return category as MaintenanceCategory;
     }
@@ -213,9 +234,6 @@ function detectCategoryByKeyword(description: string): MaintenanceCategory {
 }
 
 function matchConsumableTag(description: string): ConsumableTag | null {
-  if (CONSUMABLE_TAG_EXCLUSIONS.some((ex) => matchesKeyword(description, ex))) {
-    return null;
-  }
   for (const [tag, keywords] of Object.entries(CONSUMABLE_TAG_KEYWORDS)) {
     if (keywords.some((kw) => matchesKeyword(description, kw))) {
       return tag as ConsumableTag;
