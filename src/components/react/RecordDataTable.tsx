@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 
 import DataTable from './DataTable';
 import TagBadge, { MaintenanceBadge } from './TagBadge';
+import RecordDetailModal from './RecordDetailModal';
 import { useTranslations } from '@/i18n';
-import { localizedPath } from '@/utils/i18n';
 
 import type { Column } from './DataTable';
-import type { ConsumableTag, MaintenanceCategory, MaintenanceTableRow } from '@/types/record';
+import type { ConsumableTag, MaintenanceCategory, MaintenanceRecord, MaintenanceTableRow } from '@/types/record';
 
 interface RecordDataTableProps {
   data: MaintenanceTableRow[];
+  records: MaintenanceRecord[];
   category: string;
   caption?: string;
   locale?: string;
@@ -17,11 +18,29 @@ interface RecordDataTableProps {
 
 const RecordDataTable: React.FC<RecordDataTableProps> = ({
   data,
+  records,
   category,
   caption,
   locale,
 }) => {
   const t = useTranslations(locale);
+  const [selectedRecordId, setSelectedRecordId] = useState<string | null>(null);
+
+  const selectedRecord = selectedRecordId
+    ? records.find((r) => r.id === selectedRecordId) ?? null
+    : null;
+
+  const selectedIndex = selectedRecord
+    ? records.findIndex((r) => r.id === selectedRecordId)
+    : -1;
+
+  const handleClose = useCallback(() => setSelectedRecordId(null), []);
+  const handlePrev = selectedIndex > 0
+    ? () => setSelectedRecordId(records[selectedIndex - 1].id)
+    : undefined;
+  const handleNext = selectedIndex >= 0 && selectedIndex < records.length - 1
+    ? () => setSelectedRecordId(records[selectedIndex + 1].id)
+    : undefined;
 
   const columns: Column[] = [
     {
@@ -37,19 +56,19 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
       barColor: 'rgb(59, 130, 246)',
       render: (value: number, row: Record<string, any>) => (
         <div className="relative">
-          <a
-            href={localizedPath(locale, `/record/detail/${row.id}`)}
-            className="relative z-10 font-mono text-blue-600 dark:text-blue-400 hover:underline"
+          <button
+            onClick={() => setSelectedRecordId(row.id)}
+            className="relative z-10 font-mono text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
           >
             {value != null ? `¥${value.toLocaleString()}` : '-'}
-          </a>
+          </button>
         </div>
       ),
     },
     {
       key: 'mileage',
       label: t('record.col.mileage'),
-      width: '140px',
+      width: '130px',
       dataBar: true,
       barColor: 'rgb(34, 197, 94)',
       format: (v: number | null) => (v != null ? v.toLocaleString() + ' km' : '-'),
@@ -57,12 +76,12 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
     {
       key: 'shop',
       label: t('record.col.shop'),
-      width: '100px',
+      width: '160px',
     },
     {
       key: 'consumableTags',
       label: t('maintenance.consumable'),
-      width: '220px',
+      width: '240px',
       render: (value: ConsumableTag[]) => (
         <div className="flex flex-wrap">
           {value.map((tag) => (
@@ -74,7 +93,7 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
     {
       key: 'maintenanceTags',
       label: t('record.col.maintenanceContent'),
-      width: '280px',
+      width: '310px',
       render: (value: MaintenanceCategory[]) => (
         <div className="flex flex-wrap">
           {value.map((cat) => (
@@ -86,12 +105,22 @@ const RecordDataTable: React.FC<RecordDataTableProps> = ({
   ];
 
   return (
-    <DataTable
-      columns={columns}
-      data={data}
-      frozenColumns={1}
-      caption={caption}
-    />
+    <>
+      <DataTable
+        columns={columns}
+        data={data}
+        caption={caption}
+      />
+      {selectedRecord && (
+        <RecordDetailModal
+          record={selectedRecord}
+          onClose={handleClose}
+          onPrev={handlePrev}
+          onNext={handleNext}
+          locale={locale}
+        />
+      )}
+    </>
   );
 };
 

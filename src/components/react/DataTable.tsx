@@ -20,8 +20,6 @@ export interface Column {
 export interface DataTableProps {
   columns: Column[];
   data: Record<string, any>[];
-  /** Number of columns to freeze from the left (default: 1) */
-  frozenColumns?: number;
   /** Caption for the table */
   caption?: string;
 }
@@ -29,7 +27,6 @@ export interface DataTableProps {
 const DataTable: React.FC<DataTableProps> = ({
   columns,
   data,
-  frozenColumns = 1,
   caption,
 }) => {
   // Calculate min/max for data bar columns
@@ -68,16 +65,6 @@ const DataTable: React.FC<DataTableProps> = ({
     return String(value ?? '');
   };
 
-  // Calculate left positions for frozen columns
-  const getFrozenLeftPosition = (colIndex: number): number => {
-    let left = 0;
-    for (let i = 0; i < colIndex; i++) {
-      // Estimate width based on column width or default
-      left += 120; // Default column width estimate
-    }
-    return left;
-  };
-
   const totalWidth = columns.reduce((sum, col) => sum + parseInt(col.width || '120', 10), 0);
 
   return (
@@ -91,27 +78,15 @@ const DataTable: React.FC<DataTableProps> = ({
           )}
           <thead className="sticky top-0 z-20">
             <tr className="bg-gray-100 dark:bg-gray-800">
-              {columns.map((col, colIndex) => {
-                const isFrozen = colIndex < frozenColumns;
-                return (
+              {columns.map((col) => (
                   <th
                     key={col.key}
-                    className={`
-                      px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200
-                      border-b border-gray-200 dark:border-gray-700
-                      whitespace-nowrap
-                      ${isFrozen ? 'sticky bg-gray-100 dark:bg-gray-800 z-10' : ''}
-                      ${isFrozen && colIndex === frozenColumns - 1 ? 'border-r-2 border-r-gray-300 dark:border-r-gray-600' : ''}
-                    `}
-                    style={{
-                      left: isFrozen ? `${colIndex * 120}px` : undefined,
-                      width: col.width || '120px',
-                    }}
+                    className="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 whitespace-nowrap"
+                    style={{ width: col.width || '120px' }}
                   >
                     {col.label}
                   </th>
-                );
-              })}
+                ))}
             </tr>
           </thead>
           <tbody>
@@ -123,8 +98,7 @@ const DataTable: React.FC<DataTableProps> = ({
                   hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors
                 `}
               >
-                {columns.map((col, colIndex) => {
-                  const isFrozen = colIndex < frozenColumns;
+                {columns.map((col) => {
                   const value = row[col.key];
                   const isNumeric = typeof value === 'number';
                   const showDataBar = col.dataBar && isNumeric;
@@ -134,17 +108,8 @@ const DataTable: React.FC<DataTableProps> = ({
                   return (
                     <td
                       key={col.key}
-                      className={`
-                        px-4 py-3 border-b border-gray-100 dark:border-gray-800
-                        whitespace-nowrap overflow-hidden text-ellipsis
-                        ${isFrozen ? 'sticky z-10' : ''}
-                        ${isFrozen && colIndex === frozenColumns - 1 ? 'border-r-2 border-r-gray-300 dark:border-r-gray-600' : ''}
-                        ${rowIndex % 2 === 0 ? (isFrozen ? 'bg-white dark:bg-gray-900' : '') : (isFrozen ? 'bg-gray-50 dark:bg-gray-800/50' : '')}
-                      `}
-                      style={{
-                        left: isFrozen ? `${colIndex * 120}px` : undefined,
-                        width: col.width || '120px',
-                      }}
+                      className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 whitespace-nowrap overflow-hidden text-ellipsis"
+                      style={{ width: col.width || '120px' }}
                     >
                       {col.render ? (
                         col.render(value, row)

@@ -15,6 +15,7 @@ const TAG_COLORS: Record<ConsumableTag, string> = {
   'タイヤ': 'bg-slate-100 text-slate-800 dark:bg-slate-900/50 dark:text-slate-200',
   'ミッションオイル': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200',
   'デフオイル': 'bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-200',
+  'フューエルフィルター': 'bg-rose-100 text-rose-800 dark:bg-rose-900/50 dark:text-rose-200',
 };
 
 const FALLBACK_COLOR = 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200';

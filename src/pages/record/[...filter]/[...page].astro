@@ -55,7 +55,7 @@ function getCategoryLabel(category: string): string {
 }
 ---
 
-<Centered {metadata}>
+<Centered {metadata} class="max-w-6xl">
   <article class="flex flex-col">
     <section class="flex-grow flex flex-col">
       <RecordFilter records={allRecords} {filterPathname} />
@@ -90,7 +90,7 @@ function getCategoryLabel(category: string): string {
                   )}
                 </div>
                 {tableRows.length > 0 ? (
-                  <CarDataTable data={tableRows} category={category} caption={`${label} ${t('record.maintenanceRecord')}`} />
+                  <CarDataTable data={tableRows} records={categoryRecords} category={category} caption={`${label} ${t('record.maintenanceRecord')}`} />
                 ) : (
                   <p class="text-gray-500 dark:text-gray-400 italic">{t('record.noData')}</p>
                 )}

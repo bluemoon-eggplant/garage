@@ -54,6 +54,9 @@ export const en: Record<TranslationKey, string> = {
   'record.detail.viewBlog': 'View blog post',
   'record.detail.metaTitle': 'Maintenance Detail',
   'record.detail.metaDescSuffix': ' maintenance record',
+  'record.detail.prevRecord': 'Previous Record',
+  'record.detail.nextRecord': 'Next Record',
+  'record.detail.close': 'Close',
 
   // record list
   'record.vehicleInfo': 'Vehicle info',

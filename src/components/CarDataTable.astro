@@ -1,21 +1,23 @@
 ---
 import RecordDataTable from '@/components/react/RecordDataTable';
 
-import type { MaintenanceTableRow } from '@/types/record';
+import type { MaintenanceTableRow, MaintenanceRecord } from '@/types/record';
 
 interface Props {
   data: MaintenanceTableRow[];
+  records: MaintenanceRecord[];
   category: string;
   caption?: string;
 }
 
-const { data, category, caption } = Astro.props;
+const { data, records, category, caption } = Astro.props;
 const locale = Astro.currentLocale ?? 'ja';
 ---
 
 <RecordDataTable
   client:load
   data={data}
+  records={records}
   category={category}
   caption={caption}
   locale={locale}

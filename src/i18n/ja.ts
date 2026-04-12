@@ -52,6 +52,9 @@ export const ja = {
   'record.detail.viewBlog': 'ブログ記事を見る',
   'record.detail.metaTitle': '整備明細',
   'record.detail.metaDescSuffix': 'での整備記録',
+  'record.detail.prevRecord': '前の記録',
+  'record.detail.nextRecord': '次の記録',
+  'record.detail.close': '閉じる',
 
   // record list
   'record.vehicleInfo': '車両情報',
