@@ -6,12 +6,7 @@ name: Deploy to GitHub Pages with Astro action
 on:
   push:
     branches:
-      - 'disabled-main'
-    tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
-  pull_request:
-    branches:
-      - 'disabled-main'
+      - 'master'
   workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
@@ -22,9 +17,9 @@ permissions:
 
 # set env vars in Github settings here
 env:
-  SITE_URL: 'https://nemanjam.github.io'
-  PLAUSIBLE_SCRIPT_URL: 'https://plausible.arm1.nemanjamitic.com/js/script.js'
-  PLAUSIBLE_DOMAIN: 'nemanjamitic.com'
+  SITE_URL: 'https://bluemoon-eggplant.github.io/garage'
+  # PLAUSIBLE_SCRIPT_URL: ''
+  # PLAUSIBLE_DOMAIN: ''
 
 jobs:
   # build with astro action, unusable for monorepo

@@ -79,9 +79,20 @@ export const GET: APIRoute = async ({ props }: APIContext) => {
     ],
   });
 
-  const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
-
-  return new Response(pngBuffer);
+  try {
+    const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
+    return new Response(pngBuffer);
+  } catch (err) {
+    console.error(`[og-image] Failed to generate OG image for "${title}":`, (err as Error).message);
+    // Return a 1x1 transparent PNG fallback so the build doesn't crash
+    const fallback = Buffer.from(
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQI12NgAAIABQABNjN9GQAAAAlwSFlz' +
+      'AAAWJQAAFiUBSVIk8AAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAAANSURBVBhXY2Bg' +
+      'YPgPAAEEAQBJEBHxAAAAAElFTkSuQmCC',
+      'base64'
+    );
+    return new Response(fallback);
+  }
 };
 
 /*-------------------------------- utils ------------------------------*/

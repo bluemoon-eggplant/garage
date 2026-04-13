@@ -17,8 +17,15 @@ import { sitemapIntegration } from './src/libs/integrations/sitemap';
 const { SITE_URL } = PROCESS_ENV;
 const remarkPlugins = [remarkReadingTime];
 
+// Derive site origin and base path from SITE_URL
+// dev: http://localhost:3000 → origin only, no base
+// prod: https://bluemoon-eggplant.github.io/garage → origin + base=/garage
+const siteUrlObj = new URL(SITE_URL);
+const basePath = siteUrlObj.pathname.replace(/\/$/, '') || undefined;
+
 export default defineConfig({
-  site: SITE_URL,
+  site: siteUrlObj.origin,
+  base: basePath,
   trailingSlash: 'ignore',
   i18n: {
     defaultLocale: 'ja',

@@ -11,7 +11,7 @@ import { CONFIG_CLIENT } from '@/config/client';
 import { handleTitle } from '@/utils/metadata';
 import { filterUndefined } from '@/utils/objects';
 
-import { stripLocalePrefix, localizedPath } from '@/utils/i18n';
+import { stripLocalePrefix, localizedPath, withBase } from '@/utils/i18n';
 
 import type { Metadata } from '@/types/common';
 
@@ -39,7 +39,7 @@ const { title, description, image } = mergedMetadata;
 const ogImageUrl = new URL(image, url);
 
 const basePath = stripLocalePrefix(url.pathname);
-const jaUrl = new URL(basePath, url);
+const jaUrl = new URL(localizedPath('ja', basePath), url);
 const enUrl = new URL(localizedPath('en', basePath), url);
 ---
 
@@ -62,21 +62,21 @@ const enUrl = new URL(localizedPath('en', basePath), url);
   <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href={`${ROUTES.STATIC.FAVICONS}apple-touch-icon.png`}
+    href={withBase(`${ROUTES.STATIC.FAVICONS}apple-touch-icon.png`)}
   />
   <link
     rel="icon"
     type="image/png"
     sizes="32x32"
-    href={`${ROUTES.STATIC.FAVICONS}favicon-32x32.png`}
+    href={withBase(`${ROUTES.STATIC.FAVICONS}favicon-32x32.png`)}
   />
   <link
     rel="icon"
     type="image/png"
     sizes="16x16"
-    href={`${ROUTES.STATIC.FAVICONS}favicon-16x16.png`}
+    href={withBase(`${ROUTES.STATIC.FAVICONS}favicon-16x16.png`)}
   />
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="manifest" href={withBase('/manifest.json')} />
 
   {/* Primary Meta Tags */}
   <title>{title}</title>
@@ -89,15 +89,15 @@ const enUrl = new URL(localizedPath('en', basePath), url);
     rel="alternate"
     type="application/rss+xml"
     title={`RSS feed for ${host}`}
-    href={`${ROUTES.API.FEED_RSS}`}
+    href={withBase(ROUTES.API.FEED_RSS)}
   />
   <link
     rel="alternate"
     type="application/json"
     title={`JSON feed for ${host}`}
-    href={`${ROUTES.API.FEED_JSON}`}
+    href={withBase(ROUTES.API.FEED_JSON)}
   />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href={`${ROUTES.STATIC.SITEMAP}`} />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href={withBase(ROUTES.STATIC.SITEMAP)} />
 
   {/* Open Graph / Facebook */}
   <meta property="og:type" content="website" />
@@ -134,17 +134,18 @@ const enUrl = new URL(localizedPath('en', basePath), url);
   <ThemeScript />
 
   {/* Locale auto-detection: redirect first-time visitors based on browser language */}
-  <script is:inline>
+  <script is:inline define:vars={{ baseUrl: import.meta.env.BASE_URL.replace(/\/$/, '') }}>
   (function() {
     if (localStorage.getItem('locale-preference')) return;
-    if (location.pathname.startsWith('/en')) {
+    var pathWithoutBase = location.pathname.slice(baseUrl.length);
+    if (pathWithoutBase.startsWith('/en')) {
       localStorage.setItem('locale-preference', 'en');
       return;
     }
     var lang = navigator.language || '';
     if (lang.startsWith('en')) {
       localStorage.setItem('locale-preference', 'en');
-      location.replace('/en' + location.pathname + location.search + location.hash);
+      location.replace(baseUrl + '/en' + pathWithoutBase + location.search + location.hash);
     } else {
       localStorage.setItem('locale-preference', 'ja');
     }

@@ -27,7 +27,9 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     return categoryPagination;
   });
 
-  pagination.push({ ...pagination[0], params: { ...pagination[0].params, page: '1' } });
+  if (pagination.length > 0) {
+    pagination.push({ ...pagination[0], params: { ...pagination[0].params, page: '1' } });
+  }
   return pagination;
 }
 
