@@ -623,3 +623,84 @@ npx tsx scripts/extract-receipts.ts
 ```
 
 Claude Code セッション中に「取り込んで」と言えば、上記 2 ステップを自動で実行する。
+
+### 写真の取り込み（Google Drive）
+
+garage ページ用の写真を Google Drive からダウンロードして `_images/` に配置する仕組み。
+
+**スクリプト**: `scripts/download-photos.ts`
+
+#### フロー
+
+```
+Google Drive (写真)
+  ↓ download-photos.ts
+src/content/garage/<slug>/_images/*.jpg
+  ↓ git commit (pre-commit hook で自動リサイズ)
+Gallery ページに自動表示
+```
+
+#### Drive フォルダ構成
+
+```
+📁 blog-photos (DRIVE_PHOTOS_FOLDER_ID)
+  📁 fd3s/
+    📷 PXL_20250524_140718562.jpg
+  📁 zzr1400/
+    📷 PXL_20251220_081411235.jpg
+```
+
+Drive のフォルダ名とローカルのスラッグが異なる場合は自動リマップされる（例: `zzr1400` → `zx14`）。
+
+#### 実行方法
+
+```bash
+# 全車両の写真をダウンロード
+npx tsx scripts/download-photos.ts
+
+# 特定車両のみ
+npx tsx scripts/download-photos.ts fd3s
+npx tsx scripts/download-photos.ts zx14
+```
+
+- ダウンロード済みは `.downloaded-photo-ids.json` で管理（再実行時にスキップ）
+- ダウンロード後に `git commit` すると pre-commit hook が 1600px に自動リサイズ
+
+#### 必要な環境変数 (`.env`)
+
+| 変数 | 説明 |
+|------|------|
+| `GOOGLE_SERVICE_ACCOUNT_KEY_PATH` | サービスアカウントの JSON キーファイルパス |
+| `DRIVE_PHOTOS_FOLDER_ID` | 写真用 Drive フォルダ ID（PDF 用とは別） |
+
+※ サービスアカウントのセットアップは「領収書 OCR」セクション参照
+
+#### スラッグとリマップ
+
+| スラッグ | 車両 | Drive フォルダ名 |
+|---------|------|----------------|
+| `fd3s` | Mazda RX-7 | fd3s |
+| `roadstar` | Eunos Roadster | roadstar |
+| `mini` | Rover Mini | mini |
+| `caterham7` | Caterham 7 | caterham7 |
+| `zx14` | Kawasaki ZX-14 | **zzr1400** |
+| `renaissa250` | YAMAHA Renaissa | renaissa250 |
+| `maxam` | Yamaha MAXAM | maxam |
+
+#### 写真追加の全体フロー
+
+```
+1. Drive の車両フォルダに写真をアップロード
+
+2. ダウンロード
+   npx tsx scripts/download-photos.ts
+   → src/content/garage/<slug>/_images/ に保存
+
+3. MDX で import して使用
+   import Photo from './_images/PXL_xxx.jpg';
+   <Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Photo} alt="説明" />
+
+4. コミット & push
+   → pre-commit hook で 1600px にリサイズ
+   → Gallery ページにも自動表示
+```
