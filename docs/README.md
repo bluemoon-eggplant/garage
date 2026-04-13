@@ -510,3 +510,116 @@ git add . && git commit -m "新しいページ"
 5. 公開完了
    https://bluemoon-eggplant.github.io/garage/ に反映
 ```
+
+### 領収書 OCR（Gemini API）
+
+整備領収書の PDF から構造化データ（JSON）を自動抽出する仕組み。
+
+#### 全体フロー
+
+```
+Google Drive (PDF)
+  ↓ download-from-drive.ts
+scripts/input/<category>/*.pdf
+  ↓ extract-receipts.ts (Gemini API)
+scripts/output/<category>/YYYYMMDD-N.json
+  ↓ Record ページで表示
+```
+
+#### 1. PDF ダウンロード
+
+**スクリプト**: `scripts/download-from-drive.ts`
+
+Google Drive のフォルダからカテゴリ別に PDF をダウンロードする。
+
+```bash
+npx tsx scripts/download-from-drive.ts
+```
+
+**必要な環境変数** (`.env`):
+
+| 変数 | 説明 |
+|------|------|
+| `GOOGLE_SERVICE_ACCOUNT_KEY_PATH` | サービスアカウントの JSON キーファイルパス |
+| `DRIVE_FOLDER_ID` | Google Drive フォルダ ID |
+
+**Drive フォルダ構成**:
+```
+📁 (DRIVE_FOLDER_ID)
+  📁 mazda-rx7/
+    📄 receipt1.pdf
+  📁 eunos-roadstar/
+    📄 receipt2.pdf
+```
+
+- ダウンロード済みファイルは `.downloaded-ids.json` で管理（再実行時にスキップ）
+- ローカルの `scripts/input/<category>/` に保存される
+
+**サービスアカウントのセットアップ**:
+1. [Google Cloud Console](https://console.cloud.google.com/) でプロジェクト作成
+2. Google Drive API を有効化
+3. 認証情報 → サービスアカウント作成 → JSON キー発行
+4. Drive フォルダをサービスアカウントのメールアドレスと共有
+
+#### 2. PDF → JSON 抽出
+
+**スクリプト**: `scripts/extract-receipts.ts`
+
+PDF を Gemini API（`gemini-2.5-flash`）に送信し、領収書の内容を構造化 JSON として抽出する。
+
+```bash
+npx tsx scripts/extract-receipts.ts
+```
+
+**必要な環境変数** (`.env`):
+
+| 変数 | 説明 |
+|------|------|
+| `GEMINI_API_KEY` | [Google AI Studio](https://aistudio.google.com/apikey) で取得した API キー |
+
+**処理の仕組み**:
+1. `scripts/input/<category>/` 内の PDF を検出
+2. 既に `scripts/output/` に処理済みの source がある PDF はスキップ
+3. PDF を base64 エンコードして Gemini API に送信
+4. プロンプトで JSON 形式の抽出を指示
+5. レスポンスから JSON を抽出して `scripts/output/<category>/YYYYMMDD-N.json` に保存
+
+**レート制限**: Gemini 無料枠は 15 RPM のため、4.5 秒間隔で処理
+
+#### 出力 JSON の形式
+
+```json
+{
+  "source": "input/mazda-rx7/receipt.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "YYYY/MM/DD",
+    "totalAmount": 12345,
+    "items": [
+      { "description": "作業内容や部品名", "amount": 12345 }
+    ],
+    "mileage": null,
+    "shop": "店名"
+  },
+  "reviewStatus": "pending"
+}
+```
+
+- `reviewStatus`: `"pending"`（自動抽出） / `"approved"`（確認済み）
+- ファイル名: `YYYYMMDD-N.json`（N は同日の連番、0 始まり）
+
+#### 有効なカテゴリ
+
+`mazda-rx7`, `eunos-roadstar`, `rover-mini`, `caterham-7`, `kawasaki-zx14`, `yamaha-renaissa`, `yamaha-maxam`
+
+#### まとめて実行
+
+```bash
+# 1. Drive からダウンロード
+npx tsx scripts/download-from-drive.ts
+
+# 2. OCR 抽出
+npx tsx scripts/extract-receipts.ts
+```
+
+Claude Code セッション中に「取り込んで」と言えば、上記 2 ステップを自動で実行する。
