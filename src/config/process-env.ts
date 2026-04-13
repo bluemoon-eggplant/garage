@@ -33,6 +33,7 @@ const processEnvData: ProcessEnvType = {
   NODE_ENV: process.env.NODE_ENV,
   PREVIEW_MODE: process.env.PREVIEW_MODE,
   SITE_URL: process.env.SITE_URL,
+  GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
   PLAUSIBLE_SCRIPT_URL: process.env.PLAUSIBLE_SCRIPT_URL,
   PLAUSIBLE_DOMAIN: process.env.PLAUSIBLE_DOMAIN,
 };
@@ -61,6 +62,11 @@ export const envSchema = {
       context: 'client',
       access: 'public',
       // default: omit to have explicit validation
+    }),
+    GA_MEASUREMENT_ID: envField.string({
+      context: 'client',
+      access: 'public',
+      optional: true,
     }),
     PLAUSIBLE_SCRIPT_URL: envField.string({
       context: 'client',

@@ -18,6 +18,7 @@ export const processEnvSchema = z.object({
     .default('false'),
   // ensure no trailing slash
   SITE_URL: z.string().url().regex(/[^/]$/, 'SITE_URL should not end with a slash "/"'),
+  GA_MEASUREMENT_ID: z.string().startsWith('G-').or(z.literal('')).optional(),
   PLAUSIBLE_SCRIPT_URL: z.string().url().or(z.literal('')).optional(),
   PLAUSIBLE_DOMAIN: z
     .string()
@@ -35,11 +36,11 @@ export const processEnvSchema = z.object({
 });
 
 export const configServerSchema = processEnvSchema
-  .omit({ SITE_URL: true, PREVIEW_MODE: true, PLAUSIBLE_SCRIPT_URL: true, PLAUSIBLE_DOMAIN: true })
+  .omit({ SITE_URL: true, PREVIEW_MODE: true, GA_MEASUREMENT_ID: true, PLAUSIBLE_SCRIPT_URL: true, PLAUSIBLE_DOMAIN: true })
   .extend({ PREVIEW_MODE: z.boolean() }); // here its boolean, not 'true' | 'false'
 
 export const configClientSchema = processEnvSchema
-  .pick({ SITE_URL: true, PLAUSIBLE_SCRIPT_URL: true, PLAUSIBLE_DOMAIN: true })
+  .pick({ SITE_URL: true, GA_MEASUREMENT_ID: true, PLAUSIBLE_SCRIPT_URL: true, PLAUSIBLE_DOMAIN: true })
   .merge(
     z.object({
       SITE_TITLE: z.string().min(1),

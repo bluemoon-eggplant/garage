@@ -15,7 +15,7 @@ import { stripLocalePrefix, localizedPath, withBase } from '@/utils/i18n';
 
 import type { Metadata } from '@/types/common';
 
-const { AUTHOR_NAME, PLAUSIBLE_SCRIPT_URL, PLAUSIBLE_DOMAIN } = CONFIG_CLIENT;
+const { AUTHOR_NAME, GA_MEASUREMENT_ID, PLAUSIBLE_SCRIPT_URL, PLAUSIBLE_DOMAIN } = CONFIG_CLIENT;
 
 export interface BaseHeadProps {
   metadata: Metadata;
@@ -113,7 +113,22 @@ const enUrl = new URL(localizedPath('en', basePath), url);
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={ogImageUrl} />
 
-  {/* Analytics */}
+  {/* Analytics - GA4 */}
+  {
+    GA_MEASUREMENT_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script is:inline define:vars={{ gaMeasurementId: GA_MEASUREMENT_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaMeasurementId);
+        </script>
+      </>
+    )
+  }
+
+  {/* Analytics - Plausible */}
   {
     PLAUSIBLE_SCRIPT_URL && (
       <>

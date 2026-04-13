@@ -1,4 +1,4 @@
-import { PLAUSIBLE_DOMAIN, PLAUSIBLE_SCRIPT_URL, SITE_URL } from 'astro:env/client';
+import { GA_MEASUREMENT_ID, PLAUSIBLE_DOMAIN, PLAUSIBLE_SCRIPT_URL, SITE_URL } from 'astro:env/client';
 
 import { configClientSchema } from '@/schemas/config';
 import { validateData } from '@/utils/validation';
@@ -10,6 +10,7 @@ const configClientData: ConfigClientType = {
   SITE_URL,
   SITE_TITLE: 'まこちゃんガレージ',
   SITE_DESCRIPTION: 'I am Nemanja, full stack developer',
+  GA_MEASUREMENT_ID,
   PLAUSIBLE_SCRIPT_URL,
   PLAUSIBLE_DOMAIN,
   PAGE_SIZE_POST_CARD: 3,

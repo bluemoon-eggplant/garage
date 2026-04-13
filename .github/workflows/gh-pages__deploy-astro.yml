@@ -18,6 +18,7 @@ permissions:
 # set env vars in Github settings here
 env:
   SITE_URL: 'https://bluemoon-eggplant.github.io/garage'
+  GA_MEASUREMENT_ID: 'G-9QJZT0X1GG'
   # PLAUSIBLE_SCRIPT_URL: ''
   # PLAUSIBLE_DOMAIN: ''
 
