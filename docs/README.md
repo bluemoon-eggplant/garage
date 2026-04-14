@@ -409,6 +409,9 @@ node scripts/translate-en.mjs --all
 # 特定ファイルを翻訳
 node scripts/translate-en.mjs --file src/content/garage/fd3s/index.mdx
 
+# 特定コミット以降の変更ファイルを翻訳
+node scripts/translate-en.mjs --since abc1234
+
 # 高品質翻訳（sonnet モデル使用、時間がかかる）
 node scripts/translate-en.mjs --quality
 
@@ -424,6 +427,25 @@ node scripts/translate-en.mjs --dry-run
 - import 文、JSX コンポーネント、props
 - 技術用語、ブランド名、型番、単位
 - frontmatter の構造（title/description は翻訳される）
+
+#### 翻訳スコープ（何が対象になるか）
+
+各翻訳処理が対象にする範囲：
+
+| 処理 | スコープ |
+|------|---------|
+| i18n 値（pre-commit） | ステージされた `ja.ts` と HEAD の差分（変更された値のみ） |
+| 構造同期（pre-commit） | ステージされた MDX ファイル |
+| `translate-en.mjs`（引数なし） | ステージされたファイル（`git diff --cached`） |
+| `translate-en.mjs --file` | 指定した 1 ファイル |
+| `translate-en.mjs --since <commit>` | そのコミット以降に変更されたファイル |
+| `translate-en.mjs --all` | garage/post の全 `index.mdx` |
+
+通常のフロー（ステージ → コミット）では、**そのコミットで変更するファイルだけ**が翻訳対象。過去のコミットは関係ない。
+
+既存の `index.en.mdx` がある場合はその内容を参考にして差分更新し、ない場合は新規作成する。
+
+**Claude Code は通常 `--file` を使用する。** セッション中に作成・編集したファイルだけを指定して翻訳する。`--all` は使わない（変更していないファイルまで再翻訳すると時間がかかり、既存の翻訳を意図せず上書きするリスクがあるため）。
 
 ### 翻訳の裏側の仕組み
 
