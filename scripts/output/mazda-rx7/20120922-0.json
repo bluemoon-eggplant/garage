@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0043.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2012/09/22",
+    "totalAmount": 42903,
+    "items": [
+      {
+        "description": "パワーウィンドウ・スイッチ交換",
+        "amount": 22953
+      },
+      {
+        "description": "12ヶ月定期点検整備 (セーフティーコース)",
+        "amount": 19950
+      }
+    ],
+    "mileage": null,
+    "shop": "東京マツダ販売株式会社"
+  },
+  "reviewStatus": "pending"
+}

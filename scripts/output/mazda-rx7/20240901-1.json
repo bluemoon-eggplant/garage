@@ -1,0 +1,73 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0112_2.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2024/09/01",
+    "totalAmount": 153040,
+    "items": [
+      {
+        "description": "N3A113Z40 エレメント、エアークリーナー",
+        "amount": 6545
+      },
+      {
+        "description": "N3X518110 プラグセット、スパーク",
+        "amount": 11429
+      },
+      {
+        "description": "LLC1 ロングライフクーラント(スーパー)",
+        "amount": 3300
+      },
+      {
+        "description": "NF0115203 コック、ドレーン",
+        "amount": 720
+      },
+      {
+        "description": "KF0115205 キャップ、ラジエーター",
+        "amount": 2645
+      },
+      {
+        "description": "N3A115205A キャップ、ラジエーター",
+        "amount": 3217
+      },
+      {
+        "description": "パックdeメンテ 車検整備 技術料",
+        "amount": 52360
+      },
+      {
+        "description": "冷却水(ロングライフクーラント交換) 技術料",
+        "amount": 6600
+      },
+      {
+        "description": "水洗い洗車",
+        "amount": 550
+      },
+      {
+        "description": "ガラス内側クリーナー (クリーナーで清掃)",
+        "amount": 550
+      },
+      {
+        "description": "「お車エステ」2コインプレゼント",
+        "amount": -1826
+      },
+      {
+        "description": "自賠責",
+        "amount": 17650
+      },
+      {
+        "description": "重量税",
+        "amount": 37800
+      },
+      {
+        "description": "印紙証紙代",
+        "amount": 1600
+      },
+      {
+        "description": "代行料(課税対象)",
+        "amount": 9900
+      }
+    ],
+    "mileage": 95553,
+    "shop": "株式会社関東マツダ 群馬事業部 藤岡店"
+  },
+  "reviewStatus": "pending"
+}

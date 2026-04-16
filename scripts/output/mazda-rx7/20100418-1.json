@@ -1,0 +1,37 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260315-0005_3.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2010/04/18",
+    "totalAmount": 25904,
+    "items": [
+      {
+        "description": "エンジンオイル交換チケットお買い上げ",
+        "amount": 5250
+      },
+      {
+        "description": "エンジンオイル SM (5W-30)",
+        "amount": 0
+      },
+      {
+        "description": "オイルチケットレス①",
+        "amount": 0
+      },
+      {
+        "description": "カートリッジ、オイルフィルター",
+        "amount": 2730
+      },
+      {
+        "description": "プラグセット、スパーク",
+        "amount": 17924
+      },
+      {
+        "description": "多什空気圧点検,調整致しました",
+        "amount": null
+      }
+    ],
+    "mileage": 30056,
+    "shop": "千葉マツグ 我孫子店"
+  },
+  "reviewStatus": "pending"
+}

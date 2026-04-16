@@ -1,21 +1,29 @@
 {
-  "source": "input/yamaha-renaissa/スキャン_20260321-2256_1.pdf",
+  "source": "input/yamaha-renaissa/Screenshot_20260416-210433.png",
   "category": "yamaha-renaissa",
   "data": {
     "date": "2024/07/27",
-    "totalAmount": 2500,
+    "totalAmount": 5599,
     "items": [
       {
-        "description": "コウシンオイル エレメ2 コウチン",
-        "amount": 900
+        "description": "プラグ ドレーン 4HC153510000",
+        "amount": null
       },
       {
-        "description": "舐めたドレンボルトの交換",
-        "amount": 1600
+        "description": "コウシンオイル エレメ2 コウチン",
+        "amount": null
+      },
+      {
+        "description": "10W-40 1L ヤマルーブ スタンダード プラス",
+        "amount": null
+      },
+      {
+        "description": "KIT Oリング 33.5X3.5 70-967-30050 OY-05",
+        "amount": null
       }
     ],
     "mileage": 41790,
-    "shop": "株式会社2りんかんイエローハット 藤岡2りんかん"
+    "shop": "藤岡2りんかん"
   },
   "reviewStatus": "pending"
 }

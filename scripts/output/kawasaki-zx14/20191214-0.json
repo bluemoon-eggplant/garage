@@ -1,25 +1,25 @@
 {
-  "source": "input/kawasaki-zx14/スキャン_20260319-0003.pdf",
+  "source": "input/kawasaki-zx14/Screenshot_20260416-210820.png",
   "category": "kawasaki-zx14",
   "data": {
     "date": "2019/12/14",
-    "totalAmount": 4687,
+    "totalAmount": 8976,
     "items": [
       {
-        "description": "エンジンオイル交換 Power1Racing 4T 5W-40",
-        "amount": 3037
+        "description": "Power1Racing 4T ハカリ 100CC 5W-40",
+        "amount": null
       },
       {
-        "description": "オイルエレメント交換工賃",
-        "amount": 1650
+        "description": "ニュウカイオイル エレメント2 コウチン 2リン",
+        "amount": null
       },
       {
-        "description": "安全点検",
-        "amount": 0
+        "description": "アンゼンテンケン2 コウチン 2リン",
+        "amount": null
       }
     ],
     "mileage": 16304,
-    "shop": "株式会社2りんかんイエローハット 和光2りんかん"
+    "shop": "和光２りんかん"
   },
   "reviewStatus": "pending"
 }

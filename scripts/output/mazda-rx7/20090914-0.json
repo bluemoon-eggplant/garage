@@ -1,0 +1,21 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260318-2130.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2009/09/14",
+    "totalAmount": 11797,
+    "items": [
+      {
+        "description": "タイヤ・ローテーション、タイヤ摩耗点検",
+        "amount": 2100
+      },
+      {
+        "description": "エアエレメント交換 (エレメント、エアークリーナー、N3A113240)",
+        "amount": 9697
+      }
+    ],
+    "mileage": 24345,
+    "shop": "株式会社千葉マツダ"
+  },
+  "reviewStatus": "pending"
+}

@@ -95,18 +95,18 @@ async function main() {
   // Collect already-processed sources from existing output files
   const processedSources = collectProcessedSources();
 
-  // Discover PDFs
-  const pdfFiles = discoverPDFs();
-  if (pdfFiles.length === 0) {
-    console.log('PDFファイルが見つかりません。');
-    console.log(`${INPUT_DIR}/<category>/ にPDFを配置してください。`);
+  // Discover input files (PDFs + images)
+  const inputFiles = discoverInputFiles();
+  if (inputFiles.length === 0) {
+    console.log('対象ファイルが見つかりません。');
+    console.log(`${INPUT_DIR}/<category>/ にPDFまたは画像ファイルを配置してください。`);
     console.log(`有効なカテゴリ: ${VALID_CATEGORIES.join(', ')}`);
     return;
   }
 
   // Filter out already-processed
-  const toProcess = pdfFiles.filter((f) => !processedSources.has(f.relativePath));
-  console.log(`PDF: ${pdfFiles.length}件 (未処理: ${toProcess.length}件, 処理済: ${pdfFiles.length - toProcess.length}件)`);
+  const toProcess = inputFiles.filter((f) => !processedSources.has(f.relativePath));
+  console.log(`ファイル: ${inputFiles.length}件 (未処理: ${toProcess.length}件, 処理済: ${inputFiles.length - toProcess.length}件)`);
 
   if (toProcess.length === 0) {
     console.log('全て処理済みです。');
@@ -121,7 +121,7 @@ async function main() {
     console.log(`[${i + 1}/${toProcess.length}] ${file.relativePath} ...`);
 
     try {
-      const data = await extractFromPDF(model, file.absolutePath);
+      const data = await extractFromFile(model, file.absolutePath);
 
       // Write individual JSON file
       const record: RecordFile = {
@@ -152,14 +152,16 @@ async function main() {
 
 // --- Functions ---
 
-interface PDFFile {
+const SUPPORTED_EXTENSIONS = ['.pdf', '.jpg', '.jpeg', '.png', '.webp'];
+
+interface InputFile {
   absolutePath: string;
   relativePath: string;
   category: string;
 }
 
-function discoverPDFs(): PDFFile[] {
-  const files: PDFFile[] = [];
+function discoverInputFiles(): InputFile[] {
+  const files: InputFile[] = [];
 
   if (!fs.existsSync(INPUT_DIR)) {
     fs.mkdirSync(INPUT_DIR, { recursive: true });
@@ -177,7 +179,8 @@ function discoverPDFs(): PDFFile[] {
     const categoryDir = path.join(INPUT_DIR, dir.name);
     const entries = fs.readdirSync(categoryDir);
     for (const entry of entries) {
-      if (!entry.toLowerCase().endsWith('.pdf')) continue;
+      const ext = path.extname(entry).toLowerCase();
+      if (!SUPPORTED_EXTENSIONS.includes(ext)) continue;
       files.push({
         absolutePath: path.join(categoryDir, entry),
         relativePath: `input/${dir.name}/${entry}`,
@@ -190,17 +193,30 @@ function discoverPDFs(): PDFFile[] {
   return files;
 }
 
-async function extractFromPDF(
+function detectMimeType(filePath: string): string {
+  const ext = path.extname(filePath).toLowerCase();
+  const mimeMap: Record<string, string> = {
+    '.pdf': 'application/pdf',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.png': 'image/png',
+    '.webp': 'image/webp',
+  };
+  return mimeMap[ext] ?? 'application/octet-stream';
+}
+
+async function extractFromFile(
   model: ReturnType<GoogleGenerativeAI['getGenerativeModel']>,
-  pdfPath: string
+  filePath: string
 ): Promise<ExtractedData> {
-  const pdfBuffer = fs.readFileSync(pdfPath);
-  const base64Data = pdfBuffer.toString('base64');
+  const buffer = fs.readFileSync(filePath);
+  const base64Data = buffer.toString('base64');
+  const mimeType = detectMimeType(filePath);
 
   const result = await model.generateContent([
     {
       inlineData: {
-        mimeType: 'application/pdf',
+        mimeType,
         data: base64Data,
       },
     },

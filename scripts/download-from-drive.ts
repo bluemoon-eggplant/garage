@@ -109,15 +109,15 @@ async function main() {
     const localDir = path.join(INPUT_DIR, category);
     fs.mkdirSync(localDir, { recursive: true });
 
-    // List PDFs in this category folder
-    const pdfFiles = await listPDFs(drive, folder.id!);
+    // List files (PDFs + images) in this category folder
+    const files = await listReceiptFiles(drive, folder.id!);
 
-    if (pdfFiles.length === 0) {
-      console.log('  PDFなし');
+    if (files.length === 0) {
+      console.log('  ファイルなし');
       continue;
     }
 
-    for (const file of pdfFiles) {
+    for (const file of files) {
       // Skip if this Drive file ID was already downloaded
       if (downloadedIds.has(file.id!)) {
         console.log(`  ✓ ${file.name} (ダウンロード済み)`);
@@ -184,12 +184,19 @@ async function listFolders(
   return (res.data.files || []) as DriveFile[];
 }
 
-async function listPDFs(
+async function listReceiptFiles(
   drive: ReturnType<typeof google.drive>,
   folderId: string
 ): Promise<DriveFile[]> {
+  const mimeTypes = [
+    "mimeType='application/pdf'",
+    "mimeType='image/jpeg'",
+    "mimeType='image/png'",
+    "mimeType='image/webp'",
+  ];
+  const mimeFilter = mimeTypes.join(' or ');
   const res = await drive.files.list({
-    q: `'${folderId}' in parents and mimeType='application/pdf' and trashed=false`,
+    q: `'${folderId}' in parents and (${mimeFilter}) and trashed=false`,
     fields: 'files(id, name)',
     orderBy: 'name',
   });
