@@ -37,3 +37,6 @@ pnpm-debug.log*
 # receipt extraction
 scripts/input/
 scripts/service-account-key.json
+
+# claude local settings (may contain sensitive permission history)
+.claude/settings.local.json
