@@ -3,6 +3,9 @@ title: Regular Inspection
 description: |
   Maintenance focused on oil change
 ---
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Img1 from '../../../garage/renaissa250/_images/PXL_20260417_072437670.jpg';
 
 ## Problem
 
@@ -16,3 +19,5 @@ I want to make sure to do daily inspections from now on.
 Since there was some white smoke at high RPMs, I did a thorough cleaning with carburetor cleaner and engine flushing.  
 I also cleaned the spark plugs and changed the oil.  
 Since I've done what I can for now, I decided to wait and see.
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="エンジン周り" />

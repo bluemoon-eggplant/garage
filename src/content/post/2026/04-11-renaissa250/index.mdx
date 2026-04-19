@@ -4,6 +4,11 @@ description: |
   オイル交換を中心とした整備を実施
 ---
 
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/renaissa250/_images/PXL_20260417_072437670.jpg';
+
 ## 問題
 
 エキゾーストパイプボルトが一本脱落していた。  
@@ -16,3 +21,5 @@ description: |
 高回転で若干白煙が出ていたので、キャブクリーナー+エンジンフラッシングで徹底洗浄。  
 プラグも清掃し、オイルも交換。  
 一旦できうる洗浄はしたので、様子見することに。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="エンジン周り" />
