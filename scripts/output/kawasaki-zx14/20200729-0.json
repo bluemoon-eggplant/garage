@@ -1,0 +1,25 @@
+{
+  "source": "input/kawasaki-zx14/Screenshot_20260416-210750.png",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2020/07/29",
+    "totalAmount": 38742,
+    "items": [
+      {
+        "description": "一般整備作業 2輪",
+        "amount": null
+      },
+      {
+        "description": "カワサキ純正キャクチュウ 150",
+        "amount": null
+      },
+      {
+        "description": "カワサキ純正キャクチュウ 70",
+        "amount": null
+      }
+    ],
+    "mileage": null,
+    "shop": "和光2りんかん"
+  },
+  "reviewStatus": "pending"
+}

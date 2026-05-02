@@ -80,6 +80,7 @@ export const ja = {
   'maintenance.drivetrain': '駆動系',
   'maintenance.interior': '内外装',
   'maintenance.bodywork': '板金',
+  'maintenance.electrical': '電装系',
   'maintenance.other': 'その他',
 
   // garage

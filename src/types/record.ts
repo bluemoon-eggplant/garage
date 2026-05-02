@@ -19,6 +19,7 @@ export type MaintenanceCategory =
   | 'drivetrain'
   | 'interior'
   | 'bodywork'
+  | 'electrical'
   | 'other';
 
 export type ConsumableTag =

@@ -82,6 +82,7 @@ export const en: Record<TranslationKey, string> = {
   'maintenance.drivetrain': 'Drivetrain',
   'maintenance.interior': 'Interior/Exterior',
   'maintenance.bodywork': 'Body & Paint',
+  'maintenance.electrical': 'Electrical',
   'maintenance.other': 'Other Maintenance',
 
   // garage

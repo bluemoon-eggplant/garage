@@ -1,0 +1,33 @@
+{
+  "source": "input/yamaha-renaissa/スキャン_20260321-2256_1.pdf",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2024/07/27",
+    "totalAmount": 2500,
+    "items": [
+      {
+        "description": "10W-40 1L ヤマループ スタンダードプラス",
+        "amount": null
+      },
+      {
+        "description": "プラグドレーン 4HC153510000",
+        "amount": null
+      },
+      {
+        "description": "KIT Oリング 33.5×3.5 70-967-30050 OY-05",
+        "amount": null
+      },
+      {
+        "description": "コウシンオイル エレメ2 コウチン",
+        "amount": 900
+      },
+      {
+        "description": "スルーた取りル キャンプー",
+        "amount": 1600
+      }
+    ],
+    "mileage": 4790.14,
+    "shop": "株式会社2りんかんイエローハット 藤岡2りんかん"
+  },
+  "reviewStatus": "pending"
+}

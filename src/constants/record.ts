@@ -25,6 +25,7 @@ export const MAINTENANCE_CATEGORIES: Record<MaintenanceCategory, string> = {
   drivetrain: '駆動系',
   interior: '内外装',
   bodywork: '板金',
+  electrical: '電装系',
   other: 'その他',
 };
 
@@ -39,6 +40,7 @@ export const MAINTENANCE_TAG_COLORS: Record<MaintenanceCategory, string> = {
   drivetrain: 'bg-lime-100 text-lime-800 dark:bg-lime-900/50 dark:text-lime-200',
   interior: 'bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900/50 dark:text-fuchsia-200',
   bodywork: 'bg-pink-100 text-pink-800 dark:bg-pink-900/50 dark:text-pink-200',
+  electrical: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200',
   other: 'bg-gray-100 text-gray-800 dark:bg-gray-700/50 dark:text-gray-200',
 };
 
@@ -53,6 +55,7 @@ export const MAINTENANCE_CATEGORY_EN: Record<MaintenanceCategory, string> = {
   drivetrain: 'Drivetrain',
   interior: 'Interior/Exterior',
   bodywork: 'Body & Paint',
+  electrical: 'Electrical',
   other: 'Other',
 };
 
@@ -91,14 +94,14 @@ export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
   ],
   cooling: [
     'ラジエーター', 'ラジエター', 'サーモスタット', 'ウォーターポンプ',
-    '冷却ホース', '冷却系', 'ヒーター', 'エアセパレートタンク',
+    '冷却ホース', '冷却系', 'ヒーターホース', 'ヒーターコア', 'エアセパレートタンク',
   ],
   interior: [
     'シフトレバー', 'シフトブーツ', 'グローブボックス',
     'キーシリンダー', 'オーディオ', '張替', 'カウル', 'フード', 'レギュレターチャンネル', 'シーリング',
     'マッド', 'サイドブレーキブーツ', 'チェンジレバーブーツ', 'チェンジレバーノブ', 'カセットデッキ',
     'シガーライター', 'アッシュトレー', '灰皿', 'ガラス交換', 'ドア交換', 'バイザー', 'MINI LIFE', 'ドアインナー', 'ドアハンドル', 'レギュレターハンドル',
-    'シフトノブ', 'エンブレム', 'ホイールナット', 'スティールホイール', 'テールランプ', 'ウインカーランプ', 'パークランプ', 'ハンドル3点セット', 'バックミラー', 'フォークガード', 'グリップ', '小物入れ', 'パワーウインド', 'ラゲッジマット',
+    'シフトノブ', 'エンブレム', 'ホイールナット', 'スティールホイール', 'テールランプ', 'ウインカーランプ', 'パークランプ', 'ハンドル3点セット', 'バックミラー', 'フォークガード', 'グリップ', '小物入れ', 'ラゲッジマット',
     'モールディング', 'Fモール', 'メッキモール', 'ベルトライン', 'ガーニッシュ', 'ガラス・テン・チャンネル', 'ドライブレコーダー', 'フロアマット', 'コーナーパネル', 'リペア', 'トノカバー', '幌カバー',
   ],
   bodywork: [
@@ -118,6 +121,12 @@ export const CLASSIFICATION_KEYWORDS: Record<string, string[]> = {
     'クラッチ', 'ミッション', 'トランスミッション', 'デフ', 'ドライブシャフト',
     'プロペラシャフト', 'タイミングチェーン', 'ドライブチェーン', 'スプロケット',
     'フライホイール',
+  ],
+  electrical: [
+    'パワーウインド', 'ヒータースイッチ',
+    'リレー', 'ダイオード', 'ヒューズ', 'フューズ',
+    '配線', 'ハーネス', 'ACモジュール',
+    'スイッチ',
   ],
 };
 

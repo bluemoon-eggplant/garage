@@ -1,0 +1,109 @@
+{
+  "source": "input/rover-mini/スキャン_20260503-0010.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2026/05/02",
+    "totalAmount": 320573,
+    "items": [
+      {
+        "description": "車検基本点検、見積、申請、更新、代行費用",
+        "amount": 72000
+      },
+      {
+        "description": "アルミホイールJWLマーク未確認によりタイヤホイール改善",
+        "amount": 1000
+      },
+      {
+        "description": "ブレーキランプ点灯したまま消灯せず ブレーキランプスイッチ交換 調整",
+        "amount": 7320
+      },
+      {
+        "description": "ACモジュールリレー内部のダイオード交換",
+        "amount": 30500
+      },
+      {
+        "description": "ヒーター弱風不良 ヒータースイッチ交換",
+        "amount": 4630
+      },
+      {
+        "description": "（ヤフオク）クラシックミニ MK-3 ハンドル3点セット 未使用品×1",
+        "amount": 17250
+      },
+      {
+        "description": "ドアハンドル3点セット交換(ご支給品)",
+        "amount": 18000
+      },
+      {
+        "description": "左右 ドアハンドルガスケット 大 小",
+        "amount": 1360
+      },
+      {
+        "description": "左右 タイロッド がたつきあり",
+        "amount": 35500
+      },
+      {
+        "description": "ステアリングラックブッシュ",
+        "amount": 1900
+      },
+      {
+        "description": "左右 ステアリングラックブーツ 同時交換",
+        "amount": 4800
+      },
+      {
+        "description": "フロントサスペンション アライメント調整 ステアリングセンター出し調整",
+        "amount": 6000
+      },
+      {
+        "description": "グリス汚れ洗浄 パーツクリーナー",
+        "amount": 1200
+      },
+      {
+        "description": "グリスアップ 各部給油 右側ボールジョイントややがたつきあり",
+        "amount": 1500
+      },
+      {
+        "description": "エボンバー強化タイプ テンションロッドブッシュ",
+        "amount": 17500
+      },
+      {
+        "description": "ボルトナット",
+        "amount": 2400
+      },
+      {
+        "description": "左右 フロントサブフレーム 前側マウント 亀裂あり",
+        "amount": 19960
+      },
+      {
+        "description": "左右 メッキワイパーアームがたつき あり",
+        "amount": 5760
+      },
+      {
+        "description": "消費税 (作業内容明細)",
+        "amount": 23133
+      },
+      {
+        "description": "自賠責保険 25ヶ月分",
+        "amount": 18160
+      },
+      {
+        "description": "重量税 24ヶ月分",
+        "amount": 25200
+      },
+      {
+        "description": "印紙代",
+        "amount": 2500
+      },
+      {
+        "description": "テスター代",
+        "amount": 2000
+      },
+      {
+        "description": "代書代",
+        "amount": 1000
+      }
+    ],
+    "mileage": 29633,
+    "shop": "TURTLE TRADING LTD"
+  },
+  "reviewStatus": "pending"
+}

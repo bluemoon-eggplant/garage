@@ -1,0 +1,18 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2026/04/27",
+    "totalAmount": 0,
+    "tasks": [
+      "キャブレター同調確認",
+      "プラグ清掃",
+      "パイロットスクリュー調整（全閉から約1.375戻し）",
+      "アイドリング調整"
+    ],
+    "items": [],
+    "mileage": 33335,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}
