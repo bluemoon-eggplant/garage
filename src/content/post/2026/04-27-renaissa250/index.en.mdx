@@ -1,0 +1,44 @@
+---
+title: Fuel Mixture Tuning
+description: |
+  As temperatures started getting warmer, I tried to adjust the settings, but...
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/renaissa250/_images/PXL_20260425_133832199.jpg';
+import Img2 from '../../../garage/renaissa250/_images/PXL_20260427_233708061.jpg';
+
+## Background
+
+I had set the fuel mixture rich so that it would start on the first try even in winter without using the choke.  
+However, restarting after running would sometimes be difficult.  
+In particular, starting in the scorching summer heat of the garage was quite poor.  
+So, for the first time since doing a carburetor overhaul a year ago, I decided to change the settings.
+
+## The Problem
+
+A problem I had noticed even during the carburetor overhaul, but I confirmed again that I couldn't properly adjust the pilot screw that controls idling.  
+Apparently, adjusting the pilot screw should change the idle RPM, and you determine the screw opening based on those changes up and down, but no matter how much I adjust it, the idle remains unchanged.  
+I suspect that since I installed a brand new float as-is, the fuel level is too high, and so much fuel is being supplied that the pilot screw adjustment has no effect.  
+However, adjusting this is difficult because keeping the bike level is challenging, and more importantly, adjusting the float with the bike installed is too much work, so if I do it, I want to remove the carburetor first.  
+At that time, I also want to service the fuel petcock area on the tank. (It seems like gasoline is seeping out somehow)
+
+## Temporary Settings for Now
+
+Synchronization is fine, not out of balance.
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="Checking carburetor synchronization with a vacuum gauge" />
+
+The idle was a bit low, so I adjusted it to 1,300 RPM as specified in the service manual.
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="Checking idle RPM" />
+
+As for the all-important pilot screw:
+
+* Fully closed: Engine won't start
+* 1.25 turns out: Engine won't start, but there is an initial pop
+
+Based on this, and judging that the service manual spec of 1.5 turns out is too rich, I decided to split the difference and try 1.375 turns out to see how it goes.  
+The goal is one-touch starting anytime! But I wonder how close I can get to that.
