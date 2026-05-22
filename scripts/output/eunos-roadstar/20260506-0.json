@@ -1,0 +1,13 @@
+{
+  "source": "",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2026/05/06",
+    "totalAmount": 0,
+    "items": [],
+    "mileage": null,
+    "shop": "",
+    "tasks": ["STEP0 エンジン圧縮測定"]
+  },
+  "reviewStatus": "pending"
+}

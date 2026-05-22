@@ -7,6 +7,8 @@ import { randomizeArray } from '@/utils/objects';
 import { cn } from '@/utils/styles';
 import { getFilenameWithoutExtension } from '@/utils/paths';
 import { useTranslations } from '@/i18n';
+import { localizedPath } from '@/utils/i18n';
+import { ROUTES } from '@/constants/routes';
 
 import type { ImageProps } from '@/types/common';
 import type { ImageMetadata } from 'astro';
@@ -48,7 +50,7 @@ const buildImageMap = (): Record<string, string> => {
     // Slug is the directory name right before index.mdx (no year prefix)
     const parts = mdxPath.split('/');
     const slug = parts[parts.length - 2];
-    const blogUrl = `/blog/${slug}`;
+    const blogUrl = localizedPath(Astro.currentLocale, `${ROUTES.BLOG}${slug}`);
 
     let match;
     while ((match = importRegex.exec(raw)) !== null) {

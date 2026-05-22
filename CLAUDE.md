@@ -27,7 +27,7 @@ import Img1 from '../../../garage/<slug>/_images/<filename>.jpg';
 
 - Drive構成: `blog-photos/<slug>/` (DRIVE_PHOTOS_FOLDER_ID)
 - ダウンロード先: `src/content/garage/<slug>/_images/`
-- 有効スラッグ: fd3s, roadstar, mini, caterham7, zx14, renaissa250, maxam
+- 有効スラッグ: fd3s, roadstar, mini, caterham7, zx14, renaissa250, maxam, birel
 - リマップ: Drive `zzr1400` → local `zx14`
 
 ## レシートPDFの取り込み
@@ -42,7 +42,7 @@ npx tsx scripts/download-from-drive.ts
 npx tsx scripts/extract-receipts.ts
 ```
 
-- カテゴリ: mazda-rx7, eunos-roadstar, rover-mini, caterham-7, kawasaki-zx14, yamaha-renaissa, yamaha-maxam
+- カテゴリ: mazda-rx7, eunos-roadstar, rover-mini, caterham-7, kawasaki-zx14, yamaha-renaissa, yamaha-maxam, birel-racingkart
 - 取り込み後に重複確認を推奨（同日の -0 と -1 が同内容の場合あり）
 
 ## 画像リサイズ

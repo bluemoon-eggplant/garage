@@ -62,6 +62,11 @@ export const CATEGORIES = [
     label: 'Yamaha MAXAM',
     icon: 'mdi:motorbike',
   },
+  {
+    name: 'birel-racingkart',
+    label: 'BIREL Racing Kart',
+    icon: 'mdi:car-side',
+  },
 ] as const;
 
 /** Garage directory slug → record/post category name */
@@ -73,6 +78,7 @@ export const GARAGE_SLUG_TO_CATEGORY: Record<string, string> = {
   zx14: 'kawasaki-zx14',
   renaissa250: 'yamaha-renaissa',
   maxam: 'yamaha-maxam',
+  birel: 'birel-racingkart',
 };
 
 // use imported images here

@@ -1,0 +1,73 @@
+---
+title: STEP0 エンジン圧縮測定
+description: |
+  レストアにあたって現状を知る
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260506_122845372.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260506_123021880.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260506_123136265.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260506_123301272.jpg';
+
+## 背景
+
+これからエンジンオーバーホールとか全塗装とかやっていく予定だが、レストア前の状態を知るために測定をしてみた。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | プラグコード脱着 | <Difficulty level={2} /> | なかなか抜けない |
+| 2 | スパークプラグ脱着 | <Difficulty level={1} /> | |
+| 3 | イグニッションスイッチカプラー脱着 | <Difficulty level={1} /> | |
+| 4 | コンプレッションテスターをプラグ穴に装着 | <Difficulty level={1} /> | |
+| 5 | クランキングして測定 | <Difficulty level={1} /> | |
+
+## 振り返り
+
+購入したコンプレッションテスターはネジ穴締め込み式だったが、どのくらい閉めればいいのかちょっとわからなかった。
+でもよく考えたら手で押し込んで想定するアバウトなやつもあるので、きっとアバウトでよいのだろう。
+
+## 測定結果
+
+エンジン圧縮なんてエンジンかかってちゃんと走れば関係ない、と誰かが言ってた気もします。  
+オーバーホール後数値が改善するのが楽しみです。
+
+### 全体的に圧縮低い
+
+整備書記載の既定値は13.5bar。（下限は9.5）  
+実測は約12~12.5barで、全体的に低い。  
+ノンオーバーホール（おそらく）で、30万キロも走るとこうなりますよね、ということかな。
+
+### 気筒ごとのばらつきは既定値範囲内
+
+整備書記載の既定値は2以内。  
+ここは問題なし。
+
+### 1番手前
+
+約12bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="" />
+
+### 2番目
+
+約12.5bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="" />
+
+### 3番目
+
+約12bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="" />
+
+### 4番目
+
+約12.25bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="" />

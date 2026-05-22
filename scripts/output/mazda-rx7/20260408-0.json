@@ -1,0 +1,17 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260517-2128.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/05/03",
+    "totalAmount": 66000,
+    "items": [
+      {
+        "description": "ダッシュボードの修理代",
+        "amount": 60000
+      }
+    ],
+    "mileage": null,
+    "shop": "トータルリペアNINE"
+  },
+  "reviewStatus": "pending"
+}

@@ -46,6 +46,7 @@ const VALID_CATEGORIES = [
   'kawasaki-zx14',
   'yamaha-renaissa',
   'yamaha-maxam',
+  'birel-racingkart',
 ];
 
 const SCRIPTS_DIR = path.dirname(new URL(import.meta.url).pathname);

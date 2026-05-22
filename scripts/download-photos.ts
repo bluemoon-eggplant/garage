@@ -36,6 +36,7 @@ const VALID_SLUGS = [
   'zx14',
   'renaissa250',
   'maxam',
+  'birel',
 ];
 
 /** Drive folder name → local garage slug (when they differ) */

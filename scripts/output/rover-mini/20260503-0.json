@@ -1,0 +1,33 @@
+{
+  "source": "input/rover-mini/スキャン_20260507-0934.pdf",
+  "category": "rover-mini",
+  "data": {
+    "date": "2026/05/03",
+    "totalAmount": 43984,
+    "items": [
+      {
+        "description": "（Yahooショッピング）ブリヂストン ブリザック VRX3 145/70R12 69Q スタッドレスタイヤ 4本セット",
+        "amount": 29574
+      },
+      {
+        "description": "タイヤ交換",
+        "amount": 10000
+      },
+      {
+        "description": "エアーバルブ(ストレート)",
+        "amount": 1600
+      },
+      {
+        "description": "廃タイヤ処分費用",
+        "amount": 2000
+      },
+      {
+        "description": "リピート割引",
+        "amount": -500
+      }
+    ],
+    "mileage": null,
+    "shop": "AT-1群馬自動車販売"
+  },
+  "reviewStatus": "pending"
+}

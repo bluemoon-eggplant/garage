@@ -1,0 +1,25 @@
+{
+  "source": "input/caterham-7/スキャン_20260517-2130.pdf",
+  "category": "caterham-7",
+  "data": {
+    "date": "2026/05/09",
+    "totalAmount": 63250,
+    "items": [
+      {
+        "description": "ブレーキ効き悪い修理",
+        "amount": 45000
+      },
+      {
+        "description": "マスターシリンダー脱着O/H リペアキット交換",
+        "amount": 7500
+      },
+      {
+        "description": "ブレーキフルード",
+        "amount": 5000
+      }
+    ],
+    "mileage": 48133,
+    "shop": "有限会社ケントスピード"
+  },
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,22 @@
+---
+interface Props {
+  level: number;
+}
+
+const { level } = Astro.props;
+const clamped = Math.max(1, Math.min(5, level));
+
+const colors: Record<number, string> = {
+  1: 'text-emerald-500',
+  2: 'text-lime-500',
+  3: 'text-amber-500',
+  4: 'text-orange-500',
+  5: 'text-red-500',
+};
+
+const colorClass = colors[clamped];
+const filled = '★'.repeat(clamped);
+const empty = '☆'.repeat(5 - clamped);
+---
+
+<span class="whitespace-nowrap"><span class={colorClass}>{filled}</span><span class="text-gray-300 dark:text-gray-600">{empty}</span></span>

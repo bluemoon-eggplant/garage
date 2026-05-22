@@ -1,0 +1,73 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260517-2129.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/04/28",
+    "totalAmount": 160166,
+    "items": [
+      {
+        "description": "ボンネット 脱着工賃",
+        "amount": 2700
+      },
+      {
+        "description": "ボンネット 鈑金工賃",
+        "amount": 9000
+      },
+      {
+        "description": "リヤバンパ(塗装に含む) 脱着工賃",
+        "amount": 17550
+      },
+      {
+        "description": "産業廃棄物処理代",
+        "amount": 100
+      },
+      {
+        "description": "塗装一式 工賃",
+        "amount": 72900
+      },
+      {
+        "description": "リヤー マスコット 取替部品",
+        "amount": 5555
+      },
+      {
+        "description": "カーネームーリヤーオーナメント 取替部品",
+        "amount": 2930
+      },
+      {
+        "description": "ショートパーツ",
+        "amount": 1500
+      },
+      {
+        "description": "鈑金材料費",
+        "amount": 2000
+      },
+      {
+        "description": "その他部品",
+        "amount": 5555
+      },
+      {
+        "description": "塗装一式 材料費",
+        "amount": 21900
+      },
+      {
+        "description": "特別値引",
+        "amount": -162
+      },
+      {
+        "description": "特別値引",
+        "amount": -619
+      },
+      {
+        "description": "消費税",
+        "amount": 14091
+      },
+      {
+        "description": "（モノタロウ）ノズル(L)ウォッシャー FD01-67-510 03*2",
+        "amount": 5166
+      }
+    ],
+    "mileage": 100840,
+    "shop": "株式会社峰岸自動車"
+  },
+  "reviewStatus": "pending"
+}
