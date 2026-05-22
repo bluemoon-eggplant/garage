@@ -1,0 +1,73 @@
+---
+title: STEP0 Compression Test
+description: |
+  Checking the current state before restoration
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260506_122845372.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260506_123021880.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260506_123136265.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260506_123301272.jpg';
+
+## Background
+
+Planning to do an engine overhaul and full repaint going forward, so I wanted to measure the baseline condition before the restoration.
+
+## Procedure
+
+| no | Task | Difficulty | Notes |
+|----|------|------------|-------|
+| 1 | Remove plug cords | <Difficulty level={2} /> | Hard to pull out |
+| 2 | Remove spark plugs | <Difficulty level={1} /> | |
+| 3 | Disconnect ignition switch coupler | <Difficulty level={1} /> | |
+| 4 | Install compression tester in plug hole | <Difficulty level={1} /> | |
+| 5 | Crank and measure | <Difficulty level={1} /> | |
+
+## Reflections
+
+The compression tester I bought was the screw-in type, and I wasn't sure how tight to thread it in.
+Then again, there are push-and-hold types that are pretty rough, so it's probably fine to be approximate.
+
+## Results
+
+Someone once said compression doesn't matter as long as the engine runs and drives fine.
+Looking forward to seeing improvement after the overhaul.
+
+### Overall compression is low
+
+Workshop manual spec: 13.5 bar (lower limit 9.5).
+Measured approximately 12–12.5 bar — low overall.
+After 300,000 km with (probably) no overhaul, this is expected.
+
+### Cylinder-to-cylinder variation is within spec
+
+Workshop manual spec: within 2 bar.
+No issues here.
+
+### Cylinder 1 (front)
+
+~12 bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="" />
+
+### Cylinder 2
+
+~12.5 bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="" />
+
+### Cylinder 3
+
+~12 bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="" />
+
+### Cylinder 4
+
+~12.25 bar
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="" />
