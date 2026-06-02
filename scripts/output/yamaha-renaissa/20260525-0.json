@@ -1,0 +1,15 @@
+{
+  "source": "manual",
+  "category": "yamaha-renaissa",
+  "data": {
+    "date": "2026/05/25",
+    "totalAmount": 0,
+    "tasks": [
+      "エキゾーストパイプ連結ボルト脱落の対応"
+    ],
+    "items": [],
+    "mileage": 33440,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

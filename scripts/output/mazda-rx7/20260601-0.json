@@ -1,0 +1,24 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/06/01",
+    "totalAmount": 23211,
+    "tasks": [
+      "ボンネットインシュレーター交換"
+    ],
+    "items": [
+      {
+        "description": "FD0168601C インシュレーター,ボンネット * 1",
+        "amount": 21209
+      },
+      {
+        "description": "GA2A56694 ファスナー,ボンネット * 13",
+        "amount": 2002
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

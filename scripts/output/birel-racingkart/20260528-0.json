@@ -1,0 +1,15 @@
+{
+  "source": "manual",
+  "category": "birel-racingkart",
+  "data": {
+    "date": "2026/05/28",
+    "totalAmount": 0,
+    "tasks": [
+      "前後タイヤとハブを脱着"
+    ],
+    "items": [],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}
