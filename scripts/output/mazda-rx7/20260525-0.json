@@ -1,0 +1,77 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260606-2238.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/05/25",
+    "totalAmount": 37015,
+    "items": [
+      {
+        "description": "電解コンデンサ (10 箇所)",
+        "amount": null
+      },
+      {
+        "description": "単層セラミックコンデンサ",
+        "amount": null
+      },
+      {
+        "description": "酸化バリスタ",
+        "amount": null
+      },
+      {
+        "description": "ダイオード",
+        "amount": null
+      },
+      {
+        "description": "IC・トランジスタ",
+        "amount": null
+      },
+      {
+        "description": "その他部品",
+        "amount": null
+      },
+      {
+        "description": "漏出電解液清掃",
+        "amount": null
+      },
+      {
+        "description": "はんだ修正",
+        "amount": null
+      },
+      {
+        "description": "品質試験実施",
+        "amount": null
+      },
+      {
+        "description": "断線補修",
+        "amount": null
+      },
+      {
+        "description": "防湿・絶縁コーティング",
+        "amount": null
+      },
+      {
+        "description": "実車試験合格",
+        "amount": null
+      },
+      {
+        "description": "修理代金",
+        "amount": 36300
+      },
+      {
+        "description": "作業/OP追加料金",
+        "amount": 0
+      },
+      {
+        "description": "納期短縮OP料金",
+        "amount": 0
+      },
+      {
+        "description": "運賃",
+        "amount": 715
+      }
+    ],
+    "mileage": null,
+    "shop": "キャニー株式会社"
+  },
+  "reviewStatus": "pending"
+}

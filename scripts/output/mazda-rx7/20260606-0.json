@@ -1,0 +1,31 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/06/06",
+    "totalAmount": 95174,
+    "tasks": [
+      "TWSユニット脱着・装着",
+      "シートカバー装着",
+      "メーターフード交換",
+      "メーターガラス交換"
+    ],
+    "items": [
+      {
+        "description": "（Y!ショッピング）Artina アルティナ スポーツシートカバーFD3S・RX-7 フロント2脚 運転席・助手席セット * 1",
+        "amount": 31440
+      },
+      {
+        "description": "（マツダで購入）F13255420B メーターフード * 1",
+        "amount": 47256
+      },
+      {
+        "description": "（モノタロウ）MAZDA(マツダ) ガラス ワーニングユニット フロント (FD) FD01-55-447A FD0155447A * 1",
+        "amount": 16478
+      }
+    ],
+    "mileage": 101094,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

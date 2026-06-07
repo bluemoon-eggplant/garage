@@ -1,0 +1,20 @@
+{
+  "source": "manual",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/06/07",
+    "totalAmount": 1320,
+    "tasks": [
+      "ヒューズボックスシール張替え"
+    ],
+    "items": [
+      {
+        "description": "（楽天）ＲＸ－７　ＦＤ３Ｓ　５型　６型用　ヒューズＢＯＸシールセット * 1",
+        "amount": 1320
+      }
+    ],
+    "mileage": 101094,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}
