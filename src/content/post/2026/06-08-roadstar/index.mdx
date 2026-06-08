@@ -1,0 +1,73 @@
+---
+title: STEP3 高トルクボルト初期緩め
+description: |
+  安全を期するための準備作業
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260607_101335773.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260607_230614158.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260607_232810257.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260607_233215804.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260607_233324823.jpg';
+import Img6 from '../../../garage/roadstar/_images/PXL_20260607_233331600.jpg';
+import Img7 from '../../../garage/roadstar/_images/PXL_20260608_004558466.jpg';
+
+## 背景
+
+高くジャッキアップする前に、高トルクボルトを緩めておく。  
+車体が挙がってる状態で力を入れて車体が動くリスクをできるだけ減らすため。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | PF（パワープラントフレーム）長ボルト | <Difficulty level={1} /> | |
+| 2 | 触媒とフロントパイプの接続ナット | <Difficulty level={1} /> | |
+| 3 | リアハブセンターナット | <Difficulty level={2} /> | インパクト必須 |
+| 4 | フロントパイプとエキゾーストパイプの接続ナット | <Difficulty level={2} /> | アクセス困難|
+
+
+## PPF（パワープラントフレーム）長ボルト
+
+デフ側、ミッション側を繋いで剛性を出す的な役割のマツダ特有のPPF。  
+これの締結ボルトを緩める。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="足回りボルト" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img6} alt="ミッション付近" />
+
+## 触媒とフロントパイプの接続ナット
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="スタッドボルト" />
+
+「ロードスターメンテナンスブック」いわく、触媒とマフラーは一緒に降ろせるらしいので、フロントパイプとの接続だけ緩める。  
+
+## リアハブセンターナット
+
+このナットはカシメてあるので、カシメを起こす必要がある。  
+マイナスドライバーでいけるという記事もあるが、ちょっとやってみても行ける気がしない。  
+大人しく専用工具を購入、したが、カシメ起こし用の穴に工具が入らない。  
+というわけで人生で初めて工具加工しました。  
+ディスクグラインダーで先端を細く削る。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="ディスクグラインダー" />
+
+穴に入るサイズになったら、ハンマーでぶっ叩くとカシメが起きた。専用工具すごい。（毎回思う）  
+あとはナットを緩めるだけ、なんだが、これがめちゃくちゃ硬い。  
+インパクトでかなりの打撃を与えてようやく緩んだ。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img7} alt="リアハブセンターナット" />
+
+## フロントパイプとエキゾーストパイプの接続ナット
+
+排気系のナットは固着していることが多いので、ここも緩めておく。  
+ただしスペースが狭く、ホイールを外さないとまずアクセスできない。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="足回り" />
+
+ミッションハウジング脱着決戦兵器として買った、60cmエクステンションとユニバーサルジョイントで緩めることができた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="ブレーカーバー" />
