@@ -1,0 +1,69 @@
+---
+title: STEP5 鬼門のPPF脱着
+description: |
+  案の定大苦戦
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img0 from '../../../garage/roadstar/_images/PXL_20260610_145529872.jpg';
+import Img1 from '../../../garage/roadstar/_images/PXL_20260611_001103628.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260611_132407355.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260611_132427335.MP.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260611_132431930.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260611_132446939.jpg';
+
+## 背景
+
+ミッション脱着にはミッションとデフを繋いでいるPPF（パワープラントフレーム）を外す必要がある。  
+事前調査だとかなりの苦戦を強いられるとのことだったが、噂通り、かなり苦戦した。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | PPFボルト取り外し | <Difficulty level={1} /> | STEP3で緩め済み |
+| 2 | アルミカラー抜きチャレンジ | <Difficulty level={5} /> | |
+| 3 | PPF取り外し | <Difficulty level={5} /> | |
+
+### ハイジャッキアップ
+
+高難易度作業にあたって、作業性を上げるためにハイジャッキアップ。  
+レストア前に作っておいた木製の土台+ウマ。  
+土台は3段積み構成。  
+これはツーバイフォー材を並べて上からOSB合板を被せてビス止めしたもの。  
+さらにズレ防止のために、全ての角にツーバイ用のL字金具を取り付けている。  
+これを4輪分作り、さらに、ジャッキ用の土台も作った。  
+ウマの段数は悩んだが、3段以上上げると安定性が落ちそうで怖かったので2段目で妥協。  
+なお、前輪はホイールとロアアームをラッシングベルト*2で固定し、仮にフロントが落ちても転がりを防ぎ、被害が最小限になるようにしている。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img0} alt="リジッドラック4点支持" />
+
+### PPFボルト取り外し
+
+ミッション側3本、デフ側2本のボルトを外す。  
+アース線もPPFに固定されているので外そうとしたが、ボルト折れ・・・  
+細いボルトなので注意を払うべきだった。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="PPFボルト" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="PPF詳細" />
+
+新しい穴を空けて、ボルトナット方式に変更予定。
+
+## アルミカラー抜きチャレンジ
+
+これがかなりきつかった。  
+カラーの根本には浅い溝が入ってて、そこにマイナスドライバーとかを引っ掛けて抜こうとするもびくともしない。  
+PPF脱着後観察してみたが、固着がひどい。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="PPFブッシュ" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="PPFブッシュ" />
+
+## PPF取り外し
+
+結局、PPFをねじっていたら外れた。  
+正しい方法がわからずじまいでもやもやが残る。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="PPF" />

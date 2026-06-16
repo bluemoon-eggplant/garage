@@ -1,0 +1,39 @@
+---
+title: STEP6 プロペラシャフト脱着
+description: |
+  ボルトさえ緩められれば、抜くだけ
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img2 from '../../../garage/roadstar/_images/PXL_20260611_230417686~2.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260612_020955962.jpg';
+
+## 背景
+
+ミッションを降ろすために、プロペラシャフトを先に外す。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | ミッションオイル抜き | <Difficulty level={1} /> | |
+| 2 | プロペラシャフト取り外し | <Difficulty level={1} /> | STEP3で緩め済み |
+
+## ミッションオイル抜き
+
+トランスミッションのドレンボルトを外してオイルを抜く。  
+本来はオイルを入れるフィラーボルトを先に緩めるべきらしいが、このボルトが四角い形状のため、不利な体勢でちゃんと緩められる自信がなく、ミッション脱着後に行うことにした。  
+ミッションオイルなんて抜くのが初めてなので、状態はよくわからないが、ボルトには結構鉄粉が付いていた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="ミッションオイル" />
+
+## プロペラシャフト取り外し
+
+ボルトを抜いて、ミッション後端に刺さっているシャフトを抜くだけ。  
+ジョイント部は割としっかりしてた。  
+事前調べだと、自重でジョイントより先が垂れ下がるようなぐにゃぐにゃ状態だとダメらしい。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="PPFとプロペラシャフト" />

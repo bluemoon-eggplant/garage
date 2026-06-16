@@ -1,0 +1,82 @@
+---
+title: STEP7 トランスミッション脱着
+description: |
+  これもまた難所と聞いている
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260612_114838396.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260612_115007222.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260612_142936416.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260612_145312878.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260612_151642774.MP.jpg';
+import Img6 from '../../../garage/roadstar/_images/PXL_20260612_151657446.jpg';
+import Img7 from '../../../garage/roadstar/_images/スクリーンショット 2026-06-14 001159.png';
+import Img8 from '../../../garage/roadstar/_images/スクリーンショット 2026-06-14 001331.png';
+
+## 背景
+
+排気系、プロペラシャフト、PPFを外したので、いよいよミッション本体を降ろす。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | ミッション支持 | <Difficulty level={2} /> | |
+| 2 | ミッションマウントボルト取り外し | <Difficulty level={4} /> | 工具とパワーが全てな気がしている |
+| 3 | 配線・カプラー類取り外し | <Difficulty level={3} /> | 初見殺し |
+| 4 | ミッション降ろし | <Difficulty level={2} /> | ミッションジャッキがないと、色々工夫しないといけない |
+
+## ミッション支持
+
+プロペラシャフトを抜くとミッションが下に傾くので、これを支持しておく。  
+色々外した車内から木片を噛まして吊り下げる。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="車内支持" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="ミッション吊り下げ" />
+
+## ミッションマウントボルト取り外し
+
+先にレリーズシリンダーの固定ボルトも外しておく。  
+ハウジング自体を固定しているボルトは合計11本。  
+恐ろしいレベルの狭いスペースに、この作業のためだけに買ったと言っても過言ではない60センチのエクステンションバーを突っ込んで、仰向けになった状態でレンチを回していく。  
+結構上部のボルトが外れない情報を聞いていたが、特に問題なく外れた。  
+なお、一部、ボルト+ナットで固定されている箇所があり、狭すぎて工具が入らず大苦戦した。  
+写真はもう何が何だかわからない絵になっているが、銀色のエクステンションバーが狭いスペースに突っ込まれている図である。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img7} alt="" />
+
+## 配線・カプラー類取り外し
+
+トランスミッションにはメインハーネス？から配線が繋がっており、これを外さないといけない。  
+白いカプラーが2つ、これはすぐにわかるので外すが、バックランプの配線なるものが全くわからない、というか目視不可能である。  
+スマホのカメラで撮ってみると、赤い配線が見える。  
+これはキボシ端子で繋がっているので、なんとか手探りで端子を引っ張って外す。  
+なお、手持ちの整備書類には「外す」としか書いてないが、もうちょっと親切に書いてほしい箇所である。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="配線" />
+
+## ミッション降ろし
+
+いよいとミッションを切り離す作業に。  
+切り離されたミッションは支えがないと落下するので、下からの支持を行う。
+写真はこれまた分かりづらいが、バイク上のジャッキで前を支え、フロアジャッキで後端を支えてみた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img8} alt="" />
+
+切り離し自体は意外とうまくいった。  
+大きめのマイナスドライバーをハウジングの出っ張りに引っ掛けたりして、てこの原理で外せた。  
+切り離しきったら、ジャッキダウンしてミッションを床に下ろす。  
+このとき、ミッションが横に転がり室内側から補充していたミッションオイルが床にこぼれてしまった。  
+転がり防止の工夫が必要だと感じた。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="クラッチ" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="ベルハウジング内部" />
+
+オイル漏れしていたこともあり、全体的に汚い。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img6} alt="ミッション" />
+

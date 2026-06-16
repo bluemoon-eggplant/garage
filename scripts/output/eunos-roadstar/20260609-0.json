@@ -2,12 +2,12 @@
   "source": "",
   "category": "eunos-roadstar",
   "data": {
-    "date": "2026/05/19",
+    "date": "2026/06/09",
     "totalAmount": 0,
     "items": [],
     "mileage": null,
     "shop": "DIY",
-    "tasks": ["STEP2 クランクシャフトボルト緩め"]
+    "tasks": ["STEP4 マフラー・触媒脱着"]
   },
-  "reviewStatus": "pending"
+  "reviewStatus": "approved"
 }
