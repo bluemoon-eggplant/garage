@@ -1,0 +1,59 @@
+---
+title: STEP12 ラジエーター、パワステポンプ脱着
+description: |
+  パワステフルードは先に抜いておくべき
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260623_002636616.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260623_002641372.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260623_002644904.jpg';
+
+
+## 背景
+
+エンジン脱着に向けた作業を進めていく。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | ラジエーター付属部品取り外し | <Difficulty level={2} /> | カプラーの取り外し次第 |
+| 2 | ファン脱着 | <Difficulty level={1} /> |  |
+| 3 | ラジエーター脱着 | <Difficulty level={1} /> |  |
+| 4 | パワステポンプ脱着 | <Difficulty level={1} /> | パワステフルードは先に抜いておくべき |
+
+## ラジエーター付属部品取り外し
+
+ロアホースはすんなり抜けた。  
+ファンに付いているカプラーは大苦戦。  
+助手席側はわかりやすい形状だったが、運転席側の外し方が全くわからなかった。  
+サイドロックだと思っていたらセンターロックだった。  
+カプラーの規格というか、外し方の情報にアクセスしやすくしてほしいと毎回思う。
+
+## ファン脱着
+
+脱着に苦戦したのは白い方のカプラー。  
+シュラウドが割れたりするらしいが、問題なし。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="電動ファン" />
+
+## ラジエーター脱着
+
+ラジエーターコアの状態が良いのは救い。  
+タンク樹脂の色も黒黒しており、問題なく使えそう。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="ラジエーター" />
+
+## パワステポンプ脱着
+
+ホース2点とセンサーを抜いて、ボルトを外して引っこ抜く。  
+これ自体は問題ないのだが、当然ホースを抜くとフルードが出てくる。  
+事前に抜いてなかったので車体下で受けた。  
+プーリーのガタもなく、状態は悪くなさそう。  
+もちろんフルードタンクもあるわけで、こんな油圧機構は電動化されて然るべきだとは思う。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="パワステポンプ" />

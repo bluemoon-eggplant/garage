@@ -1,0 +1,18 @@
+{
+  "source": "",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/06/27",
+    "totalAmount": 885,
+    "items": [
+      {
+        "description": "（Amazon）PATIKUL 圧縮ばね 0.3x2x5 mm スプリング 押しバネ 304ステンレス鋼 機械延長小バネ 工具 DIYプロジェクト 修理用 10個",
+        "amount": 885
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY",
+    "tasks": ["ウィンドウスイッチの修理"]
+  },
+  "reviewStatus": "approved"
+}

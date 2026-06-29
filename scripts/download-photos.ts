@@ -203,12 +203,20 @@ async function listImages(
   folderId: string
 ): Promise<DriveFile[]> {
   const mimeFilter = IMAGE_MIMETYPES.map((m) => `mimeType='${m}'`).join(' or ');
-  const res = await drive.files.list({
-    q: `'${folderId}' in parents and (${mimeFilter}) and trashed=false`,
-    fields: 'files(id, name)',
-    orderBy: 'name',
-  });
-  return (res.data.files || []) as DriveFile[];
+  const allFiles: DriveFile[] = [];
+  let pageToken: string | undefined;
+  do {
+    const res = await drive.files.list({
+      q: `'${folderId}' in parents and (${mimeFilter}) and trashed=false`,
+      fields: 'nextPageToken, files(id, name)',
+      orderBy: 'name',
+      pageSize: 1000,
+      pageToken,
+    });
+    allFiles.push(...((res.data.files || []) as DriveFile[]));
+    pageToken = res.data.nextPageToken ?? undefined;
+  } while (pageToken);
+  return allFiles;
 }
 
 function loadManifest(): Set<string> {

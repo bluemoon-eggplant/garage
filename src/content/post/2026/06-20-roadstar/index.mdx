@@ -1,0 +1,80 @@
+---
+title: STEP11 リアバンパー・テールランプ脱着
+description: |
+  フロントの状態の悪さを鑑み、リアもチェックする
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260619_142845919.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260619_142912236.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260620_222241810.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260620_222758780.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260621_005813635.jpg';
+import Img6 from '../../../garage/roadstar/_images/PXL_20260621_005825191.jpg';
+import Img7 from '../../../garage/roadstar/_images/PXL_20260621_005830699.jpg';
+import Img8 from '../../../garage/roadstar/_images/PXL_20260621_005853035.jpg';
+import Img9 from '../../../garage/roadstar/_images/PXL_20260621_005859729.jpg';
+
+
+## 背景
+
+フロントバンパー回りの部品が各所で破損していたので、リアもチェックして早めに必要な部品を洗い出したい。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | インナーフェンダー脱着 | <Difficulty level={1} /> | |
+| 2 | マットガード脱着 | <Difficulty level={2} /> |  |
+| 3 | バンパー脱着 | <Difficulty level={1} /> |  |
+| 4 | テールランプ脱着 | <Difficulty level={1} /> |  |
+| 5 | リアガーニッシュ脱着 | <Difficulty level={2} /> | 外し方をちゃんと知らないと破損する |
+
+
+## インナーフェンダー、マットガード脱着
+
+インナーフェンダーはビスやらボルトナットで固定されている。ここはすんなり。  
+問題はマットガード。  
+これもボルト + 受け側クリップナットで固定されているが、クリップ部分が樹脂のため、内部の六角ナットが空転。。。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="マッドガードのボルト折れ" />
+
+クリップ部分を破壊してナットを露出させ、取り外し。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="マッドガードのボルト" />
+
+## バンパー脱着
+
+リアバンパー自体は問題なし。  
+一度バンパーをガレージ内でヒットさせていたので内部の破損が心配だったが、問題なし。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="リアバンパー取り外し途中" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="リアバンパー取り外し後" />
+
+## テールランプ脱着
+
+テールランプも取り外し。車体側のガスケットはさすがにぼろぼろなので要交換。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img8} alt="テールランプ" />
+
+## リアガーニッシュ脱着
+
+この部品、ただのボルトナットやビスで止まってるのかと思ったら、クリップでも止まっており、これをちゃんと外さないと破損する。というかした。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img6} alt="リアバンパー全体" />
+
+もともと割れは確認しており、補修できるかなーと思っていたところだったのが交換を決意できた。（部品がめちゃくちゃ高いけど）
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img7} alt="リアバンパー割れ（正面）" />
+
+経年劣化とはいえ、もう触っただけですぐに割れそうな雰囲気がする。  
+補修してもまた割れそうである。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="リアバンパー割れ（横）" />
+
+購入すべき部品は把握できたのでOKとする。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img9} alt="リアパネル" />

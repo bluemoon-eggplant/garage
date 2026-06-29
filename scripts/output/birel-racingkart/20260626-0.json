@@ -1,0 +1,25 @@
+{
+  "source": "input/birel-racingkart/スキャン_20260628-2039.pdf",
+  "category": "birel-racingkart",
+  "data": {
+    "date": "2026/06/26",
+    "totalAmount": 7700,
+    "items": [
+      {
+        "description": "レーシングカート 100CC",
+        "amount": null
+      },
+      {
+        "description": "内径測定・ピストンサイズ選定",
+        "amount": 6000
+      },
+      {
+        "description": "発送料",
+        "amount": 1000
+      }
+    ],
+    "mileage": null,
+    "shop": "株式会社 井上ボーリング"
+  },
+  "reviewStatus": "approved"
+}
