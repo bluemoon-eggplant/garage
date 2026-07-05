@@ -2,12 +2,12 @@
   "source": "",
   "category": "eunos-roadstar",
   "data": {
-    "date": "2026/06/24",
+    "date": "2026/07/05",
     "totalAmount": 0,
     "items": [],
     "mileage": null,
     "shop": "DIY",
-    "tasks": ["STEP13 エンジンと車体の切り離し準備"]
+    "tasks": ["STEP15 エンジン脱着とエンジンスタンド装着準備"]
   },
   "reviewStatus": "approved"
 }
