@@ -1,0 +1,42 @@
+---
+title: STEP16 エンジンをスタンドに固定
+description: |
+  ぐっとオーバーホール感が出てきた
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260711_042450505.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260711_045729893.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260711_045737510.MP.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+エンジンオーバーホールに向けて、エンジンをスタンドに固定する。  
+ただ、エンジンの作業はちょっと先なのでしばらくはスタンドで保管。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | エンジンスタンドアダプター取り付け | <Difficulty level={2} /> | 取り付け用のボルト選定の難易度高し |
+| 2 | エンジンスタンドへの装着 | <Difficulty level={1} /> |  |
+
+## エンジンスタンドアダプター取り付け
+
+3点止のうち、下2点を9mmボルトで、上1点を11mmボルト（+ 2mmスペーサ）で固定する。  
+なお、アダプター内径とボルトの外形の差をホースで埋めた。  
+また、微調整用のワッシャは必須。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="" />
+
+## エンジンスタンドへの装着
+
+クレーンで持ち上げて微調整を繰り返し、ついに装着完了。  
+本当に3本のボルトで固定でいいのか、と不安になるが、整備書通りなので大丈夫。
+
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="" />
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="" />
