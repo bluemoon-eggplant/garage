@@ -1,0 +1,38 @@
+{
+  "source": "",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/07/17",
+    "totalAmount": 6394,
+    "items": [
+      {
+        "description": "（モノタロウ）フューズ (120A) (J0) J001-67-099 * 1",
+        "amount": 989
+      },
+      {
+        "description": "（モノタロウ）フューズ (30A) (T0) H115-67-099 * 3",
+        "amount": 1660
+      },
+      {
+        "description": "（モノタロウ）フューズ (40A) (H1) FB01-67-099 * 3",
+        "amount": 1452
+      },
+      {
+        "description": "（モノタロウ）(82821)コネクターカバー 82821-12190 * 1",
+        "amount": 732
+      },
+      {
+        "description": "（モノタロウ）(90982)バッテリー ターミナル 90982-05035 * 1",
+        "amount": 1384
+      },
+      {
+        "description": "（モノタロウ）(90179)ナット 90179-08204 * 1",
+        "amount": 177
+      }
+    ],
+    "mileage": 101094,
+    "shop": "DIY",
+    "tasks": ["ヒューズとバッテリーターミナル交換"]
+  },
+  "reviewStatus": "approved"
+}

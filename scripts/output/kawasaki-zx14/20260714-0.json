@@ -1,0 +1,18 @@
+{
+  "source": "",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2026/07/14",
+    "totalAmount": 4860,
+    "items": [
+      {
+        "description": "（Amazon）メガパワー バイクバッテリー MTX14-BS メンテナンスフリー (YTX14-BS / FTX14-BS) 互換品",
+        "amount": 4860
+      }
+    ],
+    "mileage": 37199,
+    "shop": "DIY",
+    "tasks": ["バッテリー交換（MEGA POWER MTX14-BS）"]
+  },
+  "reviewStatus": "approved"
+}
