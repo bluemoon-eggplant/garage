@@ -1,0 +1,71 @@
+---
+title: STEP20 ダッシュボード裏の部品脱着
+description: |
+  予想通り空調関連はスポンジが終わってる
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260725_040309006.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260725_040702380.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260725_040710936.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260725_053949155.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260725_040656675.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+ダッシュボードを外したので、主に空調ユニットを外していく
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | ヒーターユニットの取り外し | <Difficulty level={2} /> | ヒーターホース次第 |
+| 2 | ブロアユニットの取り外し | <Difficulty level={2} /> | エアコン配管次第 |
+| 3 | ステアリングシャフト取り外し | <Difficulty level={1} /> |  |
+| 4 | ECU取り外し | <Difficulty level={1} /> |  |
+| 5 | フロアカーペットの取り外し | <Difficulty level={1} /> |  |
+
+## ヒーターユニットの取り外し
+
+室内側からはナットを外すだけ。  
+ただ、エンジンルーム側はホースが伸びる。  
+エンジン脱着時に、ホース自体ははノコギリで切断済みなので、残骸をカッターで切って外した。  
+コアからの漏れなどはなかったが、スポンジが駄目になっている。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="取り外したヒーターユニット" />
+
+## エアコンユニットの取り外し
+
+これもエンジンルーム側のエアコン配管を切り離しておく必要がある。  
+おそらくエアコン配管の中で一番でかい締結を外す必要があり、結構力がいった。  
+エバポレーターは洗浄必須だろう。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="エバポレーターとエキスパンションバルブ" />
+
+## ブロアユニットの取り外し
+
+これは室内だけで完結するのでボルトを外すだけ。  
+これもまたスポンジがおわっていた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="開けたブロアユニットのシロッコファン" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="劣化したブロアユニット吸気側のウレタン" />
+
+
+## ステアリングシャフト取り外し and ECU取り外し
+
+シャフト根本のボルトを抜いてあげればシャフトが抜ける。  
+助手席足元のカバー類を外してデカいカプラーを慎重に外せばECTも外せる。  
+ECUはきれいで雨漏りを被った形跡もない。  
+念のためECUはリペア業者に送ってリフレッシュしてあげたいところ。
+
+## フロアカーペットの取り外し
+
+クリップをいくつか外せばカーペットははがせる。  
+運転席側には断熱材？が張り付いてしまっていたので、カーペット裏はやり直す必要がある。  
+細かい装備品はまだあれど、ハーネスだけの状態になってきた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="内装を全て撤去したドンガラ状態の車内" />

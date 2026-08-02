@@ -1,0 +1,49 @@
+---
+title: STEP21 シート洗浄
+description: |
+  オープン走行のせいで汚れやすいし、素材的に？汗じみが付きやすいと感じる
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260726_042506735.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260726_045332615.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260726_073614564.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+純正シートは気に入っているが、汗じみみたいなものが付きやすいと感じる。  
+長期保管前に洗浄して、シミが消えない、みたいな事態に陥らないようにしたい。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | シートの洗浄 | <Difficulty level={3} /> | どこまできれいにするか次第 |
+
+## シートの洗浄
+
+リンサークリーナーでファブリック部分を洗浄していく。  
+重曹水をスプレーしてから開始。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="外したシートをリンサーで洗浄" />
+
+
+### 排水1回目
+
+特にヘッドレスト部分の汚れが酷く、一回では汚れが取り切れない。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="リンサーの回収タンクに溜まった汚水" />
+
+### 5回目
+
+洗浄開始して3時間以上、計5回の排水でようやく汚れの色が薄くなってきた。  
+本当は完全にきれいにしたいところだが、リンサークリーナーはのブラシや吸い取り口をシート表面に押し付けて使うがゆえ、シートを削る行為に等しかったりする。  
+事実、排水中には繊維状のものが混ざる。  
+特に、サイドサポートと座面部の溝の部分が裂けたりするのが怖い。  
+ダメージが怖いので、ここで洗浄は終了。  
+ちなみにシートカバーを装着予定なので、ファブリックの汚れとは無縁になるはず。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="洗浄を繰り返して薄くなってきた回収タンクの水" />
