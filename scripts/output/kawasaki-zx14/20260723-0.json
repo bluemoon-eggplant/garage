@@ -1,0 +1,69 @@
+{
+  "source": "input/kawasaki-zx14/スキャン_20260809-2003.pdf",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2026/07/23",
+    "totalAmount": 105123,
+    "items": [
+      {
+        "description": "重量税 継続",
+        "amount": 3800
+      },
+      {
+        "description": "印紙代 登録 指定",
+        "amount": 1500
+      },
+      {
+        "description": "自賠責保険 24か月",
+        "amount": 8760
+      },
+      {
+        "description": "24か月点検",
+        "amount": 35000
+      },
+      {
+        "description": "保安確認検査料",
+        "amount": 10000
+      },
+      {
+        "description": "検査代行手数料",
+        "amount": 5000
+      },
+      {
+        "description": "1L ブレーキフルードDOT-4",
+        "amount": 480
+      },
+      {
+        "description": "ショートパーツ",
+        "amount": 2000
+      },
+      {
+        "description": "ロングライフクーラントグリーン20",
+        "amount": 2040
+      },
+      {
+        "description": "WASHER, DRAIN",
+        "amount": 110
+      },
+      {
+        "description": "カワサキR4 SJ10W-40 20L ENEOS",
+        "amount": 10045
+      },
+      {
+        "description": "エレメント(オイルフィルター)",
+        "amount": 1420
+      },
+      {
+        "description": "ガスケット、12X22X2",
+        "amount": 90
+      },
+      {
+        "description": "RIVET",
+        "amount": 100
+      }
+    ],
+    "mileage": 37234,
+    "shop": "カワサキ プラザ前橋"
+  },
+  "reviewStatus": "pending"
+}

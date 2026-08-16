@@ -1,0 +1,36 @@
+---
+title: STEP27 ドアミラー破断ボルトの除去
+description: |
+  初めてのリューター作業
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260805_215805120.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260805_220719209.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+STEP23でドアミラーを分解した際、片側の固定ボルトが錆で破断し、台座側に残ってしまった。  
+今回はこの残ったボルトをリューターで削って除去する。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | 破断ボルトの削り出し | <Difficulty level={3} /> | リューターで地道に削る |
+
+## 破断ボルトの削り出し
+
+以前アストロプロダクツで購入したリューターを使う。  
+ミラー本体側から地道に削っていくと、台座との分離に成功。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="リューターで削る、錆びて破断したドアミラーの固定ボルト" />
+
+残ったワッシャーやボルトが樹脂と一体化してしまってはずれないので、ハンマーで撃ち抜いたり、ドライバーでこじったりして除去。  
+ミラーはアッセンブリーでしか提供されて要らず、補修部品として内部部品の提供がないのは残念。  
+社外（というかロードスター愛好家様が作ったリペアキット？）の内部部品キットを買ったので、それを使って修理予定。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="削り出した錆びたボルトとスプリング" />
