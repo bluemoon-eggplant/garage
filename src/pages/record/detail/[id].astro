@@ -7,7 +7,7 @@ import { getCategoryProps } from '@/modules/post/category';
 
 import { loadAllMaintenanceRecords } from '@/libs/record-data';
 import { getAllPosts } from '@/modules/post/common';
-import { getPrevNext } from '@/modules/common';
+import { getPrevNext, idToSlug } from '@/modules/common';
 import { formatDateIso } from '@/utils/datetime';
 import { localizedPath } from '@/utils/i18n';
 import { useTranslations } from '@/i18n';
@@ -37,7 +37,7 @@ export async function getStaticPaths() {
   const postMap = new Map<string, string>();
   for (const p of posts) {
     const key = `${p.data.category}|${formatDateIso(p.data.publishDate)}`;
-    postMap.set(key, String(p.id).replace(/^\d{4}\//, ''));
+    postMap.set(key, idToSlug(p).slug);
   }
 
   return records.map((record) => {

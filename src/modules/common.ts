@@ -92,8 +92,10 @@ export const stripLocaleSuffix = (id: string): string => id.replace(/--en$/, '')
 
 export const idToSlug = <T extends { id: unknown }>(item: T): T & { slug: string } => ({
   ...item,
-  // Strip year prefix for posts: "2025/05-25-fd3s" → "05-25-fd3s"
-  slug: stripLocaleSuffix(String(item.id).replace(/^\d{4}\//, '')),
+  // Keep year prefix for posts, flatten '/' to '-': "2025/05-25-fd3s" → "2025-05-25-fd3s".
+  // Year must stay in the slug, otherwise same month-day-garage across years collide.
+  // Flattened instead of nested to avoid the /blog/[...page].astro catch all route.
+  slug: stripLocaleSuffix(String(item.id).replace(/^(\d{4})\//, '$1-')),
 });
 
 /**

@@ -8,7 +8,7 @@ import { ROUTES } from '@/constants/routes';
 import { GARAGE_SLUG_TO_CATEGORY } from '@/constants/collections';
 import { getCategoryProps } from '@/modules/post/category';
 import { getAllPosts } from '@/modules/post/common';
-import { stripLocaleSuffix } from '@/modules/common';
+import { idToSlug } from '@/modules/common';
 import { loadAllMaintenanceRecords, toTableRow } from '@/libs/record-data';
 import { formatDateSlash } from '@/utils/datetime';
 import { localizedPath } from '@/utils/i18n';
@@ -59,7 +59,7 @@ const posts = await getAllPosts();
 const blogSlugMap: Record<string, string> = {};
 for (const p of posts) {
   const key = `${p.data.category}|${formatDateSlash(p.data.publishDate)}`;
-  const slug = stripLocaleSuffix(String(p.id).replace(/^\d{4}\//, ''));
+  const slug = idToSlug(p).slug;
   blogSlugMap[key] = localizedPath(locale, `${ROUTES.BLOG}${slug}`);
 }
 
