@@ -1,0 +1,129 @@
+---
+title: STEP34 インテークマニホールド脱着
+description: |
+  エンジン補機類を外していく
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260819_214556109.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260819_223139718.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260819_223146912.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260819_224021262.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260819_224025152.jpg';
+import Img6 from '../../../garage/roadstar/_images/PXL_20260819_224032575.jpg';
+import Img7 from '../../../garage/roadstar/_images/PXL_20260819_224035765.jpg';
+import Img8 from '../../../garage/roadstar/_images/PXL_20260819_224055163.jpg';
+import Img9 from '../../../garage/roadstar/_images/PXL_20260819_224101933.jpg';
+import Img10 from '../../../garage/roadstar/_images/PXL_20260819_224108580.jpg';
+import Img11 from '../../../garage/roadstar/_images/PXL_20260819_224115881.jpg';
+import Img12 from '../../../garage/roadstar/_images/PXL_20260819_224126326.jpg';
+import Img13 from '../../../garage/roadstar/_images/PXL_20260821_221318557.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+エンジンオーバーホールはまだしない。（分解から時間が経つとわけわからんことになりそうだから）  
+補機類を外して、状態確認、交換部品の精査だけ行う。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | ホース接続切り離し | <Difficulty level={2} /> | 取り外しに苦戦しないホースはない　|
+| 2 | オルタネーター脱着 | <Difficulty level={1} /> | |
+| 3 | オルタネーターブラケット脱着 | <Difficulty level={4} /> | ボルト硬すぎ　|
+| 4 | インマニブラケット脱着 | <Difficulty level={1} /> | |
+| 5 | スターター脱着 | <Difficulty level={1} /> | |
+| 6 | バルクヘッド側サーモセンサー脱着 | <Difficulty level={2} /> | センサーが硬くて苦戦 |
+| 7 | オイルプレッシャースイッチ脱着 | <Difficulty level={1} /> | |
+| 8 | インテークマニホールド脱着 | <Difficulty level={3} /> | ボルトナットに工具がまともに入らない |
+| 9 | バルクヘッド側ウォーターパイプ脱着 | <Difficulty level={2} /> |  |
+
+## ホース接続切り離し
+
+インマニとエンジン側を繋いでるホース類を外す。  
+水路系のホースは、錆がひどく苦戦。  
+バキューム系のホースは比較的抜きやすい。
+
+## オルタネーター脱着
+
+先にブラケットをはず下ほうがいいのだが、後術の理由で先にオルタネーターを外す。
+
+## オルタネーターブラケット脱着
+
+ブラケット自体はボルト2本で止まっているが、片方（エンジン中央側）が全く緩まない。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="ジャッキに載せたインテークマニホールド脱着前のエンジン" />
+
+なんと、インパクトでもびくともしない。  
+自分の中でインパクトは絶対だったので、これにはショックを受けた。  
+幸いボルトサイズが大きいため（17mmソケット）破断するリスクは低いと考え、インパクトで回し続けたが、結局緩まなかった。  
+調べると実は、自分が持ってるロングレンチの方がトルクが出ることがわかり、体重をかけて回したら緩んだ。  
+勉強になった。
+
+## インマニブラケット脱着&スターター脱着
+
+オルタネーターブラケットと違い、これらはボルトは簡単に緩み、楽に外せた。
+
+## バルクヘッド側サーモセンサー脱着
+
+カプラーは、エアフロセンサー同様に、細い針金によるロックを外すタイプ。  
+センサー単体を外すにはディープソケットが好ましく、通常のソケットだとセンサー部が邪魔で六角部に届かない。  
+仕方ないのでモンキーレンチで緩めたが、かなり固くてヒヤヒヤした。
+
+## オイルプレッシャースイッチ脱着
+
+オイルフィルター近く、インマニ下に刺さっているスイッチ。  
+センサー根本の六角をスパナで緩めて外した。
+
+## インテークマニホールド脱着
+
+インマニ単体で取り外す準備ができたので、ボルトを緩めていく。  
+上下でボルトナット止め。  
+下部は普通に外せるが、問題は上部。  
+ソケットが微妙に入らないため、メガネレンチでちまちま回して外すしかなく、とてつもない時間がかかった。  
+これ、取り付け時にトルク締めできないため、作戦を考えないといけない。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="車体から取り外したインテークマニホールドとサージタンク" />
+
+吸気口と対面。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="インテークマニホールドを外してポートが露出したシリンダーヘッド" />
+
+インマニ側ポート状態の確認。  
+それなりにカーボンは溜まっている。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="カーボンが堆積したインテークポートの合わせ面" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="サビと固着したガスケット跡が残るインテークポート" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img6} alt="ウォーターホール周辺に腐食が出たインテークポート" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img7} alt="ポート下側に厚くカーボンが付いたインテークポート" />
+
+エンジン側。バルブが見えるがもれなく真っ黒。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img8} alt="ポートの奥に見える2つのバルブとカーボン" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img9} alt="カーボンで真っ黒になったポート奥のバルブ" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img10} alt="ガスケットの焼き付き跡が残るポート合わせ面とバルブ" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img11} alt="バルブの傘まで見えるポート内部の様子" />
+
+とりあえずエンジンブロック部だけにすることができ、ポートの状態が確認できるところまでで本体の分解はストップ。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img12} alt="並んだ4気筒ぶんのインテークポート" />
+
+## ウォーターパイプ脱着
+
+エンジン後方に刺さっているウォーターパイプを外す。  
+とその前にホースを切り離す。  
+すでにホースは途中で切断済みなので、遠慮なくカットする。  
+というかこんな状態だとカットせざるをえないというか。。。  
+パイプ自体は簡単に外せる。  
+エンジンを脱着してるからこその楽さだろう。（装着状態でやろうとすると相当大変そう）
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img13} alt="引き抜いたウォーターパイプとシール部に出た緑色の腐食" />
