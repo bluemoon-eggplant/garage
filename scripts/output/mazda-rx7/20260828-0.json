@@ -1,0 +1,205 @@
+{
+  "source": "input/mazda-rx7/スキャン_20260830-2104.pdf",
+  "category": "mazda-rx7",
+  "data": {
+    "date": "2026/08/28",
+    "totalAmount": 223834,
+    "items": [
+      {
+        "description": "パック代金（パックdeメンテ 車検パック）",
+        "amount": 105600
+      },
+      {
+        "description": "パックdeメンテ 車検整備",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ: 法定2年定期点検整備",
+        "amount": null
+      },
+      {
+        "description": "★パックdeメンテ: 車検整備_ラージ[平日P]",
+        "amount": null
+      },
+      {
+        "description": "エンジンルーム点検 室内点検",
+        "amount": null
+      },
+      {
+        "description": "足廻り、下廻り、外廻り点検",
+        "amount": null
+      },
+      {
+        "description": "車載式故障診断装置(OBD) 点検",
+        "amount": null
+      },
+      {
+        "description": "*日常点検【付帯整備料金】",
+        "amount": null
+      },
+      {
+        "description": "--シビアコンデションの点検--",
+        "amount": null
+      },
+      {
+        "description": "ギヤボックスの機能、旋回動作点検",
+        "amount": null
+      },
+      {
+        "description": "倍力装置の機能、ホイールディスクの損傷点検",
+        "amount": null
+      },
+      {
+        "description": "シャシバネ、ショックアブソーバの緩衝能力点検",
+        "amount": null
+      },
+      {
+        "description": "クラッチ、ミッション、ドライブシャフト、プロペラシャフトの状態点検",
+        "amount": null
+      },
+      {
+        "description": "原動機の運転状態点検",
+        "amount": null
+      },
+      {
+        "description": "ブレーキドラム、ディスクの摩耗、損傷、燃料漏れ点検",
+        "amount": null
+      },
+      {
+        "description": "・ブレーキ・フルード交換 (付帯)",
+        "amount": null
+      },
+      {
+        "description": "000A7 PDEM・ブレーキ・フルード (数量1)",
+        "amount": null
+      },
+      {
+        "description": "パーキングブレーキ効き具合点検",
+        "amount": null
+      },
+      {
+        "description": "・パックdeメンテ: エンジンオイル交換 (付帯)",
+        "amount": null
+      },
+      {
+        "description": "CP-01L04 ゴールデンSP 5W-30 (数量1)",
+        "amount": null
+      },
+      {
+        "description": "995641400 ガスケット (数量1)",
+        "amount": null
+      },
+      {
+        "description": "・パックdeメンテ:オイルフィルター交換 (付帯)",
+        "amount": null
+      },
+      {
+        "description": "B6Y114302A カートリッジ、オイルフイルター (数量1)",
+        "amount": null
+      },
+      {
+        "description": "・パックdeメンテ: ワイパーゴム(フロント2本) 交換(付帯)",
+        "amount": null
+      },
+      {
+        "description": "0010 PDEM・ワイパーゴム (2本) (数量2)",
+        "amount": null
+      },
+      {
+        "description": "DB0967333 フロント ブレード ラバー (数量2)",
+        "amount": null
+      },
+      {
+        "description": "ウォッシャー液補充",
+        "amount": null
+      },
+      {
+        "description": "*シャーシー、高圧洗浄料",
+        "amount": null
+      },
+      {
+        "description": "タイヤローテーション",
+        "amount": null
+      },
+      {
+        "description": "*保安基準確認検査料",
+        "amount": null
+      },
+      {
+        "description": "制動力測定",
+        "amount": null
+      },
+      {
+        "description": "ヘッドライト焦点&光度測定",
+        "amount": null
+      },
+      {
+        "description": "スピードメータ誤差及び振れ測定",
+        "amount": null
+      },
+      {
+        "description": "サイドスリップ測定",
+        "amount": null
+      },
+      {
+        "description": "排気ガス測定",
+        "amount": null
+      },
+      {
+        "description": "点検結果に基づく整備《付帯作業》",
+        "amount": null
+      },
+      {
+        "description": "パックdeメンテ・法定2年定期点検整備等技術料",
+        "amount": 61490
+      },
+      {
+        "description": "タイヤ空気圧調整",
+        "amount": 5500
+      },
+      {
+        "description": "冷却水(ロングライフクーラント)交換",
+        "amount": 3520
+      },
+      {
+        "description": "スパークプラグ交換",
+        "amount": 14729
+      },
+      {
+        "description": "クラッチフルード・Vベルト交換",
+        "amount": 16555
+      },
+      {
+        "description": "P/Sタンクホース交換",
+        "amount": 6550
+      },
+      {
+        "description": "非常信号用具交換",
+        "amount": 2200
+      },
+      {
+        "description": "諸費用 自賠責",
+        "amount": 17650
+      },
+      {
+        "description": "諸費用 重量税",
+        "amount": 37800
+      },
+      {
+        "description": "諸費用 印紙証紙代",
+        "amount": 1850
+      },
+      {
+        "description": "諸費用 代行料(課税対象)",
+        "amount": 11880
+      },
+      {
+        "description": "パック前受金",
+        "amount": -61490
+      }
+    ],
+    "mileage": 101233,
+    "shop": "株式会社関東マツダ 埼玉事業部 本庄店"
+  },
+  "reviewStatus": "approved"
+}
