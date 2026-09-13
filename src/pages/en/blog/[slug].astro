@@ -33,15 +33,27 @@ export async function getStaticPaths() {
   const posts: Post[] = await getAllPostsWithReadingTime('en');
   const records = loadAllMaintenanceRecords('en');
 
-  // Pre-compute record lookup map: "category|yyyy/MM/dd" → record
-  const recordMap = new Map(records.map((r) => [`${r.category}|${r.date}`, r]));
+  // Pre-compute record lookups, mirroring the record → post direction.
+  // Primary: "category|task" → record, as tasks are kept identical to post titles.
+  // Fallback: "category|yyyy/MM/dd", used only when that date holds a single record —
+  // a post and its record may also sit on different dates (receipt vs. write-up).
+  const recordByTask = new Map<string, MaintenanceRecord>();
+  const recordsByDate = new Map<string, MaintenanceRecord[]>();
+  for (const r of records) {
+    for (const task of r.tasks) recordByTask.set(`${r.category}|${task}`, r);
+    const dateKey = `${r.category}|${r.date}`;
+    recordsByDate.set(dateKey, [...(recordsByDate.get(dateKey) ?? []), r]);
+  }
 
   const paths = posts.map((post) => {
     const { slug } = post;
-    const { category, publishDate } = post.data;
+    const { category, publishDate, title } = post.data;
     const randomPosts = getRandomPosts({ posts, excludeSlug: slug, category });
     const { prev: prevPost, next: nextPost } = getPrevNext(posts, post, (p) => p.data.category, category);
-    const matchedRecord = recordMap.get(`${category}|${formatDateSlash(publishDate)}`) ?? null;
+    const sameDateRecords = recordsByDate.get(`${category}|${formatDateSlash(publishDate)}`);
+    const matchedRecord =
+      recordByTask.get(`${category}|${title}`) ??
+      (sameDateRecords?.length === 1 ? sameDateRecords[0] : null);
 
     return {
       params: { slug },

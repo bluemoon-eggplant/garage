@@ -601,12 +601,43 @@ npx tsx scripts/extract-receipts.ts
 
 **処理の仕組み**:
 1. `scripts/input/<category>/` 内の PDF を検出
-2. 既に `scripts/output/` に処理済みの source がある PDF はスキップ
+2. `scripts/output/.processed-sources.json`（処理済みマニフェスト）に載っている PDF はスキップ
 3. PDF を base64 エンコードして Gemini API に送信
 4. プロンプトで JSON 形式の抽出を指示
 5. レスポンスから JSON を抽出して `scripts/output/<category>/YYYYMMDD-N.json` に保存
+6. 成功のたびにマニフェストへ追記（中断しても再抽出しない）
 
 **レート制限**: Gemini 無料枠は 15 RPM のため、4.5 秒間隔で処理
+
+#### 処理済みマニフェスト
+
+`scripts/output/.processed-sources.json` に「一度でも抽出した source」を記録している。
+
+```json
+{
+  "version": 1,
+  "sources": {
+    "input/mazda-rx7/receipt.pdf": "output/mazda-rx7/20260828-0.json",
+    "input/mazda-rx7/duplicate.pdf": null
+  }
+}
+```
+
+- 値が出力パス → そのレコードが現存する
+- 値が `null` → 抽出したが重複などで**破棄済み**（再抽出しない）
+
+出力JSONの有無だけで判定すると、重複レコードを削除した瞬間に「未処理」に戻り、
+次回実行で同じ重複が再生成されてしまう。それを防ぐための独立した記録。
+
+**重複レコードを削除したとき**は、マニフェストにエントリが残るのでそのままでよい。
+マニフェストが壊れた・失われた場合は git 履歴から再構築できる:
+
+```bash
+node scripts/rebuild-processed-manifest.mjs
+```
+
+現在の出力JSONに加えて、git 履歴に存在した全ての出力JSONの source を拾うため、
+過去に削除した重複も「破棄済み」として復元される。
 
 #### 出力 JSON の形式
 

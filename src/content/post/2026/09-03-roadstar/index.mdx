@@ -1,0 +1,51 @@
+---
+title: STEP38 ブレーキキャリパー・ローター脱着
+description: |
+  ついにステージは足回りに
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260902_000551336.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260903_031534342.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260903_031544790.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260903_031552358.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+最終的にはサブフレームまで脱着することを目指し、外しやすいところから外していく
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | ブレーキホース切り離し | <Difficulty level={1} /> |  |
+| 2 | フロントキャリパー脱着 | <Difficulty level={1} /> |  |
+| 3 | リアキャリパー脱着 | <Difficulty level={2} /> |  |
+| 4 | ブレーキローター脱着 | <Difficulty level={2} /> |  |
+
+## ブレーキホース切り離し & フロントキャリパー脱着
+
+フロントは単純にホースのボルト抜いてキャリパーを固定しているボルトを外せば終わり。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="ブレーキホースを切り離したフロント足回りとローターが付いたままのハブ" />
+
+## リアキャリパー脱着
+
+問題、というほど難易度は高くないが、リアはサイドブレーキの機構が絡んでるので手順が多い。  
+固定ボルトも一本多く、これがとても硬い、というかキャリパー裏へのアクセスがしづらいので難易度が上がるという感じだろうか。
+
+## ブレーキローター脱着
+
+ローターは固着で大変なことになるリスクが有る、というふうには聞いていたが、裏からコツコツと場所を替えて粘り強く叩いたら外れた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="キャリパーとローターを外してハブとバックプレートだけになった状態" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="ローターを外してハブとバックプレートが露出した足回り" />
+
+これでタイヤハウス内のブレーキ部品は脱着完了。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="取り外した4輪分のキャリパー・ローター・ブレーキパッドとブラケット類" />
+

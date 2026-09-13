@@ -1,0 +1,40 @@
+{
+  "source": "input/eunos-roadstar/納品書（中原　誠様）.pdf",
+  "category": "eunos-roadstar",
+  "data": {
+    "date": "2026/09/03",
+    "totalAmount": 26400,
+    "items": [
+      {
+        "description": "超音波洗浄+標準レポート(G)",
+        "amount": 16800
+      },
+      {
+        "description": "フィルター(G)",
+        "amount": 2000
+      },
+      {
+        "description": "先端キャップ(G)",
+        "amount": 1600
+      },
+      {
+        "description": "Oリング(G)",
+        "amount": 1200
+      },
+      {
+        "description": "グロメット(G)",
+        "amount": 1200
+      },
+      {
+        "description": "インシュレータ(G)",
+        "amount": 1200
+      }
+    ],
+    "mileage": null,
+    "shop": "株式会社 アイ・アール・エス",
+    "tasks": [
+      "インジェクター洗浄"
+    ]
+  },
+  "reviewStatus": "pending"
+}

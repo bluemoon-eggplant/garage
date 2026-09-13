@@ -33,16 +33,26 @@ export async function getStaticPaths() {
   const records = loadAllMaintenanceRecords('en');
   const posts = await getAllPosts('en');
 
-  // Pre-compute post lookup: "category|yyyy-MM-dd" → post slug
-  const postMap = new Map<string, string>();
+  // Pre-compute post lookups.
+  // Primary: "category|title" → post slug. Record tasks are kept identical to
+  // post titles, so each task resolves on its own and one date can hold several posts.
+  // Fallback: "category|yyyy-MM-dd", used only when that date holds a single post —
+  // with several, the date alone cannot say which one this record belongs to.
+  const postByTitle = new Map<string, string>();
+  const postsByDate = new Map<string, string[]>();
   for (const p of posts) {
-    const key = `${p.data.category}|${formatDateIso(p.data.publishDate)}`;
-    postMap.set(key, idToSlug(p).slug);
+    const slug = idToSlug(p).slug;
+    postByTitle.set(`${p.data.category}|${p.data.title}`, slug);
+    const dateKey = `${p.data.category}|${formatDateIso(p.data.publishDate)}`;
+    postsByDate.set(dateKey, [...(postsByDate.get(dateKey) ?? []), slug]);
   }
 
   return records.map((record) => {
     const recordDateIso = record.date.replaceAll('/', '-');
-    const blogSlug = postMap.get(`${record.category}|${recordDateIso}`) ?? null;
+    const sameDatePosts = postsByDate.get(`${record.category}|${recordDateIso}`);
+    const blogSlug =
+      record.tasks.map((task) => postByTitle.get(`${record.category}|${task}`)).find(Boolean) ??
+      (sameDatePosts?.length === 1 ? sameDatePosts[0] : null);
     const { prev: prevRecord, next: nextRecord } = getPrevNext(records, record, (r) => r.category, record.category);
 
     return {

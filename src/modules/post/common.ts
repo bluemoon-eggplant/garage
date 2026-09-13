@@ -9,6 +9,8 @@ import type { Post, PostCollection } from '@/types/post';
 /**
  * Derive publishDate and category from post id path.
  * id format: "2025/05-25-fd3s" → year=2025, month=05, day=25, garageSlug=fd3s
+ * A "-2", "-3", ... suffix separates several posts sharing one date:
+ * "2026/09-04-roadstar-3" → garageSlug=roadstar
  */
 const enrichPostData = (post: PostCollection): PostCollection => {
   const id = stripLocaleSuffix(String(post.id));
@@ -21,13 +23,17 @@ const enrichPostData = (post: PostCollection): PostCollection => {
   const match = slugPart.match(/^(\d{2})-(\d{2})-(.+)$/);
 
   if (match) {
-    const [, month, day, garageSlug] = match;
+    const [, month, day, slugTail] = match;
 
     if (!post.data.publishDate && yearStr) {
       post.data.publishDate = new Date(`${yearStr}-${month}-${day}`);
     }
 
     if (!post.data.category) {
+      // Drop a trailing "-2"/"-3" sequence number before looking the garage up,
+      // but only when the bare name isn't itself a known slug (zx14, renaissa250).
+      const garageSlug =
+        slugTail in GARAGE_SLUG_TO_CATEGORY ? slugTail : slugTail.replace(/-\d+$/, '');
       post.data.category = GARAGE_SLUG_TO_CATEGORY[garageSlug] ?? CATEGORIES[0].name;
     }
   }
@@ -52,11 +58,12 @@ export const getAllPosts = async (locale: Locale = DEFAULT_LOCALE): Promise<Post
     }
   }
 
-  // Sort after enrichment
+  // Sort after enrichment. Several posts can share one date ("09-04-roadstar",
+  // "09-04-roadstar-2"), so fall back to the id to keep their order stable.
   enriched.sort((a, b) => {
     const da = a.data.updatedDate ?? a.data.publishDate ?? new Date(0);
     const db = b.data.updatedDate ?? b.data.publishDate ?? new Date(0);
-    return db.valueOf() - da.valueOf();
+    return db.valueOf() - da.valueOf() || String(b.id).localeCompare(String(a.id));
   });
   return enriched;
 };

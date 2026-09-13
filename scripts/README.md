@@ -11,6 +11,7 @@
 | `download-from-drive.ts` | Google Drive から領収書 PDF をダウンロード |
 | `download-photos.ts` | Google Drive から写真をダウンロード → `_images/` に配置 |
 | `extract-receipts.ts` | Gemini API で PDF → JSON 構造化データ抽出 |
+| `rebuild-processed-manifest.mjs` | 処理済み source マニフェストを git 履歴から再構築 |
 | `translate-en.mjs` | Claude CLI で MDX 記事本文を JA→EN 翻訳 |
 | `sync-en-structure.mjs` | EN MDX の構造同期（import, 画像, frontmatter） |
 | `sync-i18n-values.mjs` | i18n UI 文字列の自動翻訳（pre-commit hook） |
@@ -27,6 +28,7 @@ scripts/
 │   ├── {category}/
 │   └── .downloaded-ids.json
 ├── output/                  # 抽出された整備記録 JSON
+│   ├── .processed-sources.json  # 処理済み source マニフェスト
 │   └── {category}/
 │       └── YYYYMMDD-N.json
 └── service-account-key.json # GCP サービスアカウントキー (.gitignore)

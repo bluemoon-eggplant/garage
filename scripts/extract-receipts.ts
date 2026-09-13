@@ -53,6 +53,15 @@ const SCRIPTS_DIR = path.dirname(new URL(import.meta.url).pathname);
 const INPUT_DIR = path.join(SCRIPTS_DIR, 'input');
 const OUTPUT_DIR = path.join(SCRIPTS_DIR, 'output');
 
+/**
+ * 処理済みsourceの永続マニフェスト。
+ *
+ * 出力JSONの有無だけで判定すると、重複レコードを削除した瞬間に
+ * 「未処理」に戻ってしまい、次回実行で同じ重複が再生成される。
+ * 削除後も「処理済み」を保持するため、ここに独立して記録する。
+ */
+const MANIFEST_PATH = path.join(OUTPUT_DIR, '.processed-sources.json');
+
 // Gemini free tier: 15 RPM
 const RATE_LIMIT_DELAY_MS = 4500;
 
@@ -94,7 +103,8 @@ async function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   // Collect already-processed sources from existing output files
-  const processedSources = collectProcessedSources();
+  const manifest = loadManifest();
+  const processedSources = collectProcessedSources(manifest);
 
   // Discover input files (PDFs + images)
   const inputFiles = discoverInputFiles();
@@ -132,6 +142,9 @@ async function main() {
         reviewStatus: 'pending',
       };
       const outputPath = writeRecordFile(record);
+      // 中断しても再抽出しないよう、1件ごとに永続化する
+      manifest.sources[file.relativePath] = outputPath;
+      saveManifest(manifest);
       console.log(`  → ${data.date} / ¥${data.totalAmount.toLocaleString()} / ${data.shop}`);
       console.log(`  → ${outputPath}`);
       successCount++;
@@ -260,8 +273,40 @@ function writeRecordFile(record: RecordFile): string {
   return `output/${record.category}/${filename}`;
 }
 
-function collectProcessedSources(): Set<string> {
-  const sources = new Set<string>();
+interface ProcessedManifest {
+  version: number;
+  /** source (例: "input/mazda-rx7/receipt.pdf") → 生成された出力パス。破棄済みは null */
+  sources: Record<string, string | null>;
+}
+
+function loadManifest(): ProcessedManifest {
+  if (!fs.existsSync(MANIFEST_PATH)) return { version: 1, sources: {} };
+  try {
+    const parsed = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf-8')) as ProcessedManifest;
+    return { version: parsed.version ?? 1, sources: parsed.sources ?? {} };
+  } catch {
+    console.warn(`Warning: ${MANIFEST_PATH} を読めませんでした。空として扱います。`);
+    return { version: 1, sources: {} };
+  }
+}
+
+function saveManifest(manifest: ProcessedManifest): void {
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  // キー順を安定させて差分を見やすくする
+  const sorted: Record<string, string | null> = {};
+  for (const key of Object.keys(manifest.sources).sort()) {
+    sorted[key] = manifest.sources[key];
+  }
+  fs.writeFileSync(
+    MANIFEST_PATH,
+    JSON.stringify({ version: manifest.version, sources: sorted }, null, 2) + '\n',
+    'utf-8'
+  );
+}
+
+/** 既存の出力JSONから source → 出力パス を集める（マニフェストの補完用） */
+function collectSourcesFromOutput(): Map<string, string> {
+  const sources = new Map<string, string>();
 
   if (!fs.existsSync(OUTPUT_DIR)) return sources;
 
@@ -276,7 +321,7 @@ function collectProcessedSources(): Set<string> {
       try {
         const content = fs.readFileSync(path.join(categoryDir, file), 'utf-8');
         const record = JSON.parse(content) as RecordFile;
-        if (record.source) sources.add(record.source);
+        if (record.source) sources.set(record.source, `output/${dir.name}/${file}`);
       } catch {
         // skip invalid files
       }
@@ -284,6 +329,26 @@ function collectProcessedSources(): Set<string> {
   }
 
   return sources;
+}
+
+/**
+ * 処理済みsourceを取得する。
+ * マニフェストを正とし、未記載だが出力JSONが存在するものは取り込んで永続化する。
+ */
+function collectProcessedSources(manifest: ProcessedManifest): Set<string> {
+  let added = 0;
+  for (const [source, output] of collectSourcesFromOutput()) {
+    if (!(source in manifest.sources)) {
+      manifest.sources[source] = output;
+      added++;
+    }
+  }
+  if (added > 0) {
+    console.log(`マニフェストに既存の出力から ${added}件 を取り込みました。`);
+    saveManifest(manifest);
+  }
+
+  return new Set(Object.keys(manifest.sources));
 }
 
 function sleep(ms: number): Promise<void> {
