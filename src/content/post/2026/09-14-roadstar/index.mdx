@@ -1,0 +1,78 @@
+---
+title: STEP46 前後サブフレーム脱着
+description: |
+  ボディ最終章という感じか
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260910_233122724.MP.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260913_211920136.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260913_214803751.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260913_221619269.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260913_223234281.MP.jpg';
+import Img6 from '../../../garage/roadstar/_images/PXL_20260913_231722200.jpg';
+import Img7 from '../../../garage/roadstar/_images/PXL_20260914_001134960.MP.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+[STEP45 デフ脱着+ドライブシャフト切り離し](/blog/2026-09-11-roadstar)でデフとドライブシャフトが降りたので、リアに残っているのはサブフレーム本体だけになった。  
+フロント側もエンジン・ミッションが無い状態なので、この際まとめて前後のサブフレームを降ろしてしまう。
+
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | リアサブフレーム脱着 | <Difficulty level={1} /> |  |
+| 2 | リアアッパーアーム脱着 | <Difficulty level={1} /> |  |
+| 3 | ステアリングラック脱着 | <Difficulty level={1} /> |  |
+| 4 | フロントサブフレーム脱着 | <Difficulty level={1} /> | |
+| 5 | フロントロアアーム脱着 | <Difficulty level={2} /> | |
+
+## リアサブフレーム脱着
+
+アーム類・デフ・ドライブシャフトを全て外してあるので、サブフレームはボディとのボルトを外せば降りる。  
+バイク用のジャッキで支え、ボルトを緩めていく。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="デフを降ろした後のリア周り。バイク用ジャッキで支えた状態" />
+
+降りた状態。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="車体から降ろしたリアサブフレーム" />
+
+## リアアッパーアーム脱着
+
+アームを外すとサブフレーム単体となる。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="降ろしたリアサブフレームを別角度から見たところ" />
+
+## ステアリングラック脱着
+
+ステアリングラックはフロントサブフレームに固定されているので、フロントを降ろす前に外しておく。  
+ラックはボルトを外すだけで取り外せる。  
+なお、オーバーホール前提のため、取り外す前に配管のフレアナットは緩めておいた。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="車体から取り外したパワステ付きステアリングラック" />
+
+## フロントサブフレーム脱着
+
+こちらもリアと同じ考え方で、バイク用ジャッキで支えながらボルトを抜いていく。  
+ただしフロントサブフレームはリアより重心が分かりづらいので、ジャッキの当て方は慎重に。  
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="バイク用ジャッキで車体前側を支えている様子" />
+
+ちょっと見えづらい箇所にもボルトがあり、それらを外すと外れる。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img6} alt="ガレージの床に並べた前後のサブフレーム" />
+
+## フロントロアアーム脱着
+
+アームにはアライメント調整可能な偏心ボルトなるものが使われているので、位置をマーキングしてから外す。  
+ただ、ブッシュもボルトも全部変える予定なので、あんまり意味はないかも。  
+ただ、ボルトの抜き方がよろしくなく、ナット側についている偏心のキーを歪めてしまった。  
+ボルト側を回すのではなく、ナット側を回すべきなのだと学んだ。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img7} alt="フロントロアアームを外した後の様子" />

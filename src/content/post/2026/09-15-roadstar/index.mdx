@@ -1,0 +1,71 @@
+---
+title: STEP47 燃料タンク脱着
+description: |
+  残ったガソリンの処理がやっかい
+---
+
+import { Image } from 'astro:assets';
+import { IMAGE_SIZES } from '@/constants/image';
+
+import Img1 from '../../../garage/roadstar/_images/PXL_20260914_225527741.jpg';
+import Img2 from '../../../garage/roadstar/_images/PXL_20260914_233345968.jpg';
+import Img3 from '../../../garage/roadstar/_images/PXL_20260914_233854919.jpg';
+import Img4 from '../../../garage/roadstar/_images/PXL_20260914_233902862.jpg';
+import Img5 from '../../../garage/roadstar/_images/PXL_20260914_233908741.jpg';
+import Img6 from '../../../garage/roadstar/_images/PXL_20260914_233916693.jpg';
+import Img7 from '../../../garage/roadstar/_images/PXL_20260914_233943944.jpg';
+import Img8 from '../../../garage/roadstar/_images/PXL_20260914_234319526.jpg';
+import Difficulty from '../../../../components/Difficulty.astro';
+
+## 背景
+
+ロードスターの燃料タンクはサブフレームを外さないと取り外せないため、脱着部品の最終段階に位置する。
+
+## 手順
+
+| no | 内容 | 難易度 | 補足 |
+|----|------|--------|------|
+| 1 | 給油口からのホースなど脱着 | <Difficulty level={1} /> | |
+| 2 | フューエルフィルター脱着 | <Difficulty level={1} /> | |
+| 3 | 燃料タンク脱着 | <Difficulty level={2} /> | |
+
+## 給油口からのホースなど脱着
+
+すでに燃料ポンプ回りは切り離し済み。  
+給油口から伸びるゴムホース回りを外す。  
+ホースは再利用しないので、問答無用でカッターで切っていくが、姿勢的にやりにくい。
+
+## フューエルフィルター脱着
+
+タンクを降ろす際に干渉するリスクがあるので、固定しているバンドごと外してしまう。  
+燃料が内部に残っている点に注意が必要で、ちょっとこぼれてしまった。
+
+## 燃料タンク脱着
+
+タンク下面は平面でないため、ジャッキを当てるのが難しい。  
+助手席側後ろ側のタンク角がボディに引っ掛けてあるので、対角線上の反対側にジャッキを当てて、ボルト脱着、ジャッキと手で支えながらが降ろしていく。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img1} alt="車体下から見た燃料タンク。ジャッキで支えた状態" />
+
+無事にタンク脱着に成功。  
+カートスタンドが大活躍。  
+この状態で下部のドレンボルトを抜いて、残った燃料を排出した。（レギュラーガソリンなのでルネッサに給油した）
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img2} alt="車体から降ろした燃料タンクを台車に載せたところ" />
+
+タンク内部観察。  
+致命的なダメージはないものの、最下面にはサビが有り、タンク洗浄は必須だろう。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img3} alt="燃料タンク上面に点在する錆" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img4} alt="燃料タンクを外して現れた車体下面と配管ブラケット" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img5} alt="防錆塗装の飛沫が残る車体下面のパネル" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_MD} src={Img6} alt="車体下面の点検穴まわりの塗装状態" />
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img7} alt="塗装が薄くなり表面サビが浮いた車体下面" />
+
+タンクがなくなるとリア下から見る景色が変わってくる。
+
+<Image {...IMAGE_SIZES.FIXED.MDX_LG} src={Img8} alt="燃料タンクを抜いた後の車体下側の空間" />
