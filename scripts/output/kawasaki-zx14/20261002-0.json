@@ -1,0 +1,26 @@
+{
+  "source": "manual",
+  "category": "kawasaki-zx14",
+  "data": {
+    "date": "2026/10/02",
+    "totalAmount": 20432,
+    "tasks": [
+      "アッパーカウル交換",
+      "スクリーン補修",
+      "メーターパネル分解清掃"
+    ],
+    "items": [
+      {
+        "description": "（AliExpress）新しいカワサキニンジャ ZX14R ZX-14 zx14 ZZR1400 2006 2007 2008 2009 2010 2011 オートバイヘッドフロントアッパーノーズ射出フェアリング×1",
+        "amount": 20322
+      },
+      {
+        "description": "カワサキ純正 リベット 92039-0023×1",
+        "amount": 110
+      }
+    ],
+    "mileage": null,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}

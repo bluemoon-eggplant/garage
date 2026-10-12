@@ -1,0 +1,24 @@
+{
+  "source": "manual",
+  "category": "rover-mini",
+  "data": {
+    "date": "2026/09/27",
+    "totalAmount": 3901,
+    "tasks": [
+      "エンジンオイル交換"
+    ],
+    "items": [
+      {
+        "description": "（Y!ショッピング）SUNOCO MARVIC SN>SQ 10W-40",
+        "amount": 3685
+      },
+      {
+        "description": "（楽天）ローバーミニ オイルパンドレンパッキン",
+        "amount": 216
+      }
+    ],
+    "mileage": 31000,
+    "shop": "DIY"
+  },
+  "reviewStatus": "approved"
+}
